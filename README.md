@@ -6,6 +6,19 @@ Cards bend a battle: they pull questions toward the categories you know, add ans
 
 Play offline against bots, or online with friends in a lobby joined by code.
 
+<p align="center">
+  <img src="crates/server/assets/shot_shop.webp" width="49%" alt="The shop: cards to buy at the top, your board in the middle, your hero and hand at the bottom">
+  <img src="crates/server/assets/shot_question.webp" width="49%" alt="A battle question with four answers and the timer">
+</p>
+<p align="center">
+  <img src="crates/server/assets/shot_hand.webp" width="49%" alt="The hand raised as a fan of cards">
+  <img src="crates/server/assets/shot_reveal.webp" width="49%" alt="An answer revealed: right and wrong for both players">
+</p>
+<p align="center">
+  <img src="crates/server/assets/shot_heroes.webp" width="49%" alt="Choosing a hero from two offered">
+  <img src="crates/server/assets/shot_home.webp" width="49%" alt="The main menu">
+</p>
+
 ## What is here
 
 | Part | What it is |
