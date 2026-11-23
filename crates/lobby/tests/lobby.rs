@@ -51,8 +51,8 @@ const SHOP_END: Millis = 1 + 30_000;
 /// How long a synthetic question (20 words) is read before its answers open:
 /// 6 s, plus 150 ms a word.
 const READING: Millis = 9_000;
-/// When the first question's answers open: the category for 2 s, then the reading time.
-const ANSWERS_OPEN: Millis = SHOP_END + 2_000 + READING;
+/// When the first question's answers open: the question shows with its category at once, then it is read.
+const ANSWERS_OPEN: Millis = SHOP_END + READING;
 fn in_battle() -> Lobby {
     let mut lobby = in_shop();
     lobby.tick(SHOP_END);
@@ -152,12 +152,15 @@ fn players_cannot_send_host_commands_or_act_for_someone_else() {
 }
 
 #[test]
-fn an_answer_is_refused_before_the_question_opens() {
+fn the_first_question_shows_with_its_category_as_the_battle_starts() {
     let mut lobby = in_battle();
-    let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
-    // The category is shown for 2 seconds before the question opens.
-    assert_eq!(lobby.handle(SHOP_END + 1_999, P0, answer.clone()), Err(LobbyError::TooEarly));
-    assert_eq!(lobby.handle(ANSWERS_OPEN, P0, answer), Ok(()));
+    let events = lobby.drain(P0);
+    let shown = events.iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("shown");
+    // No separate pause for the category: it shows with the question.
+    assert_eq!(shown.opens_at, Some(SHOP_END));
+    let category = events.iter().position(|o| matches!(o.event, Event::CategoryRevealed { .. }));
+    let question = events.iter().position(|o| matches!(o.event, Event::QuestionShown { .. }));
+    assert_eq!(category.map(|i| i + 1), question, "the category arrives with the question");
 }
 
 #[test]
@@ -165,7 +168,7 @@ fn an_answer_or_a_help_is_refused_while_the_question_is_being_read() {
     let mut lobby = in_battle();
     let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
     let help = Command::UseHelp { player: P0, help: Help::SecondOpinion };
-    let reading = SHOP_END + 2_000;
+    let reading = SHOP_END;
     for now in [reading, ANSWERS_OPEN - 1] {
         assert_eq!(lobby.handle(now, P0, answer.clone()), Err(LobbyError::StillReading));
         assert_eq!(lobby.handle(now, P0, help.clone()), Err(LobbyError::StillReading));
@@ -180,7 +183,7 @@ fn the_answer_deadline_counts_from_the_end_of_the_reading_time() {
     assert_eq!(Millis::from(content().tunables.reading_ms(SyntheticQuestions::TYPICAL_WORDS)), READING);
     let mut lobby = in_battle();
     let shown = lobby.drain(P0).into_iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("shown");
-    assert_eq!(shown.opens_at, Some(SHOP_END + 2_000));
+    assert_eq!(shown.opens_at, Some(SHOP_END));
     assert_eq!(shown.answers_at, Some(ANSWERS_OPEN));
     assert_eq!(shown.deadline, Some(ANSWERS_OPEN + 9_000));
     let battle = lobby.view(P0).battle.expect("in a battle");
@@ -213,8 +216,8 @@ fn both_players_read_a_question_for_the_same_time_set_by_its_words() {
     assert_eq!((question.words, words), (9, 9));
     let reading = 6_000 + 9 * 150;
     for item in [&a, &b] {
-        assert_eq!(item.opens_at, Some(SHOP_END + 2_000));
-        assert_eq!(item.answers_at, Some(SHOP_END + 2_000 + reading));
+        assert_eq!(item.opens_at, Some(SHOP_END));
+        assert_eq!(item.answers_at, Some(SHOP_END + reading));
     }
     let (mine, theirs) = (lobby.view(P0).battle.unwrap(), lobby.view(P1).battle.unwrap());
     assert_eq!((mine.answers_at, theirs.answers_at), (a.answers_at, a.answers_at));
@@ -280,11 +283,14 @@ fn an_unanswered_question_times_out_and_the_next_one_is_paced_by_the_reveal_paus
     lobby.tick(closes + 301);
     let events = lobby.drain(P0);
     assert!(has(&events, |e| matches!(e, Event::AnswerRevealed { a_correct: false, b_correct: false, .. })));
-    // Next question: answer shown for 2.5 s, category for 2 s, 4 s to read, then 9 s to answer.
+    // Next question: answer shown for 1.5 s, then the question with its category is read, then 9 s to answer.
     let shown = events.iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("next question");
-    assert_eq!(shown.opens_at, Some(closes + 301 + 4_500));
-    assert_eq!(shown.answers_at, Some(closes + 301 + 4_500 + READING));
-    assert_eq!(shown.deadline, Some(closes + 301 + 4_500 + READING + 9_000));
+    assert_eq!(shown.opens_at, Some(closes + 301 + 1_500));
+    assert_eq!(shown.answers_at, Some(closes + 301 + 1_500 + READING));
+    assert_eq!(shown.deadline, Some(closes + 301 + 1_500 + READING + 9_000));
+    // While the last answer is still shown, the next question is not open.
+    let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
+    assert_eq!(lobby.handle(closes + 301 + 1_499, P0, answer), Err(LobbyError::TooEarly));
 }
 
 #[test]

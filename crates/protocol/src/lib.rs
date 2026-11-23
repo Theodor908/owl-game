@@ -12,7 +12,7 @@ use serde_json::{Value, json};
 
 /// Bumped on every change a client could notice. The server refuses a
 /// client that says another number.
-pub const VERSION: u32 = 6;
+pub const VERSION: u32 = 7;
 
 /// Events for one player, each with the text of a question it shows. The
 /// correct answer is never part of it.

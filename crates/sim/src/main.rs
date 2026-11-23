@@ -13,15 +13,28 @@ use owl_core::{
 
 /// A lobby that runs this long is treated as stuck and reported.
 const TURN_LIMIT: u32 = 80;
-/// Rough seconds per phase, to turn turn counts into match length.
-const SHOP_SECONDS: u32 = 30;
-const QUESTION_SECONDS: u32 = 15;
+/// Share of the answer time a human takes on average before locking in, in
+/// percent. An assumption, not a measurement: most answers come well before
+/// the clock runs out, a few run it down.
+const ANSWER_SHARE_PERCENT: u32 = 60;
+/// Seconds the result of a battle stays up before the next shop opens.
+const SUMMARY_SECONDS: u32 = 4;
 
-/// Rough seconds per question: `QUESTION_SECONDS` plus the reading time
-/// before the answers open, for a question of typical length, rounded to
-/// the nearest second.
-fn question_seconds(content: &Content) -> u32 {
-    QUESTION_SECONDS + (reading_ms(content) + 500) / 1000
+/// How long one question takes on the clock, in milliseconds: the reading
+/// time for a question of typical length (its category shows with it), a
+/// typical answer (`ANSWER_SHARE_PERCENT` of `answer_seconds`) and the
+/// answer reveal.
+fn question_ms(content: &Content, answer_seconds: u32) -> u32 {
+    let t = &content.tunables;
+    reading_ms(content) + answer_seconds * 10 * ANSWER_SHARE_PERCENT + t.answer_reveal_ms
+}
+
+/// How long one regular turn takes, in milliseconds: the shop, the battle's
+/// questions and the result.
+fn turn_ms(content: &Content) -> u32 {
+    let t = &content.tunables;
+    let questions = t.house_questions + t.weighted_questions;
+    t.shop_seconds * 1000 + questions * question_ms(content, t.answer_time) + SUMMARY_SECONDS * 1000
 }
 
 /// The reading time of a synthetic question, which has a typical length.
@@ -151,13 +164,10 @@ fn run_lobby(content: &Content, players: usize, seed: u64, report: &mut Report) 
         report.stuck += 1;
         return Ok(());
     }
-    let questions_per_battle = content.tunables.house_questions + content.tunables.weighted_questions;
     report.turns.push(state.turn);
     report.endgame_questions += endgame_questions;
-    let question_seconds = question_seconds(content);
-    report.seconds.push(
-        state.turn * (SHOP_SECONDS + questions_per_battle * question_seconds) + endgame_questions * question_seconds,
-    );
+    let endgame_ms = endgame_questions * question_ms(content, content.tunables.endgame_answer_time);
+    report.seconds.push((state.turn * turn_ms(content) + endgame_ms) / 1000);
     for (bot, player) in bots.iter().zip(&state.players) {
         let placement = player.placement.unwrap_or(players as u32);
         let n = players as u32;
@@ -218,14 +228,24 @@ fn main() -> ExitCode {
         pick(&turns, 0.9)
     );
     println!("Endgame questions per match: mean {:.1}", report.endgame_questions as f32 / finished);
+    let minutes = |q: f32| pick(&seconds, q) as f32 / 60.0;
     println!(
-        "Estimated match length: mean {:.1} min, median {:.0} min, 90th percentile {:.0} min ({}s shop, {}s per question with {} ms reading)",
+        "Estimated match length: mean {:.1} min, median {:.1}, 90th percentile {:.1}, 95th percentile {:.1}",
         seconds.iter().map(|&s| f64::from(s)).sum::<f64>() / f64::from(finished) / 60.0,
-        pick(&seconds, 0.5) as f32 / 60.0,
-        pick(&seconds, 0.9) as f32 / 60.0,
-        SHOP_SECONDS,
-        question_seconds(&content),
-        reading_ms(&content)
+        minutes(0.5),
+        minutes(0.9),
+        minutes(0.95),
+    );
+    let t = &content.tunables;
+    println!(
+        "  (a turn is {:.1} s: {} s shop, {:.1} s per question with {} ms reading and answers at {}% of the time, {} s result; an endgame question is {:.1} s)",
+        turn_ms(&content) as f32 / 1000.0,
+        t.shop_seconds,
+        question_ms(&content, t.answer_time) as f32 / 1000.0,
+        reading_ms(&content),
+        ANSWER_SHARE_PERCENT,
+        SUMMARY_SECONDS,
+        question_ms(&content, t.endgame_answer_time) as f32 / 1000.0,
     );
     println!(
         "Battles: {}, ties: {:.1}%",

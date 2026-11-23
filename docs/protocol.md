@@ -1,4 +1,4 @@
-# Owl protocol, version 6
+# Owl protocol, version 7
 
 How a client talks to the server. The message types are defined in `crates/protocol`; this page explains them. Any change a client could notice bumps `VERSION` there and is written down here.
 
@@ -105,6 +105,8 @@ A question has three times, on its `QuestionShown` event and in `battle` of the 
 
 A question's difficulty (`"Easy"`, `"Medium"` or `"Hard"`) is sent with its category: as `difficulty` on the `CategoryRevealed` event and in `battle.difficulty` of the view. It is the difficulty of the question that was drawn, after cards have moved it.
 
+`damage_percent` in the view is what this turn's regular battle damage is multiplied by, in percent: 100 until `escalation_turn`, then one entry of `escalation_percent` per turn (the last repeating), and 100 in the endgame. The amounts on `DamageDealt` are already multiplied.
+
 A golden reward is on offer while `me.rewards` is not empty; `PickReward` takes from the first entry. A golden card in `me.hand` whose part has `reward_due: true` has not given its reward yet. The reward card is an ordinary card instance in `me.hand` (card id `golden_reward`); the `Place` command opens its pick.
 
 ### Disconnects
@@ -142,6 +144,7 @@ These are additions to HTTP answers that older games ignore, so they did not cha
 
 ## Versions
 
+- **7:** escalating damage: `damage_percent` in the view; `escalation_turn` and `escalation_percent` in the tunables. The category shows with its question: `category_reveal_ms` is gone from the tunables, and the next question shows `answer_reveal_ms` (now 1500) after the last answer was revealed. `CategoryRevealed` is still sent, just before `QuestionShown`.
 - **6:** reading time: `answers_at` on each event (set on `QuestionShown`) and in every battle view, beside `opens_at` and `deadline`; the deadline now counts from `answers_at`; an answer or help before it is refused ("the answers are not open yet"); `reading_base_ms`, `reading_per_word_ms` and `reading_max_ms` in the tunables; `words` on each question in the state.
 - **5:** questions have a difficulty (`difficulty` on `CategoryRevealed` and in `battle`); eight difficulty cards (`DifficultyShift` effect, card kind `difficulty`); the golden reward is offered when the golden card is placed (`reward_due` on a card part), and an unpicked one becomes a `golden_reward` card in hand; `difficulty_odds` in the tunables; a hero ability with limited uses per match is refused a second time in one round ("already used this round"), and `hero_state.used_turn` now also records the round of the last use for Darwin, Benz, Herodotus and Shakespeare (the view's shape is unchanged).
 - **4:** the privacy notice has a version; a player who has not confirmed the current one gets `Error` on `Hello` until they do (`GET /api/notice`, `POST /api/me/notice`). Accounts unused for a year are erased.

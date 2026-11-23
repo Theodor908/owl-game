@@ -410,6 +410,15 @@ fn category_bonus(fighter: &Fighter, plan: &[PlanSlot]) -> u32 {
         .sum()
 }
 
+/// The multiplier on this turn's regular battle damage, in percent. The
+/// endgame has its own rising damage and is never multiplied.
+pub fn damage_percent(state: &GameState, content: &Content) -> u32 {
+    match state.phase {
+        Phase::Endgame | Phase::Finished => 100,
+        _ => content.tunables.escalation_percent(state.turn),
+    }
+}
+
 /// Runs once every battle of the turn is scored: damage, rewards, deaths,
 /// and the move to the next turn, the endgame or the end of the match.
 fn resolve_turn(state: &mut GameState, env: &mut Env<'_>, events: &mut Vec<Event>) {
@@ -488,6 +497,11 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
         category_bonus(&b.fighters[w], &b.plan) + (score[w] * stats.damage_per_correct).min(stats.damage_per_correct_max)
     };
     let base = |w: usize, margin: u32| base_damage(&b.fighters[w].stats, margin, bonus(w), streak[w], t);
+    // Late in the match, battle, overtime and Arrow damage is multiplied,
+    // after the per-battle cap. Reflect follows from the damage taken. The
+    // tie cards keep their own small numbers.
+    let turn = state.turn;
+    let escalate = |amount: u32| t.escalate(amount, turn);
     let mut hit = |state: &mut GameState, from: usize, amount: u32, source: DamageSource| {
         let to = 1 - from;
         damage::deal(state, idx[from], &b.fighters[from].stats, idx[to], &b.fighters[to].stats, amount, source, content, events);
@@ -501,7 +515,7 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
     if let Some(w) = winner {
         let l = 1 - w;
         let amount = win_damage(&b.fighters[w].stats, &b.fighters[l].stats, base(w, score[w] - score[l]), score[w] == total, t);
-        hit(state, w, amount, DamageSource::Battle);
+        hit(state, w, escalate(amount), DamageSource::Battle);
     } else {
         // A tie deals nothing by itself; tie cards and overtime create damage.
         let [sa, sb] = [&fa.stats, &fb.stats];
@@ -518,7 +532,7 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
                 .map(|w| (base(w, 0) * (100 + b.fighters[w].stats.multiplier_percent) / 100).min(t.max_battle_damage))
                 .max()
                 .unwrap_or(0);
-            let half = (higher / 2).max(1);
+            let half = escalate((higher / 2).max(1));
             hit(state, 0, half, DamageSource::Overtime);
             hit(state, 1, half, DamageSource::Overtime);
         }
@@ -528,7 +542,7 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
     for side in 0..2 {
         let arrow = b.fighters[side].stats.arrow_damage;
         if let (Some(i), true) = (idx[side], arrow > 0) {
-            hit(state, side, arrow, DamageSource::Arrow);
+            hit(state, side, escalate(arrow), DamageSource::Arrow);
             state.players[i].board.retain(|c| c.disabled || !c.has_effect(content, |e| matches!(e, Effect::Arrow { .. })));
         }
     }

@@ -387,7 +387,7 @@ Elements and interactions:
 
 Why the helps are on the right, above the answers: a wasted help cannot be taken back, the right third has the lowest error rate, and the bottom-left quadrant has the highest (E1). Putting them above the answers keeps them out of the path of a thumb travelling to an answer, with a 40 px gap. They are in reach but not underfoot.
 
-**Stages of one question.** The host fixes the pauses (`category_reveal_ms` 2000, `answer_reveal_ms` 2500); the client fills them and never extends them.
+**Stages of one question.** The host fixes the pauses (the reading time, `answer_reveal_ms` 1500); the client fills them and never extends them. The category shows with the question, not before it.
 
 | Stage | Host-clock window | Centre column | Wings |
 |---|---|---|---|
@@ -953,10 +953,10 @@ All 29 variants of `Event`. "Seen by" is the audience the lobby filter gives the
 | `HouseOptionsShown` | Nietzsche's player | The house picker opens and four category tiles deal in. | 300 ms | overlay | `preview_house_options` |
 | `BattleStarted` | the two fighters | Shop slides away; the versus card brings both splashes in from the sides with names; a ghost is translucent and labelled. Ends on the battle screen with plates in place. | 700 ms | stage | `preview_battle_started` |
 | `CardDisabled` | the two fighters (everyone in the endgame) | A skull stamp lands on the token and the hatch draws across it. Plays during the intro. | 300 ms | overlay | `preview_card_disabled` |
-| `CategoryRevealed` | the two fighters (everyone in the endgame) | The category emblem turns face up in the question panel and its name writes in; answer buttons reset to blank. Holds until the question opens. | 400 ms, then hold | stage | `preview_category_revealed` |
+| `CategoryRevealed` | the two fighters (everyone in the endgame) | Arrives with `QuestionShown`: the category and its difficulty show above the question as it appears, with the reveal sweep. No screen of its own. | with the question | stage | `preview_category_revealed` |
 | `QuestionShown` | the two fighters (everyone in the endgame) | At `opens_at`: question text and answers appear, inactive, to be read. At `answers_at` they light up and the timer bar starts. | 150 ms | stage, non-blocking | `preview_question_shown` |
 | `OptionsRemoved` | the help's user | The removed answers are struck through and fade to 30%; the help button's count ticks down. Flaming Sword cuts two at once. | 200 ms | overlay | `preview_options_removed` |
-| `AnswerRevealed` | the two fighters (everyone in the endgame) | Correct answer gets its outline and check and rises; a wrong own pick gets its cross and a short shake; both plates are stamped; the ledger cell fills; the score ticks. Holds for the rest of the reveal. | 500 ms, then hold to 2500 | stage | `preview_answer_revealed` |
+| `AnswerRevealed` | the two fighters (everyone in the endgame) | Correct answer gets its outline and check and rises; a wrong own pick gets its cross and a short shake; both plates are stamped; the ledger cell fills; the score ticks. Holds for the rest of the reveal. | 500 ms, then hold to 1500 | stage | `preview_answer_revealed` |
 | `BattleScored` | the two fighters | The battle screen gives way to the result screen; the verdict word and score land. | 600 ms | stage | `preview_battle_scored` |
 | `DamageDealt` | everyone | On the result or endgame screen, for a fighter: a numeral travels to the target, armor cracks for the absorbed part, then the HP numeral drops. On the rail, for anyone else: the row flashes and HP ticks down. One variation per source, below. | 500 ms each, 300 ms on the rail | stage on the result and endgame screens; overlay on the rail | `preview_damage_dealt` |
 | `ShieldBroken` | the two fighters (everyone in the endgame) | The shield card cracks and falls from its slot; the slot empties. | 400 ms | overlay | `preview_shield_broken` |

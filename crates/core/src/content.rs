@@ -46,6 +46,12 @@ pub struct Tunables {
     pub damage_base: u32,
     pub max_battle_damage: u32,
     pub overtime_turn: u32,
+    /// The first turn whose regular battle damage is multiplied. See
+    /// `Tunables::escalation_percent`.
+    pub escalation_turn: u32,
+    /// The battle damage multiplier, in percent, for `escalation_turn` and
+    /// each turn after it; the last entry repeats.
+    pub escalation_percent: Vec<u32>,
     pub endgame_min_turn: u32,
     pub split_threshold: u32,
     pub house_questions: u32,
@@ -71,10 +77,8 @@ pub struct Tunables {
     pub hero_offer_size: u32,
     pub hero_select_seconds: u32,
     pub shop_seconds: u32,
-    /// Pause between showing the category and opening the question.
-    pub category_reveal_ms: u32,
-    /// Time to read a question and its answers before they open and the
-    /// answer time starts: the base, plus this much per word of the question
+    /// Time to read a question, its answers and its category before the
+    /// answers open and the answer time starts: the base, plus this much per word of the question
     /// and its four answers, capped. See `Tunables::reading_ms`.
     pub reading_base_ms: u32,
     pub reading_per_word_ms: u32,
@@ -508,6 +512,9 @@ fn check_tunables(t: &Tunables) -> Result<(), ContentError> {
     if t.difficulty_odds.iter().sum::<u32>() != 100 {
         return Err(invalid("tunables: difficulty_odds must add up to 100".into()));
     }
+    if t.escalation_percent.is_empty() || t.escalation_percent.iter().any(|&p| p < 100) {
+        return Err(invalid("tunables: escalation_percent must list at least one value, each at least 100".into()));
+    }
     if t.reading_base_ms > t.reading_max_ms || t.reading_max_ms > MAX_READING_MS {
         return Err(invalid(format!(
             "tunables: reading_base_ms must not exceed reading_max_ms, which must be at most {MAX_READING_MS}"
@@ -517,6 +524,24 @@ fn check_tunables(t: &Tunables) -> Result<(), ContentError> {
 }
 
 impl Tunables {
+    /// The regular battle damage multiplier on `turn`, in percent: 100
+    /// before `escalation_turn`, then one entry of `escalation_percent` per
+    /// turn, the last one repeating.
+    pub fn escalation_percent(&self, turn: u32) -> u32 {
+        let Some(step) = turn.checked_sub(self.escalation_turn) else { return 100 };
+        let last = self.escalation_percent.len().saturating_sub(1);
+        self.escalation_percent.get((step as usize).min(last)).copied().unwrap_or(100)
+    }
+
+    /// `amount` multiplied by the escalation of `turn`, rounded down, and at
+    /// least 1 when `amount` is at least 1.
+    pub fn escalate(&self, amount: u32, turn: u32) -> u32 {
+        if amount == 0 {
+            return 0;
+        }
+        (amount.saturating_mul(self.escalation_percent(turn)) / 100).max(1)
+    }
+
     /// How long a question of `words` words (its text and four answers
     /// together) is read before its answers open. Both players read the
     /// same question, so both get the same time.
@@ -603,5 +628,17 @@ mod tests {
         t.reading_max_ms = 5000;
         t.reading_base_ms = 6000;
         assert!(check_tunables(&t).is_err(), "the base cannot exceed the cap");
+    }
+
+    #[test]
+    fn escalation_factors_must_be_listed_and_at_least_one_hundred_percent() {
+        let mut t = tunables();
+        assert!(check_tunables(&t).is_ok());
+        t.escalation_percent = vec![];
+        assert!(check_tunables(&t).is_err(), "at least one factor");
+        t.escalation_percent = vec![150, 90];
+        assert!(check_tunables(&t).is_err(), "escalation never lowers damage");
+        t.escalation_percent = vec![100];
+        assert!(check_tunables(&t).is_ok(), "100 turns escalation off");
     }
 }

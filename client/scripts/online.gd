@@ -20,7 +20,7 @@ signal refused(text: String)
 const FILE := "user://online.cfg"
 ## The game's own server. Players never type an address.
 const DEFAULT_SERVER := "https://owl.predictionlegend.com"
-const PROTOCOL := 6
+const PROTOCOL := 7
 ## The privacy notice this build carries, readable offline. `android.bat`
 ## and `play.bat` copy it from `docs/privacy.md`.
 const BUNDLED_NOTICE := "res://data/privacy.md"

@@ -17,7 +17,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - A battle has 6 questions, the same for both players, answered simultaneously:
   - 2 from the house, fully random category.
   - 4 from the players' category weights, split 2-2 or 3-1 depending on weights. Never 4-0.
-- Each question: reveal category, then the question and its answers to read, then the answers open and the timer starts. While the question is read, the answers cannot be chosen, no help card or ability can be used on it and the clock does not run. The reading time is a base plus a little for every word of the question and its four answers, up to a cap; it is the same for both players, since they read the same question, and answer time bonuses apply after it. Same sequence in every format, the endgame included.
+- Each question: the category, the question and its answers appear together; then reading time; then the answers open and the timer starts. While the question is read, the answers cannot be chosen, no help card or ability can be used on it and the clock does not run. The reading time is a base plus a little for every word of the question and its four answers, up to a cap; it is the same for both players, since they read the same question, and answer time bonuses apply after it. Same sequence in every format, the endgame included.
 - 9 seconds to answer. Cards or heroes can add 3 seconds, hard cap 12.
 - A question ends the moment both players lock in.
 - Battle damage on a win: (own correct answers - opponent's correct answers) + base 2 + own tavern level, plus card bonuses. Damage grows over the match through tavern level; a bigger margin deals more.
@@ -28,6 +28,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - 0-0 card: a separate card that deals damage on a 0-0 tie, capped at 1.
 - Reflect only triggers when its holder is about to take damage. It does nothing on ties.
 - Overtime: the lobby has a turn counter (as in TFT). After a set turn, a tie no longer deals zero: the higher damage of the two players is split in half and both take it. Tie card effects still apply on top.
+- Escalation: from a set turn, the damage of every regular battle is multiplied by a factor that grows each turn, one factor per turn from a tunable list whose last entry repeats. It applies to the final battle damage after the per-battle cap, rounded down, with a minimum of 1 when the damage before it was at least 1. It also applies to overtime tie damage and Arrow damage, and reflected damage grows with it because reflect is a share of the damage taken. The tie-breaker and 0-0 cards keep their own numbers. Armor absorbs as usual and healing is unchanged. It never applies in the endgame. Players see the current multiplier in the shop and in battle, with a one-line note the first time it starts.
 - Starting HP depends on the hero.
 - Armor takes a card slot on the board. A shield only counts once it is placed.
 - Players have a hand of up to 10 cards as well as a board. Cards bought from the house go to the hand, and the player places them on the board when they choose. Cards only take effect once placed.
@@ -106,6 +107,8 @@ Every value here is a starting guess so `core` and `sim` can run. They live in o
 | Max damage from one regular battle | 15 |
 | Reflect cap | 60% (Herophilus 80%, set in his hero data) |
 | Overtime starts | turn 12 |
+| Escalation starts | turn 16 |
+| Escalation multipliers, one per turn from its start, the last repeating | 150%, 200%, 300% |
 | Earliest turn the endgame can start | 5 |
 | 3-1 split threshold | weight total leads the opponent's by 40 points |
 | Endgame answer time | 10 s |
@@ -142,7 +145,7 @@ The card pool is in `CARDS.md`. Hero numbers are in `HEROES.md`.
 - Collection variants (after the prototype): each one declares the base card it replaces; a lobby has a cap on replacements, split evenly across players.
 
 ### Open
-Numbers, all in the tunables table: the overtime turn, the 3-1 split threshold, the minimum turn for the endgame, hero HP and ability costs. Tune them from `sim` results.
+Numbers, all in the tunables table: the overtime turn, the escalation turn and multipliers, the 3-1 split threshold, the minimum turn for the endgame, hero HP and ability costs. Tune them from `sim` results.
 
 Rules not yet decided (ask before implementing any of them):
 - Target match length. Intended to be close to Hearthstone Battlegrounds; check with `sim`.

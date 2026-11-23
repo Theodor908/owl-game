@@ -424,6 +424,16 @@ static func roman(level: int) -> String:
 	return ROMAN[clampi(level, 0, ROMAN.size() - 1)]
 
 
+## "Damage ×1.5" while the host multiplies battle damage this turn
+## (`damage_percent` in the view), "" otherwise.
+static func damage_tag() -> String:
+	var percent := int(Store.view.get("damage_percent", 100))
+	if percent <= 100:
+		return ""
+	var factor := str(percent / 100) if percent % 100 == 0 else String.num(percent / 100.0, 2)
+	return "Damage ×%s" % factor
+
+
 ## "flora_and_fauna" -> "Flora and Fauna".
 static func category_label(id: Variant) -> String:
 	var words: Array[String] = []

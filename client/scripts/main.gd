@@ -912,6 +912,9 @@ func _autoplay_step() -> void:
 				return
 			if _benz_shots(me):
 				return
+			# Late in a match, the shop with its damage tag and first-time note.
+			if UI.damage_tag() != "" and _shot_first("shop_escalation"):
+				return
 			if int(Store.view["turn"]) >= 2 and (me["board"] as Array).size() >= 2 and not (me["shop"] as Array).is_empty():
 				if _shot_first("shop"):
 					return
@@ -969,17 +972,20 @@ func _autoplay_step() -> void:
 					_shoot("battle_result")
 				return
 			var endgame := int(battle["question_count"]) == 0
+			# Before a question shows, the last answer is still up.
 			if battle["opens_at"] != null and Transport.now() < int(battle["opens_at"]):
-				if int(battle["question_number"]) == 1 or endgame:
-					_shoot("endgame_category" if endgame else "battle_category")
-				else:
-					_shoot("battle_reveal")
+				_shoot("endgame_reveal" if endgame else "battle_reveal")
 				return
 			# The question is read first; the host refuses an answer before its answers open.
 			if battle.get("answers_at") != null and Transport.now() < int(battle["answers_at"]):
 				# Pictured halfway through, so the reading bar shows.
 				if Transport.now() * 2 >= int(battle["opens_at"]) + int(battle["answers_at"]):
 					_shoot("endgame_reading" if endgame else "battle_reading")
+					if not endgame and UI.damage_tag() != "":
+						_shoot("battle_escalation")
+				elif int(battle["question_number"]) == 1 and not endgame:
+					# The first moment of a battle: the question with its category, no empty screen first.
+					_shoot("battle_first_question")
 				return
 			if battle["locked"] or not battle.has("question_text"):
 				return

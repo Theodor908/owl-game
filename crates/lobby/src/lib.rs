@@ -356,7 +356,8 @@ impl Lobby {
                 Event::QuestionShown { battle, time_a, time_b, .. } => {
                     let reading = t.reading_ms(open_question(&self.state, battle).map_or(0, |q| q.words));
                     if let Some(clock) = self.clocks.get_mut(battle) {
-                        let pause = if clock.asked > 0 { t.answer_reveal_ms } else { 0 } + t.category_reveal_ms;
+                        // The previous answer stays up before the next question shows.
+                        let pause = if clock.asked > 0 { t.answer_reveal_ms } else { 0 };
                         clock.asked += 1;
                         clock.open = true;
                         clock.opens_at = now + Millis::from(pause);

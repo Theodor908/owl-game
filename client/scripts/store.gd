@@ -20,6 +20,9 @@ const NAME_LENGTH := 14
 var my_name := "You"
 ## Names by seat in an online match, as the server gave them.
 var seat_names: Array = []
+## Whether the shop has said that battle damage now grows. Cleared while
+## damage is not multiplied, so each match says it once.
+var escalation_noted := false
 
 
 func _ready() -> void:

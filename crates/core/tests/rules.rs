@@ -1968,3 +1968,114 @@ fn if_both_die_on_the_same_endgame_question_with_equal_hp_both_win() {
     placements.sort();
     assert_eq!(placements, [Some(1), Some(2)]);
 }
+
+/// A two-player lobby with escalation from turn 8: ×1.5, ×2, then ×3 for good.
+fn escalating_lobby() -> Lobby {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    lobby.content.tunables.escalation_turn = 8;
+    lobby.content.tunables.escalation_percent = vec![150, 200, 300];
+    lobby
+}
+
+#[test]
+fn escalation_leaves_damage_alone_before_its_turn() {
+    let mut lobby = escalating_lobby();
+    lobby.state.turn = 7;
+    assert_eq!(lobby.content.tunables.escalation_percent(7), 100);
+    let events = lobby.battle(&[4, 2]);
+    // Margin 2 + base 2 + level 1.
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(5, 0, 5)]);
+}
+
+#[test]
+fn escalation_multiplies_battle_damage_one_factor_per_turn_and_the_last_repeats() {
+    let t = &escalating_lobby().content.tunables;
+    assert_eq!([7, 8, 9, 10, 11, 30].map(|turn| t.escalation_percent(turn)), [100, 150, 200, 300, 300, 300]);
+    let mut lobby = escalating_lobby();
+    lobby.state.turn = 9;
+    assert_eq!(owl_core::battle::damage_percent(&lobby.state, &lobby.content), 200, "the shop shows it too");
+    for (turn, expected) in [(8, 7), (9, 10), (10, 15), (25, 15)] {
+        let mut lobby = escalating_lobby();
+        lobby.state.turn = turn;
+        let events = lobby.battle(&[4, 2]);
+        // 5 times the turn's factor, rounded down: 7, 10, 15.
+        assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(expected, 0, expected)], "turn {turn}");
+    }
+}
+
+#[test]
+fn escalation_rounds_down_but_leaves_at_least_one() {
+    let mut t = escalating_lobby().content.tunables;
+    t.escalation_percent = vec![101];
+    assert_eq!(t.escalate(1, 8), 1);
+    assert_eq!(t.escalate(0, 8), 0, "no damage stays no damage");
+    assert_eq!(t.escalate(99, 8), 99);
+    assert_eq!(t.escalate(100, 8), 101);
+}
+
+#[test]
+fn escalation_applies_after_the_per_battle_cap() {
+    let mut lobby = escalating_lobby();
+    lobby.state.turn = 9;
+    lobby.state.players[0].tavern = 6;
+    lobby.give_golden(0, "whetstone");
+    let events = lobby.battle(&[6, 0]);
+    let cap = lobby.content.tunables.max_battle_damage;
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(cap * 2, 0, cap * 2)]);
+}
+
+#[test]
+fn escalation_multiplies_overtime_tie_damage() {
+    let mut lobby = escalating_lobby();
+    lobby.content.tunables.overtime_turn = 8;
+    lobby.state.turn = 9;
+    lobby.state.players[0].tavern = 6;
+    let events = lobby.battle(&[3, 3]);
+    // Half of 0 + 2 + 6 is 4, doubled.
+    assert_eq!(damage_to(&events, P0, DamageSource::Overtime), vec![(8, 0, 8)]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Overtime), vec![(8, 0, 8)]);
+}
+
+#[test]
+fn escalation_multiplies_arrow_damage() {
+    let mut lobby = escalating_lobby();
+    lobby.give(0, "hunter");
+    lobby.give_hand(0, "hunter");
+    lobby.give_hand(0, "hunter");
+    lobby.apply(Command::Buy { player: P0, index: 0 }).unwrap();
+    let arrow_def = lobby.content.card_id("arrow").unwrap();
+    let arrow = lobby.state.players[0].hand.iter().find(|c| c.has_def(arrow_def)).expect("arrow granted").id;
+    lobby.apply(Command::Place { player: P0, card: arrow }).unwrap();
+    lobby.state.turn = 9;
+    let events = lobby.battle(&[0, 3]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Arrow), vec![(6, 0, 6)]);
+}
+
+#[test]
+fn reflect_grows_with_escalated_damage() {
+    let mut lobby = escalating_lobby();
+    lobby.state.turn = 9;
+    lobby.give(1, "hall_of_mirrors");
+    let events = lobby.battle(&[4, 2]);
+    // 10 incoming instead of 5, and 30% of it goes back.
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(10, 0, 10)]);
+    assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(3, 0, 3)]);
+}
+
+#[test]
+fn escalation_never_touches_the_endgame() {
+    let mut lobby = escalating_lobby();
+    lobby.content.tunables.escalation_turn = 1;
+    lobby.state.turn = lobby.content.tunables.endgame_min_turn;
+    lobby.battle(&[0, 0]);
+    assert_eq!(lobby.state.phase, Phase::Endgame);
+    assert_eq!(owl_core::battle::damage_percent(&lobby.state, &lobby.content), 100);
+    let endgame = lobby.state.endgame.clone().unwrap();
+    let darwin_side = endgame.players.iter().position(|&p| p == P1).unwrap();
+    let mut right = [true, true];
+    right[darwin_side] = false;
+    let first = lobby.endgame_answer(right);
+    assert_eq!(damage_to(&first, P1, DamageSource::EndgameStep), vec![(1, 0, 1)]);
+    let second = lobby.endgame_answer(right);
+    assert_eq!(damage_to(&second, P1, DamageSource::EndgameStep), vec![(2, 0, 2)]);
+}

@@ -37,8 +37,6 @@ const HELPS := [
 @export var wing_width := 552
 @export var answer_height := 250
 @export var question_font := 56
-## The size of the difficulty under the category, while the category is revealed.
-@export var difficulty_font := 44
 ## The size of the difficulty beside the timer, under the category.
 @export var difficulty_tag_font := 22
 @export var answer_font := 54
@@ -92,6 +90,8 @@ var _timer: Label
 @export var answers_open_quieter := 10.0
 var _read_bar: ColorRect
 var _sound_stage := ""
+## The question the reveal sweep last sounded for.
+var _sound_question := -1
 var _ticked := -1
 var _bar: ColorRect
 ## Damage drawn over the screen; kept across rebuilds.
@@ -157,15 +157,17 @@ func _picture(which: String) -> Control:
 	return node if is_instance_valid(node) else null
 
 
-## Sounds that follow what is on screen: a sweep as a category is revealed,
-## a softer one as the answers open, a chime or a thud as the player's answer
+## Sounds that follow what is on screen: a sweep as a question shows with
+## its category, a softer one as the answers open, a chime or a thud as the player's answer
 ## turns out right or wrong, and a tick each second over the last `tick_from`
 ## seconds of the answer time, counted to the host's deadline.
 func _sounds(stage: String, battle: Variant) -> void:
-	if stage != _sound_stage:
-		if stage == "category":
-			Sound.instance.play("reveal")
-		elif stage == "question" and _sound_stage == "reading" and answers_open_cue:
+	var question_id := int(_shown.get("id", -1))
+	if (stage == "reading" or stage == "question") and question_id != _sound_question:
+		_sound_question = question_id
+		Sound.instance.play("reveal")
+	elif stage != _sound_stage:
+		if stage == "question" and _sound_stage == "reading" and answers_open_cue:
 			Sound.instance.play("reveal", answers_open_quieter)
 		elif stage == "reveal" and _sound_stage == "question" and not _reveal.is_empty():
 			Sound.instance.play("correct" if bool(_reveal["mine"]) else "wrong")
@@ -191,13 +193,13 @@ func _process(_delta: float) -> void:
 		return
 	else:
 		var opens := int(battle["opens_at"]) if battle["opens_at"] != null else now
-		if now >= opens:
-			# The question and its answers are read first; they open at `answers_at`.
+		if now >= opens or _reveal.is_empty():
+			# The question, its answers and its category show together and
+			# are read first; the answers open at `answers_at`.
 			stage = "question" if now >= _answers_at(battle) else "reading"
 			_take_question(battle)
-		elif _reveal.is_empty() or now >= opens - int(Store.tunables["category_reveal_ms"]):
-			stage = "category"
 		else:
+			# The last answer stays up until the next question shows.
 			stage = "reveal"
 
 	var key := "%s|%s|%s|%s|%s|%s|%s|%s" % [
@@ -512,13 +514,12 @@ func _answer(index: int, stage: String, left: bool) -> Button:
 	var button := Button.new()
 	button.custom_minimum_size = Vector2(wing_width, answer_height)
 	var options: Array = _shown.get("options", ["", "", "", ""])
-	var blank := stage == "category"
-	var gone := _removed & (1 << index) != 0 and not blank
+	var gone := _removed & (1 << index) != 0
 	var correct := stage == "reveal" and index == int(_reveal.get("correct", -1))
-	var mine := index == _my_choice and not blank
+	var mine := index == _my_choice
 	var wrong_mine := stage == "reveal" and mine and not correct
 
-	var paper := UI.PAPER_SHADE.darkened(0.25) if blank else UI.PAPER
+	var paper := UI.PAPER
 	var border := UI.PAPER_SHADE
 	var width := 4
 	if correct:
@@ -533,8 +534,6 @@ func _answer(index: int, stage: String, left: bool) -> Button:
 		width = 6
 	var plaque := UI.skin("answer", 70, 60, 14)
 	if plaque != null:
-		if blank:
-			plaque.modulate_color = Color(0.6, 0.58, 0.55)
 		UI.face_skin(button, plaque)
 		if width > 4:
 			var glow := Panel.new()
@@ -548,7 +547,7 @@ func _answer(index: int, stage: String, left: bool) -> Button:
 	else:
 		UI.face(button, UI.box(paper, 60, 14, border, width))
 
-	var words := "" if blank else String(options[index])
+	var words := String(options[index])
 	var text := UI.centered(words, answer_font, UI.INK)
 	_fit(text, words, wing_width - answer_text_trim, answer_height - 2 * (22 if plaque == null else 38))
 	var mark: Control
@@ -566,12 +565,9 @@ func _answer(index: int, stage: String, left: bool) -> Button:
 	for node in order:
 		line.add_child(node)
 	button.add_child(line)
-	if plaque == null and (blank or wrong_mine):
+	if plaque == null and wrong_mine:
 		button.add_child(UI.Hatch.new())
-	if blank:
-		# Nothing to read yet: the empty plates step back.
-		button.modulate.a = 0.35
-	elif gone:
+	if gone:
 		button.modulate = Color(0.32, 0.3, 0.3) if plaque != null else Color(1, 1, 1, 0.3)
 	elif (stage == "reveal" and not correct and not mine) or (stage == "question" and _locked and not mine):
 		button.modulate = Color(0.5, 0.48, 0.46) if plaque != null else Color(1, 1, 1, 0.5)
@@ -607,9 +603,6 @@ func _centre(stage: String, battle: Variant) -> Control:
 	centre.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var category := int(_shown.get("category", -1))
 	var difficulty = _shown.get("difficulty")
-	if battle != null and stage == "category":
-		category = int(battle["category"])
-		difficulty = battle.get("difficulty")
 
 	# Category on the left, the timer in the middle (away from both scores),
 	# and the question count or the endgame stake on the right.
@@ -647,14 +640,26 @@ func _centre(stage: String, battle: Variant) -> Control:
 		count_text = "Damage %d" % int(_last["question_number"])
 	else:
 		var number := int(_shown.get("number", 1))
-		if battle != null and stage == "category":
-			number = int(battle["question_number"])
 		count_text = "%d / %d" % [number, int(_last.get("question_count", 6))]
 	var count := UI.label(count_text, 44 if _is_endgame() else 32, UI.GILT if _is_endgame() else UI.SLATE)
 	count.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	count.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	count.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	top.add_child(count)
+	# Late in the match the host multiplies battle damage; the tag stands
+	# under the count, as the difficulty stands under the category.
+	var tag := "" if _is_endgame() else UI.damage_tag()
+	if tag == "":
+		top.add_child(count)
+	else:
+		var counts := UI.column(0)
+		counts.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		counts.alignment = BoxContainer.ALIGNMENT_CENTER
+		count.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		counts.add_child(count)
+		var damage := UI.label(tag, difficulty_tag_font, UI.VERMILION, false)
+		damage.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		counts.add_child(damage)
+		top.add_child(counts)
 	centre.add_child(top)
 
 	centre.add_child(UI.spacer(0, 12))
@@ -715,25 +720,16 @@ func _centre(stage: String, battle: Variant) -> Control:
 
 	var sheet := UI.panel(UI.PAPER, 16, 24)
 	sheet.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	if stage == "category":
-		var stack := UI.column(8)
-		stack.alignment = BoxContainer.ALIGNMENT_CENTER
-		stack.add_child(UI.centered("Next category", 36, UI.VERMILION_DEEP))
-		stack.add_child(UI.centered("" if category < 0 else UI.category_label(category), 84, UI.INK))
-		if category >= 0 and difficulty != null:
-			stack.add_child(UI.centered(String(difficulty), difficulty_font, UI.VERMILION_DEEP))
-		sheet.add_child(stack)
-	else:
-		var stack := UI.column(8)
-		stack.alignment = BoxContainer.ALIGNMENT_CENTER
-		if _is_endgame() and category >= 0:
-			stack.add_child(UI.centered(UI.category_line(category, difficulty), 34, UI.VERMILION_DEEP))
-		var question := UI.centered(String(_shown.get("text", "")), question_font, UI.INK)
-		question.size_flags_vertical = Control.SIZE_EXPAND_FILL
-		stack.add_child(question)
-		if stage == "question" and _locked:
-			stack.add_child(UI.centered("Locked in. Waiting for your opponent.", 30, UI.VERDIGRIS_DEEP))
-		sheet.add_child(stack)
+	var stack := UI.column(8)
+	stack.alignment = BoxContainer.ALIGNMENT_CENTER
+	if _is_endgame() and category >= 0:
+		stack.add_child(UI.centered(UI.category_line(category, difficulty), 34, UI.VERMILION_DEEP))
+	var question := UI.centered(String(_shown.get("text", "")), question_font, UI.INK)
+	question.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	stack.add_child(question)
+	if stage == "question" and _locked:
+		stack.add_child(UI.centered("Locked in. Waiting for your opponent.", 30, UI.VERDIGRIS_DEEP))
+	sheet.add_child(stack)
 	centre.add_child(sheet)
 
 	return centre

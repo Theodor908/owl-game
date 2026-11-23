@@ -22,6 +22,9 @@
 extends Control
 
 @export var toast_ms := 2000
+## The one-time note as escalation starts, and how long it stays.
+@export var escalation_note := "Overtime: battle damage now grows every round"
+@export var escalation_note_ms := 6000
 ## Size of the hero portrait at the bottom centre.
 @export var hero_size := 236
 ## Size of the round ability button beside the hero.
@@ -184,6 +187,11 @@ var _built_for := Vector2.ZERO
 func _ready() -> void:
 	# A shop that opens reserved shows its ice at once, without growing it.
 	_was_frozen = bool(Store.me()["frozen"])
+	if UI.damage_tag() == "":
+		Store.escalation_noted = false
+	elif not Store.escalation_noted:
+		Store.escalation_noted = true
+		_say(escalation_note, escalation_note_ms)
 	refresh()
 	# Everything below the rows is placed from the size of the board, so a
 	# board that changes size is built again.
@@ -279,9 +287,9 @@ func _ability(action: Variant) -> void:
 	_me_command("UseAbility", {"action": action})
 
 
-func _say(text: String) -> void:
+func _say(text: String, ms := -1) -> void:
 	_toast = text
-	_toast_until = Time.get_ticks_msec() + toast_ms
+	_toast_until = Time.get_ticks_msec() + (toast_ms if ms < 0 else ms)
 
 
 func _show_caption(text: String) -> void:
@@ -1024,6 +1032,10 @@ func _side(me: Dictionary) -> Control:
 	clock.add_child(_timer)
 	Tutorial.mark(clock, "timer")
 	column.add_child(clock)
+	# Late in the match battle damage is multiplied; the tag says by how much.
+	var tag := UI.damage_tag()
+	if tag != "":
+		column.add_child(UI.centered(tag, UI.t(26), UI.VERMILION, false))
 
 	var names := ["upgrade", "restock", "reserve"]
 	var buttons := _shop_buttons(me)

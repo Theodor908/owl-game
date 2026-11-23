@@ -173,6 +173,9 @@ pub struct PlayerView {
     /// Gold for the next tavern level, or `None` at the highest level. Sent
     /// so the client never has to work a price out for itself.
     pub upgrade_cost: Option<u32>,
+    /// What this turn's regular battle damage is multiplied by, in percent:
+    /// 100 until escalation starts, and always 100 in the endgame.
+    pub damage_percent: u32,
     /// The living players as they were a set delay ago. Empty unless this
     /// player has been eliminated and the match is still running.
     pub spectate: Vec<Spectated>,
@@ -218,6 +221,7 @@ pub fn player_view(
         battle: battle_view(state, you, question_timing),
         phase_deadline,
         upgrade_cost: owl_core::shop::upgrade_cost(state, you.index(), content),
+        damage_percent: owl_core::battle::damage_percent(state, content),
         spectate,
     }
 }
