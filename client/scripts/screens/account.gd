@@ -220,7 +220,7 @@ func _build_notice(stack: VBoxContainer) -> void:
 func _build_account(stack: VBoxContainer) -> void:
 	stack.add_child(UI.label("%s %s" % ["Playing as guest" if Online.guest else "Logged in as", Online.username], 48, UI.PAPER, false))
 	if not Online.notice_pending:
-		stack.add_child(UI.label("Connected to %s" % Online.server if Online.connected else "Connecting to %s…" % Online.server,
+		stack.add_child(UI.label("Connected to the server" if Online.connected else "Connecting to the server…",
 			26, UI.SLATE, false))
 	if Online.notice_pending:
 		# Online play waits until the changed notice is read and confirmed.

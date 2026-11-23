@@ -146,7 +146,7 @@ func _add_build_mark() -> void:
 	var layer := CanvasLayer.new()
 	layer.layer = 120
 	add_child(layer)
-	var mark := UI.label("Build %d" % Online.build(), build_mark_size, Color(UI.PAPER, build_mark_alpha), false)
+	var mark := UI.label("Owl %s · build %d" % [Version.shown(), Online.build()], build_mark_size, Color(UI.PAPER, build_mark_alpha), false)
 	mark.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
 	mark.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	mark.offset_left = build_mark_inset.x

@@ -170,7 +170,19 @@ func _lobby_panel() -> Control:
 	var bots := int(Online.lobby.get("bots", 0))
 	var seats := int(Online.lobby["max"])
 	# The code is what a guest, or anyone not yet a friend, joins with.
-	stack.add_child(UI.label("Code  %s" % String(Online.lobby["code"]), 52, UI.GILT, false))
+	var code := String(Online.lobby["code"])
+	var code_line := UI.row(16)
+	var code_label := UI.label("Code  %s" % code, 52, UI.GILT, false)
+	code_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	code_line.add_child(code_label)
+	# Copies the code, to paste into a message to a friend.
+	var copy := UI.stamp("Copy", func() -> void: pass, Vector2(150, 72), 30, UI.INK)
+	copy.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	copy.pressed.connect(func() -> void:
+		DisplayServer.clipboard_set(code)
+		copy.text = "Copied")
+	code_line.add_child(copy)
+	stack.add_child(code_line)
 	stack.add_child(UI.label("%d of %d seats taken" % [members.size() + bots, seats], 28, UI.SLATE, false))
 	for member in members:
 		var owner := String(member) == String(Online.lobby["owner"])

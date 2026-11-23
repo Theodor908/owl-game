@@ -11,6 +11,12 @@ rem     themselves when only it changed; a changed shell needs the APK.
 rem
 rem Usage: release.bat "What is new in this build" [user@host] [full]
 rem `full` publishes the whole game whatever changed.
+rem
+rem It also asks whether the version changes (keep, patch, minor or major;
+rem see docs/versioning.md), or takes the answer from OWL_BUMP. The note is
+rem shown with the version, the release is added to CHANGELOG.md, and the
+rem build number, the version and the changelog are committed and tagged
+rem v<version>+<build>. Pushing is left to you.
 rem Started by a double-click, it asks for the note and waits at the end.
 rem The note is shown to players as it is. Do not use double quotes inside it.
 rem
@@ -35,6 +41,20 @@ cd /d "%~dp0"
 set /p OLD=<client\build.txt
 set /a BUILD=OLD+1
 (echo %BUILD%)>client\build.txt
+
+rem The version, for people. Kept as it was if the release fails.
+if not exist build mkdir build
+copy /y client\scripts\version.gd build\version.gd.old >nul
+for /f "delims=" %%v in ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0version.ps1"') do set CURRENT=%%v
+set BUMP=%OWL_BUMP%
+if "%BUMP%"=="" set /p BUMP=Version is %CURRENT%. Keep, patch, minor or major? [keep]
+if "%BUMP%"=="" set BUMP=keep
+set VERSION=
+for /f "delims=" %%v in ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0version.ps1" -Bump %BUMP%') do set VERSION=%%v
+if "%VERSION%"=="" goto failed
+set SHOWN=%VERSION:-= %
+set RAWNOTE=%NOTE%
+set NOTE=%SHOWN%: %NOTE%
 
 rem The library is built first: whether it changed decides what is published.
 call "%~dp0android.bat" prepare || goto failed
@@ -73,13 +93,18 @@ if defined FULL (
 ) else (
   echo Build %BUILD% is published: the pack only.
 )
-echo Commit client\build.txt so the number is kept.
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0version.ps1" -Changelog -Build %BUILD% -Notes "%RAWNOTE%"
+git add client\build.txt client\scripts\version.gd CHANGELOG.md
+git commit -q -m "Build %BUILD%, version %SHOWN%"
+git tag -a v%VERSION%+%BUILD% -m "Version %SHOWN%, build %BUILD%"
+echo Version %SHOWN%, build %BUILD%: committed and tagged v%VERSION%+%BUILD%. Push when ready: git push --follow-tags
 pause
 exit /b 0
 
 :failed
 (echo %OLD%)>client\build.txt
+if exist build\version.gd.old copy /y build\version.gd.old client\scripts\version.gd >nul
 echo.
-echo Nothing was published. client\build.txt is back at %OLD%.
+echo Nothing was published. client\build.txt is back at %OLD%, and the version is as it was.
 pause
 exit /b 1
