@@ -6,6 +6,8 @@ Cards bend a battle: they pull questions toward the categories you know, add ans
 
 Play offline against bots, or online with friends in a lobby joined by code.
 
+The game is inspired by Hearthstone Battlegrounds: the shop, the tavern tiers and the board come from that genre, and the battles are fought with questions instead of minions.
+
 <p align="center">
   <img src="crates/server/assets/shot_shop.webp" width="49%" alt="The shop: cards to buy at the top, your board in the middle, your hero and hand at the bottom">
   <img src="crates/server/assets/shot_question.webp" width="49%" alt="A battle question with four answers and the timer">
@@ -58,3 +60,5 @@ Every question was written for this game from facts in published quizzes with an
 ## Licence
 
 The code is under the MIT licence (`LICENSE`). The pictures, card and hero texts and the questions are under CC BY 4.0 (`LICENSE-ASSETS.md`). The fonts are under the SIL Open Font License; their licences sit beside them in `client/assets/fonts/`.
+
+Owl is a fan-made, independent project. It is not affiliated with, endorsed by or sponsored by Blizzard Entertainment. Hearthstone and Hearthstone Battlegrounds are trademarks of Blizzard Entertainment, Inc. No Blizzard art, sound or code is used.
