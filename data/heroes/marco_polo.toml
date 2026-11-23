@@ -1,0 +1,10 @@
+id = "marco_polo"
+name = "Marco Polo"
+title = "Traveller of the Silk Road"
+category = "geography"
+hp = 35
+category_bonus = 25
+kind = "MarcoPolo"
+
+[params]
+cost = 2

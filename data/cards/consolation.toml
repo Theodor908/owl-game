@@ -1,0 +1,10 @@
+id = "consolation"
+name = "Consolation"
+tier = 2
+kind = "defense"
+text = "When you lose a battle, add a 2-armor Buckler to your hand"
+golden_text = "No extra effect. When you lose a battle, add a 2-armor Buckler to your hand"
+
+[[effects]]
+effect = "ShieldOnLoss"
+card = "buckler"

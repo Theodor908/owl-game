@@ -1,0 +1,1088 @@
+[[question]]
+id = "philosophy-0001"
+subcategory = "Early modern philosophy"
+difficulty = "easy"
+text = "Which philosopher wrote \"I think, therefore I am\"?"
+answer = "René Descartes"
+wrong = ["Blaise Pascal", "Voltaire", "John Locke"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Here-Are-My-Thoughts-on-the-Subject--372281.html"
+check = "https://plato.stanford.edu/entries/descartes-epistemology/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0002"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Which Greek philosopher said at his trial that the unexamined life is not worth living?"
+answer = "Socrates"
+wrong = ["Aristotle", "Epicurus", "Diogenes"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Survey-of-Philosophy-27742.html"
+check = "https://plato.stanford.edu/entries/socrates/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0003"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Which philosopher founded the Academy in Athens?"
+answer = "Plato"
+wrong = ["Aristotle", "Epicurus", "Zeno of Citium"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Here-Are-My-Thoughts-on-the-Subject--372281.html"
+check = "https://iep.utm.edu/plato-academy/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0004"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Which philosopher came to Athens at about seventeen to study in Plato's Academy?"
+answer = "Aristotle"
+wrong = ["Xenophon", "Epicurus", "Pythagoras"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://plato.stanford.edu/entries/aristotle/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0005"
+subcategory = "Modern philosophy"
+difficulty = "easy"
+text = "Who wrote \"Thus Spoke Zarathustra\"?"
+answer = "Friedrich Nietzsche"
+wrong = ["Arthur Schopenhauer", "G. W. F. Hegel", "Martin Heidegger"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Here-Are-My-Thoughts-on-the-Subject--372281.html"
+check = "https://plato.stanford.edu/entries/nietzsche/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0006"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Which Italian wrote \"The Prince\", a guide to gaining and keeping power?"
+answer = "Niccolò Machiavelli"
+wrong = ["Dante Alighieri", "Giordano Bruno", "Baldassare Castiglione"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/A-Journey-Through-Western-Philosophy-244494.html"
+check = "https://plato.stanford.edu/entries/machiavelli/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0007"
+subcategory = "Ethics"
+difficulty = "easy"
+text = "Which ethical theory aims at the greatest happiness of the greatest number?"
+answer = "Utilitarianism"
+wrong = ["Stoicism", "Virtue ethics", "Egoism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Survey-of-Philosophy-27742.html"
+check = "https://plato.stanford.edu/entries/utilitarianism-history/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0008"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "In Plato's allegory of the cave, what do the chained prisoners take for reality?"
+answer = "Shadows on a wall"
+wrong = ["Reflections in water", "Stars in the sky", "Painted statues"]
+source = "https://funtrivia.com/trivia-quiz/Humanities/A-Momentary-Lapse-Of-Reason-344639.html"
+check = "https://en.wikipedia.org/wiki/Allegory_of_the_cave"
+reviewed = false
+
+[[question]]
+id = "philosophy-0009"
+subcategory = "Chinese philosophy"
+difficulty = "easy"
+text = "The Analects is a collection of sayings attributed to which Chinese thinker?"
+answer = "Confucius"
+wrong = ["Laozi", "Mencius", "Sun Tzu"]
+source = "https://funtrivia.com/trivia-quiz/People/Background-of-Confucianism-106578.html"
+check = "https://plato.stanford.edu/entries/confucius/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0010"
+subcategory = "Modern philosophy"
+difficulty = "easy"
+text = "Who founded Objectivism and wrote the novel \"Atlas Shrugged\"?"
+answer = "Ayn Rand"
+wrong = ["Simone de Beauvoir", "Hannah Arendt", "Iris Murdoch"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Here-Are-My-Thoughts-on-the-Subject--372281.html"
+check = "https://plato.stanford.edu/entries/ayn-rand/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0011"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "In Marx's writings, what is the class of wage workers called?"
+answer = "The proletariat"
+wrong = ["The bourgeoisie", "The aristocracy", "The clergy"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Modern-Philosophers-97757.html"
+check = "https://plato.stanford.edu/entries/marx/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0012"
+subcategory = "Ethics"
+difficulty = "easy"
+text = "What is a person who opposes all war and violence called?"
+answer = "A pacifist"
+wrong = ["A stoic", "A cynic", "A nihilist"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/The-Moral-Side-316465.html"
+check = "https://plato.stanford.edu/entries/pacifism/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0013"
+subcategory = "Ethics"
+difficulty = "easy"
+text = "Which view holds that pleasure is the highest good?"
+answer = "Hedonism"
+wrong = ["Stoicism", "Asceticism", "Nihilism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://plato.stanford.edu/entries/hedonism/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0014"
+subcategory = "Logic"
+difficulty = "easy"
+text = "Which fallacy attacks the person making an argument instead of the argument?"
+answer = "Ad hominem"
+wrong = ["Straw man", "Red herring", "Slippery slope"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Find-the-Fallacies-Fallacies-of-Relevance-336166.html"
+check = "https://plato.stanford.edu/entries/fallacies/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0015"
+subcategory = "Branches of philosophy"
+difficulty = "easy"
+text = "Which branch of philosophy studies beauty and art?"
+answer = "Aesthetics"
+wrong = ["Epistemology", "Logic", "Metaphysics"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://iep.utm.edu/aesthetics/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0016"
+subcategory = "Political philosophy"
+difficulty = "medium"
+text = "Which English philosopher wrote \"Leviathan\"?"
+answer = "Thomas Hobbes"
+wrong = ["John Locke", "Francis Bacon", "John Stuart Mill"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/A-Journey-Through-Western-Philosophy-244494.html"
+check = "https://plato.stanford.edu/entries/hobbes-moral/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0017"
+subcategory = "Ethics"
+difficulty = "medium"
+text = "The categorical imperative is the supreme moral principle of which philosopher?"
+answer = "Immanuel Kant"
+wrong = ["G. W. F. Hegel", "John Stuart Mill", "David Hume"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Survey-of-Philosophy-27742.html"
+check = "https://plato.stanford.edu/entries/kant-moral/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0018"
+subcategory = "Branches of philosophy"
+difficulty = "medium"
+text = "Which branch of philosophy studies knowledge?"
+answer = "Epistemology"
+wrong = ["Ontology", "Aesthetics", "Ethics"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Survey-of-Philosophy-27742.html"
+check = "https://plato.stanford.edu/entries/epistemology/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0019"
+subcategory = "Existentialism"
+difficulty = "medium"
+text = "Which French writer's play \"No Exit\" contains the line \"Hell is other people\"?"
+answer = "Jean-Paul Sartre"
+wrong = ["Albert Camus", "Simone de Beauvoir", "Molière"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Survey-of-Philosophy-27742.html"
+check = "https://en.wikipedia.org/wiki/No_Exit"
+reviewed = false
+
+[[question]]
+id = "philosophy-0020"
+subcategory = "Existentialism"
+difficulty = "medium"
+text = "Who wrote \"The Myth of Sisyphus\", an essay on the absurd?"
+answer = "Albert Camus"
+wrong = ["Jean-Paul Sartre", "Franz Kafka", "Søren Kierkegaard"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Your-Philosophy-Syllabus-377950.html"
+check = "https://plato.stanford.edu/entries/camus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0021"
+subcategory = "Stoicism"
+difficulty = "medium"
+text = "Which Stoic philosopher was tutor and adviser to the emperor Nero?"
+answer = "Seneca"
+wrong = ["Marcus Aurelius", "Epictetus", "Cicero"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Your-Philosophy-Syllabus-377950.html"
+check = "https://plato.stanford.edu/entries/seneca/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0022"
+subcategory = "Medieval philosophy"
+difficulty = "medium"
+text = "Who set out \"five ways\" of proving God's existence in the Summa Theologica?"
+answer = "Thomas Aquinas"
+wrong = ["Augustine of Hippo", "Anselm of Canterbury", "Duns Scotus"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Your-Philosophy-Syllabus-377950.html"
+check = "https://plato.stanford.edu/entries/aquinas/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0023"
+subcategory = "Early modern philosophy"
+difficulty = "medium"
+text = "Which 17th-century Dutch philosopher wrote the \"Ethics\", identifying God with nature?"
+answer = "Baruch Spinoza"
+wrong = ["Erasmus", "Hugo Grotius", "René Descartes"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Here-Are-My-Thoughts-on-the-Subject--372281.html"
+check = "https://plato.stanford.edu/entries/spinoza/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0024"
+subcategory = "Medieval philosophy"
+difficulty = "medium"
+text = "Who wrote \"The City of God\" after the sack of Rome in 410?"
+answer = "Augustine of Hippo"
+wrong = ["Thomas Aquinas", "Jerome", "Boethius"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://plato.stanford.edu/entries/augustine/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0025"
+subcategory = "Existentialism"
+difficulty = "medium"
+text = "Which Danish thinker is often called the father of existentialism?"
+answer = "Søren Kierkegaard"
+wrong = ["Friedrich Nietzsche", "Martin Heidegger", "Arthur Schopenhauer"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Modern-Philosophers-97757.html"
+check = "https://plato.stanford.edu/entries/kierkegaard/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0026"
+subcategory = "Political philosophy"
+difficulty = "medium"
+text = "Which French thinker is known for the theory of the separation of powers?"
+answer = "Montesquieu"
+wrong = ["Voltaire", "Jean-Jacques Rousseau", "Denis Diderot"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/A-Journey-Through-Western-Philosophy-244494.html"
+check = "https://plato.stanford.edu/entries/montesquieu/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0027"
+subcategory = "Logic"
+difficulty = "medium"
+text = "Which fallacy distorts an opponent's view to make it easier to refute?"
+answer = "Straw man"
+wrong = ["Ad hominem", "Red herring", "Begging the question"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Find-the-Fallacies-Fallacies-of-Relevance-336166.html"
+check = "https://plato.stanford.edu/entries/fallacies/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0028"
+subcategory = "Ethics"
+difficulty = "medium"
+text = "For Aristotle, courage is the mean between cowardice and what?"
+answer = "Rashness"
+wrong = ["Cruelty", "Vanity", "Sloth"]
+source = "https://saylordotorg.github.io/LegacyExams/PHIL/PHIL101/PHIL101-FinalExam-Answers.html"
+check = "https://plato.stanford.edu/entries/aristotle-ethics/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0029"
+subcategory = "Philosophy of religion"
+difficulty = "medium"
+text = "In William Paley's design argument, which found object implies a maker?"
+answer = "A watch"
+wrong = ["A telescope", "A compass", "A key"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-of-Religion-306529.html"
+check = "https://plato.stanford.edu/entries/teleological-arguments/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0030"
+subcategory = "Epistemology"
+difficulty = "medium"
+text = "Which view holds that knowledge comes chiefly from sense experience?"
+answer = "Empiricism"
+wrong = ["Rationalism", "Idealism", "Nihilism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Western-Philosophies-129164.html"
+check = "https://plato.stanford.edu/entries/rationalism-empiricism/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0031"
+subcategory = "Ancient Greek philosophy"
+difficulty = "hard"
+text = "Which ancient school of thought takes its starting point from Pyrrho of Elis?"
+answer = "Skepticism"
+wrong = ["Stoicism", "Cynicism", "Epicureanism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://plato.stanford.edu/entries/pyrrho/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0032"
+subcategory = "Early modern philosophy"
+difficulty = "hard"
+text = "Who argued that ours is \"the best of all possible worlds\"?"
+answer = "Gottfried Leibniz"
+wrong = ["Voltaire", "Baruch Spinoza", "René Descartes"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-56206.html"
+check = "https://plato.stanford.edu/entries/leibniz-evil/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0033"
+subcategory = "Ancient Greek philosophy"
+difficulty = "hard"
+text = "Zeno, famous for his paradoxes of motion, belonged to which Greek school?"
+answer = "Eleatic"
+wrong = ["Stoic", "Cynic", "Pythagorean"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Western-Philosophies-129164.html"
+check = "https://plato.stanford.edu/entries/zeno-elea/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0034"
+subcategory = "Ancient Greek philosophy"
+difficulty = "hard"
+text = "Which Presocratic held that fire is the basic material of the world?"
+answer = "Heraclitus"
+wrong = ["Thales", "Anaximenes", "Parmenides"]
+source = "https://funtrivia.com/trivia-quiz/Humanities/Philosophy-Greek-to-the-Renaissance-40389.html"
+check = "https://plato.stanford.edu/entries/heraclitus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0035"
+subcategory = "Ancient Greek philosophy"
+difficulty = "hard"
+text = "What Greek term did Epicurus use for freedom from mental disturbance?"
+answer = "Ataraxia"
+wrong = ["Eudaimonia", "Akrasia", "Arete"]
+source = "https://funtrivia.com/trivia-quiz/Humanities/Philosophy-Greek-to-the-Renaissance-40389.html"
+check = "https://plato.stanford.edu/entries/epicurus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0036"
+subcategory = "Philosophy of religion"
+difficulty = "hard"
+text = "Who set out the ontological argument for God's existence in the \"Proslogion\"?"
+answer = "Anselm of Canterbury"
+wrong = ["Thomas Aquinas", "Augustine of Hippo", "Peter Abelard"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-of-Religion-306529.html"
+check = "https://plato.stanford.edu/entries/ontological-arguments/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0037"
+subcategory = "Philosophy of religion"
+difficulty = "hard"
+text = "What is an attempt to justify God's goodness despite the existence of evil called?"
+answer = "Theodicy"
+wrong = ["Theophany", "Eschatology", "Theocracy"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-of-Religion-306529.html"
+check = "https://plato.stanford.edu/entries/evil/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0038"
+subcategory = "Chinese philosophy"
+difficulty = "hard"
+text = "Which Chinese thinker argued that human nature is evil?"
+answer = "Xunzi"
+wrong = ["Mencius", "Mozi", "Zhuangzi"]
+source = "https://funtrivia.com/trivia-quiz/Humanities/Tidbits-On-Chinese-Thought-12978.html"
+check = "https://plato.stanford.edu/entries/xunzi/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0039"
+subcategory = "Chinese philosophy"
+difficulty = "hard"
+text = "Which Chinese thinker told of dreaming that he was a butterfly?"
+answer = "Zhuangzi"
+wrong = ["Laozi", "Mencius", "Han Feizi"]
+source = "https://saylordotorg.github.io/LegacyExams/PHIL/PHIL101/PHIL101-FinalExam-Answers.html"
+check = "https://plato.stanford.edu/entries/zhuangzi/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0040"
+subcategory = "Modern philosophy"
+difficulty = "hard"
+text = "Which French philosopher used the term deconstruction in \"Of Grammatology\"?"
+answer = "Jacques Derrida"
+wrong = ["Michel Foucault", "Gilles Deleuze", "Jean-François Lyotard"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Your-Philosophy-Syllabus-377950.html"
+check = "https://plato.stanford.edu/entries/derrida/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0041"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Who was Plato's teacher?"
+answer = "Socrates"
+wrong = ["Aristotle", "Pythagoras", "Parmenides"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Fact-File-166168.html"
+check = "https://plato.stanford.edu/entries/plato/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0042"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Which Greek philosopher wrote the dialogue \"The Republic\"?"
+answer = "Plato"
+wrong = ["Aristotle", "Xenophon", "Epicurus"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Which-Philosopher-Wrote-This-306336.html"
+check = "https://plato.stanford.edu/entries/plato/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0043"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Which philosopher described the natural state of humanity as a war of all against all?"
+answer = "Thomas Hobbes"
+wrong = ["John Locke", "Jean-Jacques Rousseau", "David Hume"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/hobbes-moral/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0044"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Which philosopher is best known for natural rights to life, liberty and property?"
+answer = "John Locke"
+wrong = ["Thomas Hobbes", "David Hume", "Edmund Burke"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Rise-of-Democratic-Ideas-196560.html"
+check = "https://plato.stanford.edu/entries/locke-political/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0045"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Who wrote \"The Social Contract\" (1762)?"
+answer = "Jean-Jacques Rousseau"
+wrong = ["Voltaire", "Montesquieu", "Denis Diderot"]
+source = "https://www.funtrivia.com/quiz/humanities/french-philosophy-412334.html"
+check = "https://plato.stanford.edu/entries/rousseau/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0046"
+subcategory = "Early modern philosophy"
+difficulty = "easy"
+text = "Which French writer satirised blind optimism in \"Candide\"?"
+answer = "Voltaire"
+wrong = ["Jean-Jacques Rousseau", "Denis Diderot", "Michel de Montaigne"]
+source = "https://www.funtrivia.com/quiz/humanities/french-philosophy-412334.html"
+check = "https://en.wikipedia.org/wiki/Candide"
+reviewed = false
+
+[[question]]
+id = "philosophy-0047"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Who coined the word \"Utopia\" in his book of 1516?"
+answer = "Thomas More"
+wrong = ["Francis Bacon", "Erasmus", "Tommaso Campanella"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Utopian-Philosophers-62664.html"
+check = "https://en.wikipedia.org/wiki/Utopia_(book)"
+reviewed = false
+
+[[question]]
+id = "philosophy-0048"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Which Cynic philosopher was said to live in a large ceramic jar?"
+answer = "Diogenes"
+wrong = ["Epicurus", "Zeno of Citium", "Heraclitus"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://en.wikipedia.org/wiki/Diogenes"
+reviewed = false
+
+[[question]]
+id = "philosophy-0049"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "Who said that you cannot step into the same river twice?"
+answer = "Heraclitus"
+wrong = ["Parmenides", "Thales", "Democritus"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/heraclitus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0050"
+subcategory = "Stoicism"
+difficulty = "easy"
+text = "Which Roman emperor wrote the Stoic \"Meditations\"?"
+answer = "Marcus Aurelius"
+wrong = ["Hadrian", "Augustus", "Julian"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/marcus-aurelius/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0051"
+subcategory = "Indian philosophy"
+difficulty = "easy"
+text = "Nirvana, release from the cycle of rebirth, is central to which tradition?"
+answer = "Buddhism"
+wrong = ["Confucianism", "Shinto", "Taoism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-and-Philosophers-1233.html"
+check = "https://en.wikipedia.org/wiki/Nirvana"
+reviewed = false
+
+[[question]]
+id = "philosophy-0052"
+subcategory = "Metaphysics"
+difficulty = "easy"
+text = "What is the view that every event is fixed by earlier causes and the laws of nature?"
+answer = "Determinism"
+wrong = ["Nihilism", "Relativism", "Existentialism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Fact-File-166168.html"
+check = "https://plato.stanford.edu/entries/determinism-causal/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0053"
+subcategory = "Ethics"
+difficulty = "easy"
+text = "Which English philosopher is regarded as the founder of modern utilitarianism?"
+answer = "Jeremy Bentham"
+wrong = ["Thomas Hobbes", "Adam Smith", "Edmund Burke"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-417709.html"
+check = "https://en.wikipedia.org/wiki/Jeremy_Bentham"
+reviewed = false
+
+[[question]]
+id = "philosophy-0054"
+subcategory = "Early modern philosophy"
+difficulty = "easy"
+text = "Which country was the empiricist David Hume from?"
+answer = "Scotland"
+wrong = ["England", "Ireland", "Wales"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Fact-File-166168.html"
+check = "https://plato.stanford.edu/entries/hume/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0055"
+subcategory = "Medieval philosophy"
+difficulty = "easy"
+text = "Which medieval friar's \"razor\" says not to multiply entities beyond necessity?"
+answer = "William of Ockham"
+wrong = ["Duns Scotus", "Roger Bacon", "Peter Abelard"]
+source = "https://www.funtrivia.com/quiz/humanities/timeline-of-philosophy-419761.html"
+check = "https://plato.stanford.edu/entries/ockham/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0056"
+subcategory = "Logic"
+difficulty = "easy"
+text = "Which fallacy assumes that because B followed A, A must have caused B?"
+answer = "Post hoc ergo propter hoc"
+wrong = ["Non sequitur", "Red herring", "Tu quoque"]
+source = "https://www.funtrivia.com/quiz/humanities/know-your-logical-fallacies-419201.html"
+check = "https://en.wikipedia.org/wiki/Post_hoc_ergo_propter_hoc"
+reviewed = false
+
+[[question]]
+id = "philosophy-0057"
+subcategory = "Logic"
+difficulty = "easy"
+text = "Claiming something is true because nobody has proved it false is which fallacy?"
+answer = "Appeal to ignorance"
+wrong = ["Appeal to authority", "Appeal to emotion", "Appeal to tradition"]
+source = "https://www.funtrivia.com/quiz/humanities/know-your-logical-fallacies-419201.html"
+check = "https://en.wikipedia.org/wiki/Argument_from_ignorance"
+reviewed = false
+
+[[question]]
+id = "philosophy-0058"
+subcategory = "Logic"
+difficulty = "easy"
+text = "Which fallacy offers only two options when more exist?"
+answer = "False dilemma"
+wrong = ["Slippery slope", "Red herring", "Circular reasoning"]
+source = "https://www.funtrivia.com/quiz/humanities/know-your-logical-fallacies-419201.html"
+check = "https://en.wikipedia.org/wiki/False_dilemma"
+reviewed = false
+
+[[question]]
+id = "philosophy-0059"
+subcategory = "Ancient Greek philosophy"
+difficulty = "easy"
+text = "What did Plato call the perfect, unchanging ideas that exist beyond the senses?"
+answer = "The Forms"
+wrong = ["The Monads", "The Atoms", "The Categories"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Philosophical-Terminology-35192.html"
+check = "https://en.wikipedia.org/wiki/Theory_of_forms"
+reviewed = false
+
+[[question]]
+id = "philosophy-0060"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "If a prince cannot be both, Machiavelli says it is safer to be what?"
+answer = "Feared"
+wrong = ["Loved", "Pitied", "Admired"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/machiavelli/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0061"
+subcategory = "Philosophy of science"
+difficulty = "easy"
+text = "Which philosopher of science coined the term \"paradigm shift\"?"
+answer = "Thomas Kuhn"
+wrong = ["Karl Popper", "Paul Feyerabend", "Imre Lakatos"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Me-You-and-Kuhn-Scientific-Revolutions-293817.html"
+check = "https://plato.stanford.edu/entries/thomas-kuhn/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0062"
+subcategory = "Political philosophy"
+difficulty = "easy"
+text = "Who wrote \"A Vindication of the Rights of Woman\" (1792)?"
+answer = "Mary Wollstonecraft"
+wrong = ["Olympe de Gouges", "Mary Shelley", "Harriet Taylor Mill"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophical-Treatises-With-Long-Titles-60241.html"
+check = "https://plato.stanford.edu/entries/wollstonecraft/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0063"
+subcategory = "Existentialism"
+difficulty = "easy"
+text = "Which existentialist summed up his view as \"existence precedes essence\"?"
+answer = "Jean-Paul Sartre"
+wrong = ["Albert Camus", "Martin Heidegger", "Karl Jaspers"]
+source = "https://www.funtrivia.com/quiz/humanities/french-philosophy-412334.html"
+check = "https://plato.stanford.edu/entries/sartre/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0064"
+subcategory = "Modern philosophy"
+difficulty = "medium"
+text = "Who wrote the \"Critique of Pure Reason\"?"
+answer = "Immanuel Kant"
+wrong = ["G. W. F. Hegel", "Johann Fichte", "Arthur Schopenhauer"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Which-Philosopher-Wrote-This-306336.html"
+check = "https://plato.stanford.edu/entries/kant/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0065"
+subcategory = "Modern philosophy"
+difficulty = "medium"
+text = "Who contrasted the Apollonian and the Dionysian in \"The Birth of Tragedy\"?"
+answer = "Friedrich Nietzsche"
+wrong = ["Arthur Schopenhauer", "G. W. F. Hegel", "Søren Kierkegaard"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Match-the-Quote-with-the-Philosopher-310433.html"
+check = "https://plato.stanford.edu/entries/nietzsche/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0066"
+subcategory = "Indian philosophy"
+difficulty = "medium"
+text = "The Bhagavad Gita forms part of which Indian epic?"
+answer = "Mahabharata"
+wrong = ["Ramayana", "Rigveda", "Panchatantra"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Yoga-Philosophy-161657.html"
+check = "https://en.wikipedia.org/wiki/Bhagavad_Gita"
+reviewed = false
+
+[[question]]
+id = "philosophy-0067"
+subcategory = "Indian philosophy"
+difficulty = "medium"
+text = "In Indian philosophy, what does \"ahimsa\" mean?"
+answer = "Non-violence"
+wrong = ["Truthfulness", "Detachment", "Liberation"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Vedanta-and-Yoga-153790.html"
+check = "https://en.wikipedia.org/wiki/Ahimsa"
+reviewed = false
+
+[[question]]
+id = "philosophy-0068"
+subcategory = "Political philosophy"
+difficulty = "medium"
+text = "Which philosopher, also a British MP, wrote \"The Subjection of Women\"?"
+answer = "John Stuart Mill"
+wrong = ["Jeremy Bentham", "Herbert Spencer", "Edmund Burke"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Fact-File-166168.html"
+check = "https://plato.stanford.edu/entries/mill/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0069"
+subcategory = "Modern philosophy"
+difficulty = "medium"
+text = "Whose \"Tractatus\" ends by saying that what we cannot speak of we must pass over in silence?"
+answer = "Ludwig Wittgenstein"
+wrong = ["Bertrand Russell", "Rudolf Carnap", "Martin Heidegger"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Match-the-Quote-with-the-Philosopher-310433.html"
+check = "https://plato.stanford.edu/entries/wittgenstein/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0070"
+subcategory = "Philosophy of science"
+difficulty = "medium"
+text = "Which movement was the Vienna Circle chiefly linked to?"
+answer = "Logical positivism"
+wrong = ["Existentialism", "Phenomenology", "Pragmatism"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Fact-File-166168.html"
+check = "https://plato.stanford.edu/entries/vienna-circle/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0071"
+subcategory = "Renaissance philosophy"
+difficulty = "medium"
+text = "Which Dutch humanist wrote \"In Praise of Folly\"?"
+answer = "Desiderius Erasmus"
+wrong = ["Thomas More", "Michel de Montaigne", "Hugo Grotius"]
+source = "https://www.funtrivia.com/quiz/humanities/timeline-of-philosophy-419761.html"
+check = "https://plato.stanford.edu/entries/erasmus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0072"
+subcategory = "Epistemology"
+difficulty = "medium"
+text = "For Hume, what leads us to expect a cause to be followed by its effect?"
+answer = "Habit or custom"
+wrong = ["Pure reason", "Innate ideas", "Divine revelation"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-3-418055.html"
+check = "https://plato.stanford.edu/entries/hume/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0073"
+subcategory = "Ancient Greek philosophy"
+difficulty = "medium"
+text = "Which Presocratic held that all things are made of earth, air, fire and water?"
+answer = "Empedocles"
+wrong = ["Thales", "Anaximenes", "Democritus"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-3-418055.html"
+check = "https://plato.stanford.edu/entries/empedocles/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0074"
+subcategory = "Islamic philosophy"
+difficulty = "medium"
+text = "Which Andalusian philosopher was known in Latin Europe as Averroes?"
+answer = "Ibn Rushd"
+wrong = ["Ibn Sina", "al-Farabi", "al-Ghazali"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-3-418055.html"
+check = "https://plato.stanford.edu/entries/ibn-rushd/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0075"
+subcategory = "Jewish philosophy"
+difficulty = "medium"
+text = "Which medieval Jewish philosopher wrote \"The Guide for the Perplexed\"?"
+answer = "Maimonides"
+wrong = ["Judah Halevi", "Saadia Gaon", "Baruch Spinoza"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Global-Philosophy-58232.html"
+check = "https://plato.stanford.edu/entries/maimonides/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0076"
+subcategory = "Medieval philosophy"
+difficulty = "medium"
+text = "Who wrote \"The Consolation of Philosophy\" while in prison awaiting execution?"
+answer = "Boethius"
+wrong = ["Augustine of Hippo", "Thomas Aquinas", "Cassiodorus"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Piecemeal-Medieval-Philosophies-380516.html"
+check = "https://plato.stanford.edu/entries/boethius/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0077"
+subcategory = "Indian philosophy"
+difficulty = "medium"
+text = "In Vedanta, what is the illusion that veils true reality called?"
+answer = "Maya"
+wrong = ["Karma", "Dharma", "Moksha"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Vedanta-and-Yoga-153790.html"
+check = "https://en.wikipedia.org/wiki/Maya_(religion)"
+reviewed = false
+
+[[question]]
+id = "philosophy-0078"
+subcategory = "Indian philosophy"
+difficulty = "medium"
+text = "Who compiled the Yoga Sutras?"
+answer = "Patanjali"
+wrong = ["Adi Shankara", "Nagarjuna", "Kautilya"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Yoga-Philosophy-161657.html"
+check = "https://en.wikipedia.org/wiki/Yoga_Sutras_of_Patanjali"
+reviewed = false
+
+[[question]]
+id = "philosophy-0079"
+subcategory = "Logic"
+difficulty = "medium"
+text = "Which fallacy assumes the very conclusion it sets out to prove?"
+answer = "Begging the question"
+wrong = ["Red herring", "False dilemma", "Slippery slope"]
+source = "https://www.funtrivia.com/quiz/humanities/know-your-logical-fallacies-419201.html"
+check = "https://en.wikipedia.org/wiki/Begging_the_question"
+reviewed = false
+
+[[question]]
+id = "philosophy-0080"
+subcategory = "Logic"
+difficulty = "medium"
+text = "Which fallacy redefines a group to exclude any counterexample?"
+answer = "No true Scotsman"
+wrong = ["Tu quoque", "Appeal to authority", "Slippery slope"]
+source = "https://www.funtrivia.com/quiz/humanities/know-your-logical-fallacies-419201.html"
+check = "https://en.wikipedia.org/wiki/No_true_Scotsman"
+reviewed = false
+
+[[question]]
+id = "philosophy-0081"
+subcategory = "Branches of philosophy"
+difficulty = "medium"
+text = "What is the study of purposes or ends in nature called?"
+answer = "Teleology"
+wrong = ["Ontology", "Cosmology", "Phenomenology"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Philosophical-Terminology-35192.html"
+check = "https://en.wikipedia.org/wiki/Teleology"
+reviewed = false
+
+[[question]]
+id = "philosophy-0082"
+subcategory = "Ethics"
+difficulty = "medium"
+text = "What Greek term names the flourishing that Aristotle took to be the highest human good?"
+answer = "Eudaimonia"
+wrong = ["Ataraxia", "Akrasia", "Apatheia"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/aristotle-ethics/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0083"
+subcategory = "Stoicism"
+difficulty = "medium"
+text = "Which Stoic, once a slave, taught that we control only our own judgements and choices?"
+answer = "Epictetus"
+wrong = ["Seneca", "Marcus Aurelius", "Zeno of Citium"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-3-418055.html"
+check = "https://plato.stanford.edu/entries/epictetus/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0084"
+subcategory = "Modern philosophy"
+difficulty = "medium"
+text = "Who wrote \"Being and Time\" (1927)?"
+answer = "Martin Heidegger"
+wrong = ["Edmund Husserl", "Karl Jaspers", "Jean-Paul Sartre"]
+source = "https://www.funtrivia.com/quiz/humanities/timeline-of-philosophy-419761.html"
+check = "https://plato.stanford.edu/entries/heidegger/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0085"
+subcategory = "Modern philosophy"
+difficulty = "hard"
+text = "Which French philosopher proposed the \"élan vital\", a creative force of life?"
+answer = "Henri Bergson"
+wrong = ["Pierre Teilhard de Chardin", "Maurice Merleau-Ponty", "Gaston Bachelard"]
+source = "https://www.funtrivia.com/quiz/humanities/french-philosophy-412334.html"
+check = "https://plato.stanford.edu/entries/bergson/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0086"
+subcategory = "Modern philosophy"
+difficulty = "hard"
+text = "Who wrote \"The Order of Things\" (1966)?"
+answer = "Michel Foucault"
+wrong = ["Jacques Derrida", "Roland Barthes", "Jean-François Lyotard"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Which-Philosopher-Wrote-This-306336.html"
+check = "https://plato.stanford.edu/entries/foucault/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0087"
+subcategory = "Renaissance philosophy"
+difficulty = "hard"
+text = "Who wrote the \"Oration on the Dignity of Man\"?"
+answer = "Pico della Mirandola"
+wrong = ["Marsilio Ficino", "Lorenzo Valla", "Erasmus"]
+source = "https://www.funtrivia.com/quiz/humanities/timeline-of-philosophy-419761.html"
+check = "https://plato.stanford.edu/entries/pico-della-mirandola/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0088"
+subcategory = "Renaissance philosophy"
+difficulty = "hard"
+text = "Which humanist showed that the Donation of Constantine was a forgery?"
+answer = "Lorenzo Valla"
+wrong = ["Petrarch", "Pico della Mirandola", "Marsilio Ficino"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophical-Treatises-With-Long-Titles-60241.html"
+check = "https://en.wikipedia.org/wiki/Donation_of_Constantine"
+reviewed = false
+
+[[question]]
+id = "philosophy-0089"
+subcategory = "Early modern philosophy"
+difficulty = "hard"
+text = "What is the view that God is the only true cause of events called?"
+answer = "Occasionalism"
+wrong = ["Deism", "Pantheism", "Fideism"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-3-418055.html"
+check = "https://en.wikipedia.org/wiki/Occasionalism"
+reviewed = false
+
+[[question]]
+id = "philosophy-0090"
+subcategory = "Medieval philosophy"
+difficulty = "hard"
+text = "Which contemporary of Augustine denied the doctrine of original sin?"
+answer = "Pelagius"
+wrong = ["Jerome", "Ambrose", "Arius"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Global-Philosophy-58232.html"
+check = "https://en.wikipedia.org/wiki/Pelagianism"
+reviewed = false
+
+[[question]]
+id = "philosophy-0091"
+subcategory = "Ancient Greek philosophy"
+difficulty = "hard"
+text = "Which Presocratic called the origin of all things the \"apeiron\", the boundless?"
+answer = "Anaximander"
+wrong = ["Anaximenes", "Thales", "Xenophanes"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Global-Philosophy-58232.html"
+check = "https://iep.utm.edu/anaximander/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0092"
+subcategory = "Philosophy of religion"
+difficulty = "hard"
+text = "Describing God only by what God is not is known as what?"
+answer = "Via negativa"
+wrong = ["Via positiva", "Via media", "Via moderna"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Piecemeal-Medieval-Philosophies-380516.html"
+check = "https://en.wikipedia.org/wiki/Apophatic_theology"
+reviewed = false
+
+[[question]]
+id = "philosophy-0093"
+subcategory = "Chinese philosophy"
+difficulty = "hard"
+text = "Which Chinese thinker taught impartial care for all and judged acts by their benefit?"
+answer = "Mozi"
+wrong = ["Mencius", "Laozi", "Han Feizi"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Tidbits-On-Chinese-Thought-12978.html"
+check = "https://plato.stanford.edu/entries/mohism/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0094"
+subcategory = "Chinese philosophy"
+difficulty = "hard"
+text = "Which Chinese school is known for the paradox \"a white horse is not a horse\"?"
+answer = "School of Names"
+wrong = ["Legalism", "Mohism", "Yin-Yang school"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Tidbits-On-Chinese-Thought-12978.html"
+check = "https://plato.stanford.edu/entries/school-names/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0095"
+subcategory = "Indian philosophy"
+difficulty = "hard"
+text = "In Patanjali's eight limbs of yoga, which is the final stage?"
+answer = "Samadhi"
+wrong = ["Pratyahara", "Dharana", "Dhyana"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Yoga-Philosophy-161657.html"
+check = "https://en.wikipedia.org/wiki/Samadhi"
+reviewed = false
+
+[[question]]
+id = "philosophy-0096"
+subcategory = "Philosophy of science"
+difficulty = "hard"
+text = "Which founder of the Vienna Circle was shot dead by a former student in 1936?"
+answer = "Moritz Schlick"
+wrong = ["Rudolf Carnap", "Otto Neurath", "Kurt Gödel"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-and-Philosophers-1233.html"
+check = "https://plato.stanford.edu/entries/schlick/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0097"
+subcategory = "Branches of philosophy"
+difficulty = "hard"
+text = "Which branch of philosophy is the general study of value?"
+answer = "Axiology"
+wrong = ["Ontology", "Deontology", "Hermeneutics"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Philosophy-Philosophical-Terminology-35192.html"
+check = "https://en.wikipedia.org/wiki/Axiology"
+reviewed = false
+
+[[question]]
+id = "philosophy-0098"
+subcategory = "Existentialism"
+difficulty = "hard"
+text = "Kierkegaard's stages of life are the aesthetic, the ethical and which other?"
+answer = "The religious"
+wrong = ["The political", "The rational", "The natural"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-417709.html"
+check = "https://plato.stanford.edu/entries/kierkegaard/"
+reviewed = false
+
+[[question]]
+id = "philosophy-0099"
+subcategory = "Philosophy of religion"
+difficulty = "hard"
+text = "Who argued in \"The Essence of Christianity\" that God is a projection of human nature?"
+answer = "Ludwig Feuerbach"
+wrong = ["Max Stirner", "Bruno Bauer", "David Strauss"]
+source = "https://www.funtrivia.com/quiz/humanities/10-philosophers-10-questions-part-2-417865.html"
+check = "https://plato.stanford.edu/entries/ludwig-feuerbach/"
+reviewed = false

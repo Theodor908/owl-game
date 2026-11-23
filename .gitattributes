@@ -1,0 +1,7 @@
+# Files that run on Linux keep Linux line endings, whatever this PC uses.
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+# Windows scripts keep Windows line endings, which cmd reads most reliably.
+*.bat text eol=crlf

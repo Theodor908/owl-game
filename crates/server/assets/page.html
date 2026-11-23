@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#141B2D">
+<meta name="robots" content="noindex">
+<meta name="description" content="Owl is a trivia auto-battler for Android: buy cards, then win 1v1 battles of general-knowledge questions.">
+<title>Owl: download for Android</title>
+<link rel="icon" type="image/png" href="/site/favicon.png">
+<style>
+@font-face {
+  font-family: "Grenze";
+  src: url("/site/heading.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --ink: #141B2D;
+  --ink-deep: #0D1220;
+  --ink-raised: #1F2A44;
+  --rule: #33415F;
+  --paper: #F2E9D8;
+  --paper-shade: #D9CDB4;
+  --slate: #9AA3B8;
+  --gilt: #E0A526;
+  --verdigris: #2FA58C;
+  --verdigris-deep: #17695A;
+  --vermilion-deep: #B23A16;
+  --display: "Grenze", Georgia, "Times New Roman", serif;
+  --text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  color: var(--paper);
+  font: 16px/1.55 var(--text);
+  background-color: var(--ink);
+  background-image:
+    radial-gradient(1px 1px at 12% 9%, #cdd6ee 50%, transparent 51%),
+    radial-gradient(1px 1px at 31% 22%, #8e9bc0 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 58% 6%, #cdd6ee 50%, transparent 51%),
+    radial-gradient(1px 1px at 77% 17%, #8e9bc0 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 91% 31%, #cdd6ee 50%, transparent 51%),
+    radial-gradient(1px 1px at 6% 38%, #8e9bc0 50%, transparent 51%),
+    radial-gradient(120% 60% at 50% 0%, #26345a 0%, var(--ink) 60%, var(--ink-deep) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 560px, 100% 560px, 100% 560px, 100% 560px, 100% 560px, 100% 560px, 100% 100%;
+  min-height: 100vh;
+}
+a { color: var(--paper); }
+main { max-width: 960px; margin: 0 auto; padding: 28px 16px 8px; }
+h1, h2 { font-family: var(--display); font-weight: 500; margin: 0; letter-spacing: 0.01em; }
+h2 { font-size: 1.5rem; line-height: 1.2; margin-bottom: 12px; }
+h2::after {
+  content: ""; display: block; width: 44px; height: 2px; margin-top: 8px;
+  background: var(--gilt);
+}
+section { margin-top: 36px; }
+
+/* Who it is: icon, name, a line about it. */
+.identity { display: flex; align-items: center; gap: 16px; }
+.identity img { width: 104px; height: 104px; flex: none; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5)); }
+.identity h1 { font-size: 3.25rem; line-height: 1; }
+.tagline { margin: 6px 0 0; color: var(--slate); }
+.tagline b { color: var(--gilt); font-weight: 600; }
+
+/* The store-style row of facts. */
+.facts {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  margin: 22px 0 0; padding: 12px 0; list-style: none;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.facts li + li { border-left: 1px solid var(--rule); }
+.facts strong { display: block; font-family: var(--display); font-size: 1.45rem; font-weight: 500; line-height: 1.2; }
+.facts span { color: var(--slate); font-size: 0.8rem; }
+
+.get { margin-top: 22px; }
+.button {
+  display: block; padding: 15px 20px; border-radius: 14px;
+  font-family: var(--display); font-size: 1.55rem; line-height: 1.2; font-weight: 500;
+  text-align: center; text-decoration: none; color: var(--paper);
+  background: linear-gradient(#249079, var(--verdigris-deep));
+  border: 2px solid var(--gilt);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+.button:hover { background: linear-gradient(var(--verdigris), #1b7a68); }
+.button:active { transform: translateY(1px); }
+.button:focus-visible, a:focus-visible { outline: 3px solid var(--paper); outline-offset: 3px; }
+.under { margin: 10px 0 0; color: var(--slate); font-size: 0.85rem; text-align: center; }
+.soon {
+  padding: 15px 20px; border-radius: 14px; text-align: center;
+  font-family: var(--display); font-size: 1.55rem; line-height: 1.2;
+  color: var(--slate); border: 2px dashed var(--rule);
+}
+
+.install {
+  margin-top: 18px; padding: 16px 18px; border-radius: 14px;
+  background: rgba(31, 42, 68, 0.75); border: 1px solid var(--rule);
+}
+.install h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.install h2::after { display: none; }
+.install ol { margin: 0; padding-left: 1.3em; }
+.install li { margin: 4px 0; }
+.install li::marker { color: var(--gilt); font-weight: 600; }
+.install p { margin: 10px 0 0; color: var(--slate); font-size: 0.9rem; }
+
+/* Screenshots: a row to swipe on a phone, a grid on a wide screen. */
+.shots {
+  display: flex; gap: 12px; margin: 0 -16px; padding: 4px 16px 14px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+}
+.shots img {
+  flex: none; width: 84%; max-width: 560px; height: auto; aspect-ratio: 20 / 9;
+  border-radius: 12px; border: 1px solid var(--rule); background: var(--ink-deep);
+  scroll-snap-align: start; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about {
+  padding: 22px 20px; border-radius: 14px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--paper-shade);
+  box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5px var(--paper-shade), 0 10px 26px rgba(0, 0, 0, 0.4);
+}
+.about h2::after { background: var(--vermilion-deep); }
+.about p { margin: 0 0 12px; }
+.about ul { margin: 0; padding: 0; list-style: none; }
+.about li { padding: 9px 0 9px 26px; border-top: 1px solid var(--paper-shade); position: relative; }
+.about li::before {
+  content: ""; position: absolute; left: 4px; top: 1.05em; width: 9px; height: 9px;
+  background: var(--verdigris-deep); transform: rotate(45deg);
+}
+.about li:last-child { padding-bottom: 0; }
+
+.notes p { margin: 0; white-space: pre-line; }
+.notes .build { color: var(--gilt); font-size: 0.85rem; margin-bottom: 4px; }
+
+footer {
+  max-width: 960px; margin: 40px auto 0; padding: 18px 16px 30px;
+  border-top: 1px solid var(--rule); color: var(--slate); font-size: 0.85rem;
+  display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between;
+}
+footer a { color: var(--slate); }
+
+@media (min-width: 820px) {
+  main { padding-top: 56px; }
+  .top { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+  .identity img { width: 136px; height: 136px; }
+  .identity h1 { font-size: 4.25rem; }
+  .tagline { font-size: 1.1rem; }
+  .get { margin-top: 0; }
+  .shots {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin: 0; padding: 0; overflow: visible;
+  }
+  .shots img { width: 100%; max-width: none; }
+  .lower { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: start; }
+  .lower section { margin-top: 36px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div>
+      <header class="identity">
+        <img src="/site/icon.webp" alt="" width="384" height="384">
+        <div>
+          <h1>Owl</h1>
+          <p class="tagline">A trivia auto-battler. <b>Know more, hit harder.</b></p>
+        </div>
+      </header>
+      <ul class="facts">
+{{facts}}
+      </ul>
+    </div>
+    <div class="get">
+{{download}}
+    </div>
+  </div>
+
+  <section aria-label="Screenshots">
+    <div class="shots">
+      <img src="/site/shot_home.webp" width="1280" height="576" alt="The home screen: a snowy owl and a Play button.">
+      <img src="/site/shot_heroes.webp" width="1280" height="576" loading="lazy" alt="Choosing one of two heroes.">
+      <img src="/site/shot_shop.webp" width="1280" height="576" loading="lazy" alt="The shop: cards on offer above the player's board.">
+      <img src="/site/shot_hand.webp" width="1280" height="576" loading="lazy" alt="The hand of cards, raised over the shop.">
+      <img src="/site/shot_question.webp" width="1280" height="576" loading="lazy" alt="A battle question with four answers and a timer.">
+      <img src="/site/shot_reveal.webp" width="1280" height="576" loading="lazy" alt="The correct answer revealed.">
+    </div>
+  </section>
+
+  <div class="lower">
+    <section class="about">
+      <h2>About the game</h2>
+      <p>Owl is a card battler where the fighting is done with what you know.</p>
+      <p>Up to six players share a lobby. Each round you visit the shop, buy cards and place them on your board. Then you meet one opponent over six multiple-choice questions. Answer more of them right and you deal the damage. The last player standing wins.</p>
+      <p>Cards bend a battle your way: they pull questions toward the categories you know best, and add answer time, armor or damage. Three cards of one category earn a bonus.</p>
+      <ul>
+        <li>Play with friends online: open a lobby and share its code.</li>
+        <li>Play offline against bots, any time.</li>
+        <li>Ten categories, from History to Sport.</li>
+        <li>Twelve heroes, each with an ability of their own.</li>
+        <li>No ads and no tracking.</li>
+      </ul>
+    </section>
+{{notes}}
+  </div>
+</main>
+<footer>
+  <span>This page uses no cookies and collects nothing.</span>
+  <a href="/api/privacy">Privacy notice</a>
+</footer>
+</body>
+</html>

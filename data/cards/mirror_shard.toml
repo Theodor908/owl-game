@@ -1,0 +1,10 @@
+id = "mirror_shard"
+name = "Mirror Shard"
+tier = 2
+kind = "reflect"
+text = "15% reflect"
+golden_text = "30% reflect"
+
+[[effects]]
+effect = "Reflect"
+percent = 15

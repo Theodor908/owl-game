@@ -1,0 +1,18 @@
+[package]
+name = "owl-local"
+edition.workspace = true
+version.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[lints]
+workspace = true
+
+[dependencies]
+godot = "0.5.5"
+owl-core = { path = "../core" }
+owl-lobby = { path = "../lobby" }
+owl-protocol = { path = "../protocol" }
+owl-release = { path = "../release" }
+serde_json = "1.0.154"

@@ -1,0 +1,9 @@
+id = "scales_of_judgment"
+name = "Scales of Judgment"
+tier = 2
+kind = "tie"
+text = "On a tie where both got at least one right, deal half your tavern level, minimum 1"
+golden_text = "No extra effect. On a tie where both got at least one right, deal half your tavern level, minimum 1"
+
+[[effects]]
+effect = "TieBreaker"

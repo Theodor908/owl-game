@@ -1,0 +1,1121 @@
+[[question]]
+id = "history-0001"
+subcategory = "Ancient Egypt"
+difficulty = "easy"
+text = "Which pharaoh's almost intact tomb did Howard Carter uncover in the Valley of the Kings in 1922?"
+answer = "Tutankhamun"
+wrong = ["Ramesses II", "Khufu", "Akhenaten"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Tutankhamun"
+reviewed = false
+
+[[question]]
+id = "history-0002"
+subcategory = "Age of Exploration"
+difficulty = "easy"
+text = "In which year did Christopher Columbus first reach the Americas?"
+answer = "1492"
+wrong = ["1453", "1519", "1607"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Christopher_Columbus"
+reviewed = false
+
+[[question]]
+id = "history-0003"
+subcategory = "Cold War"
+difficulty = "easy"
+text = "In which year did the Berlin Wall fall?"
+answer = "1989"
+wrong = ["1961", "1985", "1991"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Berlin_Wall"
+reviewed = false
+
+[[question]]
+id = "history-0004"
+subcategory = "Space Race"
+difficulty = "easy"
+text = "Who was the first person to walk on the Moon?"
+answer = "Neil Armstrong"
+wrong = ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Neil_Armstrong"
+reviewed = false
+
+[[question]]
+id = "history-0005"
+subcategory = "World War II"
+difficulty = "easy"
+text = "Germany's invasion of which country in September 1939 began the Second World War in Europe?"
+answer = "Poland"
+wrong = ["France", "Belgium", "Czechoslovakia"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Invasion_of_Poland"
+reviewed = false
+
+[[question]]
+id = "history-0006"
+subcategory = "Medieval France"
+difficulty = "easy"
+text = "Which peasant girl led French troops in the Hundred Years' War and was burned at the stake in 1431?"
+answer = "Joan of Arc"
+wrong = ["Eleanor of Aquitaine", "Catherine de' Medici", "Marie Antoinette"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Joan_of_Arc"
+reviewed = false
+
+[[question]]
+id = "history-0007"
+subcategory = "Medicine"
+difficulty = "easy"
+text = "Which scientist discovered penicillin in 1928?"
+answer = "Alexander Fleming"
+wrong = ["Louis Pasteur", "Edward Jenner", "Joseph Lister"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Alexander_Fleming"
+reviewed = false
+
+[[question]]
+id = "history-0008"
+subcategory = "Ancient Rome"
+difficulty = "easy"
+text = "Which Roman city was buried by the eruption of Mount Vesuvius in AD 79?"
+answer = "Pompeii"
+wrong = ["Ostia", "Carthage", "Ravenna"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Pompeii"
+reviewed = false
+
+[[question]]
+id = "history-0009"
+subcategory = "Mongol Empire"
+difficulty = "easy"
+text = "Who founded the Mongol Empire in 1206?"
+answer = "Genghis Khan"
+wrong = ["Kublai Khan", "Attila", "Tamerlane"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Genghis_Khan"
+reviewed = false
+
+[[question]]
+id = "history-0010"
+subcategory = "United States"
+difficulty = "easy"
+text = "Which US president issued the Emancipation Proclamation?"
+answer = "Abraham Lincoln"
+wrong = ["Ulysses S. Grant", "Thomas Jefferson", "Andrew Johnson"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Emancipation_Proclamation"
+reviewed = false
+
+[[question]]
+id = "history-0011"
+subcategory = "19th century"
+difficulty = "easy"
+text = "Which country gave the Statue of Liberty to the United States?"
+answer = "France"
+wrong = ["United Kingdom", "Spain", "Italy"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Statue_of_Liberty"
+reviewed = false
+
+[[question]]
+id = "history-0012"
+subcategory = "World War I"
+difficulty = "easy"
+text = "In which year did the First World War begin?"
+answer = "1914"
+wrong = ["1912", "1916", "1918"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/World_War_I"
+reviewed = false
+
+[[question]]
+id = "history-0013"
+subcategory = "Modern Britain"
+difficulty = "easy"
+text = "Who became the first woman to serve as Prime Minister of the United Kingdom?"
+answer = "Margaret Thatcher"
+wrong = ["Theresa May", "Barbara Castle", "Nancy Astor"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Margaret_Thatcher"
+reviewed = false
+
+[[question]]
+id = "history-0014"
+subcategory = "Ancient Greece"
+difficulty = "easy"
+text = "Which Athenian philosopher was sentenced to death in 399 BC and died by drinking hemlock?"
+answer = "Socrates"
+wrong = ["Plato", "Aristotle", "Pythagoras"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Socrates"
+reviewed = false
+
+[[question]]
+id = "history-0015"
+subcategory = "Russian Revolution"
+difficulty = "easy"
+text = "Who led the Bolsheviks to power in Russia in 1917 and became the first head of the Soviet state?"
+answer = "Vladimir Lenin"
+wrong = ["Joseph Stalin", "Nicholas II", "Alexander Kerensky"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Vladimir_Lenin"
+reviewed = false
+
+[[question]]
+id = "history-0016"
+subcategory = "Medieval England"
+difficulty = "medium"
+text = "Which English king put his seal to Magna Carta in 1215?"
+answer = "John"
+wrong = ["Henry II", "Richard I", "Edward I"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Magna_Carta"
+reviewed = false
+
+[[question]]
+id = "history-0017"
+subcategory = "Early Middle Ages"
+difficulty = "medium"
+text = "Which Frankish king was crowned emperor by Pope Leo III in Rome on Christmas Day 800?"
+answer = "Charlemagne"
+wrong = ["Charles Martel", "Pepin the Short", "Clovis I"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Charlemagne"
+reviewed = false
+
+[[question]]
+id = "history-0018"
+subcategory = "Ancient Rome"
+difficulty = "medium"
+text = "Under which Roman emperor did construction of the Colosseum begin?"
+answer = "Vespasian"
+wrong = ["Nero", "Trajan", "Hadrian"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Colosseum"
+reviewed = false
+
+[[question]]
+id = "history-0019"
+subcategory = "World War I"
+difficulty = "medium"
+text = "Which 1919 treaty set the peace terms between Germany and the Allies after the First World War?"
+answer = "Treaty of Versailles"
+wrong = ["Treaty of Trianon", "Treaty of Brest-Litovsk", "Treaty of Utrecht"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Treaty_of_Versailles"
+reviewed = false
+
+[[question]]
+id = "history-0020"
+subcategory = "Punic Wars"
+difficulty = "medium"
+text = "Which Carthaginian general crossed the Alps with war elephants to invade Italy in 218 BC?"
+answer = "Hannibal"
+wrong = ["Hamilcar Barca", "Hasdrubal", "Pyrrhus"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Hannibal"
+reviewed = false
+
+[[question]]
+id = "history-0021"
+subcategory = "Age of Exploration"
+difficulty = "medium"
+text = "Which Portuguese navigator was the first European to reach India by sea, in 1498?"
+answer = "Vasco da Gama"
+wrong = ["Ferdinand Magellan", "Bartolomeu Dias", "Pedro Cabral"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Vasco_da_Gama"
+reviewed = false
+
+[[question]]
+id = "history-0022"
+subcategory = "Space Race"
+difficulty = "medium"
+text = "Who became the first woman in space in 1963?"
+answer = "Valentina Tereshkova"
+wrong = ["Sally Ride", "Svetlana Savitskaya", "Mae Jemison"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Valentina_Tereshkova"
+reviewed = false
+
+[[question]]
+id = "history-0023"
+subcategory = "Crusades"
+difficulty = "medium"
+text = "Which Muslim sultan recaptured Jerusalem from the Crusaders in 1187?"
+answer = "Saladin"
+wrong = ["Baibars", "Suleiman the Magnificent", "Harun al-Rashid"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Saladin"
+reviewed = false
+
+[[question]]
+id = "history-0024"
+subcategory = "Women's suffrage"
+difficulty = "medium"
+text = "In 1893, which country became the first self-governing nation to give women the vote in national elections?"
+answer = "New Zealand"
+wrong = ["Australia", "Finland", "Norway"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Women%27s_suffrage_in_New_Zealand"
+reviewed = false
+
+[[question]]
+id = "history-0025"
+subcategory = "World War II"
+difficulty = "medium"
+text = "What was the code name of the Allied invasion of Normandy in June 1944?"
+answer = "Operation Overlord"
+wrong = ["Operation Barbarossa", "Operation Market Garden", "Operation Torch"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Operation_Overlord"
+reviewed = false
+
+[[question]]
+id = "history-0026"
+subcategory = "Ancient China"
+difficulty = "medium"
+text = "Who unified China in 221 BC and became its first emperor?"
+answer = "Qin Shi Huang"
+wrong = ["Kublai Khan", "Liu Bang", "Sun Tzu"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Qin_Shi_Huang"
+reviewed = false
+
+[[question]]
+id = "history-0027"
+subcategory = "Ancient Egypt"
+difficulty = "medium"
+text = "The Rosetta Stone, found in 1799, was the key to deciphering which script?"
+answer = "Egyptian hieroglyphs"
+wrong = ["Cuneiform", "Linear B", "Phoenician"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Rosetta_Stone"
+reviewed = false
+
+[[question]]
+id = "history-0028"
+subcategory = "Southeast Asia"
+difficulty = "medium"
+text = "Which country was ruled by the Khmer Rouge from 1975 to 1979?"
+answer = "Cambodia"
+wrong = ["Vietnam", "Laos", "Myanmar"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Khmer_Rouge"
+reviewed = false
+
+[[question]]
+id = "history-0029"
+subcategory = "Haitian Revolution"
+difficulty = "medium"
+text = "Which former slave was the best-known leader of the Haitian Revolution?"
+answer = "Toussaint Louverture"
+wrong = ["Simón Bolívar", "José de San Martín", "Bernardo O'Higgins"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Toussaint_Louverture"
+reviewed = false
+
+[[question]]
+id = "history-0030"
+subcategory = "South Africa"
+difficulty = "medium"
+text = "In which year was Nelson Mandela released after 27 years in prison?"
+answer = "1990"
+wrong = ["1985", "1994", "1999"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Nelson_Mandela"
+reviewed = false
+
+[[question]]
+id = "history-0031"
+subcategory = "Early modern Europe"
+difficulty = "hard"
+text = "Which war was ended by the Peace of Westphalia in 1648?"
+answer = "Thirty Years' War"
+wrong = ["Hundred Years' War", "Seven Years' War", "Great Northern War"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Peace_of_Westphalia"
+reviewed = false
+
+[[question]]
+id = "history-0032"
+subcategory = "20th-century leaders"
+difficulty = "hard"
+text = "Sirimavo Bandaranaike became the world's first woman prime minister in 1960. Which country did she lead?"
+answer = "Ceylon (now Sri Lanka)"
+wrong = ["India", "Pakistan", "Israel"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Sirimavo_Bandaranaike"
+reviewed = false
+
+[[question]]
+id = "history-0033"
+subcategory = "Roman Britain"
+difficulty = "hard"
+text = "What name did the Romans give to the part of Britain north of their province, in what is now Scotland?"
+answer = "Caledonia"
+wrong = ["Hibernia", "Cambria", "Lusitania"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Caledonia"
+reviewed = false
+
+[[question]]
+id = "history-0034"
+subcategory = "Persia"
+difficulty = "hard"
+text = "Shah Abbas the Great, who reigned from 1588 to 1629, ruled which empire?"
+answer = "Safavid"
+wrong = ["Ottoman", "Mughal", "Timurid"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Abbas_the_Great"
+reviewed = false
+
+[[question]]
+id = "history-0035"
+subcategory = "Reformation"
+difficulty = "hard"
+text = "Which Holy Roman Emperor presided over the Diet of Worms, where Martin Luther appeared in 1521?"
+answer = "Charles V"
+wrong = ["Maximilian I", "Ferdinand I", "Rudolf II"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Diet_of_Worms"
+reviewed = false
+
+[[question]]
+id = "history-0036"
+subcategory = "Ottoman Empire"
+difficulty = "hard"
+text = "In which year was the Ottoman sultanate abolished?"
+answer = "1922"
+wrong = ["1908", "1918", "1930"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Abolition_of_the_Ottoman_sultanate"
+reviewed = false
+
+[[question]]
+id = "history-0037"
+subcategory = "Mesopotamia"
+difficulty = "hard"
+text = "Which Mesopotamian law code, some three centuries older than Hammurabi's, is the oldest known to survive?"
+answer = "Code of Ur-Nammu"
+wrong = ["Code of Lipit-Ishtar", "Laws of Eshnunna", "Middle Assyrian Laws"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Code_of_Ur-Nammu"
+reviewed = false
+
+[[question]]
+id = "history-0038"
+subcategory = "Late Roman Empire"
+difficulty = "hard"
+text = "Which Roman emperor made Nicene Christianity the state religion with the Edict of Thessalonica in 380?"
+answer = "Theodosius I"
+wrong = ["Constantine I", "Diocletian", "Justinian I"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Edict_of_Thessalonica"
+reviewed = false
+
+[[question]]
+id = "history-0039"
+subcategory = "Siam"
+difficulty = "hard"
+text = "Which king of Siam, who reigned from 1868 to 1910, abolished slavery and kept his country free of colonial rule?"
+answer = "Chulalongkorn"
+wrong = ["Mongkut", "Taksin", "Bhumibol"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Chulalongkorn"
+reviewed = false
+
+[[question]]
+id = "history-0040"
+subcategory = "Industrial Revolution"
+difficulty = "hard"
+text = "Who invented the spinning jenny, a multi-spindle spinning frame, in the 1760s?"
+answer = "James Hargreaves"
+wrong = ["Richard Arkwright", "Samuel Crompton", "Edmund Cartwright"]
+source = "https://blog.polleverywhere.com/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Spinning_jenny"
+reviewed = false
+
+[[question]]
+id = "history-0041"
+subcategory = "World War I"
+difficulty = "easy"
+text = "In which city was Archduke Franz Ferdinand assassinated in June 1914?"
+answer = "Sarajevo"
+wrong = ["Vienna", "Belgrade", "Budapest"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Assassination_of_Archduke_Franz_Ferdinand"
+reviewed = false
+
+[[question]]
+id = "history-0042"
+subcategory = "Cold War"
+difficulty = "easy"
+text = "Which US president declared 'Ich bin ein Berliner' in a 1963 speech?"
+answer = "John F. Kennedy"
+wrong = ["Ronald Reagan", "Richard Nixon", "Dwight D. Eisenhower"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Ich_bin_ein_Berliner"
+reviewed = false
+
+[[question]]
+id = "history-0043"
+subcategory = "Science"
+difficulty = "easy"
+text = "Who discovered the elements radium and polonium together with her husband Pierre?"
+answer = "Marie Curie"
+wrong = ["Lise Meitner", "Rosalind Franklin", "Dorothy Hodgkin"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Marie_Curie"
+reviewed = false
+
+[[question]]
+id = "history-0044"
+subcategory = "Napoleonic era"
+difficulty = "easy"
+text = "On which island was Napoleon Bonaparte born?"
+answer = "Corsica"
+wrong = ["Sardinia", "Sicily", "Elba"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Napoleon"
+reviewed = false
+
+[[question]]
+id = "history-0045"
+subcategory = "Colonial America"
+difficulty = "easy"
+text = "Which ship carried the Pilgrims to North America in 1620?"
+answer = "Mayflower"
+wrong = ["Santa María", "Endeavour", "Golden Hind"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Mayflower"
+reviewed = false
+
+[[question]]
+id = "history-0046"
+subcategory = "Crimean War"
+difficulty = "easy"
+text = "Which nurse became known as 'the Lady with the Lamp' during the Crimean War?"
+answer = "Florence Nightingale"
+wrong = ["Mary Seacole", "Edith Cavell", "Clara Barton"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Florence_Nightingale"
+reviewed = false
+
+[[question]]
+id = "history-0047"
+subcategory = "Tudor England"
+difficulty = "easy"
+text = "How many times did Henry VIII marry?"
+answer = "Six"
+wrong = ["Four", "Five", "Seven"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Wives_of_Henry_VIII"
+reviewed = false
+
+[[question]]
+id = "history-0048"
+subcategory = "20th century"
+difficulty = "easy"
+text = "Which liner sank on its maiden voyage in April 1912?"
+answer = "Titanic"
+wrong = ["Lusitania", "Britannic", "Olympic"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Titanic"
+reviewed = false
+
+[[question]]
+id = "history-0049"
+subcategory = "World War II"
+difficulty = "easy"
+text = "Which city was the first to be hit by an atomic bomb in war?"
+answer = "Hiroshima"
+wrong = ["Nagasaki", "Tokyo", "Kokura"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+reviewed = false
+
+[[question]]
+id = "history-0050"
+subcategory = "Aviation"
+difficulty = "easy"
+text = "Who was the first woman to fly solo across the Atlantic, in 1932?"
+answer = "Amelia Earhart"
+wrong = ["Amy Johnson", "Bessie Coleman", "Harriet Quimby"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Amelia_Earhart"
+reviewed = false
+
+[[question]]
+id = "history-0051"
+subcategory = "Space Race"
+difficulty = "easy"
+text = "Who became the first human to travel into space, in 1961?"
+answer = "Yuri Gagarin"
+wrong = ["Alexei Leonov", "Gherman Titov", "John Glenn"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Yuri_Gagarin"
+reviewed = false
+
+[[question]]
+id = "history-0052"
+subcategory = "Ancient Rome"
+difficulty = "easy"
+text = "According to legend, who founded the city of Rome?"
+answer = "Romulus"
+wrong = ["Aeneas", "Numa Pompilius", "Tarquin"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Romulus"
+reviewed = false
+
+[[question]]
+id = "history-0053"
+subcategory = "Medieval England"
+difficulty = "easy"
+text = "Which battle in 1066 opened the way for the Norman conquest of England?"
+answer = "Hastings"
+wrong = ["Stamford Bridge", "Bosworth", "Agincourt"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Battle_of_Hastings"
+reviewed = false
+
+[[question]]
+id = "history-0054"
+subcategory = "Stuart England"
+difficulty = "easy"
+text = "In which year did the Great Fire of London break out?"
+answer = "1666"
+wrong = ["1588", "1605", "1688"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Great_Fire_of_London"
+reviewed = false
+
+[[question]]
+id = "history-0055"
+subcategory = "United States"
+difficulty = "easy"
+text = "From which country did the United States buy Louisiana in 1803?"
+answer = "France"
+wrong = ["Spain", "Britain", "Mexico"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Louisiana_Purchase"
+reviewed = false
+
+[[question]]
+id = "history-0056"
+subcategory = "United States"
+difficulty = "easy"
+text = "Who assassinated Abraham Lincoln in 1865?"
+answer = "John Wilkes Booth"
+wrong = ["Lee Harvey Oswald", "Charles Guiteau", "Leon Czolgosz"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/John_Wilkes_Booth"
+reviewed = false
+
+[[question]]
+id = "history-0057"
+subcategory = "United States"
+difficulty = "easy"
+text = "Which territory did the United States buy from Russia in 1867?"
+answer = "Alaska"
+wrong = ["Hawaii", "Oregon", "Yukon"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Alaska_Purchase"
+reviewed = false
+
+[[question]]
+id = "history-0058"
+subcategory = "United States"
+difficulty = "easy"
+text = "Which scandal led Richard Nixon to resign the presidency in 1974?"
+answer = "Watergate"
+wrong = ["Teapot Dome", "Iran–Contra", "Whitewater"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Watergate_scandal"
+reviewed = false
+
+[[question]]
+id = "history-0059"
+subcategory = "World War II"
+difficulty = "easy"
+text = "At which English country house did Alan Turing help break the Enigma code?"
+answer = "Bletchley Park"
+wrong = ["Chequers", "Blenheim Palace", "Hampton Court"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Bletchley_Park"
+reviewed = false
+
+[[question]]
+id = "history-0060"
+subcategory = "Cold War"
+difficulty = "easy"
+text = "Which country was the target of the failed Bay of Pigs invasion in 1961?"
+answer = "Cuba"
+wrong = ["Nicaragua", "Panama", "Dominican Republic"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion"
+reviewed = false
+
+[[question]]
+id = "history-0061"
+subcategory = "South Asia"
+difficulty = "easy"
+text = "In which year did India gain independence from Britain?"
+answer = "1947"
+wrong = ["1945", "1950", "1957"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Indian_Independence_Act_1947"
+reviewed = false
+
+[[question]]
+id = "history-0062"
+subcategory = "Ancient Rome"
+difficulty = "easy"
+text = "Which river did Julius Caesar cross in 49 BC, starting a civil war?"
+answer = "Rubicon"
+wrong = ["Tiber", "Po", "Arno"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Crossing_the_Rubicon"
+reviewed = false
+
+[[question]]
+id = "history-0063"
+subcategory = "Vikings"
+difficulty = "easy"
+text = "Which Norse explorer is thought to have reached North America around the year 1000?"
+answer = "Leif Erikson"
+wrong = ["Erik the Red", "Harald Hardrada", "Ragnar Lothbrok"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Leif_Erikson"
+reviewed = false
+
+[[question]]
+id = "history-0064"
+subcategory = "Space Race"
+difficulty = "easy"
+text = "In which year did the Soviet Union launch Sputnik 1, the first artificial satellite?"
+answer = "1957"
+wrong = ["1953", "1961", "1965"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Sputnik_1"
+reviewed = false
+
+[[question]]
+id = "history-0065"
+subcategory = "Ancient Greece"
+difficulty = "easy"
+text = "Which ancient Greek physician is known as the father of medicine?"
+answer = "Hippocrates"
+wrong = ["Galen", "Herophilus", "Erasistratus"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Hippocrates"
+reviewed = false
+
+[[question]]
+id = "history-0066"
+subcategory = "Cold War"
+difficulty = "medium"
+text = "Which phrase did Winston Churchill popularise in 1946 for the divide across Europe?"
+answer = "Iron Curtain"
+wrong = ["Bamboo Curtain", "Berlin Wall", "Green Line"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Iron_Curtain"
+reviewed = false
+
+[[question]]
+id = "history-0067"
+subcategory = "Ancient Rome"
+difficulty = "medium"
+text = "Which Roman emperor was nicknamed 'Little Boots' as a child?"
+answer = "Caligula"
+wrong = ["Nero", "Tiberius", "Claudius"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Caligula"
+reviewed = false
+
+[[question]]
+id = "history-0068"
+subcategory = "Colonial America"
+difficulty = "medium"
+text = "What was New York City called when it was a Dutch colonial town?"
+answer = "New Amsterdam"
+wrong = ["Fort Orange", "New Haven", "Plymouth"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/New_Amsterdam"
+reviewed = false
+
+[[question]]
+id = "history-0069"
+subcategory = "Mesopotamia"
+difficulty = "medium"
+text = "Which people invented cuneiform, one of the earliest writing systems?"
+answer = "Sumerians"
+wrong = ["Phoenicians", "Hittites", "Minoans"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Cuneiform"
+reviewed = false
+
+[[question]]
+id = "history-0070"
+subcategory = "Britain"
+difficulty = "medium"
+text = "In which year did the Acts of Union join England and Scotland as Great Britain?"
+answer = "1707"
+wrong = ["1603", "1688", "1801"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Acts_of_Union_1707"
+reviewed = false
+
+[[question]]
+id = "history-0071"
+subcategory = "Tudor England"
+difficulty = "medium"
+text = "Who reigned as queen of England for only nine days in 1553?"
+answer = "Lady Jane Grey"
+wrong = ["Mary I", "Anne of Cleves", "Matilda"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Lady_Jane_Grey"
+reviewed = false
+
+[[question]]
+id = "history-0072"
+subcategory = "Ancient India"
+difficulty = "medium"
+text = "Which Mauryan emperor embraced Buddhism after the bloody Kalinga War?"
+answer = "Ashoka"
+wrong = ["Chandragupta Maurya", "Bindusara", "Harsha"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Ashoka"
+reviewed = false
+
+[[question]]
+id = "history-0073"
+subcategory = "Ancient Egypt"
+difficulty = "medium"
+text = "Who is credited as the architect of Djoser's Step Pyramid at Saqqara?"
+answer = "Imhotep"
+wrong = ["Hemiunu", "Senenmut", "Ineni"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Imhotep"
+reviewed = false
+
+[[question]]
+id = "history-0074"
+subcategory = "Ancient China"
+difficulty = "medium"
+text = "Shang dynasty diviners carved their questions on which materials?"
+answer = "Ox bones and turtle shells"
+wrong = ["Bamboo slips", "Silk scrolls", "Clay tablets"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Oracle_bone"
+reviewed = false
+
+[[question]]
+id = "history-0075"
+subcategory = "Indus Valley"
+difficulty = "medium"
+text = "Which of these ancient scripts has never been deciphered?"
+answer = "Indus script"
+wrong = ["Linear B", "Maya script", "Old Persian cuneiform"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Indus_script"
+reviewed = false
+
+[[question]]
+id = "history-0076"
+subcategory = "Islamic Golden Age"
+difficulty = "medium"
+text = "Which Baghdad scholar's name gave us the word 'algorithm'?"
+answer = "al-Khwarizmi"
+wrong = ["Ibn Sina", "al-Biruni", "Omar Khayyam"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi"
+reviewed = false
+
+[[question]]
+id = "history-0077"
+subcategory = "Ming China"
+difficulty = "medium"
+text = "Which Ming admiral led treasure fleets as far as East Africa in the early 1400s?"
+answer = "Zheng He"
+wrong = ["Koxinga", "Yue Fei", "Qi Jiguang"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Zheng_He"
+reviewed = false
+
+[[question]]
+id = "history-0078"
+subcategory = "Ancient China"
+difficulty = "medium"
+text = "Near which city did farmers digging a well in 1974 find the Terracotta Army?"
+answer = "Xi'an"
+wrong = ["Beijing", "Nanjing", "Luoyang"]
+source = "https://www.historyoasis.com/quizzes/history-iq-test"
+check = "https://en.wikipedia.org/wiki/Terracotta_Army"
+reviewed = false
+
+[[question]]
+id = "history-0079"
+subcategory = "Khmer Empire"
+difficulty = "medium"
+text = "Angkor Wat was first built as a temple of which religion?"
+answer = "Hinduism"
+wrong = ["Buddhism", "Jainism", "Islam"]
+source = "https://www.historyoasis.com/quizzes/history-iq-test"
+check = "https://en.wikipedia.org/wiki/Angkor_Wat"
+reviewed = false
+
+[[question]]
+id = "history-0080"
+subcategory = "Qing China"
+difficulty = "medium"
+text = "Which territory did China cede to Britain in the 1842 Treaty of Nanking?"
+answer = "Hong Kong Island"
+wrong = ["Macau", "Kowloon", "Shanghai"]
+source = "https://www.historyoasis.com/quizzes/history-iq-test"
+check = "https://en.wikipedia.org/wiki/Treaty_of_Nanking"
+reviewed = false
+
+[[question]]
+id = "history-0081"
+subcategory = "Ethiopia"
+difficulty = "medium"
+text = "At the Battle of Adwa in 1896, Ethiopia defeated an invading army from which country?"
+answer = "Italy"
+wrong = ["Britain", "France", "Portugal"]
+source = "https://www.historyoasis.com/quizzes/history-iq-test"
+check = "https://en.wikipedia.org/wiki/Battle_of_Adwa"
+reviewed = false
+
+[[question]]
+id = "history-0082"
+subcategory = "East Africa"
+difficulty = "medium"
+text = "Which 1896 conflict, over in under an hour, is often called the shortest war in history?"
+answer = "Anglo-Zanzibar War"
+wrong = ["Football War", "Six-Day War", "Pig War"]
+source = "https://www.historyoasis.com/quizzes/history-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Anglo-Zanzibar_War"
+reviewed = false
+
+[[question]]
+id = "history-0083"
+subcategory = "World War I"
+difficulty = "medium"
+text = "Which British liner was sunk by a German U-boat off Ireland in May 1915?"
+answer = "Lusitania"
+wrong = ["Britannic", "Mauretania", "Olympic"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/RMS_Lusitania"
+reviewed = false
+
+[[question]]
+id = "history-0084"
+subcategory = "Middle East"
+difficulty = "medium"
+text = "The 1978 Camp David Accords led to a peace treaty between Israel and which country?"
+answer = "Egypt"
+wrong = ["Jordan", "Syria", "Lebanon"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Camp_David_Accords"
+reviewed = false
+
+[[question]]
+id = "history-0085"
+subcategory = "Cold War"
+difficulty = "medium"
+text = "What was the American aid programme that rebuilt Western Europe's economies from 1948?"
+answer = "Marshall Plan"
+wrong = ["Truman Doctrine", "Lend-Lease", "New Deal"]
+source = "https://quizado.com/blog/history-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Marshall_Plan"
+reviewed = false
+
+[[question]]
+id = "history-0086"
+subcategory = "Yuan dynasty"
+difficulty = "medium"
+text = "Which grandson of Genghis Khan founded China's Yuan dynasty?"
+answer = "Kublai Khan"
+wrong = ["Ögedei Khan", "Möngke Khan", "Hulagu Khan"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Kublai_Khan"
+reviewed = false
+
+[[question]]
+id = "history-0087"
+subcategory = "Inca Empire"
+difficulty = "medium"
+text = "Which Spanish conquistador captured the Inca emperor Atahualpa in 1532?"
+answer = "Francisco Pizarro"
+wrong = ["Hernán Cortés", "Diego de Almagro", "Pedro de Valdivia"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Francisco_Pizarro"
+reviewed = false
+
+[[question]]
+id = "history-0088"
+subcategory = "Early medieval India"
+difficulty = "hard"
+text = "Which Chalukya king defeated Harsha and halted his push into southern India?"
+answer = "Pulakeshin II"
+wrong = ["Rajaraja I", "Krishnadevaraya", "Mahendravarman I"]
+source = "https://forms.app/en/blog/history-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Pulakeshin_II"
+reviewed = false
+
+[[question]]
+id = "history-0089"
+subcategory = "Mathematics"
+difficulty = "hard"
+text = "Which Indian mathematician first set out rules for zero as a number, in 628?"
+answer = "Brahmagupta"
+wrong = ["Aryabhata", "Bhaskara II", "Varahamihira"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Brahmagupta"
+reviewed = false
+
+[[question]]
+id = "history-0090"
+subcategory = "Bronze Age Greece"
+difficulty = "hard"
+text = "The Linear B script was used to write which language?"
+answer = "Mycenaean Greek"
+wrong = ["Minoan", "Phoenician", "Hittite"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Linear_B"
+reviewed = false
+
+[[question]]
+id = "history-0091"
+subcategory = "Aviation"
+difficulty = "hard"
+text = "Which airship's 1933 crash, killing 73 people, was the deadliest airship disaster?"
+answer = "USS Akron"
+wrong = ["Hindenburg", "R101", "USS Shenandoah"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/USS_Akron"
+reviewed = false
+
+[[question]]
+id = "history-0092"
+subcategory = "World War II"
+difficulty = "hard"
+text = "In May 1945, what killed six picnickers near Bly, Oregon?"
+answer = "A Japanese balloon bomb"
+wrong = ["A submarine shell", "A seaplane bomb", "A naval mine"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Fu-Go_balloon_bomb"
+reviewed = false
+
+[[question]]
+id = "history-0093"
+subcategory = "Mesopotamia"
+difficulty = "hard"
+text = "At which ancient city was the stele of Hammurabi's law code excavated?"
+answer = "Susa"
+wrong = ["Babylon", "Nineveh", "Ur"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Code_of_Hammurabi"
+reviewed = false
+
+[[question]]
+id = "history-0094"
+subcategory = "Printing"
+difficulty = "hard"
+text = "Jikji, the oldest surviving book printed with movable metal type, was made in which country?"
+answer = "Korea"
+wrong = ["China", "Japan", "Germany"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Jikji"
+reviewed = false
+
+[[question]]
+id = "history-0095"
+subcategory = "Age of Exploration"
+difficulty = "hard"
+text = "Who brought the last ship of Magellan's fleet home, completing the first circumnavigation?"
+answer = "Juan Sebastián Elcano"
+wrong = ["Francis Drake", "Bartolomeu Dias", "Amerigo Vespucci"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Elcano"
+reviewed = false
+
+[[question]]
+id = "history-0096"
+subcategory = "Qing China"
+difficulty = "hard"
+text = "Hong Xiuquan, who claimed to be the younger brother of Jesus, led which uprising?"
+answer = "Taiping Rebellion"
+wrong = ["Boxer Rebellion", "White Lotus Rebellion", "Nian Rebellion"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Hong_Xiuquan"
+reviewed = false
+
+[[question]]
+id = "history-0097"
+subcategory = "Partition of India"
+difficulty = "hard"
+text = "Which British lawyer drew the 1947 border between India and Pakistan?"
+answer = "Cyril Radcliffe"
+wrong = ["Lord Mountbatten", "Lord Curzon", "Stafford Cripps"]
+source = "https://www.historyoasis.com/quizzes/world-history"
+check = "https://en.wikipedia.org/wiki/Radcliffe_Line"
+reviewed = false
+
+[[question]]
+id = "history-0098"
+subcategory = "Islamic world"
+difficulty = "hard"
+text = "In which city did Fatima al-Fihri found the al-Qarawiyyin mosque in 859?"
+answer = "Fez"
+wrong = ["Cairo", "Córdoba", "Tunis"]
+source = "https://www.historyoasis.com/quizzes/history-trivia-questions"
+check = "https://en.wikipedia.org/wiki/University_of_al-Qarawiyyin"
+reviewed = false
+
+[[question]]
+id = "history-0099"
+subcategory = "Medicine"
+difficulty = "hard"
+text = "Who identified the plague bacterium in Hong Kong in 1894, which now bears his name?"
+answer = "Alexandre Yersin"
+wrong = ["Robert Koch", "Louis Pasteur", "Paul Ehrlich"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Alexandre_Yersin"
+reviewed = false
+
+[[question]]
+id = "history-0100"
+subcategory = "Ancient Rome"
+difficulty = "hard"
+text = "What were ancient Rome's official daily public notices, an early kind of newspaper, called?"
+answer = "Acta Diurna"
+wrong = ["Res Gestae", "Annales Maximi", "Fasti"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Acta_Diurna"
+reviewed = false
+
+[[question]]
+id = "history-0101"
+subcategory = "Ancient Africa"
+difficulty = "hard"
+text = "The Garamantes, who tapped desert groundwater with foggara tunnels, lived in which modern country?"
+answer = "Libya"
+wrong = ["Egypt", "Mali", "Mauritania"]
+source = "https://www.historyoasis.com/quizzes/hardest-history-questions"
+check = "https://en.wikipedia.org/wiki/Garamantes"
+reviewed = false
+
+[[question]]
+id = "history-0102"
+subcategory = "United States"
+difficulty = "hard"
+text = "Which was the first state to ratify the US Constitution, in 1787?"
+answer = "Delaware"
+wrong = ["Pennsylvania", "New Jersey", "Virginia"]
+source = "https://ahaslides.com/blog/history-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Delaware"
+reviewed = false

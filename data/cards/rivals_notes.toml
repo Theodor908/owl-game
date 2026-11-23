@@ -1,0 +1,10 @@
+id = "rivals_notes"
+name = "Rival's Notes"
+tier = 4
+kind = "weights"
+text = "Your weight total counts as 20 points higher for the 3-1 split"
+golden_text = "Your weight total counts as 40 points higher for the 3-1 split"
+
+[[effects]]
+effect = "SplitBonus"
+points = 20

@@ -1,0 +1,11 @@
+id = "pheidippides"
+name = "Pheidippides"
+title = "Runner of Marathon"
+category = "sport"
+hp = 35
+category_bonus = 25
+kind = "Pheidippides"
+
+[params]
+per_correct = 1
+max = 6

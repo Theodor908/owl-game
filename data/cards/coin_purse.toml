@@ -1,0 +1,11 @@
+id = "coin_purse"
+name = "Coin Purse"
+tier = 2
+kind = "economy"
+text = "If you got 4 or more right in the battle, +1 gold next shop"
+golden_text = "If you got 4 or more right in the battle, +2 gold next shop"
+
+[[effects]]
+effect = "GoldOnCorrect"
+min_correct = 4
+gold = 1

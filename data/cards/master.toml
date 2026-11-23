@@ -1,0 +1,11 @@
+id = "master"
+name = "Master"
+tier = 5
+kind = "category"
+text = "+25% chance of this category on your weighted questions"
+golden_text = "+50% chance of this category on your weighted questions. Counts as 3 cards of its category, and the category bonus becomes +3 damage"
+per_category = true
+
+[[effects]]
+effect = "CategoryWeight"
+percent = 25

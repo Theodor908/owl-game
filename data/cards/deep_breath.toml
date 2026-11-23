@@ -1,0 +1,11 @@
+id = "deep_breath"
+name = "Deep Breath"
+tier = 5
+kind = "endgame"
+text = "In the endgame, +3 s answer time"
+cost = 8
+golden = false
+
+[[effects]]
+effect = "EndgameTime"
+seconds = 3

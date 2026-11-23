@@ -1,0 +1,1055 @@
+[[question]]
+id = "physics-0001"
+subcategory = "Units"
+difficulty = "easy"
+text = "Which physical quantity is measured in newtons?"
+answer = "Force"
+wrong = ["Energy", "Power", "Pressure"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0002"
+subcategory = "Units"
+difficulty = "easy"
+text = "What does the hertz measure?"
+answer = "Frequency"
+wrong = ["Wavelength", "Loudness", "Electric current"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0003"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "Who formulated the law of universal gravitation?"
+answer = "Isaac Newton"
+wrong = ["Galileo Galilei", "Johannes Kepler", "Albert Einstein"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation"
+reviewed = false
+
+[[question]]
+id = "physics-0004"
+subcategory = "Relativity"
+difficulty = "easy"
+text = "Which physicist is known for the equation E = mc²?"
+answer = "Albert Einstein"
+wrong = ["Niels Bohr", "Max Planck", "Isaac Newton"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence"
+reviewed = false
+
+[[question]]
+id = "physics-0005"
+subcategory = "Heat"
+difficulty = "easy"
+text = "By which process does the Sun's heat cross empty space to reach Earth?"
+answer = "Radiation"
+wrong = ["Conduction", "Convection", "Evaporation"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Heat_transfer"
+reviewed = false
+
+[[question]]
+id = "physics-0006"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "Which of these can sound not travel through?"
+answer = "A vacuum"
+wrong = ["Water", "Steel", "Air"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Sound"
+reviewed = false
+
+[[question]]
+id = "physics-0007"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "Which instrument measures atmospheric pressure?"
+answer = "Barometer"
+wrong = ["Thermometer", "Hygrometer", "Anemometer"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Barometer"
+reviewed = false
+
+[[question]]
+id = "physics-0008"
+subcategory = "Light"
+difficulty = "easy"
+text = "What is the bending of light as it passes from air into water called?"
+answer = "Refraction"
+wrong = ["Reflection", "Diffraction", "Polarization"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Refraction"
+reviewed = false
+
+[[question]]
+id = "physics-0009"
+subcategory = "Units"
+difficulty = "easy"
+text = "The ohm is the SI unit of what?"
+answer = "Electrical resistance"
+wrong = ["Electric current", "Electric charge", "Voltage"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0010"
+subcategory = "Nuclear physics"
+difficulty = "easy"
+text = "Which process powers the Sun?"
+answer = "Nuclear fusion"
+wrong = ["Nuclear fission", "Combustion", "Radioactive decay"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://science.nasa.gov/sun/facts/"
+reviewed = false
+
+[[question]]
+id = "physics-0011"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "Newton's first law of motion is also known as the law of what?"
+answer = "Inertia"
+wrong = ["Gravity", "Momentum", "Acceleration"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
+reviewed = false
+
+[[question]]
+id = "physics-0012"
+subcategory = "Electricity"
+difficulty = "easy"
+text = "Which metal is the filament of a traditional incandescent light bulb made of?"
+answer = "Tungsten"
+wrong = ["Copper", "Nickel", "Aluminium"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Incandescent_light_bulb"
+reviewed = false
+
+[[question]]
+id = "physics-0013"
+subcategory = "Quantum physics"
+difficulty = "easy"
+text = "Which physicist devised a famous thought experiment about a cat in a box?"
+answer = "Erwin Schrödinger"
+wrong = ["Werner Heisenberg", "Niels Bohr", "Paul Dirac"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat"
+reviewed = false
+
+[[question]]
+id = "physics-0014"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "What is the rate of change of velocity called?"
+answer = "Acceleration"
+wrong = ["Momentum", "Speed", "Inertia"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Acceleration"
+reviewed = false
+
+[[question]]
+id = "physics-0015"
+subcategory = "Fluids"
+difficulty = "easy"
+text = "Which ancient Greek discovered the principle of buoyancy for immersed bodies?"
+answer = "Archimedes"
+wrong = ["Pythagoras", "Euclid", "Aristotle"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Personalities-of-Physics-274936.html"
+check = "https://en.wikipedia.org/wiki/Archimedes%27_principle"
+reviewed = false
+
+[[question]]
+id = "physics-0016"
+subcategory = "Units"
+difficulty = "medium"
+text = "How many base units does the SI have?"
+answer = "Seven"
+wrong = ["Five", "Six", "Nine"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0017"
+subcategory = "Units"
+difficulty = "medium"
+text = "What is the SI base unit of luminous intensity?"
+answer = "Candela"
+wrong = ["Lumen", "Lux", "Watt"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0018"
+subcategory = "Heat"
+difficulty = "medium"
+text = "What is absolute zero on the Celsius scale?"
+answer = "−273.15 °C"
+wrong = ["−100 °C", "−373.15 °C", "−459.67 °C"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Absolute_zero"
+reviewed = false
+
+[[question]]
+id = "physics-0019"
+subcategory = "Astronomy and gravity"
+difficulty = "medium"
+text = "Who formulated the three laws of planetary motion?"
+answer = "Johannes Kepler"
+wrong = ["Nicolaus Copernicus", "Tycho Brahe", "Galileo Galilei"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion"
+reviewed = false
+
+[[question]]
+id = "physics-0020"
+subcategory = "Fluids"
+difficulty = "medium"
+text = "Which principle explains how a hydraulic press multiplies force?"
+answer = "Pascal's law"
+wrong = ["Bernoulli's principle", "Archimedes' principle", "Boyle's law"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Pascal%27s_law"
+reviewed = false
+
+[[question]]
+id = "physics-0021"
+subcategory = "Waves and sound"
+difficulty = "medium"
+text = "What type of wave is sound travelling through air?"
+answer = "Longitudinal"
+wrong = ["Transverse", "Electromagnetic", "Torsional"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Sound"
+reviewed = false
+
+[[question]]
+id = "physics-0022"
+subcategory = "Light"
+difficulty = "medium"
+text = "Which phenomenon keeps light inside an optical fibre?"
+answer = "Total internal reflection"
+wrong = ["Diffraction", "Dispersion", "Polarization"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Optical_fiber"
+reviewed = false
+
+[[question]]
+id = "physics-0023"
+subcategory = "Light"
+difficulty = "medium"
+text = "Which colour of visible light is bent most by a glass prism?"
+answer = "Violet"
+wrong = ["Red", "Green", "Yellow"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Prism_(optics)"
+reviewed = false
+
+[[question]]
+id = "physics-0024"
+subcategory = "Light"
+difficulty = "medium"
+text = "The dioptre is a unit for which property of a lens?"
+answer = "Optical power"
+wrong = ["Diameter", "Thickness", "Transparency"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Dioptre"
+reviewed = false
+
+[[question]]
+id = "physics-0025"
+subcategory = "Electricity"
+difficulty = "medium"
+text = "Who is credited with discovering electromagnetic induction in 1831?"
+answer = "Michael Faraday"
+wrong = ["Alessandro Volta", "André-Marie Ampère", "Georg Ohm"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Electromagnetic_induction"
+reviewed = false
+
+[[question]]
+id = "physics-0026"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "Who discovered X-rays, winning the first Nobel Prize in Physics in 1901?"
+answer = "Wilhelm Röntgen"
+wrong = ["Marie Curie", "Henri Becquerel", "J. J. Thomson"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nobelprize.org/prizes/physics/1901/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0027"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "Who discovered spontaneous radioactivity, sharing the 1903 Nobel Prize with the Curies?"
+answer = "Henri Becquerel"
+wrong = ["Ernest Rutherford", "Wilhelm Röntgen", "Max Planck"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nobelprize.org/prizes/physics/1903/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0028"
+subcategory = "Nuclear physics"
+difficulty = "medium"
+text = "Which of these types of radiation is the most penetrating?"
+answer = "Gamma rays"
+wrong = ["Alpha particles", "Beta particles", "Ultraviolet light"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Gamma_ray"
+reviewed = false
+
+[[question]]
+id = "physics-0029"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "For which discovery did Albert Einstein win the Nobel Prize in Physics?"
+answer = "The photoelectric effect"
+wrong = ["Special relativity", "General relativity", "Brownian motion"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://www.nobelprize.org/prizes/physics/1921/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0030"
+subcategory = "Nuclear physics"
+difficulty = "medium"
+text = "Which particles did Rutherford's team fire at metal foil to probe the atom?"
+answer = "Alpha particles"
+wrong = ["Electrons", "Neutrons", "Protons"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/Rutherford_scattering_experiments"
+reviewed = false
+
+[[question]]
+id = "physics-0031"
+subcategory = "Units"
+difficulty = "hard"
+text = "What is the SI unit of magnetic flux?"
+answer = "Weber"
+wrong = ["Tesla", "Henry", "Gauss"]
+source = "https://www.watercoolertrivia.com/trivia-questions/physics-trivia-questions"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0032"
+subcategory = "Units"
+difficulty = "hard"
+text = "What is the SI unit of electrical conductance?"
+answer = "Siemens"
+wrong = ["Ohm", "Farad", "Henry"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0033"
+subcategory = "Quantum physics"
+difficulty = "hard"
+text = "Who won the 1929 Nobel Prize for discovering the wave nature of electrons?"
+answer = "Louis de Broglie"
+wrong = ["Erwin Schrödinger", "Werner Heisenberg", "Paul Dirac"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Quirky-Quantum-and-Nuclear-Physics-284704.html"
+check = "https://www.nobelprize.org/prizes/physics/1929/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0034"
+subcategory = "Relativity"
+difficulty = "hard"
+text = "What was the Michelson–Morley experiment trying to detect?"
+answer = "The luminiferous aether"
+wrong = ["Gravitational waves", "Cosmic rays", "The electron's charge"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment"
+reviewed = false
+
+[[question]]
+id = "physics-0035"
+subcategory = "Nuclear physics"
+difficulty = "hard"
+text = "Which model of the atom did Rutherford's gold foil experiment overturn?"
+answer = "Plum pudding model"
+wrong = ["Bohr model", "Electron cloud model", "Liquid drop model"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Quirky-Quantum-and-Nuclear-Physics-284704.html"
+check = "https://en.wikipedia.org/wiki/Plum_pudding_model"
+reviewed = false
+
+[[question]]
+id = "physics-0036"
+subcategory = "Mechanics"
+difficulty = "hard"
+text = "Which branch of mechanics describes motion without regard to its causes?"
+answer = "Kinematics"
+wrong = ["Dynamics", "Statics", "Thermodynamics"]
+source = "https://www.watercoolertrivia.com/trivia-questions/physics-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Kinematics"
+reviewed = false
+
+[[question]]
+id = "physics-0037"
+subcategory = "Quantum physics"
+difficulty = "hard"
+text = "What are particles with half-integer spin called?"
+answer = "Fermions"
+wrong = ["Bosons", "Photons", "Gluons"]
+source = "https://www.watercoolertrivia.com/trivia-questions/physics-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Fermion"
+reviewed = false
+
+[[question]]
+id = "physics-0038"
+subcategory = "Nuclear physics"
+difficulty = "hard"
+text = "In a nuclear reactor, what is the job of the moderator?"
+answer = "Slowing down neutrons"
+wrong = ["Absorbing neutrons", "Shielding radiation", "Turning the turbine"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://en.wikipedia.org/wiki/Neutron_moderator"
+reviewed = false
+
+[[question]]
+id = "physics-0039"
+subcategory = "Units"
+difficulty = "hard"
+text = "Which SI prefix means 10⁻¹⁵?"
+answer = "Femto"
+wrong = ["Pico", "Nano", "Atto"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Quirky-Quantum-and-Nuclear-Physics-284704.html"
+check = "https://www.nist.gov/pml/owm/metric-si-prefixes"
+reviewed = false
+
+[[question]]
+id = "physics-0040"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Who won the 1935 Nobel Prize in Physics for discovering the neutron?"
+answer = "James Chadwick"
+wrong = ["Enrico Fermi", "Ernest Rutherford", "Niels Bohr"]
+source = "https://ssbcrackexams.com/?p=197423"
+check = "https://www.nobelprize.org/prizes/physics/1935/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0041"
+subcategory = "Units"
+difficulty = "easy"
+text = "What is the SI unit of power?"
+answer = "Watt"
+wrong = ["Joule", "Newton", "Volt"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0042"
+subcategory = "Units"
+difficulty = "easy"
+text = "What is the SI unit of energy?"
+answer = "Joule"
+wrong = ["Watt", "Newton", "Pascal"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0043"
+subcategory = "Units"
+difficulty = "easy"
+text = "The pascal is the SI unit of what?"
+answer = "Pressure"
+wrong = ["Force", "Energy", "Power"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0044"
+subcategory = "Electricity"
+difficulty = "easy"
+text = "What does the volt measure?"
+answer = "Electric potential difference"
+wrong = ["Electric current", "Electric charge", "Electric power"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Personalities-of-Physics-274936.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0045"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "Which law says a spring's restoring force is proportional to its extension?"
+answer = "Hooke's law"
+wrong = ["Boyle's law", "Ohm's law", "Snell's law"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Phenomenal-Physics-307360.html"
+check = "https://en.wikipedia.org/wiki/Hooke%27s_law"
+reviewed = false
+
+[[question]]
+id = "physics-0046"
+subcategory = "Heat"
+difficulty = "easy"
+text = "Which law says a gas's pressure varies inversely with its volume at constant temperature?"
+answer = "Boyle's law"
+wrong = ["Charles's law", "Hooke's law", "Ohm's law"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Personalities-of-Physics-274936.html"
+check = "https://en.wikipedia.org/wiki/Boyle%27s_law"
+reviewed = false
+
+[[question]]
+id = "physics-0047"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "Which of Newton's laws says every action has an equal and opposite reaction?"
+answer = "The third law"
+wrong = ["The first law", "The second law", "The law of gravitation"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
+reviewed = false
+
+[[question]]
+id = "physics-0048"
+subcategory = "Light"
+difficulty = "easy"
+text = "Roughly how long does sunlight take to reach Earth?"
+answer = "About 8 minutes"
+wrong = ["About 8 seconds", "About 1 hour", "About 1 day"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-Fun-sics-159283.html"
+check = "https://en.wikipedia.org/wiki/Sunlight"
+reviewed = false
+
+[[question]]
+id = "physics-0049"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "What is a wave's greatest displacement from its rest position called?"
+answer = "Amplitude"
+wrong = ["Wavelength", "Frequency", "Period"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/Amplitude"
+reviewed = false
+
+[[question]]
+id = "physics-0050"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "In which unit is the loudness of a sound usually given?"
+answer = "Decibel"
+wrong = ["Hertz", "Lux", "Tesla"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Turn-Up-the-Volume-315888.html"
+check = "https://en.wikipedia.org/wiki/Decibel"
+reviewed = false
+
+[[question]]
+id = "physics-0051"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "What is sound above the range of human hearing called?"
+answer = "Ultrasound"
+wrong = ["Infrasound", "Microwaves", "Ultraviolet"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Turn-Up-the-Volume-315888.html"
+check = "https://en.wikipedia.org/wiki/Ultrasound"
+reviewed = false
+
+[[question]]
+id = "physics-0052"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "What is the change in pitch of a siren as it passes you called?"
+answer = "The Doppler effect"
+wrong = ["The Compton effect", "The Hall effect", "The Zeeman effect"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Turn-Up-the-Volume-315888.html"
+check = "https://en.wikipedia.org/wiki/Doppler_effect"
+reviewed = false
+
+[[question]]
+id = "physics-0053"
+subcategory = "Light"
+difficulty = "easy"
+text = "Why does the daytime sky look blue?"
+answer = "Air scatters blue light most"
+wrong = ["It reflects the oceans", "Ozone gives off blue light", "Water vapour absorbs red light"]
+source = "https://www.funtrivia.com/quiz/scitech/an-introduction-to-physics-423897.html"
+check = "https://en.wikipedia.org/wiki/Rayleigh_scattering"
+reviewed = false
+
+[[question]]
+id = "physics-0054"
+subcategory = "Mechanics"
+difficulty = "easy"
+text = "In free fall with no air, which is the only force acting on a body?"
+answer = "Gravity"
+wrong = ["Friction", "Normal force", "Tension"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Forces-372289.html"
+check = "https://en.wikipedia.org/wiki/Free_fall"
+reviewed = false
+
+[[question]]
+id = "physics-0055"
+subcategory = "Electricity"
+difficulty = "easy"
+text = "What does a capacitor store?"
+answer = "Electric charge"
+wrong = ["Electric current", "Resistance", "Magnetism"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Mixed-Physics-265891.html"
+check = "https://en.wikipedia.org/wiki/Capacitor"
+reviewed = false
+
+[[question]]
+id = "physics-0056"
+subcategory = "Astronomy and gravity"
+difficulty = "easy"
+text = "What causes the northern lights?"
+answer = "Charged particles from the Sun"
+wrong = ["Sunlight reflected off polar ice", "Lightning in the upper atmosphere", "Moonlight scattered by clouds"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Mixed-Physics-265891.html"
+check = "https://en.wikipedia.org/wiki/Aurora"
+reviewed = false
+
+[[question]]
+id = "physics-0057"
+subcategory = "Electricity"
+difficulty = "easy"
+text = "What is a fuse in a circuit meant to protect against?"
+answer = "Too much current"
+wrong = ["Too little current", "Static electricity", "Magnetic fields"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Mixed-Physics-265891.html"
+check = "https://en.wikipedia.org/wiki/Fuse_(electrical)"
+reviewed = false
+
+[[question]]
+id = "physics-0058"
+subcategory = "Waves and sound"
+difficulty = "easy"
+text = "Through which of these does sound travel fastest?"
+answer = "Steel"
+wrong = ["Water", "Air", "Helium"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-for-Teens-296935.html"
+check = "https://en.wikipedia.org/wiki/Speed_of_sound"
+reviewed = false
+
+[[question]]
+id = "physics-0059"
+subcategory = "Heat"
+difficulty = "easy"
+text = "How is heat mainly carried through a pan of water heated from below?"
+answer = "Convection"
+wrong = ["Conduction", "Radiation", "Evaporation"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-for-Teens-296935.html"
+check = "https://en.wikipedia.org/wiki/Convection"
+reviewed = false
+
+[[question]]
+id = "physics-0060"
+subcategory = "Heat"
+difficulty = "easy"
+text = "What happens to the volume of water when it freezes into ice?"
+answer = "It increases"
+wrong = ["It decreases", "It stays the same", "It doubles"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Ice"
+reviewed = false
+
+[[question]]
+id = "physics-0061"
+subcategory = "Discoverers"
+difficulty = "easy"
+text = "Which physicist, diagnosed with motor neurone disease at 21, became famous for work on black holes?"
+answer = "Stephen Hawking"
+wrong = ["Roger Penrose", "Kip Thorne", "Richard Feynman"]
+source = "https://www.watercoolertrivia.com/trivia-questions/physics-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Stephen_Hawking"
+reviewed = false
+
+[[question]]
+id = "physics-0062"
+subcategory = "Electricity"
+difficulty = "easy"
+text = "Which law states that voltage equals current times resistance?"
+answer = "Ohm's law"
+wrong = ["Coulomb's law", "Faraday's law", "Joule's law"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Phenomenal-Physics-307360.html"
+check = "https://en.wikipedia.org/wiki/Ohm%27s_law"
+reviewed = false
+
+[[question]]
+id = "physics-0063"
+subcategory = "Instruments"
+difficulty = "medium"
+text = "Which instrument is used to measure the pressure of a gas in a container?"
+answer = "Manometer"
+wrong = ["Hygrometer", "Ammeter", "Seismometer"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Mixed-Physics-265891.html"
+check = "https://en.wikipedia.org/wiki/Pressure_measurement"
+reviewed = false
+
+[[question]]
+id = "physics-0064"
+subcategory = "Nuclear physics"
+difficulty = "medium"
+text = "What is the largest source of natural background radiation in the UK?"
+answer = "Radon gas"
+wrong = ["Cosmic rays", "Food and drink", "Medical X-rays"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-for-Teens-296935.html"
+check = "https://en.wikipedia.org/wiki/Background_radiation"
+reviewed = false
+
+[[question]]
+id = "physics-0065"
+subcategory = "Instruments"
+difficulty = "medium"
+text = "Which Italian invented the mercury barometer?"
+answer = "Evangelista Torricelli"
+wrong = ["Galileo Galilei", "Alessandro Volta", "Blaise Pascal"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Evangelista_Torricelli"
+reviewed = false
+
+[[question]]
+id = "physics-0066"
+subcategory = "Astronomy and gravity"
+difficulty = "medium"
+text = "Kepler's second law says a planet's line to the Sun sweeps out equal what in equal times?"
+answer = "Areas"
+wrong = ["Distances", "Angles", "Volumes"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/General-Physics-233074.html"
+check = "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion"
+reviewed = false
+
+[[question]]
+id = "physics-0067"
+subcategory = "Heat"
+difficulty = "medium"
+text = "Which temperature scale is named after the maker of an early mercury thermometer?"
+answer = "Fahrenheit"
+wrong = ["Celsius", "Kelvin", "Réaumur"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit"
+reviewed = false
+
+[[question]]
+id = "physics-0068"
+subcategory = "Units"
+difficulty = "medium"
+text = "The kelvin is named after which physicist?"
+answer = "William Thomson"
+wrong = ["James Joule", "James Clerk Maxwell", "J. J. Thomson"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://en.wikipedia.org/wiki/Kelvin"
+reviewed = false
+
+[[question]]
+id = "physics-0069"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "Who first proved that electromagnetic waves exist, as Maxwell had predicted?"
+answer = "Heinrich Hertz"
+wrong = ["Michael Faraday", "Nikola Tesla", "Oliver Heaviside"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://en.wikipedia.org/wiki/Heinrich_Hertz"
+reviewed = false
+
+[[question]]
+id = "physics-0070"
+subcategory = "Units"
+difficulty = "medium"
+text = "The parsec is a unit of what?"
+answer = "Distance"
+wrong = ["Time", "Brightness", "Mass"]
+source = "https://www.funtrivia.com/quiz/scitech/physics-unit-by-unit-412110.html"
+check = "https://en.wikipedia.org/wiki/Parsec"
+reviewed = false
+
+[[question]]
+id = "physics-0071"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "Which particle did J. J. Thomson discover in 1897 using cathode rays?"
+answer = "Electron"
+wrong = ["Proton", "Neutron", "Positron"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://www.nobelprize.org/prizes/physics/1906/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0072"
+subcategory = "Electricity"
+difficulty = "medium"
+text = "Below its critical temperature, what is a superconductor's electrical resistance?"
+answer = "Zero"
+wrong = ["Infinite", "Doubled", "Unchanged"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://en.wikipedia.org/wiki/Superconductivity"
+reviewed = false
+
+[[question]]
+id = "physics-0073"
+subcategory = "Discoverers"
+difficulty = "medium"
+text = "Robert Millikan measured the electron's charge using falling drops of what?"
+answer = "Oil"
+wrong = ["Water", "Mercury", "Ink"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Winning-Physicists-1921-1930-363019.html"
+check = "https://www.nobelprize.org/prizes/physics/1923/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0074"
+subcategory = "Quantum physics"
+difficulty = "medium"
+text = "Who won the 1918 Nobel Prize in Physics for discovering energy quanta?"
+answer = "Max Planck"
+wrong = ["Niels Bohr", "Albert Einstein", "Arnold Sommerfeld"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://www.nobelprize.org/prizes/physics/1918/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0075"
+subcategory = "Quantum physics"
+difficulty = "medium"
+text = "What is the antimatter counterpart of the electron called?"
+answer = "Positron"
+wrong = ["Proton", "Neutrino", "Muon"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Subatomic-Particle-Theory-306167.html"
+check = "https://en.wikipedia.org/wiki/Positron"
+reviewed = false
+
+[[question]]
+id = "physics-0076"
+subcategory = "Heat"
+difficulty = "medium"
+text = "What is the effect in which water drops skate on a layer of vapour over a very hot pan?"
+answer = "Leidenfrost effect"
+wrong = ["Peltier effect", "Coandă effect", "Seebeck effect"]
+source = "https://www.funtrivia.com/quiz/scitech/a-sampling-of-effects-417956.html"
+check = "https://en.wikipedia.org/wiki/Leidenfrost_effect"
+reviewed = false
+
+[[question]]
+id = "physics-0077"
+subcategory = "Mechanics"
+difficulty = "medium"
+text = "In which kind of collision is total kinetic energy conserved?"
+answer = "Elastic"
+wrong = ["Inelastic", "Perfectly inelastic", "Explosive"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Understanding-Physics-308039.html"
+check = "https://en.wikipedia.org/wiki/Elastic_collision"
+reviewed = false
+
+[[question]]
+id = "physics-0078"
+subcategory = "Mechanics"
+difficulty = "medium"
+text = "What is the steady speed reached when air resistance balances a falling object's weight?"
+answer = "Terminal velocity"
+wrong = ["Escape velocity", "Orbital velocity", "Speed of sound"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Understanding-Physics-308039.html"
+check = "https://en.wikipedia.org/wiki/Terminal_velocity"
+reviewed = false
+
+[[question]]
+id = "physics-0079"
+subcategory = "Heat"
+difficulty = "medium"
+text = "Which law of thermodynamics is a form of the conservation of energy?"
+answer = "The first law"
+wrong = ["The zeroth law", "The second law", "The third law"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-Fun-sics-159283.html"
+check = "https://en.wikipedia.org/wiki/First_law_of_thermodynamics"
+reviewed = false
+
+[[question]]
+id = "physics-0080"
+subcategory = "Heat"
+difficulty = "medium"
+text = "Which law says a gas's volume is proportional to its temperature at constant pressure?"
+answer = "Charles's law"
+wrong = ["Boyle's law", "Avogadro's law", "Dalton's law"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Understanding-Physics-308039.html"
+check = "https://en.wikipedia.org/wiki/Charles%27s_law"
+reviewed = false
+
+[[question]]
+id = "physics-0081"
+subcategory = "Waves and sound"
+difficulty = "medium"
+text = "Which quality lets you tell a flute from a violin playing the same note?"
+answer = "Timbre"
+wrong = ["Pitch", "Frequency", "Tempo"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Turn-Up-the-Volume-315888.html"
+check = "https://en.wikipedia.org/wiki/Timbre"
+reviewed = false
+
+[[question]]
+id = "physics-0082"
+subcategory = "Units"
+difficulty = "hard"
+text = "One ångström is equal to how many metres?"
+answer = "10⁻¹⁰"
+wrong = ["10⁻⁹", "10⁻¹²", "10⁻¹⁵"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Behind-the-Units---Mechanics-57349.html"
+check = "https://en.wikipedia.org/wiki/Angstrom"
+reviewed = false
+
+[[question]]
+id = "physics-0083"
+subcategory = "Units"
+difficulty = "hard"
+text = "What is the SI unit of radioactive activity?"
+answer = "Becquerel"
+wrong = ["Curie", "Sievert", "Gray"]
+source = "https://www.funtrivia.com/quiz/scitech/physics-unit-by-unit-412110.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0084"
+subcategory = "Units"
+difficulty = "hard"
+text = "Multiplying ohms by farads gives which unit?"
+answer = "Second"
+wrong = ["Volt", "Henry", "Watt"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/RC_time_constant"
+reviewed = false
+
+[[question]]
+id = "physics-0085"
+subcategory = "Units"
+difficulty = "hard"
+text = "What is the SI unit of magnetic flux density?"
+answer = "Tesla"
+wrong = ["Weber", "Henry", "Farad"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+reviewed = false
+
+[[question]]
+id = "physics-0086"
+subcategory = "Units"
+difficulty = "hard"
+text = "The henry, the unit of inductance, is named after which American scientist?"
+answer = "Joseph Henry"
+wrong = ["Benjamin Franklin", "Thomas Edison", "Josiah Willard Gibbs"]
+source = "https://www.funtrivia.com/trivia/SciTech/Laws-and-Theories-of-Physics-17328_6.html"
+check = "https://en.wikipedia.org/wiki/Henry_(unit)"
+reviewed = false
+
+[[question]]
+id = "physics-0087"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Who first liquefied helium and later discovered superconductivity?"
+answer = "Heike Kamerlingh Onnes"
+wrong = ["James Dewar", "Pyotr Kapitsa", "Walther Nernst"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://www.nobelprize.org/prizes/physics/1913/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0088"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Charles-Édouard Guillaume won a Nobel for which nickel-steel alloy that barely expands with heat?"
+answer = "Invar"
+wrong = ["Constantan", "Nichrome", "Alnico"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://www.nobelprize.org/prizes/physics/1920/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0089"
+subcategory = "Heat"
+difficulty = "hard"
+text = "Wien's displacement law links the peak wavelength of a hot body's radiation to its what?"
+answer = "Temperature"
+wrong = ["Mass", "Volume", "Density"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://en.wikipedia.org/wiki/Wien%27s_displacement_law"
+reviewed = false
+
+[[question]]
+id = "physics-0090"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Jean Perrin's study of which kind of motion helped confirm that atoms are real?"
+answer = "Brownian motion"
+wrong = ["Planetary motion", "Simple harmonic motion", "Projectile motion"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Winning-Physicists-1921-1930-363019.html"
+check = "https://en.wikipedia.org/wiki/Jean_Baptiste_Perrin"
+reviewed = false
+
+[[question]]
+id = "physics-0091"
+subcategory = "Quantum physics"
+difficulty = "hard"
+text = "Arthur Compton won a Nobel for observing electrons scatter which radiation?"
+answer = "X-rays"
+wrong = ["Radio waves", "Infrared", "Microwaves"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Winning-Physicists-1921-1930-363019.html"
+check = "https://www.nobelprize.org/prizes/physics/1927/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0092"
+subcategory = "Light"
+difficulty = "hard"
+text = "Which Indian physicist won the 1930 Nobel Prize for work on the scattering of light?"
+answer = "C. V. Raman"
+wrong = ["Satyendra Nath Bose", "Meghnad Saha", "Homi Bhabha"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Winning-Physicists-1921-1930-363019.html"
+check = "https://www.nobelprize.org/prizes/physics/1930/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0093"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Which father and son shared the 1915 Physics Nobel for analysing crystals with X-rays?"
+answer = "William and Lawrence Bragg"
+wrong = ["J. J. and G. P. Thomson", "Niels and Aage Bohr", "Manne and Kai Siegbahn"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Nobel-Physics-1911-1920-268905.html"
+check = "https://www.nobelprize.org/prizes/physics/1915/summary/"
+reviewed = false
+
+[[question]]
+id = "physics-0094"
+subcategory = "Quantum physics"
+difficulty = "hard"
+text = "Planck's constant has the same SI units as which quantity?"
+answer = "Angular momentum"
+wrong = ["Energy", "Linear momentum", "Power"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physical-Quantities-310909.html"
+check = "https://en.wikipedia.org/wiki/Planck_constant"
+reviewed = false
+
+[[question]]
+id = "physics-0095"
+subcategory = "Units"
+difficulty = "hard"
+text = "The slug is a unit of what?"
+answer = "Mass"
+wrong = ["Force", "Length", "Volume"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Physics-Fun-sics-159283.html"
+check = "https://en.wikipedia.org/wiki/Slug_(unit)"
+reviewed = false
+
+[[question]]
+id = "physics-0096"
+subcategory = "Discoverers"
+difficulty = "hard"
+text = "Albert Fert and Peter Grünberg shared the 2007 Physics Nobel for discovering what?"
+answer = "Giant magnetoresistance"
+wrong = ["Graphene", "Neutrino oscillations", "Blue LEDs"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Personalities-of-Physics-274936.html"
+check = "https://www.nobelprize.org/prizes/physics/2007/summary/"
+reviewed = false

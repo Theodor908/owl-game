@@ -1,0 +1,10 @@
+id = "herophilus"
+name = "Herophilus of Chalcedon"
+title = "Father of Anatomy"
+category = "anatomy"
+hp = 30
+category_bonus = 25
+kind = "Herophilus"
+
+[params]
+reflect = 25

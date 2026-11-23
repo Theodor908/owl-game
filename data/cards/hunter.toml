@@ -1,0 +1,17 @@
+id = "hunter"
+name = "Hunter"
+tier = 6
+kind = "counter"
+text = "If the opponent has a Healer, disables its next heal. Golden: also gives one Arrow"
+golden_text = "If the opponent has a Healer, disables its next heal. When it is made, it gives one Arrow"
+max_on_board = 1
+
+[[effects]]
+effect = "HuntHealer"
+
+[[golden_effects]]
+effect = "HuntHealer"
+
+[[golden_effects]]
+effect = "GrantOnGolden"
+card = "arrow"

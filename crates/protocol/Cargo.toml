@@ -1,0 +1,13 @@
+[package]
+name = "owl-protocol"
+edition.workspace = true
+version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+owl-core = { path = "../core" }
+owl-lobby = { path = "../lobby" }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"

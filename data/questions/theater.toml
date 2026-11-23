@@ -1,0 +1,1286 @@
+[[question]]
+id = "theater-0001"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "Which Shakespeare play contains the speech that begins \"To be, or not to be\"?"
+answer = "Hamlet"
+wrong = ["Macbeth", "King Lear", "Othello"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/To_be,_or_not_to_be"
+reviewed = false
+
+[[question]]
+id = "theater-0002"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "In which Italian city is Romeo and Juliet set?"
+answer = "Verona"
+wrong = ["Venice", "Padua", "Florence"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Romeo_and_Juliet"
+reviewed = false
+
+[[question]]
+id = "theater-0003"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "In Romeo and Juliet, which family does Romeo belong to?"
+answer = "Montague"
+wrong = ["Capulet", "Medici", "Borgia"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Romeo_and_Juliet"
+reviewed = false
+
+[[question]]
+id = "theater-0004"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "Which Shakespeare play features three witches?"
+answer = "Macbeth"
+wrong = ["The Tempest", "Hamlet", "Julius Caesar"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Three_Witches"
+reviewed = false
+
+[[question]]
+id = "theater-0005"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "The moneylender Shylock is a character in which Shakespeare play?"
+answer = "The Merchant of Venice"
+wrong = ["Othello", "Measure for Measure", "The Taming of the Shrew"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Shylock"
+reviewed = false
+
+[[question]]
+id = "theater-0006"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "Goneril, Regan and Cordelia are the daughters of which Shakespearean king?"
+answer = "King Lear"
+wrong = ["King Duncan", "Henry IV", "Richard II"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/King_Lear"
+reviewed = false
+
+[[question]]
+id = "theater-0007"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "The song \"Memory\" comes from which Andrew Lloyd Webber musical?"
+answer = "Cats"
+wrong = ["Evita", "The Phantom of the Opera", "Starlight Express"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Memory_(Cats_song)"
+reviewed = false
+
+[[question]]
+id = "theater-0008"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Which musical features the song \"Don't Cry for Me Argentina\"?"
+answer = "Evita"
+wrong = ["Cats", "Chess", "Les Misérables"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Don%27t_Cry_for_Me_Argentina"
+reviewed = false
+
+[[question]]
+id = "theater-0009"
+subcategory = "Playwrights"
+difficulty = "easy"
+text = "Who wrote the comedy The Importance of Being Earnest?"
+answer = "Oscar Wilde"
+wrong = ["George Bernard Shaw", "Noël Coward", "Richard Brinsley Sheridan"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Importance_of_Being_Earnest"
+reviewed = false
+
+[[question]]
+id = "theater-0010"
+subcategory = "Theatre history"
+difficulty = "easy"
+text = "Which London playhouse, built in 1599, is most closely associated with Shakespeare?"
+answer = "The Globe"
+wrong = ["The Rose", "The Swan", "The Curtain"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/The-History-Of-Theatre-25569.html"
+check = "https://en.wikipedia.org/wiki/Globe_Theatre"
+reviewed = false
+
+[[question]]
+id = "theater-0011"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "What is the trade of Sweeney Todd, the murderous title character of Sondheim's musical?"
+answer = "Barber"
+wrong = ["Butcher", "Tailor", "Blacksmith"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Sweeney_Todd"
+reviewed = false
+
+[[question]]
+id = "theater-0012"
+subcategory = "Stagecraft terms"
+difficulty = "easy"
+text = "What is the usual term for an afternoon performance of a show?"
+answer = "Matinee"
+wrong = ["Preview", "Encore", "Soirée"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wiktionary.org/wiki/matinee"
+reviewed = false
+
+[[question]]
+id = "theater-0013"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "The musical Mamma Mia! is built around the songs of which group?"
+answer = "ABBA"
+wrong = ["Bee Gees", "Queen", "The Beatles"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Mamma_Mia!_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0014"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Which musical features the song \"If I Were a Rich Man\"?"
+answer = "Fiddler on the Roof"
+wrong = ["Cabaret", "Oliver!", "Hello, Dolly!"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/If_I_Were_a_Rich_Man_(song)"
+reviewed = false
+
+[[question]]
+id = "theater-0015"
+subcategory = "Opera"
+difficulty = "easy"
+text = "Who composed the opera Carmen?"
+answer = "Georges Bizet"
+wrong = ["Giuseppe Verdi", "Giacomo Puccini", "Gioachino Rossini"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Famous-Operas-and-Their-Composers-16990.html"
+check = "https://en.wikipedia.org/wiki/Carmen"
+reviewed = false
+
+[[question]]
+id = "theater-0016"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote the play Waiting for Godot?"
+answer = "Samuel Beckett"
+wrong = ["Harold Pinter", "Eugène Ionesco", "Jean-Paul Sartre"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Waiting_for_Godot"
+reviewed = false
+
+[[question]]
+id = "theater-0017"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Which Arthur Miller play dramatizes the Salem witch trials?"
+answer = "The Crucible"
+wrong = ["All My Sons", "A View from the Bridge", "After the Fall"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Crucible"
+reviewed = false
+
+[[question]]
+id = "theater-0018"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Willy Loman is the protagonist of which play?"
+answer = "Death of a Salesman"
+wrong = ["The Glass Menagerie", "Long Day's Journey into Night", "Our Town"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Death_of_a_Salesman"
+reviewed = false
+
+[[question]]
+id = "theater-0019"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Which Chekhov play ends with the sound of axes cutting down trees?"
+answer = "The Cherry Orchard"
+wrong = ["The Seagull", "Uncle Vanya", "Three Sisters"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Classics-From-The-Theatre-114261.html"
+check = "https://en.wikipedia.org/wiki/The_Cherry_Orchard"
+reviewed = false
+
+[[question]]
+id = "theater-0020"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote A Doll's House, whose protagonist is Nora Helmer?"
+answer = "Henrik Ibsen"
+wrong = ["August Strindberg", "Anton Chekhov", "George Bernard Shaw"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Survey-of-Great-Plays-and-Playwrights-173644.html"
+check = "https://en.wikipedia.org/wiki/A_Doll%27s_House"
+reviewed = false
+
+[[question]]
+id = "theater-0021"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "In which Shakespeare tragedy is Iago the villain?"
+answer = "Othello"
+wrong = ["Hamlet", "Julius Caesar", "Coriolanus"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Iago"
+reviewed = false
+
+[[question]]
+id = "theater-0022"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "Who wrote Lysistrata, a comedy in which women withhold sex to end a war?"
+answer = "Aristophanes"
+wrong = ["Euripides", "Sophocles", "Aeschylus"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Lysistrata"
+reviewed = false
+
+[[question]]
+id = "theater-0023"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "Which Greek philosopher wrote the Poetics, the earliest surviving work of dramatic theory?"
+answer = "Aristotle"
+wrong = ["Plato", "Socrates", "Epicurus"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Poetics_(Aristotle)"
+reviewed = false
+
+[[question]]
+id = "theater-0024"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "Which George Bernard Shaw play is the basis of the musical My Fair Lady?"
+answer = "Pygmalion"
+wrong = ["Major Barbara", "Saint Joan", "Man and Superman"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Survey-of-Great-Plays-and-Playwrights-173644.html"
+check = "https://en.wikipedia.org/wiki/My_Fair_Lady"
+reviewed = false
+
+[[question]]
+id = "theater-0025"
+subcategory = "Opera"
+difficulty = "medium"
+text = "What is the only opera Beethoven wrote?"
+answer = "Fidelio"
+wrong = ["Der Freischütz", "Idomeneo", "Euryanthe"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Opera-For-Beginners-125306.html"
+check = "https://en.wikipedia.org/wiki/Fidelio"
+reviewed = false
+
+[[question]]
+id = "theater-0026"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "The Athenian festival at which tragedies and comedies were performed honoured which god?"
+answer = "Dionysus"
+wrong = ["Apollo", "Zeus", "Hermes"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Dionysia"
+reviewed = false
+
+[[question]]
+id = "theater-0027"
+subcategory = "Stagecraft terms"
+difficulty = "medium"
+text = "On a stage, where is \"upstage\"?"
+answer = "At the back, away from the audience"
+wrong = ["At the front, near the audience", "On the actor's left", "Above the stage"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Mastering-Theatre-Lingo-205390.html"
+check = "https://en.wikipedia.org/wiki/Blocking_(stage)"
+reviewed = false
+
+[[question]]
+id = "theater-0028"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "\"You'll Never Walk Alone\" comes from which Rodgers and Hammerstein musical?"
+answer = "Carousel"
+wrong = ["Oklahoma!", "South Pacific", "The King and I"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/You%27ll_Never_Walk_Alone"
+reviewed = false
+
+[[question]]
+id = "theater-0029"
+subcategory = "Opera"
+difficulty = "medium"
+text = "How many operas make up Wagner's Ring cycle?"
+answer = "Four"
+wrong = ["Three", "Five", "Seven"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Opera-For-Beginners-125306.html"
+check = "https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen"
+reviewed = false
+
+[[question]]
+id = "theater-0030"
+subcategory = "Stagecraft terms"
+difficulty = "medium"
+text = "What is the arch that frames the stage opening in a traditional theatre called?"
+answer = "Proscenium"
+wrong = ["Cyclorama", "Apron", "Fly loft"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatre-for-the-Techies-137633.html"
+check = "https://en.wikipedia.org/wiki/Proscenium"
+reviewed = false
+
+[[question]]
+id = "theater-0031"
+subcategory = "Greek drama"
+difficulty = "hard"
+text = "Which Greek playwright wrote the comedy Dyskolos (The Grouch)?"
+answer = "Menander"
+wrong = ["Aristophanes", "Euripides", "Aeschylus"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Dyskolos"
+reviewed = false
+
+[[question]]
+id = "theater-0032"
+subcategory = "Shakespeare"
+difficulty = "hard"
+text = "Shakespeare's The Comedy of Errors adapts which comedy by Plautus?"
+answer = "Menaechmi"
+wrong = ["Miles Gloriosus", "Aulularia", "Pseudolus"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Comedy_of_Errors"
+reviewed = false
+
+[[question]]
+id = "theater-0033"
+subcategory = "Stagecraft terms"
+difficulty = "hard"
+text = "In stage lighting, what is the stencil placed in a lantern to shape the beam or cast a pattern?"
+answer = "Gobo"
+wrong = ["Gel", "Barn door", "Scrim"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatre-for-the-Techies-137633.html"
+check = "https://en.wikipedia.org/wiki/Gobo_(lighting)"
+reviewed = false
+
+[[question]]
+id = "theater-0034"
+subcategory = "Stagecraft terms"
+difficulty = "hard"
+text = "In British theatre slang, what does an actor do when \"corpsing\"?"
+answer = "Breaks into laughter on stage"
+wrong = ["Forgets a line", "Misses an entrance", "Plays a dead body"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatrical-Terms-91051.html"
+check = "https://en.wikipedia.org/wiki/Corpsing"
+reviewed = false
+
+[[question]]
+id = "theater-0035"
+subcategory = "Theatre history"
+difficulty = "hard"
+text = "The 10th-century canoness Hrotsvitha modelled her plays on which Roman dramatist?"
+answer = "Terence"
+wrong = ["Plautus", "Seneca", "Ennius"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Crash-Course-in-Theatre-History-195623.html"
+check = "https://en.wikipedia.org/wiki/Hrotsvitha"
+reviewed = false
+
+[[question]]
+id = "theater-0036"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Who wrote The Playboy of the Western World, first staged at Dublin's Abbey Theatre in 1907?"
+answer = "J. M. Synge"
+wrong = ["Seán O'Casey", "W. B. Yeats", "Brendan Behan"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Survey-of-Great-Plays-and-Playwrights-173644.html"
+check = "https://en.wikipedia.org/wiki/The_Playboy_of_the_Western_World"
+reviewed = false
+
+[[question]]
+id = "theater-0037"
+subcategory = "Theatre history"
+difficulty = "hard"
+text = "Which Shoreditch playhouse did James Burbage build in 1576?"
+answer = "The Theatre"
+wrong = ["The Curtain", "The Rose", "The Swan"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/The-History-Of-Theatre-25569.html"
+check = "https://en.wikipedia.org/wiki/The_Theatre"
+reviewed = false
+
+[[question]]
+id = "theater-0038"
+subcategory = "Opera"
+difficulty = "hard"
+text = "Who composed the opera The Tales of Hoffmann?"
+answer = "Jacques Offenbach"
+wrong = ["Charles Gounod", "Georges Bizet", "Jules Massenet"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Famous-Operas-and-Their-Composers-16990.html"
+check = "https://en.wikipedia.org/wiki/The_Tales_of_Hoffmann"
+reviewed = false
+
+[[question]]
+id = "theater-0039"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Which archbishop is the subject of plays by both T. S. Eliot and Jean Anouilh?"
+answer = "Thomas Becket"
+wrong = ["Thomas Cranmer", "Thomas Wolsey", "William Laud"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Classics-From-The-Theatre-114261.html"
+check = "https://en.wikipedia.org/wiki/Thomas_Becket"
+reviewed = false
+
+[[question]]
+id = "theater-0040"
+subcategory = "Musicals"
+difficulty = "hard"
+text = "Lynn Riggs's play Green Grow the Lilacs was the basis of which musical?"
+answer = "Oklahoma!"
+wrong = ["Carousel", "Show Boat", "Annie Get Your Gun"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Green_Grow_the_Lilacs_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0041"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "In which Shakespeare play do the spirit Ariel and the creature Caliban serve Prospero?"
+answer = "The Tempest"
+wrong = ["A Midsummer Night's Dream", "The Winter's Tale", "Cymbeline"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Classics-From-The-Theatre-114261.html"
+check = "https://en.wikipedia.org/wiki/The_Tempest"
+reviewed = false
+
+[[question]]
+id = "theater-0042"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "Oberon and Titania, king and queen of the fairies, appear in which Shakespeare play?"
+answer = "A Midsummer Night's Dream"
+wrong = ["The Tempest", "As You Like It", "Twelfth Night"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Shakespeare-For-Dummies-331320.html"
+check = "https://en.wikipedia.org/wiki/A_Midsummer_Night's_Dream"
+reviewed = false
+
+[[question]]
+id = "theater-0043"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "In A Midsummer Night's Dream, what is Bottom's head turned into?"
+answer = "An ass's head"
+wrong = ["A goat's head", "A pig's head", "A bull's head"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Nick_Bottom"
+reviewed = false
+
+[[question]]
+id = "theater-0044"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "In which town was William Shakespeare born?"
+answer = "Stratford-upon-Avon"
+wrong = ["Warwick", "Oxford", "Coventry"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Shakespeare-For-Dummies-331320.html"
+check = "https://en.wikipedia.org/wiki/William_Shakespeare"
+reviewed = false
+
+[[question]]
+id = "theater-0045"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "Whose skull does Hamlet hold in the graveyard scene?"
+answer = "Yorick"
+wrong = ["Polonius", "Osric", "Laertes"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Yorick"
+reviewed = false
+
+[[question]]
+id = "theater-0046"
+subcategory = "Theatre history"
+difficulty = "easy"
+text = "Which Shakespeare play do actors traditionally avoid naming inside a theatre?"
+answer = "Macbeth"
+wrong = ["Hamlet", "King Lear", "Richard III"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Scottish_Play"
+reviewed = false
+
+[[question]]
+id = "theater-0047"
+subcategory = "Shakespeare"
+difficulty = "easy"
+text = "The sparring lovers Beatrice and Benedick appear in which Shakespeare comedy?"
+answer = "Much Ado About Nothing"
+wrong = ["As You Like It", "Twelfth Night", "The Taming of the Shrew"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Much_Ado_About_Nothing"
+reviewed = false
+
+[[question]]
+id = "theater-0048"
+subcategory = "Greek drama"
+difficulty = "easy"
+text = "Which heroine of Sophocles defies King Creon to bury her dead brother?"
+answer = "Antigone"
+wrong = ["Ismene", "Electra", "Medea"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Antigone_(Sophocles_play)"
+reviewed = false
+
+[[question]]
+id = "theater-0049"
+subcategory = "Greek drama"
+difficulty = "easy"
+text = "Which heroine of Euripides kills her own children to punish Jason?"
+answer = "Medea"
+wrong = ["Phaedra", "Electra", "Hecuba"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Medea_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0050"
+subcategory = "Playwrights"
+difficulty = "easy"
+text = "In which city is Tennessee Williams's A Streetcar Named Desire set?"
+answer = "New Orleans"
+wrong = ["Memphis", "Atlanta", "St. Louis"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Classics-From-The-Theatre-114261.html"
+check = "https://en.wikipedia.org/wiki/A_Streetcar_Named_Desire"
+reviewed = false
+
+[[question]]
+id = "theater-0051"
+subcategory = "Playwrights"
+difficulty = "easy"
+text = "Who wrote the plays Uncle Vanya and Three Sisters?"
+answer = "Anton Chekhov"
+wrong = ["Maxim Gorky", "Henrik Ibsen", "August Strindberg"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Uncle_Vanya"
+reviewed = false
+
+[[question]]
+id = "theater-0052"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Trey Parker and Matt Stone co-wrote which 2011 Broadway musical?"
+answer = "The Book of Mormon"
+wrong = ["Avenue Q", "Spamalot", "Urinetown"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Book_of_Mormon_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0053"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "The musical American Idiot is built on the songs of which punk band?"
+answer = "Green Day"
+wrong = ["Blink-182", "The Offspring", "My Chemical Romance"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/American_Idiot_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0054"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Which musical tells the story of Frankie Valli and the Four Seasons?"
+answer = "Jersey Boys"
+wrong = ["Motown", "Beautiful", "Dreamgirls"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Jersey_Boys"
+reviewed = false
+
+[[question]]
+id = "theater-0055"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Tracy Turnblad, a teenager who dreams of dancing on TV, is the heroine of which musical?"
+answer = "Hairspray"
+wrong = ["Grease", "Footloose", "Legally Blonde"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Hairspray_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0056"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Sally Bowles performs at Berlin's Kit Kat Klub in which musical?"
+answer = "Cabaret"
+wrong = ["Chicago", "Sweet Charity", "Gypsy"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Cabaret_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0057"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "In The King and I, which kingdom does the king rule?"
+answer = "Siam"
+wrong = ["Burma", "Persia", "Cambodia"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_King_and_I"
+reviewed = false
+
+[[question]]
+id = "theater-0058"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Miss Hannigan runs the orphanage in which musical?"
+answer = "Annie"
+wrong = ["Oliver!", "Matilda", "Gypsy"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Annie_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0059"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "In Oliver!, who runs a gang of child pickpockets?"
+answer = "Fagin"
+wrong = ["Bill Sikes", "Uriah Heep", "Mr Bumble"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Fagin"
+reviewed = false
+
+[[question]]
+id = "theater-0060"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "On an island in which country is Mamma Mia! set?"
+answer = "Greece"
+wrong = ["Italy", "Spain", "Croatia"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Mamma_Mia!_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0061"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Love Never Dies is Andrew Lloyd Webber's sequel to which musical?"
+answer = "The Phantom of the Opera"
+wrong = ["Cats", "Evita", "Sunset Boulevard"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Love_Never_Dies_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0062"
+subcategory = "Musicals"
+difficulty = "easy"
+text = "Which 1960s rock musical, known for a nude scene, includes the song \"Aquarius\"?"
+answer = "Hair"
+wrong = ["Godspell", "Jesus Christ Superstar", "Tommy"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Hair_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0063"
+subcategory = "Opera"
+difficulty = "easy"
+text = "Who composed the opera Rigoletto?"
+answer = "Giuseppe Verdi"
+wrong = ["Giacomo Puccini", "Gaetano Donizetti", "Gioachino Rossini"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Opera-For-Beginners-125306.html"
+check = "https://en.wikipedia.org/wiki/Rigoletto"
+reviewed = false
+
+[[question]]
+id = "theater-0064"
+subcategory = "Opera"
+difficulty = "easy"
+text = "The seamstress Mimì, who dies of consumption, is the heroine of which Puccini opera?"
+answer = "La Bohème"
+wrong = ["Tosca", "Turandot", "Manon Lescaut"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Popular-Opera-Characters-And-Arias-101151.html"
+check = "https://en.wikipedia.org/wiki/La_bohème"
+reviewed = false
+
+[[question]]
+id = "theater-0065"
+subcategory = "Stagecraft terms"
+difficulty = "easy"
+text = "In theatre, what is a \"thespian\"?"
+answer = "An actor"
+wrong = ["A playwright", "A theatre critic", "A stagehand"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Thespis"
+reviewed = false
+
+[[question]]
+id = "theater-0066"
+subcategory = "Stagecraft terms"
+difficulty = "easy"
+text = "On stage, where is \"stage left\"?"
+answer = "The actor's left, facing the audience"
+wrong = ["The audience's left", "The back left corner", "The side nearest the orchestra pit"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Mastering-Theatre-Lingo-205390.html"
+check = "https://en.wikipedia.org/wiki/Stage_(theatre)"
+reviewed = false
+
+[[question]]
+id = "theater-0067"
+subcategory = "Stagecraft terms"
+difficulty = "easy"
+text = "In theatre, what does \"the house\" refer to?"
+answer = "The auditorium, where the audience sits"
+wrong = ["The backstage area", "The set", "The cast"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Mastering-Theatre-Lingo-205390.html"
+check = "https://en.wikipedia.org/wiki/Auditorium"
+reviewed = false
+
+[[question]]
+id = "theater-0068"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "What was the name of the woman Shakespeare married in 1582?"
+answer = "Anne Hathaway"
+wrong = ["Mary Arden", "Susanna Hall", "Judith Quiney"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Shakespeare-For-Dummies-331320.html"
+check = "https://en.wikipedia.org/wiki/Anne_Hathaway_(wife_of_Shakespeare)"
+reviewed = false
+
+[[question]]
+id = "theater-0069"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "How many sonnets are in the 1609 collection of Shakespeare's sonnets?"
+answer = "154"
+wrong = ["108", "126", "200"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Shakespeare-For-Dummies-331320.html"
+check = "https://en.wikipedia.org/wiki/Shakespeare's_sonnets"
+reviewed = false
+
+[[question]]
+id = "theater-0070"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "Which comic knight appears in both parts of Henry IV and in The Merry Wives of Windsor?"
+answer = "Sir John Falstaff"
+wrong = ["Sir Toby Belch", "Sir Andrew Aguecheek", "Sir Nathaniel"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Falstaff"
+reviewed = false
+
+[[question]]
+id = "theater-0071"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "Who is the illegitimate son of the Earl of Gloucester in King Lear?"
+answer = "Edmund"
+wrong = ["Edgar", "Oswald", "Kent"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Edmund_(King_Lear)"
+reviewed = false
+
+[[question]]
+id = "theater-0072"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "Which heroine disguises herself as a lawyer to save Antonio in The Merchant of Venice?"
+answer = "Portia"
+wrong = ["Nerissa", "Jessica", "Rosalind"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Portia_(The_Merchant_of_Venice)"
+reviewed = false
+
+[[question]]
+id = "theater-0073"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "Who kills Macbeth at the end of Shakespeare's play?"
+answer = "Macduff"
+wrong = ["Malcolm", "Banquo", "Fleance"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Macduff_(Macbeth)"
+reviewed = false
+
+[[question]]
+id = "theater-0074"
+subcategory = "Shakespeare"
+difficulty = "medium"
+text = "On which date is Shakespeare's birthday traditionally celebrated?"
+answer = "23 April"
+wrong = ["1 May", "14 March", "6 June"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/William_Shakespeare"
+reviewed = false
+
+[[question]]
+id = "theater-0075"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "Which Greek playwright is often called the Father of Tragedy?"
+answer = "Aeschylus"
+wrong = ["Sophocles", "Euripides", "Thespis"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Ancient-Greek-Tragedians-158089.html"
+check = "https://en.wikipedia.org/wiki/Aeschylus"
+reviewed = false
+
+[[question]]
+id = "theater-0076"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "Agamemnon, The Libation Bearers and The Eumenides make up which trilogy?"
+answer = "The Oresteia"
+wrong = ["The Theban Plays", "The Danaid trilogy", "The Achilleid"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Oresteia"
+reviewed = false
+
+[[question]]
+id = "theater-0077"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "In Sophocles's play, who is both the mother and the wife of Oedipus?"
+answer = "Jocasta"
+wrong = ["Ismene", "Antigone", "Eurydice"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Jocasta"
+reviewed = false
+
+[[question]]
+id = "theater-0078"
+subcategory = "Greek drama"
+difficulty = "medium"
+text = "In Aeschylus's Agamemnon, who kills the king on his return from Troy?"
+answer = "Clytemnestra"
+wrong = ["Electra", "Cassandra", "Iphigenia"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Agamemnon_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0079"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "In Cat on a Hot Tin Roof, what is the name of \"the cat\"?"
+answer = "Maggie"
+wrong = ["Blanche", "Stella", "Laura"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Survey-of-Great-Plays-and-Playwrights-173644.html"
+check = "https://en.wikipedia.org/wiki/Cat_on_a_Hot_Tin_Roof"
+reviewed = false
+
+[[question]]
+id = "theater-0080"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote The Government Inspector, a comedy about a man mistaken for an official?"
+answer = "Nikolai Gogol"
+wrong = ["Anton Chekhov", "Alexander Ostrovsky", "Ivan Turgenev"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Classics-From-The-Theatre-114261.html"
+check = "https://en.wikipedia.org/wiki/The_Government_Inspector"
+reviewed = false
+
+[[question]]
+id = "theater-0081"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote Our Town, set in a small New Hampshire town?"
+answer = "Thornton Wilder"
+wrong = ["William Inge", "Clifford Odets", "Eugene O'Neill"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Survey-of-Great-Plays-and-Playwrights-173644.html"
+check = "https://en.wikipedia.org/wiki/Our_Town"
+reviewed = false
+
+[[question]]
+id = "theater-0082"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote Long Day's Journey into Night?"
+answer = "Eugene O'Neill"
+wrong = ["Tennessee Williams", "Arthur Miller", "Edward Albee"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Long_Day's_Journey_into_Night"
+reviewed = false
+
+[[question]]
+id = "theater-0083"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Who wrote the 1960 play The Caretaker?"
+answer = "Harold Pinter"
+wrong = ["Tom Stoppard", "John Osborne", "Joe Orton"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Caretaker"
+reviewed = false
+
+[[question]]
+id = "theater-0084"
+subcategory = "Playwrights"
+difficulty = "medium"
+text = "Which Elizabethan playwright wrote Tamburlaine the Great?"
+answer = "Christopher Marlowe"
+wrong = ["Ben Jonson", "Thomas Kyd", "John Webster"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Tamburlaine"
+reviewed = false
+
+[[question]]
+id = "theater-0085"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "Who wrote the music and lyrics for both Godspell and Pippin?"
+answer = "Stephen Schwartz"
+wrong = ["Stephen Sondheim", "Marvin Hamlisch", "Jerry Herman"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Men-Who-Make-Broadway-Musicals-84128.html"
+check = "https://en.wikipedia.org/wiki/Stephen_Schwartz_(composer)"
+reviewed = false
+
+[[question]]
+id = "theater-0086"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "Who composed the music for A Chorus Line (1975)?"
+answer = "Marvin Hamlisch"
+wrong = ["Cy Coleman", "John Kander", "Charles Strouse"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Musical-Theatre-of-the-Twentieth-Century-186613.html"
+check = "https://en.wikipedia.org/wiki/A_Chorus_Line"
+reviewed = false
+
+[[question]]
+id = "theater-0087"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "Which 1927 Kern and Hammerstein musical includes the song \"Ol' Man River\"?"
+answer = "Show Boat"
+wrong = ["Oklahoma!", "Anything Goes", "Porgy and Bess"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Musical-Theatre-of-the-Twentieth-Century-186613.html"
+check = "https://en.wikipedia.org/wiki/Show_Boat"
+reviewed = false
+
+[[question]]
+id = "theater-0088"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "The song \"Schadenfreude\" comes from which puppet-filled musical?"
+answer = "Avenue Q"
+wrong = ["The Book of Mormon", "Spamalot", "Urinetown"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Avenue_Q"
+reviewed = false
+
+[[question]]
+id = "theater-0089"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "Miss Saigon is an update of which Puccini opera?"
+answer = "Madama Butterfly"
+wrong = ["Turandot", "Tosca", "La Bohème"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Miss_Saigon"
+reviewed = false
+
+[[question]]
+id = "theater-0090"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "In Starlight Express, the performers on roller skates play what?"
+answer = "Trains"
+wrong = ["Cars", "Planes", "Horses"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Starlight_Express"
+reviewed = false
+
+[[question]]
+id = "theater-0091"
+subcategory = "Musicals"
+difficulty = "medium"
+text = "In Little Shop of Horrors, what is the job of Audrey's cruel boyfriend Orin?"
+answer = "Dentist"
+wrong = ["Butcher", "Florist", "Barber"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(musical)"
+reviewed = false
+
+[[question]]
+id = "theater-0092"
+subcategory = "Opera"
+difficulty = "medium"
+text = "Who composed the opera Eugene Onegin?"
+answer = "Pyotr Ilyich Tchaikovsky"
+wrong = ["Modest Mussorgsky", "Nikolai Rimsky-Korsakov", "Sergei Rachmaninoff"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Opera-For-Beginners-125306.html"
+check = "https://en.wikipedia.org/wiki/Eugene_Onegin_(opera)"
+reviewed = false
+
+[[question]]
+id = "theater-0093"
+subcategory = "Opera"
+difficulty = "medium"
+text = "Papageno the bird-catcher is a character in which Mozart opera?"
+answer = "The Magic Flute"
+wrong = ["Don Giovanni", "The Marriage of Figaro", "Così fan tutte"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Opera-For-Beginners-125306.html"
+check = "https://en.wikipedia.org/wiki/Papageno"
+reviewed = false
+
+[[question]]
+id = "theater-0094"
+subcategory = "Opera"
+difficulty = "medium"
+text = "Who composed The Barber of Seville, in which Figaro sings \"Largo al factotum\"?"
+answer = "Gioachino Rossini"
+wrong = ["Wolfgang Amadeus Mozart", "Gaetano Donizetti", "Vincenzo Bellini"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Famous-Operas-and-Their-Composers-16990.html"
+check = "https://en.wikipedia.org/wiki/The_Barber_of_Seville"
+reviewed = false
+
+[[question]]
+id = "theater-0095"
+subcategory = "Opera"
+difficulty = "medium"
+text = "Violetta, Alfredo and Baron Douphol are characters in which Verdi opera?"
+answer = "La Traviata"
+wrong = ["Il Trovatore", "Aida", "Nabucco"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Identify-The-Opera-From-Its-Characters-83144.html"
+check = "https://en.wikipedia.org/wiki/La_traviata"
+reviewed = false
+
+[[question]]
+id = "theater-0096"
+subcategory = "Stagecraft terms"
+difficulty = "medium"
+text = "What is the single lamp left burning on an empty stage overnight called?"
+answer = "Ghost light"
+wrong = ["Work light", "Pilot light", "Footlight"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatre-for-the-Techies-137633.html"
+check = "https://en.wikipedia.org/wiki/Ghost_light_(theatre)"
+reviewed = false
+
+[[question]]
+id = "theater-0097"
+subcategory = "Stagecraft terms"
+difficulty = "medium"
+text = "What is it called when the director sets where actors stand and move on stage?"
+answer = "Blocking"
+wrong = ["Spiking", "Rigging", "Dressing"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Mastering-Theatre-Lingo-205390.html"
+check = "https://en.wikipedia.org/wiki/Blocking_(stage)"
+reviewed = false
+
+[[question]]
+id = "theater-0098"
+subcategory = "Theatre history"
+difficulty = "medium"
+text = "Bunraku is a traditional Japanese form of which kind of theatre?"
+answer = "Puppet theatre"
+wrong = ["Masked dance drama", "Shadow play", "Comic mime"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Bunraku"
+reviewed = false
+
+[[question]]
+id = "theater-0099"
+subcategory = "Theatre history"
+difficulty = "medium"
+text = "Agatha Christie's The Mousetrap opened in London's West End in which year?"
+answer = "1952"
+wrong = ["1947", "1958", "1963"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/The_Mousetrap"
+reviewed = false
+
+[[question]]
+id = "theater-0100"
+subcategory = "Shakespeare"
+difficulty = "hard"
+text = "Who is the foolish constable in charge of the night watch in Much Ado About Nothing?"
+answer = "Dogberry"
+wrong = ["Verges", "Borachio", "Dull"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Dogberry"
+reviewed = false
+
+[[question]]
+id = "theater-0101"
+subcategory = "Shakespeare"
+difficulty = "hard"
+text = "Who is the daughter of Titus Andronicus?"
+answer = "Lavinia"
+wrong = ["Tamora", "Marina", "Hermia"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Whos-Who-in-Shakespeare-193867.html"
+check = "https://en.wikipedia.org/wiki/Titus_Andronicus"
+reviewed = false
+
+[[question]]
+id = "theater-0102"
+subcategory = "Shakespeare"
+difficulty = "hard"
+text = "Which Shakespeare title character is the Prince of Tyre?"
+answer = "Pericles"
+wrong = ["Cymbeline", "Timon", "Coriolanus"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Pericles,_Prince_of_Tyre"
+reviewed = false
+
+[[question]]
+id = "theater-0103"
+subcategory = "Greek drama"
+difficulty = "hard"
+text = "What does the name Oedipus mean in Greek?"
+answer = "Swollen foot"
+wrong = ["Wise king", "Born of a god", "Bright eyes"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Oedipus"
+reviewed = false
+
+[[question]]
+id = "theater-0104"
+subcategory = "Greek drama"
+difficulty = "hard"
+text = "In Euripides's play, which young man is destroyed for scorning Aphrodite?"
+answer = "Hippolytus"
+wrong = ["Pentheus", "Orestes", "Ion"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Well-Known-Greek-Plays-174967.html"
+check = "https://en.wikipedia.org/wiki/Hippolytus_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0105"
+subcategory = "Greek drama"
+difficulty = "hard"
+text = "Euripides's Cyclops is the only complete surviving example of which kind of Greek play?"
+answer = "Satyr play"
+wrong = ["Old Comedy", "Mime", "Pantomime"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Ancient-Theatre-103928.html"
+check = "https://en.wikipedia.org/wiki/Cyclops_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0106"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Molière was the stage name of which French playwright?"
+answer = "Jean-Baptiste Poquelin"
+wrong = ["François-Marie Arouet", "Jean Racine", "Pierre Corneille"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Molière"
+reviewed = false
+
+[[question]]
+id = "theater-0107"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Who wrote both Equus and Amadeus?"
+answer = "Peter Shaffer"
+wrong = ["Anthony Shaffer", "Tom Stoppard", "Harold Pinter"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Peter_Shaffer"
+reviewed = false
+
+[[question]]
+id = "theater-0108"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Who wrote Oleanna, a two-hander about a professor and his student?"
+answer = "David Mamet"
+wrong = ["Sam Shepard", "Neil LaBute", "Tracy Letts"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Oleanna_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0109"
+subcategory = "Playwrights"
+difficulty = "hard"
+text = "Which playwright wrote Closer, later filmed with Julia Roberts and Jude Law?"
+answer = "Patrick Marber"
+wrong = ["Jez Butterworth", "Mark Ravenhill", "Martin McDonagh"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Closer_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0110"
+subcategory = "Musicals"
+difficulty = "hard"
+text = "Who wrote \"Give My Regards to Broadway\" for Little Johnny Jones (1904)?"
+answer = "George M. Cohan"
+wrong = ["Irving Berlin", "Jerome Kern", "Cole Porter"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Musical-Theatre-of-the-Twentieth-Century-186613.html"
+check = "https://en.wikipedia.org/wiki/Give_My_Regards_to_Broadway"
+reviewed = false
+
+[[question]]
+id = "theater-0111"
+subcategory = "Musicals"
+difficulty = "hard"
+text = "In West Side Story, which tomboy longs to be accepted by the Jets?"
+answer = "Anybodys"
+wrong = ["Anita", "Graziella", "Consuelo"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/West_Side_Story"
+reviewed = false
+
+[[question]]
+id = "theater-0112"
+subcategory = "Opera"
+difficulty = "hard"
+text = "Which French composer turned Goethe's The Sorrows of Young Werther into an opera?"
+answer = "Jules Massenet"
+wrong = ["Charles Gounod", "Léo Delibes", "Camille Saint-Saëns"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Popular-Opera-Characters-And-Arias-101151.html"
+check = "https://en.wikipedia.org/wiki/Werther"
+reviewed = false
+
+[[question]]
+id = "theater-0113"
+subcategory = "Opera"
+difficulty = "hard"
+text = "Jochanaan (John the Baptist) and Herod are characters in which Richard Strauss opera?"
+answer = "Salome"
+wrong = ["Elektra", "Der Rosenkavalier", "Ariadne auf Naxos"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Identify-The-Opera-From-Its-Characters-83144.html"
+check = "https://en.wikipedia.org/wiki/Salome_(opera)"
+reviewed = false
+
+[[question]]
+id = "theater-0114"
+subcategory = "Opera"
+difficulty = "hard"
+text = "Gurnemanz, Klingsor and Amfortas are characters in which Wagner opera?"
+answer = "Parsifal"
+wrong = ["Lohengrin", "Tannhäuser", "Tristan und Isolde"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Identify-The-Opera-From-Its-Characters-83144.html"
+check = "https://en.wikipedia.org/wiki/Parsifal"
+reviewed = false
+
+[[question]]
+id = "theater-0115"
+subcategory = "Stagecraft terms"
+difficulty = "hard"
+text = "The Corsican trap, made for the play The Corsican Brothers, is also known as what?"
+answer = "The ghost glide"
+wrong = ["The star trap", "The vampire trap", "The grave trap"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatrical-Terms-91051.html"
+check = "https://en.wikipedia.org/wiki/The_Corsican_Brothers_(play)"
+reviewed = false
+
+[[question]]
+id = "theater-0116"
+subcategory = "Stagecraft terms"
+difficulty = "hard"
+text = "On a Fresnel lantern, what are the hinged metal flaps that shape the beam called?"
+answer = "Barn doors"
+wrong = ["Gobos", "Gels", "Irises"]
+source = "https://www.funtrivia.com/trivia-quiz/Humanities/Theatre-for-the-Techies-137633.html"
+check = "https://en.wikipedia.org/wiki/Stage_lighting_accessories"
+reviewed = false
+
+[[question]]
+id = "theater-0117"
+subcategory = "Theatre history"
+difficulty = "hard"
+text = "Which actor founded London's Mermaid Theatre?"
+answer = "Bernard Miles"
+wrong = ["Joan Littlewood", "Lilian Baylis", "Peter Hall"]
+source = "https://www.trivianerd.com/topic/musicals-theatre-trivia"
+check = "https://en.wikipedia.org/wiki/Mermaid_Theatre"
+reviewed = false

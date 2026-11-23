@@ -1,0 +1,11 @@
+id = "abridged_edition"
+name = "Abridged Edition"
+tier = 3
+kind = "difficulty"
+text = "Questions in your top category are always easy, for both players. Counts as two steps against cards that make them harder"
+unique = true
+
+[[effects]]
+effect = "DifficultyShift"
+steps = -2
+all = false

@@ -1,0 +1,1275 @@
+[[question]]
+id = "film-0001"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which actor played Rick Blaine in Casablanca (1942)?"
+answer = "Humphrey Bogart"
+wrong = ["Cary Grant", "James Stewart", "Clark Gable"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Casablanca_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0002"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "What is the name of Dorothy's dog in The Wizard of Oz?"
+answer = "Toto"
+wrong = ["Rex", "Asta", "Lassie"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Toto_(Oz)"
+reviewed = false
+
+[[question]]
+id = "film-0003"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed the 1960 thriller Psycho?"
+answer = "Alfred Hitchcock"
+wrong = ["Orson Welles", "Billy Wilder", "Stanley Kubrick"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Psycho_(1960_film)"
+reviewed = false
+
+[[question]]
+id = "film-0004"
+subcategory = "Animation"
+difficulty = "easy"
+text = "What was Walt Disney's first feature-length animated film?"
+answer = "Snow White and the Seven Dwarfs"
+wrong = ["Pinocchio", "Fantasia", "Bambi"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)"
+reviewed = false
+
+[[question]]
+id = "film-0005"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which building does the giant ape climb at the end of King Kong (1933)?"
+answer = "Empire State Building"
+wrong = ["Chrysler Building", "Statue of Liberty", "Woolworth Building"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/King_Kong_(1933_film)"
+reviewed = false
+
+[[question]]
+id = "film-0006"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which star dances with an umbrella in the title number of Singin' in the Rain (1952)?"
+answer = "Gene Kelly"
+wrong = ["Fred Astaire", "Frank Sinatra", "Bing Crosby"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Singin%27_in_the_Rain"
+reviewed = false
+
+[[question]]
+id = "film-0007"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed Jurassic Park (1993)?"
+answer = "Steven Spielberg"
+wrong = ["George Lucas", "James Cameron", "Ridley Scott"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Jurassic_Park_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0008"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "What is the dying word of the title character in Citizen Kane?"
+answer = "Rosebud"
+wrong = ["Xanadu", "Mother", "Susan"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Citizen_Kane"
+reviewed = false
+
+[[question]]
+id = "film-0009"
+subcategory = "Animation"
+difficulty = "easy"
+text = "Which Disney character pilots the boat in the 1928 cartoon Steamboat Willie?"
+answer = "Mickey Mouse"
+wrong = ["Donald Duck", "Goofy", "Oswald the Lucky Rabbit"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/The-History-of-Animation---Part-1-317734.html"
+check = "https://en.wikipedia.org/wiki/Steamboat_Willie"
+reviewed = false
+
+[[question]]
+id = "film-0010"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which actress played Holly Golightly in Breakfast at Tiffany's (1961)?"
+answer = "Audrey Hepburn"
+wrong = ["Grace Kelly", "Marilyn Monroe", "Elizabeth Taylor"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Breakfast_at_Tiffany%27s_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0011"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which actor played the villain Hans Gruber in Die Hard (1988)?"
+answer = "Alan Rickman"
+wrong = ["Jeremy Irons", "Gary Oldman", "John Malkovich"]
+source = "https://www.watercoolertrivia.com/trivia-questions/movie-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Die_Hard"
+reviewed = false
+
+[[question]]
+id = "film-0012"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which 1965 film musical tells the story of the von Trapp family?"
+answer = "The Sound of Music"
+wrong = ["Mary Poppins", "My Fair Lady", "West Side Story"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Sound_of_Music_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0013"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "In Back to the Future (1985), which year does Marty McFly travel back to?"
+answer = "1955"
+wrong = ["1945", "1965", "1975"]
+source = "https://www.watercoolertrivia.com/trivia-questions/movie-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Back_to_the_Future"
+reviewed = false
+
+[[question]]
+id = "film-0014"
+subcategory = "Awards"
+difficulty = "easy"
+text = "Which actor won the Best Actor Oscar for Philadelphia (1993)?"
+answer = "Tom Hanks"
+wrong = ["Denzel Washington", "Anthony Hopkins", "Liam Neeson"]
+source = "https://www.watercoolertrivia.com/trivia-questions/movie-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Philadelphia_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0015"
+subcategory = "Awards"
+difficulty = "easy"
+text = "Which film was the first not in the English language to win the Oscar for Best Picture?"
+answer = "Parasite"
+wrong = ["Roma", "Amour", "Life Is Beautiful"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Parasite_(2019_film)"
+reviewed = false
+
+[[question]]
+id = "film-0016"
+subcategory = "Film history"
+difficulty = "medium"
+text = "Which 1927 film was the first feature with synchronized singing and speech?"
+answer = "The Jazz Singer"
+wrong = ["Wings", "Metropolis", "Sunrise"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Jazz_Singer"
+reviewed = false
+
+[[question]]
+id = "film-0017"
+subcategory = "Film history"
+difficulty = "medium"
+text = "Which French film pioneer made A Trip to the Moon (1902)?"
+answer = "Georges Méliès"
+wrong = ["Louis Lumière", "Abel Gance", "Jean Renoir"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/A_Trip_to_the_Moon"
+reviewed = false
+
+[[question]]
+id = "film-0018"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed the Soviet silent film Battleship Potemkin (1925)?"
+answer = "Sergei Eisenstein"
+wrong = ["Dziga Vertov", "Andrei Tarkovsky", "Vsevolod Pudovkin"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/Battleship_Potemkin"
+reviewed = false
+
+[[question]]
+id = "film-0019"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed the German silent vampire film Nosferatu (1922)?"
+answer = "F. W. Murnau"
+wrong = ["Fritz Lang", "Robert Wiene", "G. W. Pabst"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/Nosferatu"
+reviewed = false
+
+[[question]]
+id = "film-0020"
+subcategory = "Film history"
+difficulty = "medium"
+text = "Which silent comedian starred in and co-directed The General, set in the American Civil War?"
+answer = "Buster Keaton"
+wrong = ["Charlie Chaplin", "Harold Lloyd", "Stan Laurel"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/The_General_(1926_film)"
+reviewed = false
+
+[[question]]
+id = "film-0021"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Bicycle Thieves (1948) is a landmark of which film movement?"
+answer = "Italian neorealism"
+wrong = ["French New Wave", "German Expressionism", "Soviet montage"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Bicycle_Thieves"
+reviewed = false
+
+[[question]]
+id = "film-0022"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "The crime film City of God (2002) was made and set in which country?"
+answer = "Brazil"
+wrong = ["Mexico", "Argentina", "Colombia"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/City_of_God_(2002_film)"
+reviewed = false
+
+[[question]]
+id = "film-0023"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Which Italian director made 8½ (1963)?"
+answer = "Federico Fellini"
+wrong = ["Michelangelo Antonioni", "Luchino Visconti", "Roberto Rossellini"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/8%C2%BD"
+reviewed = false
+
+[[question]]
+id = "film-0024"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Which Japanese director made Seven Samurai (1954)?"
+answer = "Akira Kurosawa"
+wrong = ["Yasujiro Ozu", "Kenji Mizoguchi", "Ishiro Honda"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Seven_Samurai"
+reviewed = false
+
+[[question]]
+id = "film-0025"
+subcategory = "Animation"
+difficulty = "medium"
+text = "Who directed the animated film Spirited Away (2001)?"
+answer = "Hayao Miyazaki"
+wrong = ["Isao Takahata", "Satoshi Kon", "Katsuhiro Otomo"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Spirited_Away"
+reviewed = false
+
+[[question]]
+id = "film-0026"
+subcategory = "Awards"
+difficulty = "medium"
+text = "Who was the first African American to win an Academy Award, for Gone with the Wind?"
+answer = "Hattie McDaniel"
+wrong = ["Sidney Poitier", "Dorothy Dandridge", "Butterfly McQueen"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Hattie_McDaniel"
+reviewed = false
+
+[[question]]
+id = "film-0027"
+subcategory = "Technique"
+difficulty = "medium"
+text = "What name is given to everyday sound effects, such as footsteps, recreated for a film?"
+answer = "Foley"
+wrong = ["ADR", "Score", "Room tone"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Foley_(filmmaking)"
+reviewed = false
+
+[[question]]
+id = "film-0028"
+subcategory = "Technique"
+difficulty = "medium"
+text = "On a film set, what is the head of the electrical department called?"
+answer = "Gaffer"
+wrong = ["Key grip", "Best boy", "Focus puller"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Gaffer_(filmmaking)"
+reviewed = false
+
+[[question]]
+id = "film-0029"
+subcategory = "Technique"
+difficulty = "medium"
+text = "Which term, popularized by Hitchcock, names an object that drives a plot but matters little in itself?"
+answer = "MacGuffin"
+wrong = ["Red herring", "Deus ex machina", "Chekhov's gun"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/MacGuffin"
+reviewed = false
+
+[[question]]
+id = "film-0030"
+subcategory = "Awards"
+difficulty = "medium"
+text = "How many Academy Awards did Titanic (1997) win?"
+answer = "11"
+wrong = ["9", "10", "14"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+reviewed = false
+
+[[question]]
+id = "film-0031"
+subcategory = "Film history"
+difficulty = "hard"
+text = "Which painter co-wrote the surrealist short Un Chien Andalou (1929) with Luis Buñuel?"
+answer = "Salvador Dalí"
+wrong = ["Pablo Picasso", "René Magritte", "Max Ernst"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/Un_Chien_Andalou"
+reviewed = false
+
+[[question]]
+id = "film-0032"
+subcategory = "Animation"
+difficulty = "hard"
+text = "Which cartoonist made the 1914 animated film Gertie the Dinosaur?"
+answer = "Winsor McCay"
+wrong = ["Walt Disney", "Max Fleischer", "Otto Messmer"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/The-History-of-Animation---Part-1-317734.html"
+check = "https://en.wikipedia.org/wiki/Gertie_the_Dinosaur"
+reviewed = false
+
+[[question]]
+id = "film-0033"
+subcategory = "Animation"
+difficulty = "hard"
+text = "Lotte Reiniger, maker of The Adventures of Prince Achmed (1926), pioneered which kind of animation?"
+answer = "Silhouette animation"
+wrong = ["Claymation", "Cel animation", "Rotoscoping"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/The-History-of-Animation---Part-1-317734.html"
+check = "https://en.wikipedia.org/wiki/Lotte_Reiniger"
+reviewed = false
+
+[[question]]
+id = "film-0034"
+subcategory = "Technique"
+difficulty = "hard"
+text = "In film-set slang, what is the \"martini shot\"?"
+answer = "The last shot of the day"
+wrong = ["The first shot of the day", "The second-to-last shot", "A shot filmed in a bar"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Martini_Shot"
+reviewed = false
+
+[[question]]
+id = "film-0035"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which film won the \"Unique and Artistic Picture\" award at the first Academy Awards?"
+answer = "Sunrise"
+wrong = ["Wings", "The Jazz Singer", "7th Heaven"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/1st_Academy_Awards"
+reviewed = false
+
+[[question]]
+id = "film-0036"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Shoeshine, the first foreign-language film given a special Academy Award, came from which country?"
+answer = "Italy"
+wrong = ["France", "Japan", "Sweden"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Shoeshine_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0037"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Who was the first Japanese director nominated for the Best Director Oscar?"
+answer = "Hiroshi Teshigahara"
+wrong = ["Akira Kurosawa", "Yasujiro Ozu", "Kenji Mizoguchi"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Hiroshi_Teshigahara"
+reviewed = false
+
+[[question]]
+id = "film-0038"
+subcategory = "Film history"
+difficulty = "hard"
+text = "Who made the 1903 Western The Great Train Robbery?"
+answer = "Edwin S. Porter"
+wrong = ["D. W. Griffith", "Cecil B. DeMille", "Mack Sennett"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/The_Great_Train_Robbery_(1903_film)"
+reviewed = false
+
+[[question]]
+id = "film-0039"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "4 Months, 3 Weeks and 2 Days, winner of the Palme d'Or in 2007, comes from which country?"
+answer = "Romania"
+wrong = ["Hungary", "Poland", "Bulgaria"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/4_Months,_3_Weeks_and_2_Days"
+reviewed = false
+
+[[question]]
+id = "film-0040"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which Oscar category was presented only at the first ceremony, in 1929?"
+answer = "Best Title Writing"
+wrong = ["Best Dance Direction", "Best Assistant Director", "Best Original Story"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/1st_Academy_Awards"
+reviewed = false
+
+[[question]]
+id = "film-0041"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which actor played Norman Bates in Hitchcock's Psycho (1960)?"
+answer = "Anthony Perkins"
+wrong = ["Montgomery Clift", "Tony Curtis", "Farley Granger"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Norman_Bates"
+reviewed = false
+
+[[question]]
+id = "film-0042"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed The Godfather (1972)?"
+answer = "Francis Ford Coppola"
+wrong = ["Martin Scorsese", "Brian De Palma", "Sidney Lumet"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/The_Godfather"
+reviewed = false
+
+[[question]]
+id = "film-0043"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which actress played the title role in the 1963 epic Cleopatra?"
+answer = "Elizabeth Taylor"
+wrong = ["Vivien Leigh", "Sophia Loren", "Ava Gardner"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Cleopatra_(1963_film)"
+reviewed = false
+
+[[question]]
+id = "film-0044"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "Which 1959 comedy ends with the line \"Well, nobody's perfect\"?"
+answer = "Some Like It Hot"
+wrong = ["The Apartment", "The Seven Year Itch", "How to Marry a Millionaire"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Some_Like_It_Hot"
+reviewed = false
+
+[[question]]
+id = "film-0045"
+subcategory = "Classic films"
+difficulty = "easy"
+text = "In It's a Wonderful Life, what is Clarence, who saves George Bailey?"
+answer = "A guardian angel"
+wrong = ["A ghost", "A bank examiner", "A taxi driver"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/It's_a_Wonderful_Life"
+reviewed = false
+
+[[question]]
+id = "film-0046"
+subcategory = "Animation"
+difficulty = "easy"
+text = "Which studio made Toy Story (1995), the first entirely computer-animated feature film?"
+answer = "Pixar"
+wrong = ["DreamWorks Animation", "Blue Sky Studios", "Industrial Light & Magic"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Pixar-Gold-Standard-of-Childrens-CGI-Movies-364637.html"
+check = "https://en.wikipedia.org/wiki/Toy_Story"
+reviewed = false
+
+[[question]]
+id = "film-0047"
+subcategory = "Animation"
+difficulty = "easy"
+text = "Which British studio makes the Wallace and Gromit films?"
+answer = "Aardman Animations"
+wrong = ["Cosgrove Hall", "Laika", "Illumination"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/The-Films-of-Aardman-Animations-366452.html"
+check = "https://en.wikipedia.org/wiki/Wallace_and_Gromit"
+reviewed = false
+
+[[question]]
+id = "film-0048"
+subcategory = "Animation"
+difficulty = "easy"
+text = "Which Studio Ghibli film features a forest spirit and a Catbus?"
+answer = "My Neighbor Totoro"
+wrong = ["Ponyo", "Kiki's Delivery Service", "Princess Mononoke"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Studio-Ghibli-Films-226384.html"
+check = "https://en.wikipedia.org/wiki/My_Neighbor_Totoro"
+reviewed = false
+
+[[question]]
+id = "film-0049"
+subcategory = "Animation"
+difficulty = "easy"
+text = "In Shrek (2001), which princess does Shrek rescue from a dragon-guarded castle?"
+answer = "Fiona"
+wrong = ["Aurora", "Giselle", "Merida"]
+source = "https://funtrivia.com/trivia-quiz/Movies/Animated-Films-Without-Walt-363232.html"
+check = "https://en.wikipedia.org/wiki/Shrek"
+reviewed = false
+
+[[question]]
+id = "film-0050"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed Do the Right Thing (1989)?"
+answer = "Spike Lee"
+wrong = ["John Singleton", "Robert Townsend", "Mario Van Peebles"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Do_the_Right_Thing"
+reviewed = false
+
+[[question]]
+id = "film-0051"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed Memento (2000), a thriller told partly in reverse order?"
+answer = "Christopher Nolan"
+wrong = ["David Fincher", "Darren Aronofsky", "Bryan Singer"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Memento_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0052"
+subcategory = "World cinema"
+difficulty = "easy"
+text = "The Indian film Dangal (2016) is about a father who trains his daughters in which sport?"
+answer = "Wrestling"
+wrong = ["Boxing", "Cricket", "Kabaddi"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Dangal_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0053"
+subcategory = "Awards"
+difficulty = "easy"
+text = "Which film won Best Picture at the 2017 Oscars after La La Land was announced by mistake?"
+answer = "Moonlight"
+wrong = ["Manchester by the Sea", "Arrival", "Hidden Figures"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/89th_Academy_Awards"
+reviewed = false
+
+[[question]]
+id = "film-0054"
+subcategory = "Film history"
+difficulty = "easy"
+text = "In which 1936 film is Charlie Chaplin a factory worker who gets caught in a machine's gears?"
+answer = "Modern Times"
+wrong = ["The Great Dictator", "City Lights", "The Gold Rush"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/A-History-of-Silent-Cinema-163193.html"
+check = "https://en.wikipedia.org/wiki/Modern_Times_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0055"
+subcategory = "Technique"
+difficulty = "easy"
+text = "Which editing transition gradually blends one shot into the next?"
+answer = "Dissolve"
+wrong = ["Jump cut", "Smash cut", "Match cut"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Dissolve_(filmmaking)"
+reviewed = false
+
+[[question]]
+id = "film-0056"
+subcategory = "Technique"
+difficulty = "easy"
+text = "Which French-named genre covers dark 1940s crime dramas such as Double Indemnity?"
+answer = "Film noir"
+wrong = ["Nouvelle vague", "Cinéma vérité", "Giallo"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Film_noir"
+reviewed = false
+
+[[question]]
+id = "film-0057"
+subcategory = "Directors"
+difficulty = "easy"
+text = "Who directed The Ten Commandments (1956), with Charlton Heston as Moses?"
+answer = "Cecil B. DeMille"
+wrong = ["William Wyler", "David Lean", "King Vidor"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/The_Ten_Commandments_(1956_film)"
+reviewed = false
+
+[[question]]
+id = "film-0058"
+subcategory = "Animation"
+difficulty = "easy"
+text = "Who voiced the title character in Wes Anderson's Fantastic Mr. Fox (2009)?"
+answer = "George Clooney"
+wrong = ["Bill Murray", "Brad Pitt", "Matt Damon"]
+source = "https://funtrivia.com/trivia-quiz/Movies/Animated-Films-Without-Walt-363232.html"
+check = "https://en.wikipedia.org/wiki/Fantastic_Mr._Fox_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0059"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "In The Matrix (1999), what colour is the pill Neo takes?"
+answer = "Red"
+wrong = ["Blue", "Green", "White"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Red_pill_and_blue_pill"
+reviewed = false
+
+[[question]]
+id = "film-0060"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "Kevin McCallister, left behind at Christmas, is the hero of which film?"
+answer = "Home Alone"
+wrong = ["Jingle All the Way", "Elf", "The Santa Clause"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Home_Alone"
+reviewed = false
+
+[[question]]
+id = "film-0061"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "In Forrest Gump, life is like a box of what?"
+answer = "Chocolates"
+wrong = ["Matches", "Surprises", "Crayons"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Forrest_Gump"
+reviewed = false
+
+[[question]]
+id = "film-0062"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "Which car does Doc Brown turn into a time machine in Back to the Future?"
+answer = "DeLorean"
+wrong = ["Corvette", "Mustang", "Cadillac"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Back_to_the_Future"
+reviewed = false
+
+[[question]]
+id = "film-0063"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "FBI trainee Clarice Starling is the heroine of which 1991 thriller?"
+answer = "The Silence of the Lambs"
+wrong = ["Seven", "Basic Instinct", "Cape Fear"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0064"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "In which 1993 comedy does Bill Murray live the same day over and over?"
+answer = "Groundhog Day"
+wrong = ["Ghostbusters", "Scrooged", "What About Bob?"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Groundhog_Day_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0065"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "Which actor played the title role in Spike Lee's Malcolm X (1992)?"
+answer = "Denzel Washington"
+wrong = ["Morgan Freeman", "Wesley Snipes", "Laurence Fishburne"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Malcolm_X_(1992_film)"
+reviewed = false
+
+[[question]]
+id = "film-0066"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "In which 1986 film does Tom Cruise play a naval fighter pilot nicknamed Maverick?"
+answer = "Top Gun"
+wrong = ["Days of Thunder", "Iron Eagle", "Firefox"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Top_Gun"
+reviewed = false
+
+[[question]]
+id = "film-0067"
+subcategory = "Popular films"
+difficulty = "easy"
+text = "Which 1984 film introduced the line \"I'll be back\"?"
+answer = "The Terminator"
+wrong = ["Predator", "Commando", "Total Recall"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/I'll_be_back"
+reviewed = false
+
+[[question]]
+id = "film-0068"
+subcategory = "Awards"
+difficulty = "easy"
+text = "Which actress won the Best Actress Oscar four times?"
+answer = "Katharine Hepburn"
+wrong = ["Meryl Streep", "Bette Davis", "Ingrid Bergman"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/Katharine_Hepburn"
+reviewed = false
+
+[[question]]
+id = "film-0069"
+subcategory = "Classic films"
+difficulty = "medium"
+text = "In Kubrick's film 2001: A Space Odyssey, which planet is the Discovery One heading for?"
+answer = "Jupiter"
+wrong = ["Saturn", "Mars", "Neptune"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey"
+reviewed = false
+
+[[question]]
+id = "film-0070"
+subcategory = "Animation"
+difficulty = "medium"
+text = "What is the name of the desk lamp that appears in Pixar's logo?"
+answer = "Luxo Jr."
+wrong = ["Wally B.", "Lumpy", "Tinny"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/Pixar-Animation-Studios-252016.html"
+check = "https://en.wikipedia.org/wiki/Luxo_Jr."
+reviewed = false
+
+[[question]]
+id = "film-0071"
+subcategory = "Animation"
+difficulty = "medium"
+text = "In which Wallace and Gromit film do the pair fly to the Moon in a home-made rocket?"
+answer = "A Grand Day Out"
+wrong = ["A Close Shave", "The Wrong Trousers", "A Matter of Loaf and Death"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/The-Films-of-Aardman-Animations-366452.html"
+check = "https://en.wikipedia.org/wiki/A_Grand_Day_Out"
+reviewed = false
+
+[[question]]
+id = "film-0072"
+subcategory = "Animation"
+difficulty = "medium"
+text = "In The Wrong Trousers, what kind of animal is the villain Feathers McGraw?"
+answer = "Penguin"
+wrong = ["Chicken", "Crow", "Owl"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/The-Films-of-Aardman-Animations-366452.html"
+check = "https://en.wikipedia.org/wiki/The_Wrong_Trousers"
+reviewed = false
+
+[[question]]
+id = "film-0073"
+subcategory = "Animation"
+difficulty = "medium"
+text = "Art Garfunkel's hit \"Bright Eyes\" was written for which animated film?"
+answer = "Watership Down"
+wrong = ["The Plague Dogs", "The Secret of NIMH", "The Last Unicorn"]
+source = "https://funtrivia.com/trivia-quiz/Movies/Animated-Films-Without-Walt-363232.html"
+check = "https://en.wikipedia.org/wiki/Bright_Eyes_(Art_Garfunkel_song)"
+reviewed = false
+
+[[question]]
+id = "film-0074"
+subcategory = "Animation"
+difficulty = "medium"
+text = "Which Fleischer cartoon star began as a minor character in the short Dizzy Dishes (1930)?"
+answer = "Betty Boop"
+wrong = ["Olive Oyl", "Minnie Mouse", "Little Lulu"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/The-History-of-Animation---Part-1-317734.html"
+check = "https://en.wikipedia.org/wiki/Betty_Boop"
+reviewed = false
+
+[[question]]
+id = "film-0075"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed the 1939 Western Stagecoach, starring John Wayne?"
+answer = "John Ford"
+wrong = ["Howard Hawks", "Raoul Walsh", "William Wyler"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/Stagecoach_(1939_film)"
+reviewed = false
+
+[[question]]
+id = "film-0076"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed the German silent science-fiction film Metropolis (1927)?"
+answer = "Fritz Lang"
+wrong = ["G. W. Pabst", "Robert Wiene", "Ernst Lubitsch"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/Metropolis_(1927_film)"
+reviewed = false
+
+[[question]]
+id = "film-0077"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Which Swedish director made Wild Strawberries and The Seventh Seal?"
+answer = "Ingmar Bergman"
+wrong = ["Bo Widerberg", "Jan Troell", "Roy Andersson"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/Wild_Strawberries_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0078"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed the film musical My Fair Lady (1964)?"
+answer = "George Cukor"
+wrong = ["Vincente Minnelli", "Robert Wise", "Stanley Donen"]
+source = "https://funtrivia.com/trivia-quiz/People/Legendary-Film-Directors-367220.html"
+check = "https://en.wikipedia.org/wiki/My_Fair_Lady_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0079"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Which 1984 thriller was the first feature by Joel and Ethan Coen?"
+answer = "Blood Simple"
+wrong = ["Raising Arizona", "Miller's Crossing", "Barton Fink"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Blood_Simple"
+reviewed = false
+
+[[question]]
+id = "film-0080"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed The Shawshank Redemption (1994)?"
+answer = "Frank Darabont"
+wrong = ["Rob Reiner", "Barry Levinson", "Ron Howard"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Shawshank_Redemption"
+reviewed = false
+
+[[question]]
+id = "film-0081"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Who directed The Hurt Locker, a drama about a bomb disposal team in Iraq?"
+answer = "Kathryn Bigelow"
+wrong = ["Jane Campion", "Sofia Coppola", "Greta Gerwig"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Hurt_Locker"
+reviewed = false
+
+[[question]]
+id = "film-0082"
+subcategory = "Directors"
+difficulty = "medium"
+text = "Which Danish director made Melancholia (2011)?"
+answer = "Lars von Trier"
+wrong = ["Thomas Vinterberg", "Susanne Bier", "Nicolas Winding Refn"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Melancholia_(2011_film)"
+reviewed = false
+
+[[question]]
+id = "film-0083"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "A Separation (2011), the Oscar-winning drama by Asghar Farhadi, comes from which country?"
+answer = "Iran"
+wrong = ["Turkey", "Afghanistan", "Lebanon"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/A_Separation"
+reviewed = false
+
+[[question]]
+id = "film-0084"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "In The Lives of Others (2006), which secret police spies on an East Berlin playwright?"
+answer = "The Stasi"
+wrong = ["The KGB", "The Securitate", "The Gestapo"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/The_Lives_of_Others"
+reviewed = false
+
+[[question]]
+id = "film-0085"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Tony Leung and Maggie Cheung star in which 2000 film by Wong Kar-wai?"
+answer = "In the Mood for Love"
+wrong = ["Chungking Express", "Happy Together", "Fallen Angels"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/In_the_Mood_for_Love"
+reviewed = false
+
+[[question]]
+id = "film-0086"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Oldboy (2003) belongs to the Vengeance Trilogy of which South Korean director?"
+answer = "Park Chan-wook"
+wrong = ["Bong Joon-ho", "Kim Ki-duk", "Lee Chang-dong"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Oldboy_(2003_film)"
+reviewed = false
+
+[[question]]
+id = "film-0087"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "In Pawlikowski's Ida (2013), the young heroine is about to become what?"
+answer = "A nun"
+wrong = ["A teacher", "A nurse", "A singer"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Ida_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0088"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Which 1997 Italian film, set partly in a concentration camp, won the Oscar for Best Foreign Language Film?"
+answer = "Life Is Beautiful"
+wrong = ["Cinema Paradiso", "Il Postino", "Mediterraneo"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Life_Is_Beautiful"
+reviewed = false
+
+[[question]]
+id = "film-0089"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Which French New Wave director made The 400 Blows (1959)?"
+answer = "François Truffaut"
+wrong = ["Jean-Luc Godard", "Éric Rohmer", "Claude Chabrol"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/The_400_Blows"
+reviewed = false
+
+[[question]]
+id = "film-0090"
+subcategory = "World cinema"
+difficulty = "medium"
+text = "Which French filmmaker created and played the pipe-smoking Monsieur Hulot?"
+answer = "Jacques Tati"
+wrong = ["Pierre Étaix", "Louis de Funès", "Fernandel"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/Monsieur_Hulot"
+reviewed = false
+
+[[question]]
+id = "film-0091"
+subcategory = "Awards"
+difficulty = "medium"
+text = "Which was the first colour film to win the Oscar for Best Picture?"
+answer = "Gone with the Wind"
+wrong = ["An American in Paris", "Around the World in 80 Days", "The Wizard of Oz"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0092"
+subcategory = "Awards"
+difficulty = "medium"
+text = "During World War II, Oscar statuettes were made of what, because of metal shortages?"
+answer = "Painted plaster"
+wrong = ["Carved wood", "Glass", "Ceramic"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/Academy_Awards"
+reviewed = false
+
+[[question]]
+id = "film-0093"
+subcategory = "Film history"
+difficulty = "medium"
+text = "Whose 1870s photo sequences of a galloping horse were a forerunner of motion pictures?"
+answer = "Eadweard Muybridge"
+wrong = ["Étienne-Jules Marey", "Louis Le Prince", "William Friese-Greene"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/The-Science-and-Technology-of-Motion-Pictures-96673.html"
+check = "https://en.wikipedia.org/wiki/The_Horse_in_Motion"
+reviewed = false
+
+[[question]]
+id = "film-0094"
+subcategory = "Film history"
+difficulty = "medium"
+text = "Which 1948 Hitchcock film was staged to look like a handful of long continuous takes?"
+answer = "Rope"
+wrong = ["Rear Window", "Lifeboat", "Dial M for Murder"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Rope_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0095"
+subcategory = "Technique"
+difficulty = "medium"
+text = "What is a shot called when the camera is tilted so the horizon is not level?"
+answer = "Dutch angle"
+wrong = ["Crane shot", "Dolly zoom", "Whip pan"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Dutch_angle"
+reviewed = false
+
+[[question]]
+id = "film-0096"
+subcategory = "Technique"
+difficulty = "medium"
+text = "Which French term covers everything placed in front of the camera: sets, props, actors and lighting?"
+answer = "Mise-en-scène"
+wrong = ["Montage", "Cinéma vérité", "Auteur"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/MovieTerms-12919.html"
+check = "https://en.wikipedia.org/wiki/Mise-en-scène"
+reviewed = false
+
+[[question]]
+id = "film-0097"
+subcategory = "Technique"
+difficulty = "medium"
+text = "In filmmaking, what does \"looping\" mean?"
+answer = "Re-recording dialogue after filming"
+wrong = ["Repeating a shot in the edit", "Filming a scene in reverse", "Reusing stock footage"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Film-Basics-72397.html"
+check = "https://en.wikipedia.org/wiki/Dubbing"
+reviewed = false
+
+[[question]]
+id = "film-0098"
+subcategory = "Animation"
+difficulty = "hard"
+text = "Which 1984 Miyazaki film, released before Studio Ghibli was founded, is set after an ecological catastrophe?"
+answer = "Nausicaä of the Valley of the Wind"
+wrong = ["Castle in the Sky", "Porco Rosso", "Princess Mononoke"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Studio-Ghibli-Films-226384.html"
+check = "https://en.wikipedia.org/wiki/Nausicaä_of_the_Valley_of_the_Wind_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0099"
+subcategory = "Animation"
+difficulty = "hard"
+text = "Which 2009 clay-animated film follows pen pals: a girl in Melbourne and a man in New York?"
+answer = "Mary and Max"
+wrong = ["Anomalisa", "Coraline", "$9.99"]
+source = "https://funtrivia.com/trivia-quiz/Movies/Animated-Films-Without-Walt-363232.html"
+check = "https://en.wikipedia.org/wiki/Mary_and_Max"
+reviewed = false
+
+[[question]]
+id = "film-0100"
+subcategory = "Animation"
+difficulty = "hard"
+text = "Which Aardman short, in which zoo animals voice real interviews, won the studio's first Oscar?"
+answer = "Creature Comforts"
+wrong = ["The Wrong Trousers", "A Close Shave", "A Grand Day Out"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/The-Films-of-Aardman-Animations-366452.html"
+check = "https://en.wikipedia.org/wiki/Creature_Comforts"
+reviewed = false
+
+[[question]]
+id = "film-0101"
+subcategory = "Animation"
+difficulty = "hard"
+text = "What is the 1830s spinning drum with slits that makes a strip of drawings appear to move?"
+answer = "Zoetrope"
+wrong = ["Praxinoscope", "Kinetoscope", "Thaumatrope"]
+source = "https://www.funtrivia.com/trivia-quiz/Entertainment/The-History-of-Animation---Part-1-317734.html"
+check = "https://en.wikipedia.org/wiki/Zoetrope"
+reviewed = false
+
+[[question]]
+id = "film-0102"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Wadjda (2012) was the first feature film shot entirely in which country?"
+answer = "Saudi Arabia"
+wrong = ["Jordan", "Kuwait", "Oman"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Wadjda"
+reviewed = false
+
+[[question]]
+id = "film-0103"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Who wrote and directed The Umbrellas of Cherbourg (1964), in which every line is sung?"
+answer = "Jacques Demy"
+wrong = ["Agnès Varda", "Louis Malle", "Alain Resnais"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/The_Umbrellas_of_Cherbourg"
+reviewed = false
+
+[[question]]
+id = "film-0104"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Which actor plays the contract killer in Jean-Pierre Melville's Le Samouraï (1967)?"
+answer = "Alain Delon"
+wrong = ["Jean-Paul Belmondo", "Yves Montand", "Lino Ventura"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/Le_Samouraï"
+reviewed = false
+
+[[question]]
+id = "film-0105"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Who directed Les Enfants du Paradis (Children of Paradise, 1945)?"
+answer = "Marcel Carné"
+wrong = ["Jean Renoir", "Julien Duvivier", "Jean Vigo"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/Children_of_Paradise"
+reviewed = false
+
+[[question]]
+id = "film-0106"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Le Beau Serge (1958), an early French New Wave film, was the first feature by which director?"
+answer = "Claude Chabrol"
+wrong = ["Jacques Rivette", "Alain Resnais", "Jean-Luc Godard"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Great-French-Directors-361242.html"
+check = "https://en.wikipedia.org/wiki/Le_Beau_Serge"
+reviewed = false
+
+[[question]]
+id = "film-0107"
+subcategory = "World cinema"
+difficulty = "hard"
+text = "Which Japanese director made Drive My Car (2021), based on a Haruki Murakami story?"
+answer = "Ryusuke Hamaguchi"
+wrong = ["Hirokazu Kore-eda", "Takeshi Kitano", "Kiyoshi Kurosawa"]
+source = "https://www.mentalfloss.com/entertainment/movies/film-trivia-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Drive_My_Car_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0108"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which actress tied with Katharine Hepburn for the Best Actress Oscar at the 1969 ceremony?"
+answer = "Barbra Streisand"
+wrong = ["Joanne Woodward", "Vanessa Redgrave", "Patricia Neal"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/41st_Academy_Awards"
+reviewed = false
+
+[[question]]
+id = "film-0109"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which 1950 film received a then-record 14 Oscar nominations?"
+answer = "All About Eve"
+wrong = ["Sunset Boulevard", "Born Yesterday", "Father of the Bride"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/All_About_Eve"
+reviewed = false
+
+[[question]]
+id = "film-0110"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Who was the first person to decline an Academy Award, for The Informer (1935)?"
+answer = "Dudley Nichols"
+wrong = ["John Ford", "Ben Hecht", "Paul Muni"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/Dudley_Nichols"
+reviewed = false
+
+[[question]]
+id = "film-0111"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which 1958 musical won all nine Academy Awards it was nominated for?"
+answer = "Gigi"
+wrong = ["An American in Paris", "West Side Story", "My Fair Lady"]
+source = "https://www.funtrivia.com/trivia-quiz/Television/History-of-the-Oscars-175045.html"
+check = "https://en.wikipedia.org/wiki/Gigi_(1958_film)"
+reviewed = false
+
+[[question]]
+id = "film-0112"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Which Best Picture winner famously has no women in speaking roles?"
+answer = "Lawrence of Arabia"
+wrong = ["Ben-Hur", "Gandhi", "The Sting"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)"
+reviewed = false
+
+[[question]]
+id = "film-0113"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Who was the first person nominated for Oscars in seven different categories?"
+answer = "Kenneth Branagh"
+wrong = ["George Clooney", "Woody Allen", "Orson Welles"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Kenneth_Branagh"
+reviewed = false
+
+[[question]]
+id = "film-0114"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Who was the first actor to receive an Oscar nomination after their death, for The Letter (1929)?"
+answer = "Jeanne Eagels"
+wrong = ["Rudolph Valentino", "Lon Chaney", "Jean Harlow"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Jeanne_Eagels"
+reviewed = false
+
+[[question]]
+id = "film-0115"
+subcategory = "Awards"
+difficulty = "hard"
+text = "Who was nominated for both Best Actor and Best Supporting Actor for the same role in Going My Way?"
+answer = "Barry Fitzgerald"
+wrong = ["Bing Crosby", "Walter Brennan", "Claude Rains"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Do-You-Know-the-Academy-Awards-409373.html"
+check = "https://en.wikipedia.org/wiki/Barry_Fitzgerald"
+reviewed = false
+
+[[question]]
+id = "film-0116"
+subcategory = "Technique"
+difficulty = "hard"
+text = "Which effect shows that viewers read an actor's blank face differently depending on the shot cut next to it?"
+answer = "Kuleshov effect"
+wrong = ["Phi phenomenon", "Uncanny valley", "Mandela effect"]
+source = "https://www.funtrivia.com/trivia-quiz/Movies/Film-Basics-72397.html"
+check = "https://en.wikipedia.org/wiki/Kuleshov_effect"
+reviewed = false

@@ -1,0 +1,18 @@
+id = "aegis"
+name = "Aegis"
+tier = 6
+kind = "defense"
+text = "You take at most 8 damage from a single battle. Golden: also gives 10 armor"
+golden_text = "You take at most 8 damage from a single battle, and it gives 10 armor"
+
+[[effects]]
+effect = "DamageCap"
+amount = 8
+
+[[golden_effects]]
+effect = "DamageCap"
+amount = 8
+
+[[golden_effects]]
+effect = "Armor"
+amount = 10

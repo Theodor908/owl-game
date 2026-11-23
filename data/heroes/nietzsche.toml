@@ -1,0 +1,11 @@
+id = "nietzsche"
+name = "Friedrich Nietzsche"
+title = "Ubermensch"
+category = "philosophy"
+hp = 35
+category_bonus = 25
+kind = "Nietzsche"
+
+[params]
+cost = 2
+options = 4

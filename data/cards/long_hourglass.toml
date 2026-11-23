@@ -1,0 +1,10 @@
+id = "long_hourglass"
+name = "Long Hourglass"
+tier = 3
+kind = "time"
+text = "+2 s answer time"
+golden_text = "+4 s answer time"
+
+[[effects]]
+effect = "AnswerTime"
+seconds = 2

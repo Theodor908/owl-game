@@ -1,0 +1,10 @@
+id = "iron_shield"
+name = "Iron Shield"
+tier = 3
+kind = "armor"
+text = "6 armor. Breaks when depleted"
+golden = false
+
+[[effects]]
+effect = "Armor"
+amount = 6

@@ -1,0 +1,11 @@
+id = "footnotes"
+name = "Footnotes"
+tier = 2
+kind = "difficulty"
+text = "Every question in your battle is one step harder, for both players"
+unique = true
+
+[[effects]]
+effect = "DifficultyShift"
+steps = 1
+all = true

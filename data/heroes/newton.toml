@@ -1,0 +1,13 @@
+id = "newton"
+name = "Isaac Newton"
+title = "Father of Classical Mechanics"
+category = "physics"
+hp = 30
+category_bonus = 25
+kind = "Newton"
+
+[params]
+questions = 2
+cost = 2
+chance = 50
+removed = 2

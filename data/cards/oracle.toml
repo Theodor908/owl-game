@@ -1,0 +1,12 @@
+id = "oracle"
+name = "The Oracle"
+tier = 6
+kind = "legendary"
+text = "Instantly answers one question per regular battle, and one endgame question in total"
+cost = 8
+unique = true
+
+[[effects]]
+effect = "Oracle"
+per_battle = 1
+endgame_total = 1

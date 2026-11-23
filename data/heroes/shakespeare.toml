@@ -1,0 +1,13 @@
+id = "shakespeare"
+name = "William Shakespeare"
+title = "Dramatic Genius"
+category = "theater"
+hp = 34
+category_bonus = 25
+kind = "Shakespeare"
+
+[params]
+skull_chance = 20
+skulls = 3
+skip_above = 3
+skips = 3

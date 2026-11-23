@@ -1,0 +1,12 @@
+id = "potion"
+name = "Potion"
+tier = 0
+kind = "legendary"
+text = "One use: instantly heal 5 HP. Removed from the game when used"
+golden = false
+shop = false
+copies = 4
+
+[[effects]]
+effect = "HealOnce"
+amount = 5

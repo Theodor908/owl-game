@@ -1,0 +1,16 @@
+[package]
+name = "owl-lobby"
+edition.workspace = true
+version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+owl-core = { path = "../core" }
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0.21"
+toml = "1.2.1"
+
+[dev-dependencies]
+serde_json = "1.0.154"

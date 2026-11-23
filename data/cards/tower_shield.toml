@@ -1,0 +1,12 @@
+id = "tower_shield"
+name = "Tower Shield"
+tier = 0
+kind = "armor"
+text = "6 armor. Breaks when depleted"
+golden = false
+shop = false
+copies = 0
+
+[[effects]]
+effect = "Armor"
+amount = 6

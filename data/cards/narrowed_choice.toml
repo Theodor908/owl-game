@@ -1,0 +1,10 @@
+id = "narrowed_choice"
+name = "Narrowed Choice"
+tier = 5
+kind = "endgame"
+text = "In the endgame, you choose between 3 answers instead of 4"
+cost = 8
+golden = false
+
+[[effects]]
+effect = "EndgameFewerOptions"

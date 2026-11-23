@@ -1,0 +1,10 @@
+id = "second_wind"
+name = "Second Wind"
+tier = 6
+kind = "endgame"
+text = "In the endgame, the first time you would take damage, take none"
+cost = 8
+golden = false
+
+[[effects]]
+effect = "EndgameShield"

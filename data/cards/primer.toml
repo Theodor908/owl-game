@@ -1,0 +1,11 @@
+id = "primer"
+name = "Primer"
+tier = 3
+kind = "difficulty"
+text = "Questions in your top category are one step easier, for both players"
+unique = true
+
+[[effects]]
+effect = "DifficultyShift"
+steps = -1
+all = false

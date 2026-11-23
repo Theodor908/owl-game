@@ -1,0 +1,10 @@
+id = "piercing_quill"
+name = "Piercing Quill"
+tier = 4
+kind = "counter"
+text = "Your damage ignores half of the opponent's reflect"
+golden_text = "Your damage ignores all of the opponent's reflect"
+
+[[effects]]
+effect = "ReflectPierce"
+percent = 50

@@ -1,0 +1,11 @@
+id = "golden_reward"
+name = "Golden Reward"
+tier = 0
+kind = "token"
+text = "Place it to pick one of three cards from the next tier up. It takes no place on the board"
+golden = false
+shop = false
+copies = 0
+
+[[effects]]
+effect = "GoldenReward"

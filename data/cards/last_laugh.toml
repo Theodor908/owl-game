@@ -1,0 +1,10 @@
+id = "last_laugh"
+name = "Last Laugh"
+tier = 3
+kind = "tie"
+text = "On a 0-0 tie, deal 1 damage"
+golden_text = "On a 0-0 tie, deal 2 damage"
+
+[[effects]]
+effect = "ZeroZero"
+damage = 1

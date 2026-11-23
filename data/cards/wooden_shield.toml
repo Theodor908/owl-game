@@ -1,0 +1,10 @@
+id = "wooden_shield"
+name = "Wooden Shield"
+tier = 1
+kind = "armor"
+text = "3 armor. Breaks and frees its slot when depleted"
+golden = false
+
+[[effects]]
+effect = "Armor"
+amount = 3

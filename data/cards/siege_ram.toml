@@ -1,0 +1,10 @@
+id = "siege_ram"
+name = "Siege Ram"
+tier = 4
+kind = "counter"
+text = "Your damage ignores 3 armor"
+golden_text = "Your damage ignores 6 armor"
+
+[[effects]]
+effect = "ArmorPierce"
+amount = 3

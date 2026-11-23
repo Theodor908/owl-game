@@ -1,0 +1,1387 @@
+# Sport. Format and rules: docs/questions.md.
+
+[[question]]
+id = "sport-0001"
+subcategory = "Tennis"
+difficulty = "easy"
+text = "In tennis, what is a score of 40-40 called?"
+answer = "Deuce"
+wrong = ["Advantage", "Love", "Tie-break"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Tennis_scoring_system"
+reviewed = false
+
+[[question]]
+id = "sport-0002"
+subcategory = "Golf"
+difficulty = "easy"
+text = "In golf, what is a score of one stroke under par on a hole called?"
+answer = "Birdie"
+wrong = ["Eagle", "Bogey", "Albatross"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Par_(score)"
+reviewed = false
+
+[[question]]
+id = "sport-0003"
+subcategory = "Olympics"
+difficulty = "easy"
+text = "How many interlocking rings are there on the Olympic flag?"
+answer = "5"
+wrong = ["4", "6", "7"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Olympic_symbols"
+reviewed = false
+
+[[question]]
+id = "sport-0004"
+subcategory = "Football rules"
+difficulty = "easy"
+text = "How many players does a football (soccer) team have on the pitch at the start of a match?"
+answer = "11"
+wrong = ["9", "10", "12"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://www.theifab.com/laws/latest/the-players/"
+reviewed = false
+
+[[question]]
+id = "sport-0005"
+subcategory = "Boxing"
+difficulty = "easy"
+text = "Under which name was the boxer Muhammad Ali born?"
+answer = "Cassius Clay"
+wrong = ["Walker Smith", "Joseph Barrow", "Rocco Marchegiano"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Muhammad_Ali"
+reviewed = false
+
+[[question]]
+id = "sport-0006"
+subcategory = "Equipment"
+difficulty = "easy"
+text = "Which racket sport is played with a shuttlecock?"
+answer = "Badminton"
+wrong = ["Squash", "Tennis", "Table tennis"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Badminton"
+reviewed = false
+
+[[question]]
+id = "sport-0007"
+subcategory = "Football history"
+difficulty = "easy"
+text = "Which country won the first FIFA World Cup, in 1930?"
+answer = "Uruguay"
+wrong = ["Brazil", "Argentina", "Italy"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0008"
+subcategory = "Olympics history"
+difficulty = "easy"
+text = "Which city hosted the first modern Olympic Games, in 1896?"
+answer = "Athens"
+wrong = ["Paris", "London", "Rome"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0009"
+subcategory = "Golf"
+difficulty = "easy"
+text = "How many holes make up a standard round of golf?"
+answer = "18"
+wrong = ["12", "16", "20"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Par_(score)"
+reviewed = false
+
+[[question]]
+id = "sport-0010"
+subcategory = "Ice hockey"
+difficulty = "easy"
+text = "The Stanley Cup is the championship trophy of which sport?"
+answer = "Ice hockey"
+wrong = ["Baseball", "Basketball", "Golf"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Stanley_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0011"
+subcategory = "Equipment"
+difficulty = "easy"
+text = "In which sport is a foil used?"
+answer = "Fencing"
+wrong = ["Archery", "Judo", "Lacrosse"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Fencing"
+reviewed = false
+
+[[question]]
+id = "sport-0012"
+subcategory = "Football history"
+difficulty = "easy"
+text = "In which year did England win the football World Cup?"
+answer = "1966"
+wrong = ["1958", "1962", "1970"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0013"
+subcategory = "Tennis"
+difficulty = "easy"
+text = "Which country did the tennis champion Roger Federer represent?"
+answer = "Switzerland"
+wrong = ["Austria", "Sweden", "Germany"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Roger_Federer"
+reviewed = false
+
+[[question]]
+id = "sport-0014"
+subcategory = "American football"
+difficulty = "easy"
+text = "How many points is a touchdown worth in American football?"
+answer = "6"
+wrong = ["3", "5", "7"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Touchdown"
+reviewed = false
+
+[[question]]
+id = "sport-0015"
+subcategory = "Cricket"
+difficulty = "easy"
+text = "The Ashes is a Test cricket series between England and which other country?"
+answer = "Australia"
+wrong = ["South Africa", "India", "New Zealand"]
+source = "https://businessballs.com/quiz/sport-by-letter-a/print/"
+check = "https://en.wikipedia.org/wiki/The_Ashes"
+reviewed = false
+
+[[question]]
+id = "sport-0016"
+subcategory = "Athletics"
+difficulty = "medium"
+text = "What is the official distance of a marathon?"
+answer = "42.195 km"
+wrong = ["38.195 km", "40 km", "45.5 km"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Marathon"
+reviewed = false
+
+[[question]]
+id = "sport-0017"
+subcategory = "Snooker"
+difficulty = "medium"
+text = "In snooker, how many points is the black ball worth?"
+answer = "7"
+wrong = ["5", "6", "8"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Snooker"
+reviewed = false
+
+[[question]]
+id = "sport-0018"
+subcategory = "Darts"
+difficulty = "medium"
+text = "What is the highest score possible with three darts?"
+answer = "180"
+wrong = ["150", "170", "200"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Darts"
+reviewed = false
+
+[[question]]
+id = "sport-0019"
+subcategory = "Rugby rules"
+difficulty = "medium"
+text = "In rugby union, how many points is a try worth?"
+answer = "5"
+wrong = ["3", "4", "6"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sports-Scoring-164203.html"
+check = "https://en.wikipedia.org/wiki/Rugby_union"
+reviewed = false
+
+[[question]]
+id = "sport-0020"
+subcategory = "Rugby rules"
+difficulty = "medium"
+text = "How many players does a rugby league team have on the field?"
+answer = "13"
+wrong = ["11", "12", "15"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Rugby_league"
+reviewed = false
+
+[[question]]
+id = "sport-0021"
+subcategory = "Football rules"
+difficulty = "medium"
+text = "In football, how far from the goal line is the penalty spot?"
+answer = "12 yards"
+wrong = ["10 yards", "15 yards", "18 yards"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Penalty_kick_(association_football)"
+reviewed = false
+
+[[question]]
+id = "sport-0022"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "Which American athlete won four gold medals at the 1936 Berlin Olympics?"
+answer = "Jesse Owens"
+wrong = ["Carl Lewis", "Ralph Metcalfe", "Bob Beamon"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Jesse_Owens"
+reviewed = false
+
+[[question]]
+id = "sport-0023"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "Which gymnast was the first to be awarded a perfect 10 at the Olympic Games, in 1976?"
+answer = "Nadia Comaneci"
+wrong = ["Olga Korbut", "Larisa Latynina", "Vera Caslavska"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Nadia_Com%C4%83neci"
+reviewed = false
+
+[[question]]
+id = "sport-0024"
+subcategory = "Boxing"
+difficulty = "medium"
+text = "Whom did Muhammad Ali beat in the 1974 fight known as the Rumble in the Jungle?"
+answer = "George Foreman"
+wrong = ["Joe Frazier", "Sonny Liston", "Ken Norton"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Muhammad_Ali"
+reviewed = false
+
+[[question]]
+id = "sport-0025"
+subcategory = "Rugby history"
+difficulty = "medium"
+text = "Which country won the first Rugby World Cup, in 1987?"
+answer = "New Zealand"
+wrong = ["Australia", "South Africa", "England"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Rugby_union"
+reviewed = false
+
+[[question]]
+id = "sport-0026"
+subcategory = "Other sports"
+difficulty = "medium"
+text = "In which sport is play divided into periods called chukkas?"
+answer = "Polo"
+wrong = ["Croquet", "Curling", "Lacrosse"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Polo"
+reviewed = false
+
+[[question]]
+id = "sport-0027"
+subcategory = "Other sports"
+difficulty = "medium"
+text = "In ten-pin bowling, what are three strikes in a row called?"
+answer = "A turkey"
+wrong = ["An eagle", "A hat-trick", "A full house"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Strike_(bowling)"
+reviewed = false
+
+[[question]]
+id = "sport-0028"
+subcategory = "Olympics"
+difficulty = "medium"
+text = "In which Swiss city is the International Olympic Committee based?"
+answer = "Lausanne"
+wrong = ["Geneva", "Zurich", "Bern"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0029"
+subcategory = "Cricket rules"
+difficulty = "medium"
+text = "In cricket, how many runs are scored when the ball is hit over the boundary without bouncing?"
+answer = "6"
+wrong = ["4", "5", "8"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sports-Scoring-164203.html"
+check = "https://en.wikipedia.org/wiki/Boundary_(cricket)"
+reviewed = false
+
+[[question]]
+id = "sport-0030"
+subcategory = "Athletics"
+difficulty = "medium"
+text = "Which Ethiopian runner won the 1960 Olympic marathon in Rome running barefoot?"
+answer = "Abebe Bikila"
+wrong = ["Mamo Wolde", "Haile Gebrselassie", "Miruts Yifter"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Abebe_Bikila"
+reviewed = false
+
+[[question]]
+id = "sport-0031"
+subcategory = "Tennis history"
+difficulty = "hard"
+text = "Who won the first Wimbledon championship, in 1877?"
+answer = "Spencer Gore"
+wrong = ["William Renshaw", "Frank Hadow", "Fred Perry"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Spencer_Gore_(sportsman)"
+reviewed = false
+
+[[question]]
+id = "sport-0032"
+subcategory = "Cricket history"
+difficulty = "hard"
+text = "Which Australian batsman scored the first century in Test cricket, in 1877?"
+answer = "Charles Bannerman"
+wrong = ["Victor Trumper", "Billy Murdoch", "Dave Gregory"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Charles_Bannerman"
+reviewed = false
+
+[[question]]
+id = "sport-0033"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Which Frenchman scored the first goal in World Cup history, in 1930?"
+answer = "Lucien Laurent"
+wrong = ["Just Fontaine", "Andre Maschinot", "Raymond Kopa"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0034"
+subcategory = "Athletics history"
+difficulty = "hard"
+text = "Who was the first woman to run a mile in under five minutes?"
+answer = "Diane Leather"
+wrong = ["Mary Decker", "Zola Budd", "Paula Radcliffe"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Diane_Leather"
+reviewed = false
+
+[[question]]
+id = "sport-0035"
+subcategory = "Athletics history"
+difficulty = "hard"
+text = "Which Dutch athlete won four gold medals at the 1948 London Olympics?"
+answer = "Fanny Blankers-Koen"
+wrong = ["Wilma Rudolph", "Betty Cuthbert", "Shirley Strickland"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Fanny_Blankers-Koen"
+reviewed = false
+
+[[question]]
+id = "sport-0036"
+subcategory = "Cycling history"
+difficulty = "hard"
+text = "Who was the first cyclist to win the Tour de France five times?"
+answer = "Jacques Anquetil"
+wrong = ["Eddy Merckx", "Bernard Hinault", "Louison Bobet"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Jacques_Anquetil"
+reviewed = false
+
+[[question]]
+id = "sport-0037"
+subcategory = "Golf history"
+difficulty = "hard"
+text = "Who became the first European golfer to win the Masters, in 1980?"
+answer = "Seve Ballesteros"
+wrong = ["Nick Faldo", "Bernhard Langer", "Sandy Lyle"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Masters_Tournament"
+reviewed = false
+
+[[question]]
+id = "sport-0038"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Which Manchester City goalkeeper played on with a broken neck in the 1956 FA Cup final?"
+answer = "Bert Trautmann"
+wrong = ["Frank Swift", "Harry Gregg", "Gordon Banks"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Bert_Trautmann"
+reviewed = false
+
+[[question]]
+id = "sport-0039"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Which French town hosted the first Winter Olympic Games, in 1924?"
+answer = "Chamonix"
+wrong = ["Grenoble", "Albertville", "Megeve"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0040"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Which city hosted the first Paralympic Games, in 1960?"
+answer = "Rome"
+wrong = ["Tokyo", "Helsinki", "Melbourne"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0041"
+subcategory = "Football"
+difficulty = "easy"
+text = "What is the nickname of Arsenal Football Club?"
+answer = "The Gunners"
+wrong = ["The Hammers", "The Magpies", "The Toffees"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Arsenal_F.C."
+reviewed = false
+
+[[question]]
+id = "sport-0042"
+subcategory = "Cycling"
+difficulty = "easy"
+text = "Which sport is raced on a banked indoor track called a velodrome?"
+answer = "Cycling"
+wrong = ["Athletics", "Speed skating", "Motorcycle racing"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Velodrome"
+reviewed = false
+
+[[question]]
+id = "sport-0043"
+subcategory = "Golf"
+difficulty = "easy"
+text = "What are the small hollows covering the surface of a golf ball called?"
+answer = "Dimples"
+wrong = ["Pits", "Craters", "Grooves"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Golf_ball"
+reviewed = false
+
+[[question]]
+id = "sport-0044"
+subcategory = "Rowing"
+difficulty = "easy"
+text = "Which university does Oxford race against in the annual Boat Race on the Thames?"
+answer = "Cambridge"
+wrong = ["Durham", "Harvard", "Yale"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/The_Boat_Race"
+reviewed = false
+
+[[question]]
+id = "sport-0045"
+subcategory = "Baseball"
+difficulty = "easy"
+text = "How many players does a baseball team have on the field while defending?"
+answer = "9"
+wrong = ["7", "10", "11"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Baseball"
+reviewed = false
+
+[[question]]
+id = "sport-0046"
+subcategory = "Volleyball"
+difficulty = "easy"
+text = "How many players does each team have on court in indoor volleyball?"
+answer = "6"
+wrong = ["5", "7", "9"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Volleyball"
+reviewed = false
+
+[[question]]
+id = "sport-0047"
+subcategory = "Baseball"
+difficulty = "easy"
+text = "In baseball, how many strikes put a batter out?"
+answer = "3"
+wrong = ["2", "4", "5"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Strikeout"
+reviewed = false
+
+[[question]]
+id = "sport-0048"
+subcategory = "Swimming"
+difficulty = "easy"
+text = "Which is the fastest swimming stroke?"
+answer = "Front crawl"
+wrong = ["Backstroke", "Breaststroke", "Butterfly"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Front_crawl"
+reviewed = false
+
+[[question]]
+id = "sport-0049"
+subcategory = "Golf"
+difficulty = "easy"
+text = "At which golf club is the Masters Tournament played?"
+answer = "Augusta National"
+wrong = ["Pebble Beach", "St Andrews", "Pinehurst"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Augusta_National_Golf_Club"
+reviewed = false
+
+[[question]]
+id = "sport-0050"
+subcategory = "Football history"
+difficulty = "easy"
+text = "In which World Cup year did Diego Maradona score his \"Hand of God\" goal?"
+answer = "1986"
+wrong = ["1978", "1982", "1990"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Diego_Maradona"
+reviewed = false
+
+[[question]]
+id = "sport-0051"
+subcategory = "Football"
+difficulty = "easy"
+text = "Which club does Barcelona play in the match known as El Clasico?"
+answer = "Real Madrid"
+wrong = ["Atletico Madrid", "Valencia", "Sevilla"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/El_Cl%C3%A1sico"
+reviewed = false
+
+[[question]]
+id = "sport-0052"
+subcategory = "Motorsport"
+difficulty = "easy"
+text = "Which country did the racing driver Ayrton Senna come from?"
+answer = "Brazil"
+wrong = ["Argentina", "Portugal", "Italy"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Ayrton_Senna"
+reviewed = false
+
+[[question]]
+id = "sport-0053"
+subcategory = "Ice hockey"
+difficulty = "easy"
+text = "How many players does each team have on the ice in ice hockey, goalkeeper included?"
+answer = "6"
+wrong = ["5", "7", "11"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Ice_hockey"
+reviewed = false
+
+[[question]]
+id = "sport-0054"
+subcategory = "Ice hockey"
+difficulty = "easy"
+text = "How many periods are there in a regular ice hockey game?"
+answer = "3"
+wrong = ["2", "4", "5"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Ice_hockey"
+reviewed = false
+
+[[question]]
+id = "sport-0055"
+subcategory = "Basketball"
+difficulty = "easy"
+text = "How many players does each team have on court in basketball?"
+answer = "5"
+wrong = ["4", "6", "7"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Basketball"
+reviewed = false
+
+[[question]]
+id = "sport-0056"
+subcategory = "Basketball"
+difficulty = "easy"
+text = "In basketball, what is the foul for taking too many steps without dribbling?"
+answer = "Travelling"
+wrong = ["Double dribble", "Goaltending", "Charging"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Traveling_(basketball)"
+reviewed = false
+
+[[question]]
+id = "sport-0057"
+subcategory = "Football"
+difficulty = "easy"
+text = "Which football manager called himself \"The Special One\"?"
+answer = "Jose Mourinho"
+wrong = ["Arsene Wenger", "Pep Guardiola", "Carlo Ancelotti"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Jos%C3%A9_Mourinho"
+reviewed = false
+
+[[question]]
+id = "sport-0058"
+subcategory = "Football history"
+difficulty = "easy"
+text = "Which club came from 3-0 down to win the 2005 Champions League final in Istanbul?"
+answer = "Liverpool"
+wrong = ["AC Milan", "Manchester United", "Chelsea"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/2005_UEFA_Champions_League_final"
+reviewed = false
+
+[[question]]
+id = "sport-0059"
+subcategory = "Olympics history"
+difficulty = "easy"
+text = "Which city hosted the first Summer Olympics held in South America, in 2016?"
+answer = "Rio de Janeiro"
+wrong = ["Buenos Aires", "Sao Paulo", "Santiago"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/2016_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0060"
+subcategory = "Rugby"
+difficulty = "easy"
+text = "Which national rugby union team is nicknamed Los Pumas?"
+answer = "Argentina"
+wrong = ["Chile", "Uruguay", "Spain"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Argentina_national_rugby_union_team"
+reviewed = false
+
+[[question]]
+id = "sport-0061"
+subcategory = "Football rules"
+difficulty = "easy"
+text = "How long does a regular football (soccer) match last, without stoppage time?"
+answer = "90 minutes"
+wrong = ["60 minutes", "80 minutes", "100 minutes"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://www.theifab.com/laws/latest/the-duration-of-the-match/"
+reviewed = false
+
+[[question]]
+id = "sport-0062"
+subcategory = "Ice hockey"
+difficulty = "easy"
+text = "What is the flat rubber disc used in ice hockey called?"
+answer = "Puck"
+wrong = ["Biscuit", "Slider", "Disc"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Hockey_puck"
+reviewed = false
+
+[[question]]
+id = "sport-0063"
+subcategory = "Tennis"
+difficulty = "easy"
+text = "In which city are the Wimbledon tennis championships held?"
+answer = "London"
+wrong = ["Manchester", "Birmingham", "Edinburgh"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/The_Championships,_Wimbledon"
+reviewed = false
+
+[[question]]
+id = "sport-0064"
+subcategory = "Olympics"
+difficulty = "easy"
+text = "How often are the Summer Olympic Games normally held?"
+answer = "Every four years"
+wrong = ["Every two years", "Every three years", "Every five years"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0065"
+subcategory = "Table tennis"
+difficulty = "easy"
+text = "Which sport is also known as ping-pong?"
+answer = "Table tennis"
+wrong = ["Squash", "Badminton", "Racquetball"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Table_tennis"
+reviewed = false
+
+[[question]]
+id = "sport-0066"
+subcategory = "Other sports"
+difficulty = "easy"
+text = "Which bat-and-ball sport, close to baseball, is pitched underarm?"
+answer = "Softball"
+wrong = ["Cricket", "Rounders", "Lacrosse"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Softball"
+reviewed = false
+
+[[question]]
+id = "sport-0067"
+subcategory = "American football"
+difficulty = "easy"
+text = "In American football, what is it called when a player loses hold of the ball before being tackled?"
+answer = "Fumble"
+wrong = ["Interception", "Sack", "Punt"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Fumble"
+reviewed = false
+
+[[question]]
+id = "sport-0068"
+subcategory = "Basketball"
+difficulty = "easy"
+text = "With which NBA team did Michael Jordan win all six of his championships?"
+answer = "Chicago Bulls"
+wrong = ["Washington Wizards", "Boston Celtics", "Detroit Pistons"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Michael_Jordan"
+reviewed = false
+
+[[question]]
+id = "sport-0069"
+subcategory = "Olympics history"
+difficulty = "easy"
+text = "Which city hosted the first Olympic Games held in Asia, in 1964?"
+answer = "Tokyo"
+wrong = ["Seoul", "Beijing", "Sapporo"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/1964_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0070"
+subcategory = "Darts"
+difficulty = "easy"
+text = "What is the highest score possible with a single dart?"
+answer = "60"
+wrong = ["50", "40", "75"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Darts"
+reviewed = false
+
+[[question]]
+id = "sport-0071"
+subcategory = "Martial arts"
+difficulty = "easy"
+text = "Who founded the martial art Jeet Kune Do?"
+answer = "Bruce Lee"
+wrong = ["Jackie Chan", "Chuck Norris", "Ip Man"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Jeet_Kune_Do"
+reviewed = false
+
+[[question]]
+id = "sport-0072"
+subcategory = "Golf"
+difficulty = "easy"
+text = "Which sport did an Apollo astronaut play on the Moon in 1971?"
+answer = "Golf"
+wrong = ["Baseball", "Tennis", "Football"]
+source = "https://www.anadventurousworld.com/easy-sports-quiz-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Alan_Shepard"
+reviewed = false
+
+[[question]]
+id = "sport-0073"
+subcategory = "Football"
+difficulty = "medium"
+text = "Which football stadium has the Shankly Gates?"
+answer = "Anfield"
+wrong = ["Goodison Park", "Old Trafford", "Elland Road"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Anfield"
+reviewed = false
+
+[[question]]
+id = "sport-0074"
+subcategory = "Water sports"
+difficulty = "medium"
+text = "How many players does each water polo team have in the water, goalkeeper included?"
+answer = "7"
+wrong = ["5", "6", "8"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Water_polo"
+reviewed = false
+
+[[question]]
+id = "sport-0075"
+subcategory = "Netball"
+difficulty = "medium"
+text = "How many players does a netball team have on court?"
+answer = "7"
+wrong = ["5", "6", "9"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Netball"
+reviewed = false
+
+[[question]]
+id = "sport-0076"
+subcategory = "Table tennis"
+difficulty = "medium"
+text = "In modern table tennis, how many points win a game?"
+answer = "11"
+wrong = ["10", "15", "21"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Table_tennis"
+reviewed = false
+
+[[question]]
+id = "sport-0077"
+subcategory = "Football"
+difficulty = "medium"
+text = "How many players does each futsal team have on court?"
+answer = "5"
+wrong = ["4", "6", "7"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Futsal"
+reviewed = false
+
+[[question]]
+id = "sport-0078"
+subcategory = "Snooker"
+difficulty = "medium"
+text = "What is the standard maximum break in snooker?"
+answer = "147"
+wrong = ["120", "140", "160"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Maximum_break"
+reviewed = false
+
+[[question]]
+id = "sport-0079"
+subcategory = "Other sports"
+difficulty = "medium"
+text = "Under a 1994 Act, which is Canada's national summer sport?"
+answer = "Lacrosse"
+wrong = ["Ice hockey", "Baseball", "Canadian football"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Lacrosse_in_Canada"
+reviewed = false
+
+[[question]]
+id = "sport-0080"
+subcategory = "Basketball"
+difficulty = "medium"
+text = "How long is each quarter of an NBA game?"
+answer = "12 minutes"
+wrong = ["10 minutes", "15 minutes", "20 minutes"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Basketball"
+reviewed = false
+
+[[question]]
+id = "sport-0081"
+subcategory = "American football"
+difficulty = "medium"
+text = "How long is each quarter of an NFL game?"
+answer = "15 minutes"
+wrong = ["10 minutes", "12 minutes", "20 minutes"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/American_football"
+reviewed = false
+
+[[question]]
+id = "sport-0082"
+subcategory = "Basketball"
+difficulty = "medium"
+text = "How many points did Wilt Chamberlain score in a single NBA game in 1962?"
+answer = "100"
+wrong = ["81", "92", "110"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Wilt_Chamberlain%27s_100-point_game"
+reviewed = false
+
+[[question]]
+id = "sport-0083"
+subcategory = "American football"
+difficulty = "medium"
+text = "Which team won the first Super Bowl, in 1967?"
+answer = "Green Bay Packers"
+wrong = ["Kansas City Chiefs", "Dallas Cowboys", "New York Jets"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Super_Bowl_I"
+reviewed = false
+
+[[question]]
+id = "sport-0084"
+subcategory = "Baseball"
+difficulty = "medium"
+text = "Which player broke Major League Baseball's colour line in 1947?"
+answer = "Jackie Robinson"
+wrong = ["Satchel Paige", "Larry Doby", "Willie Mays"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Jackie_Robinson"
+reviewed = false
+
+[[question]]
+id = "sport-0085"
+subcategory = "Horse racing"
+difficulty = "medium"
+text = "Which horse won the Grand National in 1973, 1974 and 1977?"
+answer = "Red Rum"
+wrong = ["Aldaniti", "Arkle", "Desert Orchid"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Red_Rum"
+reviewed = false
+
+[[question]]
+id = "sport-0086"
+subcategory = "Horse racing"
+difficulty = "medium"
+text = "On which date do all Northern Hemisphere racehorses officially turn a year older?"
+answer = "1 January"
+wrong = ["1 April", "1 May", "1 June"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Thoroughbred"
+reviewed = false
+
+[[question]]
+id = "sport-0087"
+subcategory = "Rugby"
+difficulty = "medium"
+text = "In rugby union, which shirt number does the full-back wear?"
+answer = "15"
+wrong = ["1", "9", "10"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Rugby_union_positions"
+reviewed = false
+
+[[question]]
+id = "sport-0088"
+subcategory = "Golf"
+difficulty = "medium"
+text = "Which golfer is nicknamed \"The Big Easy\"?"
+answer = "Ernie Els"
+wrong = ["Fred Couples", "Retief Goosen", "Phil Mickelson"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Ernie_Els"
+reviewed = false
+
+[[question]]
+id = "sport-0089"
+subcategory = "Tennis history"
+difficulty = "medium"
+text = "Which unseeded 17-year-old won the Wimbledon men's singles in 1985?"
+answer = "Boris Becker"
+wrong = ["Stefan Edberg", "Michael Stich", "Mats Wilander"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Boris_Becker"
+reviewed = false
+
+[[question]]
+id = "sport-0090"
+subcategory = "Boxing"
+difficulty = "medium"
+text = "Which heavyweight champion retired in 1956 having won all 49 of his professional fights?"
+answer = "Rocky Marciano"
+wrong = ["Joe Louis", "Jack Dempsey", "Floyd Patterson"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Rocky_Marciano"
+reviewed = false
+
+[[question]]
+id = "sport-0091"
+subcategory = "Olympics"
+difficulty = "medium"
+text = "Besides English, which is an official language of the International Olympic Committee?"
+answer = "French"
+wrong = ["Greek", "German", "Spanish"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/International_Olympic_Committee"
+reviewed = false
+
+[[question]]
+id = "sport-0092"
+subcategory = "Olympics"
+difficulty = "medium"
+text = "Which metal makes up most of an Olympic gold medal?"
+answer = "Silver"
+wrong = ["Gold", "Bronze", "Copper"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Olympic_medal"
+reviewed = false
+
+[[question]]
+id = "sport-0093"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "Which sport made its Olympic debut at Rio 2016?"
+answer = "Rugby sevens"
+wrong = ["Skateboarding", "Surfing", "Karate"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Rugby_sevens_at_the_2016_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0094"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "For which Games was the Olympic torch relay first held?"
+answer = "Berlin 1936"
+wrong = ["Amsterdam 1928", "Los Angeles 1932", "London 1948"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/Olympic_flame"
+reviewed = false
+
+[[question]]
+id = "sport-0095"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "At which Olympic Games did women first compete?"
+answer = "Paris 1900"
+wrong = ["Athens 1896", "St. Louis 1904", "London 1908"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/1900_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0096"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "At which Olympic Games did the triathlon make its debut?"
+answer = "Sydney 2000"
+wrong = ["Barcelona 1992", "Atlanta 1996", "Athens 2004"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/Triathlon_at_the_2000_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0097"
+subcategory = "Tennis"
+difficulty = "medium"
+text = "At which tournament did Andy Murray win his first Grand Slam singles title, in 2012?"
+answer = "US Open"
+wrong = ["Wimbledon", "Australian Open", "French Open"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Andy_Murray"
+reviewed = false
+
+[[question]]
+id = "sport-0098"
+subcategory = "Olympics history"
+difficulty = "medium"
+text = "In which sport did Princess Anne compete at the 1976 Montreal Olympics?"
+answer = "Equestrian"
+wrong = ["Sailing", "Rowing", "Shooting"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Anne,_Princess_Royal"
+reviewed = false
+
+[[question]]
+id = "sport-0099"
+subcategory = "Football rules"
+difficulty = "medium"
+text = "How high above the ground is the crossbar of a football goal?"
+answer = "8 feet (2.44 m)"
+wrong = ["7 feet (2.13 m)", "9 feet (2.74 m)", "10 feet (3.05 m)"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://www.theifab.com/laws/latest/the-field-of-play/"
+reviewed = false
+
+[[question]]
+id = "sport-0100"
+subcategory = "Other sports"
+difficulty = "medium"
+text = "Which sport has playing positions called the rover and the followers?"
+answer = "Australian rules football"
+wrong = ["Gaelic football", "Rugby league", "Hurling"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Australian_rules_football_positions"
+reviewed = false
+
+[[question]]
+id = "sport-0101"
+subcategory = "Football history"
+difficulty = "medium"
+text = "Which country hosted the 1978 FIFA World Cup?"
+answer = "Argentina"
+wrong = ["Spain", "Mexico", "West Germany"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/1978_FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0102"
+subcategory = "Football"
+difficulty = "medium"
+text = "In which city does FIFA have its headquarters?"
+answer = "Zurich"
+wrong = ["Geneva", "Lausanne", "Paris"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/FIFA"
+reviewed = false
+
+[[question]]
+id = "sport-0103"
+subcategory = "Football history"
+difficulty = "hard"
+text = "In which year was the Football Association founded in England?"
+answer = "1863"
+wrong = ["1848", "1872", "1888"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/The_Football_Association"
+reviewed = false
+
+[[question]]
+id = "sport-0104"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Which Swiss watchmaker began its long run as official Olympic timekeeper in 1932?"
+answer = "Omega"
+wrong = ["Rolex", "Longines", "TAG Heuer"]
+source = "https://www.businessballs.com/quiz/olympic-games-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Omega_SA"
+reviewed = false
+
+[[question]]
+id = "sport-0105"
+subcategory = "Cricket"
+difficulty = "hard"
+text = "Which ground is the home of Warwickshire County Cricket Club?"
+answer = "Edgbaston"
+wrong = ["Trent Bridge", "Headingley", "The Oval"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Edgbaston_Cricket_Ground"
+reviewed = false
+
+[[question]]
+id = "sport-0106"
+subcategory = "Basketball"
+difficulty = "hard"
+text = "What is the inside diameter of a regulation basketball hoop?"
+answer = "18 inches"
+wrong = ["16 inches", "20 inches", "24 inches"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Basketball"
+reviewed = false
+
+[[question]]
+id = "sport-0107"
+subcategory = "Water sports"
+difficulty = "hard"
+text = "Underwater hockey is also known by which name?"
+answer = "Octopush"
+wrong = ["Aquapuck", "Deepstick", "Seahockey"]
+source = "https://ahaslides.com/blog/easy-sports/"
+check = "https://en.wikipedia.org/wiki/Underwater_hockey"
+reviewed = false
+
+[[question]]
+id = "sport-0108"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "In which year was ice hockey first played at the Olympics?"
+answer = "1920"
+wrong = ["1908", "1924", "1936"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Ice_hockey_at_the_Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0109"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "In which year did women's ice hockey join the Winter Olympics?"
+answer = "1998"
+wrong = ["1988", "1994", "2002"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Ice_hockey_at_the_Olympic_Games"
+reviewed = false
+
+[[question]]
+id = "sport-0110"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Before 2016, in which year was rugby last played at the Olympics?"
+answer = "1924"
+wrong = ["1908", "1920", "1936"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Rugby_union_at_the_Summer_Olympics"
+reviewed = false
+
+[[question]]
+id = "sport-0111"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "In which sport did Hidilyn Diaz win the Philippines' first Olympic gold medal?"
+answer = "Weightlifting"
+wrong = ["Boxing", "Taekwondo", "Judo"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Hidilyn_Diaz"
+reviewed = false
+
+[[question]]
+id = "sport-0112"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Which American won four individual athletics golds at the 1900 Paris Olympics?"
+answer = "Alvin Kraenzlein"
+wrong = ["Ray Ewry", "Archie Hahn", "Jim Thorpe"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Alvin_Kraenzlein"
+reviewed = false
+
+[[question]]
+id = "sport-0113"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "In which sport did Yang Yang win China's first Winter Olympic gold, in 2002?"
+answer = "Short-track speed skating"
+wrong = ["Figure skating", "Freestyle skiing", "Curling"]
+source = "https://momlovesbest.com/sports-trivia"
+check = "https://en.wikipedia.org/wiki/Yang_Yang_(speed_skater,_born_1976)"
+reviewed = false
+
+[[question]]
+id = "sport-0114"
+subcategory = "Athletics history"
+difficulty = "hard"
+text = "Who won the 100 metres at the first modern Olympics, in 1896?"
+answer = "Thomas Burke"
+wrong = ["Fritz Hofmann", "Arthur Duffey", "Archie Hahn"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Thomas_Burke_(sprinter)"
+reviewed = false
+
+[[question]]
+id = "sport-0115"
+subcategory = "American football"
+difficulty = "hard"
+text = "Who scored the first touchdown in Super Bowl history?"
+answer = "Max McGee"
+wrong = ["Bart Starr", "Paul Hornung", "Jim Taylor"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Max_McGee"
+reviewed = false
+
+[[question]]
+id = "sport-0116"
+subcategory = "Snooker"
+difficulty = "hard"
+text = "Who won the first World Snooker Championship, in 1927?"
+answer = "Joe Davis"
+wrong = ["Fred Davis", "John Pulman", "Tom Dennis"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Joe_Davis"
+reviewed = false
+
+[[question]]
+id = "sport-0117"
+subcategory = "Rugby history"
+difficulty = "hard"
+text = "Which New Zealander scored the first try in Rugby World Cup history, in 1987?"
+answer = "Michael Jones"
+wrong = ["John Kirwan", "David Kirk", "Grant Fox"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-384223.html"
+check = "https://en.wikipedia.org/wiki/Michael_Jones_(rugby_union)"
+reviewed = false
+
+[[question]]
+id = "sport-0118"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Which country became the first to retain the World Cup, in 1938?"
+answer = "Italy"
+wrong = ["Uruguay", "Brazil", "Hungary"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/1938_FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0119"
+subcategory = "Horse racing"
+difficulty = "hard"
+text = "Which American jockey was the first to win both the Kentucky Derby and the Epsom Derby?"
+answer = "Steve Cauthen"
+wrong = ["Lester Piggott", "Willie Shoemaker", "Pat Eddery"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/Steve_Cauthen"
+reviewed = false
+
+[[question]]
+id = "sport-0120"
+subcategory = "Athletics history"
+difficulty = "hard"
+text = "Which race did Gary Muhrcke win in 1970, the year it was first run?"
+answer = "New York City Marathon"
+wrong = ["Boston Marathon", "London Marathon", "Chicago Marathon"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Sporting-Firsts-350212.html"
+check = "https://en.wikipedia.org/wiki/New_York_City_Marathon"
+reviewed = false
+
+[[question]]
+id = "sport-0121"
+subcategory = "Football history"
+difficulty = "hard"
+text = "The 1969 \"Football War\" was fought between Honduras and which country?"
+answer = "El Salvador"
+wrong = ["Guatemala", "Nicaragua", "Costa Rica"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Football_War"
+reviewed = false
+
+[[question]]
+id = "sport-0122"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Which country hosted the 1962 FIFA World Cup?"
+answer = "Chile"
+wrong = ["Peru", "Brazil", "Argentina"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/1962_FIFA_World_Cup"
+reviewed = false
+
+[[question]]
+id = "sport-0123"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Who in 1978 became the first black footballer to win a full England cap?"
+answer = "Viv Anderson"
+wrong = ["Laurie Cunningham", "Cyrille Regis", "John Barnes"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Viv_Anderson"
+reviewed = false
+
+[[question]]
+id = "sport-0124"
+subcategory = "Football history"
+difficulty = "hard"
+text = "Who was the first manager of the England national football team, from 1946?"
+answer = "Walter Winterbottom"
+wrong = ["Alf Ramsey", "Stanley Rous", "Joe Mercer"]
+source = "https://www.businessballs.com/quiz/football-quiz/print/"
+check = "https://en.wikipedia.org/wiki/Walter_Winterbottom"
+reviewed = false
+
+[[question]]
+id = "sport-0125"
+subcategory = "Cricket"
+difficulty = "hard"
+text = "In which year was the first season of the cricket competition The Hundred played?"
+answer = "2021"
+wrong = ["2019", "2020", "2022"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/The_Hundred_(cricket)"
+reviewed = false
+
+[[question]]
+id = "sport-0126"
+subcategory = "Olympics history"
+difficulty = "hard"
+text = "Which city hosted the first Youth Olympic Games, in 2010?"
+answer = "Singapore"
+wrong = ["Nanjing", "Buenos Aires", "Kuala Lumpur"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Olympic-Firsts-407483.html"
+check = "https://en.wikipedia.org/wiki/2010_Summer_Youth_Olympics"
+reviewed = false

@@ -1,0 +1,1066 @@
+[[question]]
+id = "geography-0001"
+subcategory = "Capitals"
+difficulty = "easy"
+text = "What is the capital of Australia?"
+answer = "Canberra"
+wrong = ["Sydney", "Melbourne", "Perth"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Canberra"
+reviewed = false
+
+[[question]]
+id = "geography-0002"
+subcategory = "Rivers"
+difficulty = "easy"
+text = "Which river flows through Paris?"
+answer = "Seine"
+wrong = ["Loire", "Rhône", "Thames"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Seine"
+reviewed = false
+
+[[question]]
+id = "geography-0003"
+subcategory = "Flags"
+difficulty = "easy"
+text = "Which country's flag shows a red maple leaf on a white square between two red bands?"
+answer = "Canada"
+wrong = ["Peru", "Austria", "Denmark"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Canada"
+reviewed = false
+
+[[question]]
+id = "geography-0004"
+subcategory = "Deserts"
+difficulty = "easy"
+text = "Which desert covers much of northern Africa?"
+answer = "Sahara"
+wrong = ["Kalahari", "Namib", "Gobi"]
+source = "https://www.mentalfloss.com/geography/best-geography-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Sahara"
+reviewed = false
+
+[[question]]
+id = "geography-0005"
+subcategory = "Landmarks"
+difficulty = "easy"
+text = "In which country are the ruins of Machu Picchu?"
+answer = "Peru"
+wrong = ["Bolivia", "Mexico", "Chile"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Machu_Picchu"
+reviewed = false
+
+[[question]]
+id = "geography-0006"
+subcategory = "Seas"
+difficulty = "easy"
+text = "Which sea lies between southern Europe and northern Africa?"
+answer = "Mediterranean Sea"
+wrong = ["Black Sea", "Red Sea", "Baltic Sea"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Mediterranean_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0007"
+subcategory = "Islands"
+difficulty = "easy"
+text = "Which is the world's largest island that is not a continent?"
+answer = "Greenland"
+wrong = ["Madagascar", "Borneo", "New Guinea"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Greenland"
+reviewed = false
+
+[[question]]
+id = "geography-0008"
+subcategory = "Flags"
+difficulty = "easy"
+text = "Which country's flag is a red disc on a plain white field?"
+answer = "Japan"
+wrong = ["South Korea", "Bangladesh", "Switzerland"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Japan"
+reviewed = false
+
+[[question]]
+id = "geography-0009"
+subcategory = "Mountains"
+difficulty = "easy"
+text = "What is the highest mountain in Africa?"
+answer = "Kilimanjaro"
+wrong = ["Mount Kenya", "Mount Stanley", "Mount Meru"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+reviewed = false
+
+[[question]]
+id = "geography-0010"
+subcategory = "Oceans"
+difficulty = "easy"
+text = "Which is the largest of the Earth's oceans?"
+answer = "Pacific"
+wrong = ["Atlantic", "Indian", "Arctic"]
+source = "https://www.mentalfloss.com/geography/best-geography-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Pacific_Ocean"
+reviewed = false
+
+[[question]]
+id = "geography-0011"
+subcategory = "Rivers"
+difficulty = "easy"
+text = "Which river carved the Grand Canyon?"
+answer = "Colorado"
+wrong = ["Rio Grande", "Columbia", "Missouri"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Grand_Canyon"
+reviewed = false
+
+[[question]]
+id = "geography-0012"
+subcategory = "Mountains"
+difficulty = "easy"
+text = "Which mountain range runs along the western edge of South America?"
+answer = "Andes"
+wrong = ["Rockies", "Pyrenees", "Atlas"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Andes"
+reviewed = false
+
+[[question]]
+id = "geography-0013"
+subcategory = "Latitude and climate"
+difficulty = "easy"
+text = "Which imaginary line divides the Earth into the Northern and Southern Hemispheres?"
+answer = "Equator"
+wrong = ["Prime Meridian", "Tropic of Cancer", "International Date Line"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Equator"
+reviewed = false
+
+[[question]]
+id = "geography-0014"
+subcategory = "Natural wonders"
+difficulty = "easy"
+text = "Off the coast of which country does the Great Barrier Reef lie?"
+answer = "Australia"
+wrong = ["Indonesia", "Philippines", "Fiji"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Great_Barrier_Reef"
+reviewed = false
+
+[[question]]
+id = "geography-0015"
+subcategory = "Cities"
+difficulty = "easy"
+text = "In which Spanish city does the Sagrada Família stand?"
+answer = "Barcelona"
+wrong = ["Madrid", "Seville", "Valencia"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia"
+reviewed = false
+
+[[question]]
+id = "geography-0016"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of New Zealand?"
+answer = "Wellington"
+wrong = ["Auckland", "Christchurch", "Dunedin"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Wellington"
+reviewed = false
+
+[[question]]
+id = "geography-0017"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of Turkey?"
+answer = "Ankara"
+wrong = ["Istanbul", "Izmir", "Bursa"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Ankara"
+reviewed = false
+
+[[question]]
+id = "geography-0018"
+subcategory = "Lakes"
+difficulty = "medium"
+text = "Which Siberian lake is the deepest in the world?"
+answer = "Lake Baikal"
+wrong = ["Lake Ladoga", "Lake Onega", "Lake Balkhash"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Lake_Baikal"
+reviewed = false
+
+[[question]]
+id = "geography-0019"
+subcategory = "Mountains"
+difficulty = "medium"
+text = "Which Russian mountain range is conventionally taken as part of the boundary between Europe and Asia?"
+answer = "Urals"
+wrong = ["Altai", "Carpathians", "Sayan"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Ural_Mountains"
+reviewed = false
+
+[[question]]
+id = "geography-0020"
+subcategory = "Straits"
+difficulty = "medium"
+text = "Which strait separates Spain from Morocco?"
+answer = "Strait of Gibraltar"
+wrong = ["Bosporus", "Strait of Messina", "Strait of Hormuz"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Strait_of_Gibraltar"
+reviewed = false
+
+[[question]]
+id = "geography-0021"
+subcategory = "Rivers"
+difficulty = "medium"
+text = "Which river flows through Baghdad?"
+answer = "Tigris"
+wrong = ["Euphrates", "Jordan", "Nile"]
+source = "https://www.mentalfloss.com/geography/best-geography-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Baghdad"
+reviewed = false
+
+[[question]]
+id = "geography-0022"
+subcategory = "Flags"
+difficulty = "medium"
+text = "Which country has the only national flag that is not a rectangle or square?"
+answer = "Nepal"
+wrong = ["Bhutan", "Sri Lanka", "Qatar"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Nepal"
+reviewed = false
+
+[[question]]
+id = "geography-0023"
+subcategory = "Borders"
+difficulty = "medium"
+text = "Which country completely surrounds Lesotho?"
+answer = "South Africa"
+wrong = ["Botswana", "Mozambique", "Zimbabwe"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Lesotho"
+reviewed = false
+
+[[question]]
+id = "geography-0024"
+subcategory = "Mountains"
+difficulty = "medium"
+text = "What is the second-highest mountain on Earth?"
+answer = "K2"
+wrong = ["Kangchenjunga", "Lhotse", "Makalu"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/K2"
+reviewed = false
+
+[[question]]
+id = "geography-0025"
+subcategory = "Flags"
+difficulty = "medium"
+text = "Which country's flag shows a green cedar tree between two red bands?"
+answer = "Lebanon"
+wrong = ["Cyprus", "Syria", "Jordan"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Lebanon"
+reviewed = false
+
+[[question]]
+id = "geography-0026"
+subcategory = "Waterfalls"
+difficulty = "medium"
+text = "In which country is Angel Falls, the world's tallest uninterrupted waterfall?"
+answer = "Venezuela"
+wrong = ["Brazil", "Colombia", "Guyana"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Angel_Falls"
+reviewed = false
+
+[[question]]
+id = "geography-0027"
+subcategory = "Islands"
+difficulty = "medium"
+text = "Which is the largest island in the Mediterranean Sea?"
+answer = "Sicily"
+wrong = ["Sardinia", "Cyprus", "Crete"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Sicily"
+reviewed = false
+
+[[question]]
+id = "geography-0028"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "Which capital city stands where the Blue Nile and the White Nile meet?"
+answer = "Khartoum"
+wrong = ["Cairo", "Addis Ababa", "Juba"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Khartoum"
+reviewed = false
+
+[[question]]
+id = "geography-0029"
+subcategory = "Deserts and climate"
+difficulty = "medium"
+text = "Which South American desert is the driest non-polar desert in the world?"
+answer = "Atacama"
+wrong = ["Patagonian", "Sechura", "Monte"]
+source = "https://www.mentalfloss.com/geography/best-geography-quiz-questions"
+check = "https://en.wikipedia.org/wiki/Atacama_Desert"
+reviewed = false
+
+[[question]]
+id = "geography-0030"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "Vaduz is the capital of which European country?"
+answer = "Liechtenstein"
+wrong = ["Luxembourg", "Andorra", "San Marino"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Vaduz"
+reviewed = false
+
+[[question]]
+id = "geography-0031"
+subcategory = "Landlocked countries"
+difficulty = "hard"
+text = "Only two countries are doubly landlocked. One is Liechtenstein; which is the other?"
+answer = "Uzbekistan"
+wrong = ["Kazakhstan", "Mongolia", "Paraguay"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Landlocked_country"
+reviewed = false
+
+[[question]]
+id = "geography-0032"
+subcategory = "Exclaves"
+difficulty = "hard"
+text = "Nakhchivan is an exclave of which country?"
+answer = "Azerbaijan"
+wrong = ["Armenia", "Georgia", "Turkey"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Nakhchivan_Autonomous_Republic"
+reviewed = false
+
+[[question]]
+id = "geography-0033"
+subcategory = "Exclaves"
+difficulty = "hard"
+text = "The exclave of Cabinda belongs to which African country?"
+answer = "Angola"
+wrong = ["Gabon", "Namibia", "Cameroon"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Cabinda_Province"
+reviewed = false
+
+[[question]]
+id = "geography-0034"
+subcategory = "Landforms"
+difficulty = "hard"
+text = "In which country is Salar de Uyuni, the world's largest salt flat?"
+answer = "Bolivia"
+wrong = ["Chile", "Peru", "Argentina"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Salar_de_Uyuni"
+reviewed = false
+
+[[question]]
+id = "geography-0035"
+subcategory = "Capitals"
+difficulty = "hard"
+text = "What is the capital of Togo?"
+answer = "Lomé"
+wrong = ["Porto-Novo", "Accra", "Niamey"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Lom%C3%A9"
+reviewed = false
+
+[[question]]
+id = "geography-0036"
+subcategory = "Mountains"
+difficulty = "hard"
+text = "What is the highest mountain in Canada?"
+answer = "Mount Logan"
+wrong = ["Mount Robson", "Mount Waddington", "Mount Columbia"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Mount_Logan"
+reviewed = false
+
+[[question]]
+id = "geography-0037"
+subcategory = "Borders"
+difficulty = "hard"
+text = "Which country on Borneo is split into two parts by a strip of Malaysian territory?"
+answer = "Brunei"
+wrong = ["East Timor", "Singapore", "Papua New Guinea"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Brunei"
+reviewed = false
+
+[[question]]
+id = "geography-0038"
+subcategory = "Capitals"
+difficulty = "hard"
+text = "Yamoussoukro is the official capital of which country?"
+answer = "Côte d'Ivoire"
+wrong = ["Burkina Faso", "Cameroon", "Senegal"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Yamoussoukro"
+reviewed = false
+
+[[question]]
+id = "geography-0039"
+subcategory = "Flags"
+difficulty = "hard"
+text = "Which country's flag shows a white dragon holding jewels in its claws?"
+answer = "Bhutan"
+wrong = ["Mongolia", "Sri Lanka", "Nepal"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Bhutan"
+reviewed = false
+
+[[question]]
+id = "geography-0040"
+subcategory = "Rivers"
+difficulty = "hard"
+text = "How many national capitals does the Danube flow through?"
+answer = "Four"
+wrong = ["Two", "Three", "Five"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Danube"
+reviewed = false
+
+[[question]]
+id = "geography-0041"
+subcategory = "Rivers"
+difficulty = "easy"
+text = "Which river flows through central London?"
+answer = "Thames"
+wrong = ["Severn", "Trent", "Avon"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/River_Thames"
+reviewed = false
+
+[[question]]
+id = "geography-0042"
+subcategory = "Capitals"
+difficulty = "easy"
+text = "What is the capital of Canada?"
+answer = "Ottawa"
+wrong = ["Toronto", "Montreal", "Vancouver"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Ottawa"
+reviewed = false
+
+[[question]]
+id = "geography-0043"
+subcategory = "Cities"
+difficulty = "easy"
+text = "Which capital city was formed in 1873 by uniting Buda, Óbuda and Pest?"
+answer = "Budapest"
+wrong = ["Prague", "Vienna", "Bratislava"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Budapest"
+reviewed = false
+
+[[question]]
+id = "geography-0044"
+subcategory = "Deserts"
+difficulty = "easy"
+text = "Which desert stretches across northern China and southern Mongolia?"
+answer = "Gobi"
+wrong = ["Taklamakan", "Thar", "Karakum"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Gobi_Desert"
+reviewed = false
+
+[[question]]
+id = "geography-0045"
+subcategory = "Seas"
+difficulty = "easy"
+text = "Which sea separates the Arabian Peninsula from Egypt, Sudan and Eritrea?"
+answer = "Red Sea"
+wrong = ["Black Sea", "Caspian Sea", "Adriatic Sea"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Red_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0046"
+subcategory = "Cities"
+difficulty = "easy"
+text = "Which Italian city is built on more than 100 small islands in a lagoon?"
+answer = "Venice"
+wrong = ["Naples", "Genoa", "Trieste"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Venice"
+reviewed = false
+
+[[question]]
+id = "geography-0047"
+subcategory = "Capitals"
+difficulty = "easy"
+text = "What is the capital of Argentina?"
+answer = "Buenos Aires"
+wrong = ["Córdoba", "Rosario", "Mendoza"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Buenos_Aires"
+reviewed = false
+
+[[question]]
+id = "geography-0048"
+subcategory = "Islands"
+difficulty = "easy"
+text = "On which Pacific island stand the giant stone statues called moai?"
+answer = "Easter Island"
+wrong = ["Tahiti", "Samoa", "Tonga"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Moai"
+reviewed = false
+
+[[question]]
+id = "geography-0049"
+subcategory = "Landmarks"
+difficulty = "easy"
+text = "In which country is the rock-cut ancient city of Petra?"
+answer = "Jordan"
+wrong = ["Egypt", "Syria", "Lebanon"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Petra"
+reviewed = false
+
+[[question]]
+id = "geography-0050"
+subcategory = "Rivers"
+difficulty = "easy"
+text = "Which river flows through Rome?"
+answer = "Tiber"
+wrong = ["Arno", "Po", "Adige"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Tiber"
+reviewed = false
+
+[[question]]
+id = "geography-0051"
+subcategory = "Landmarks"
+difficulty = "easy"
+text = "In which Indian city does the Taj Mahal stand?"
+answer = "Agra"
+wrong = ["Delhi", "Jaipur", "Mumbai"]
+source = "https://flexiquiz.com/blog/geography-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Taj_Mahal"
+reviewed = false
+
+[[question]]
+id = "geography-0052"
+subcategory = "Cities"
+difficulty = "easy"
+text = "Which South African city lies at the foot of Table Mountain?"
+answer = "Cape Town"
+wrong = ["Durban", "Johannesburg", "Pretoria"]
+source = "https://flexiquiz.com/blog/geography-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Table_Mountain"
+reviewed = false
+
+[[question]]
+id = "geography-0053"
+subcategory = "Landmarks"
+difficulty = "easy"
+text = "In which US city is the Golden Gate Bridge?"
+answer = "San Francisco"
+wrong = ["Los Angeles", "Seattle", "San Diego"]
+source = "https://flexiquiz.com/blog/geography-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+reviewed = false
+
+[[question]]
+id = "geography-0054"
+subcategory = "Islands"
+difficulty = "easy"
+text = "In which ocean do the Seychelles lie?"
+answer = "Indian"
+wrong = ["Atlantic", "Pacific", "Southern"]
+source = "https://www.wanderlustchloe.com/world-geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Seychelles"
+reviewed = false
+
+[[question]]
+id = "geography-0055"
+subcategory = "Capitals"
+difficulty = "easy"
+text = "What is the capital of Kenya?"
+answer = "Nairobi"
+wrong = ["Mombasa", "Kisumu", "Nakuru"]
+source = "https://flexiquiz.com/blog/geography-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Nairobi"
+reviewed = false
+
+[[question]]
+id = "geography-0056"
+subcategory = "Seas"
+difficulty = "easy"
+text = "Which sea lies between Italy and Croatia?"
+answer = "Adriatic Sea"
+wrong = ["Ionian Sea", "Tyrrhenian Sea", "Ligurian Sea"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Adriatic_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0057"
+subcategory = "Seas"
+difficulty = "easy"
+text = "Which sea lies between mainland Greece and Turkey?"
+answer = "Aegean Sea"
+wrong = ["Ionian Sea", "Adriatic Sea", "Tyrrhenian Sea"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Aegean_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0058"
+subcategory = "Cities"
+difficulty = "easy"
+text = "In which country is the city of Medellín?"
+answer = "Colombia"
+wrong = ["Venezuela", "Ecuador", "Peru"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Medell%C3%ADn"
+reviewed = false
+
+[[question]]
+id = "geography-0059"
+subcategory = "Cities"
+difficulty = "easy"
+text = "In which country is the walled coastal city of Dubrovnik?"
+answer = "Croatia"
+wrong = ["Montenegro", "Slovenia", "Albania"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Dubrovnik"
+reviewed = false
+
+[[question]]
+id = "geography-0060"
+subcategory = "Borders"
+difficulty = "easy"
+text = "Which river forms the border between Texas and Mexico?"
+answer = "Rio Grande"
+wrong = ["Pecos", "Brazos", "Red River"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Rio_Grande"
+reviewed = false
+
+[[question]]
+id = "geography-0061"
+subcategory = "Landmarks"
+difficulty = "easy"
+text = "In which US state is Mount Rushmore?"
+answer = "South Dakota"
+wrong = ["North Dakota", "Wyoming", "Montana"]
+source = "https://www.mentimeter.com/blog/education/best-geography-quizzes-and-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Mount_Rushmore"
+reviewed = false
+
+[[question]]
+id = "geography-0062"
+subcategory = "Islands"
+difficulty = "easy"
+text = "To which country do the Canary Islands belong?"
+answer = "Spain"
+wrong = ["Portugal", "Morocco", "Italy"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Canary_Islands"
+reviewed = false
+
+[[question]]
+id = "geography-0063"
+subcategory = "Coasts"
+difficulty = "easy"
+text = "Which country has the longest coastline in the world?"
+answer = "Canada"
+wrong = ["Russia", "Norway", "Indonesia"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/List_of_countries_by_length_of_coastline"
+reviewed = false
+
+[[question]]
+id = "geography-0064"
+subcategory = "Rivers"
+difficulty = "medium"
+text = "Which river divides Dublin into a north side and a south side?"
+answer = "Liffey"
+wrong = ["Shannon", "Boyne", "Lee"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/River_Liffey"
+reviewed = false
+
+[[question]]
+id = "geography-0065"
+subcategory = "Currencies"
+difficulty = "medium"
+text = "The baht is the currency of which country?"
+answer = "Thailand"
+wrong = ["Vietnam", "Laos", "Myanmar"]
+source = "https://flexiquiz.com/blog/geography-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Thai_baht"
+reviewed = false
+
+[[question]]
+id = "geography-0066"
+subcategory = "Waterfalls"
+difficulty = "medium"
+text = "Victoria Falls lies on the border between Zambia and which other country?"
+answer = "Zimbabwe"
+wrong = ["Botswana", "Malawi", "Mozambique"]
+source = "https://www.wanderlustchloe.com/world-geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Victoria_Falls"
+reviewed = false
+
+[[question]]
+id = "geography-0067"
+subcategory = "Straits"
+difficulty = "medium"
+text = "Which strait separates Russia's far east from Alaska?"
+answer = "Bering Strait"
+wrong = ["Davis Strait", "Torres Strait", "Strait of Magellan"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Bering_Strait"
+reviewed = false
+
+[[question]]
+id = "geography-0068"
+subcategory = "Former names"
+difficulty = "medium"
+text = "Which African country was long known in Europe as Abyssinia?"
+answer = "Ethiopia"
+wrong = ["Eritrea", "Somalia", "Sudan"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Ethiopian_Empire"
+reviewed = false
+
+[[question]]
+id = "geography-0069"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of Mongolia?"
+answer = "Ulaanbaatar"
+wrong = ["Erdenet", "Darkhan", "Hohhot"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Ulaanbaatar"
+reviewed = false
+
+[[question]]
+id = "geography-0070"
+subcategory = "Lakes"
+difficulty = "medium"
+text = "Which body of water is the largest lake in the world by surface area?"
+answer = "Caspian Sea"
+wrong = ["Lake Superior", "Lake Victoria", "Aral Sea"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Caspian_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0071"
+subcategory = "Landmarks"
+difficulty = "medium"
+text = "Which country has more ancient pyramids than any other?"
+answer = "Sudan"
+wrong = ["Egypt", "Mexico", "Guatemala"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Nubian_pyramids"
+reviewed = false
+
+[[question]]
+id = "geography-0072"
+subcategory = "Landlocked countries"
+difficulty = "medium"
+text = "Which is the world's largest landlocked country?"
+answer = "Kazakhstan"
+wrong = ["Mongolia", "Chad", "Niger"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Kazakhstan"
+reviewed = false
+
+[[question]]
+id = "geography-0073"
+subcategory = "Former names"
+difficulty = "medium"
+text = "Which southern African kingdom was called Swaziland until 2018?"
+answer = "Eswatini"
+wrong = ["Lesotho", "Namibia", "Malawi"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Eswatini"
+reviewed = false
+
+[[question]]
+id = "geography-0074"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of Nigeria?"
+answer = "Abuja"
+wrong = ["Lagos", "Kano", "Ibadan"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Abuja"
+reviewed = false
+
+[[question]]
+id = "geography-0075"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of Pakistan?"
+answer = "Islamabad"
+wrong = ["Karachi", "Lahore", "Rawalpindi"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Islamabad"
+reviewed = false
+
+[[question]]
+id = "geography-0076"
+subcategory = "Flags"
+difficulty = "medium"
+text = "Which country's flag shows an eagle on a cactus eating a snake?"
+answer = "Mexico"
+wrong = ["Albania", "Ecuador", "Egypt"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Mexico"
+reviewed = false
+
+[[question]]
+id = "geography-0077"
+subcategory = "Landmarks"
+difficulty = "medium"
+text = "In which country are the Nazca Lines, huge figures drawn in the desert?"
+answer = "Peru"
+wrong = ["Chile", "Bolivia", "Mexico"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Nazca_Lines"
+reviewed = false
+
+[[question]]
+id = "geography-0078"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "What is the capital of Cambodia?"
+answer = "Phnom Penh"
+wrong = ["Siem Reap", "Battambang", "Sihanoukville"]
+source = "https://ahaslides.com/blog/geography-quiz/"
+check = "https://en.wikipedia.org/wiki/Phnom_Penh"
+reviewed = false
+
+[[question]]
+id = "geography-0079"
+subcategory = "Wetlands"
+difficulty = "medium"
+text = "In which country is the Okavango Delta?"
+answer = "Botswana"
+wrong = ["Namibia", "Zambia", "Angola"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Okavango_Delta"
+reviewed = false
+
+[[question]]
+id = "geography-0080"
+subcategory = "Straits"
+difficulty = "medium"
+text = "Which stretch of water separates South America from Antarctica?"
+answer = "Drake Passage"
+wrong = ["Strait of Magellan", "Beagle Channel", "Bass Strait"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Drake_Passage"
+reviewed = false
+
+[[question]]
+id = "geography-0081"
+subcategory = "Rivers"
+difficulty = "medium"
+text = "Which is the longest river in Asia?"
+answer = "Yangtze"
+wrong = ["Yellow River", "Mekong", "Ganges"]
+source = "https://kwizzbit.com/?p=224706"
+check = "https://en.wikipedia.org/wiki/Yangtze"
+reviewed = false
+
+[[question]]
+id = "geography-0082"
+subcategory = "Capitals"
+difficulty = "medium"
+text = "Which is the northernmost capital of a sovereign state?"
+answer = "Reykjavík"
+wrong = ["Oslo", "Helsinki", "Tallinn"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Reykjav%C3%ADk"
+reviewed = false
+
+[[question]]
+id = "geography-0083"
+subcategory = "Lakes"
+difficulty = "medium"
+text = "Which lake on the Kazakhstan-Uzbekistan border shrank drastically after its feeder rivers were diverted?"
+answer = "Aral Sea"
+wrong = ["Caspian Sea", "Lake Balkhash", "Issyk-Kul"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Aral_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0084"
+subcategory = "Landlocked countries"
+difficulty = "hard"
+text = "Which is the only landlocked country in Southeast Asia?"
+answer = "Laos"
+wrong = ["Cambodia", "Myanmar", "Thailand"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Laos"
+reviewed = false
+
+[[question]]
+id = "geography-0085"
+subcategory = "Capitals"
+difficulty = "hard"
+text = "What is the capital of Myanmar?"
+answer = "Naypyidaw"
+wrong = ["Yangon", "Mandalay", "Bago"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Naypyidaw"
+reviewed = false
+
+[[question]]
+id = "geography-0086"
+subcategory = "Countries"
+difficulty = "hard"
+text = "Which is the smallest country on the African mainland?"
+answer = "The Gambia"
+wrong = ["Eswatini", "Djibouti", "Rwanda"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/The_Gambia"
+reviewed = false
+
+[[question]]
+id = "geography-0087"
+subcategory = "Coasts"
+difficulty = "hard"
+text = "Which is the only Central American country with no Pacific coastline?"
+answer = "Belize"
+wrong = ["Honduras", "Guatemala", "Nicaragua"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Belize"
+reviewed = false
+
+[[question]]
+id = "geography-0088"
+subcategory = "Seas"
+difficulty = "hard"
+text = "Which is the only country with coasts on both the Caspian Sea and the Persian Gulf?"
+answer = "Iran"
+wrong = ["Iraq", "Turkmenistan", "Saudi Arabia"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Iran"
+reviewed = false
+
+[[question]]
+id = "geography-0089"
+subcategory = "Capitals"
+difficulty = "hard"
+text = "What is the capital of Bhutan?"
+answer = "Thimphu"
+wrong = ["Paro", "Punakha", "Phuntsholing"]
+source = "https://quizado.com/blog/geography-trivia-questions-and-answers"
+check = "https://en.wikipedia.org/wiki/Thimphu"
+reviewed = false
+
+[[question]]
+id = "geography-0090"
+subcategory = "Seas"
+difficulty = "hard"
+text = "Which named sea in the North Atlantic has no land boundaries?"
+answer = "Sargasso Sea"
+wrong = ["Labrador Sea", "Irminger Sea", "Norwegian Sea"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Sargasso_Sea"
+reviewed = false
+
+[[question]]
+id = "geography-0091"
+subcategory = "Hemispheres"
+difficulty = "hard"
+text = "Which country has territory in all four hemispheres?"
+answer = "Kiribati"
+wrong = ["Fiji", "Tuvalu", "Samoa"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Kiribati"
+reviewed = false
+
+[[question]]
+id = "geography-0092"
+subcategory = "Flags"
+difficulty = "hard"
+text = "Which British Overseas Territory has a shipwreck on its flag?"
+answer = "Bermuda"
+wrong = ["Cayman Islands", "Montserrat", "Anguilla"]
+source = "https://factsinstitute.com/games/geography-trivia/"
+check = "https://en.wikipedia.org/wiki/Flag_of_Bermuda"
+reviewed = false
+
+[[question]]
+id = "geography-0093"
+subcategory = "Microstates"
+difficulty = "hard"
+text = "The French president and the Bishop of Urgell are joint heads of state of which country?"
+answer = "Andorra"
+wrong = ["Monaco", "San Marino", "Liechtenstein"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Co-princes_of_Andorra"
+reviewed = false
+
+[[question]]
+id = "geography-0094"
+subcategory = "Rivers"
+difficulty = "hard"
+text = "Which river flows through Bangkok?"
+answer = "Chao Phraya"
+wrong = ["Mekong", "Irrawaddy", "Salween"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Chao_Phraya_River"
+reviewed = false
+
+[[question]]
+id = "geography-0095"
+subcategory = "Rivers"
+difficulty = "hard"
+text = "Which river flows through Madrid?"
+answer = "Manzanares"
+wrong = ["Tagus", "Ebro", "Guadalquivir"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Manzanares_(river)"
+reviewed = false
+
+[[question]]
+id = "geography-0096"
+subcategory = "Countries"
+difficulty = "hard"
+text = "After Algeria, which is the largest country in Africa by area?"
+answer = "DR Congo"
+wrong = ["Sudan", "Libya", "Chad"]
+source = "https://www.funtrivia.com/quizzes/geography/geography_-_miscellany/difficult_geography.html"
+check = "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo"
+reviewed = false
+
+[[question]]
+id = "geography-0097"
+subcategory = "Rivers"
+difficulty = "hard"
+text = "Which river flows through Prague?"
+answer = "Vltava"
+wrong = ["Elbe", "Morava", "Oder"]
+source = "https://www.earthsattractions.com/geography-trivia-questions/"
+check = "https://en.wikipedia.org/wiki/Vltava"
+reviewed = false

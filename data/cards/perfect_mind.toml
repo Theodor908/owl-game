@@ -1,0 +1,9 @@
+id = "perfect_mind"
+name = "Perfect Mind"
+tier = 5
+kind = "damage"
+text = "If you answer all questions correctly and win, double your damage"
+golden_text = "No extra effect. If you answer all questions correctly and win, double your damage"
+
+[[effects]]
+effect = "PerfectDouble"

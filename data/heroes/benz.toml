@@ -1,0 +1,10 @@
+id = "benz"
+name = "Karl Benz"
+title = "Inventor of the Car"
+category = "cars_and_mechanics"
+hp = 35
+category_bonus = 25
+kind = "Benz"
+
+[params]
+uses = 2

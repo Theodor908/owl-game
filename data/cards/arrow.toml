@@ -1,0 +1,12 @@
+id = "arrow"
+name = "Arrow"
+tier = 0
+kind = "token"
+text = "Deals 3 damage to your next opponent whatever the battle result, then vanishes"
+golden = false
+shop = false
+copies = 0
+
+[[effects]]
+effect = "Arrow"
+damage = 3

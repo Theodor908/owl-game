@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.2
+reloadable = true
+
+[libraries]
+windows.debug.x86_64 = "res://../target/debug/owl_local.dll"
+windows.release.x86_64 = "res://../target/release/owl_local.dll"
+linux.debug.x86_64 = "res://../target/debug/libowl_local.so"
+linux.release.x86_64 = "res://../target/release/libowl_local.so"
+macos.debug = "res://../target/debug/libowl_local.dylib"
+macos.release = "res://../target/release/libowl_local.dylib"
+android.debug.arm64 = "res://lib/android/arm64/libowl_local.so"
+android.release.arm64 = "res://lib/android/arm64/libowl_local.so"

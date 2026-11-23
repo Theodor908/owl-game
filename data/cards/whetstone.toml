@@ -1,0 +1,10 @@
+id = "whetstone"
+name = "Whetstone"
+tier = 1
+kind = "damage"
+text = "+1 damage on win"
+golden_text = "+2 damage on win"
+
+[[effects]]
+effect = "DamageOnWin"
+amount = 1

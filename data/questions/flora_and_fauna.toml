@@ -1,0 +1,1165 @@
+[[question]]
+id = "flora_and_fauna-0001"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which are the only mammals capable of true powered flight?"
+answer = "Bats"
+wrong = ["Flying squirrels", "Colugos", "Sugar gliders"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/bat-mammal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0002"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which is the fastest land animal over a short sprint?"
+answer = "Cheetah"
+wrong = ["Lion", "Pronghorn", "Greyhound"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/science/How-Fast-Are-Cheetahs"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0003"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which is the largest living land animal?"
+answer = "African bush elephant"
+wrong = ["White rhinoceros", "Hippopotamus", "Giraffe"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/African-bush-elephant"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0004"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "What is a young kangaroo called?"
+answer = "Joey"
+wrong = ["Cub", "Kit", "Calf"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://kids.nationalgeographic.com/animals/mammals/facts/kangaroo"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0005"
+subcategory = "Birds"
+difficulty = "easy"
+text = "Which is the tallest and heaviest living bird?"
+answer = "Ostrich"
+wrong = ["Emu", "Cassowary", "Rhea"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/ostrich"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0006"
+subcategory = "Birds"
+difficulty = "easy"
+text = "Which birds are the only ones able to fly backwards?"
+answer = "Hummingbirds"
+wrong = ["Kingfishers", "Swifts", "Kestrels"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://kids.britannica.com/students/article/hummingbird/274986"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0007"
+subcategory = "Insects"
+difficulty = "easy"
+text = "How many legs does an adult insect have?"
+answer = "Six"
+wrong = ["Four", "Eight", "Ten"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/How-many-legs-does-an-adult-insect-have"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0008"
+subcategory = "Classification"
+difficulty = "easy"
+text = "How many legs does a spider have?"
+answer = "Eight"
+wrong = ["Six", "Ten", "Twelve"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/spider-arachnid"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0009"
+subcategory = "Sea life"
+difficulty = "easy"
+text = "How many hearts does an octopus have?"
+answer = "Three"
+wrong = ["One", "Two", "Four"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0010"
+subcategory = "Plants"
+difficulty = "easy"
+text = "By which process do green plants use sunlight, water and carbon dioxide to make sugar?"
+answer = "Photosynthesis"
+wrong = ["Respiration", "Transpiration", "Germination"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basic-Botany-330772.html"
+check = "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0011"
+subcategory = "Trees"
+difficulty = "easy"
+text = "Acorns are the fruit of which tree?"
+answer = "Oak"
+wrong = ["Beech", "Horse chestnut", "Hazel"]
+source = "https://www.funtrivia.com/trivia-quiz/ForChildren/Trees-For-Kids-373209.html"
+check = "https://www.britannica.com/science/acorn-nut"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0012"
+subcategory = "Trees"
+difficulty = "easy"
+text = "Cinnamon is made from which part of a tree?"
+answer = "Bark"
+wrong = ["Root", "Leaves", "Seeds"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Plant-Basics-580.html"
+check = "https://www.kew.org/plants/cinnamon"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0013"
+subcategory = "Fungi"
+difficulty = "easy"
+text = "Which prized underground fungus is hunted with trained dogs or pigs?"
+answer = "Truffle"
+wrong = ["Morel", "Chanterelle", "Porcini"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Fabulous-Fungi-129745.html"
+check = "https://www.britannica.com/science/truffle-fungus"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0014"
+subcategory = "Fungi"
+difficulty = "easy"
+text = "Fungi reproduce by releasing what?"
+answer = "Spores"
+wrong = ["Seeds", "Pollen", "Bulbs"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Fungi-Quiz-304482.html"
+check = "https://openstax.org/books/biology-2e/pages/24-1-characteristics-of-fungi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0015"
+subcategory = "Behaviour"
+difficulty = "easy"
+text = "What is a family group of lions called?"
+answer = "Pride"
+wrong = ["Pack", "Herd", "Troop"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/science/pride-animal-behavior"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0016"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which of these mammals lays eggs?"
+answer = "Platypus"
+wrong = ["Koala", "Armadillo", "Opossum"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://openstax.org/books/biology-2e/pages/29-6-mammals"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0017"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which mammal is covered in overlapping keratin scales?"
+answer = "Pangolin"
+wrong = ["Aardvark", "Porcupine", "Anteater"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.worldwildlife.org/resources/facts/what-is-a-pangolin/"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0018"
+subcategory = "Birds"
+difficulty = "medium"
+text = "Which bird makes the longest yearly migration, between the Arctic and the Antarctic?"
+answer = "Arctic tern"
+wrong = ["Barn swallow", "Snow goose", "White stork"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.nationalgeographic.com/animals/birds/facts/arctic-tern"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0019"
+subcategory = "Birds"
+difficulty = "medium"
+text = "Which living bird has the largest wingspan?"
+answer = "Wandering albatross"
+wrong = ["Andean condor", "Mute swan", "Golden eagle"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://ocean.si.edu/ocean-life/seabirds/wandering-albatross"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0020"
+subcategory = "Birds"
+difficulty = "medium"
+text = "Which bird of prey is the fastest animal in a dive?"
+answer = "Peregrine falcon"
+wrong = ["Golden eagle", "Gyrfalcon", "Osprey"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/peregrine-falcon"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0021"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "Which is the largest species of shark?"
+answer = "Whale shark"
+wrong = ["Great white shark", "Basking shark", "Tiger shark"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.nhm.ac.uk/discover/whale-sharks-worlds-biggest-shark.html"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0022"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "The narwhal's long spiral tusk is actually which body part?"
+answer = "A tooth"
+wrong = ["A horn", "A jawbone", "A nasal bone"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/narwhal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0023"
+subcategory = "Insects"
+difficulty = "medium"
+text = "A butterfly tastes a leaf it lands on using receptors on which body part?"
+answer = "Feet"
+wrong = ["Wings", "Eyes", "Abdomen"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.floridamuseum.ufl.edu/exhibits/blog/butterfly-moment-how-do-they-taste/"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0024"
+subcategory = "Plants"
+difficulty = "medium"
+text = "What is the male, pollen-producing organ of a flower called?"
+answer = "Stamen"
+wrong = ["Pistil", "Sepal", "Petal"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basic-Botany-330772.html"
+check = "https://openstax.org/books/biology-2e/pages/32-1-reproductive-development-and-structure"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0025"
+subcategory = "Plants"
+difficulty = "medium"
+text = "Which plant tissue carries water and minerals up from the roots?"
+answer = "Xylem"
+wrong = ["Phloem", "Cambium", "Epidermis"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basic-Botany-330772.html"
+check = "https://www.britannica.com/science/How-do-xylem-and-phloem-transport-materials-through-a-plant"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0026"
+subcategory = "Plants"
+difficulty = "medium"
+text = "Which flower's name comes from the French for \"lion's tooth\"?"
+answer = "Dandelion"
+wrong = ["Snapdragon", "Tiger lily", "Foxglove"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Plant-Basics-580.html"
+check = "https://www.kew.org/plants/dandelion"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0027"
+subcategory = "Trees"
+difficulty = "medium"
+text = "What word describes a tree that sheds all its leaves for part of every year?"
+answer = "Deciduous"
+wrong = ["Evergreen", "Coniferous", "Perennial"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basic-Botany-330772.html"
+check = "https://kids.britannica.com/students/article/tree/277422"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0028"
+subcategory = "Fungi"
+difficulty = "medium"
+text = "What is a partnership of a fungus and an alga living as one organism called?"
+answer = "Lichen"
+wrong = ["Moss", "Liverwort", "Mycorrhiza"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Fungi-Quiz-304482.html"
+check = "https://openstax.org/books/biology-2e/pages/24-3-ecology-of-fungi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0029"
+subcategory = "Behaviour"
+difficulty = "medium"
+text = "Which marine mammal floats on its back and cracks shellfish open against a stone?"
+answer = "Sea otter"
+wrong = ["Harbor seal", "Walrus", "Manatee"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/sea-otter"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0030"
+subcategory = "Behaviour"
+difficulty = "medium"
+text = "Males of which birds build stick structures decorated with bright objects to court females?"
+answer = "Bowerbirds"
+wrong = ["Lyrebirds", "Magpies", "Kingfishers"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/science/How-do-bower-birds-use-colorful-objects-to-attract-females"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0031"
+subcategory = "Plants"
+difficulty = "hard"
+text = "The plant group name \"gymnosperm\" means what?"
+answer = "Naked seed"
+wrong = ["Covered seed", "Winged seed", "Hidden flower"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Botany-14059.html"
+check = "https://openstax.org/books/biology-2e/pages/26-2-gymnosperms"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0032"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Which ancient Greek pupil of Aristotle is often called the father of botany?"
+answer = "Theophrastus"
+wrong = ["Dioscorides", "Hippocrates", "Galen"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Botany-14059.html"
+check = "https://www.britannica.com/science/botany"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0033"
+subcategory = "Trees"
+difficulty = "hard"
+text = "Which of these trees is a gymnosperm rather than a flowering plant?"
+answer = "Ginkgo"
+wrong = ["Magnolia", "Willow", "Birch"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basic-Botany-330772.html"
+check = "https://openstax.org/books/biology-2e/pages/26-2-gymnosperms"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0034"
+subcategory = "Fungi"
+difficulty = "hard"
+text = "The club fungi, which include most familiar mushrooms, form which division?"
+answer = "Basidiomycota"
+wrong = ["Ascomycota", "Zygomycota", "Chytridiomycota"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Fungi-Quiz-304482.html"
+check = "https://openstax.org/books/biology-2e/pages/24-2-classifications-of-fungi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0035"
+subcategory = "Fungi"
+difficulty = "hard"
+text = "What is the mutually beneficial association between a fungus and a plant's roots called?"
+answer = "Mycorrhiza"
+wrong = ["Lichen", "Rhizome", "Root nodule"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Fungi-Quiz-304482.html"
+check = "https://openstax.org/books/biology-2e/pages/24-3-ecology-of-fungi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0036"
+subcategory = "Birds"
+difficulty = "hard"
+text = "The chicks of which South American bird have claws on their wings for climbing?"
+answer = "Hoatzin"
+wrong = ["Cassowary", "Kiwi", "Secretary bird"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.britannica.com/animal/hoatzin"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0037"
+subcategory = "Classification"
+difficulty = "hard"
+text = "A caecilian is a limbless, worm-like member of which group of animals?"
+answer = "Amphibians"
+wrong = ["Reptiles", "Fish", "Insects"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://openstax.org/books/biology-2e/pages/29-3-amphibians"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0038"
+subcategory = "Classification"
+difficulty = "hard"
+text = "To which phylum do jellyfish belong?"
+answer = "Cnidaria"
+wrong = ["Porifera", "Mollusca", "Echinodermata"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://openstax.org/books/biology-2e/pages/28-2-phylum-cnidaria"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0039"
+subcategory = "Mammals"
+difficulty = "hard"
+text = "What is a baby echidna called?"
+answer = "Puggle"
+wrong = ["Joey", "Kit", "Pup"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://animals.sandiegozoo.org/animals/echidna"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0040"
+subcategory = "Insects"
+difficulty = "hard"
+text = "Which beetle defends itself by spraying a near-boiling chemical mixture?"
+answer = "Bombardier beetle"
+wrong = ["Stag beetle", "Scarab beetle", "Rhinoceros beetle"]
+source = "https://www.mentalfloss.com/animals/animal-trivia-questions"
+check = "https://www.nhm.ac.uk/discover/bombardier-beetles-and-their-caustic-chemical-cannon.html"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0041"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "What is an adult male gorilla with grey hair on its back called?"
+answer = "Silverback"
+wrong = ["Blackback", "Greyback", "Alpha"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/gorilla"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0042"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Bamboo makes up almost all of which animal's diet?"
+answer = "Giant panda"
+wrong = ["Koala", "Sloth", "Orangutan"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/giant-panda"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0043"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "The capybara is the largest living member of which group of mammals?"
+answer = "Rodents"
+wrong = ["Marsupials", "Lagomorphs", "Ungulates"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/capybara"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0044"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which mammals carry their young in a pouch?"
+answer = "Marsupials"
+wrong = ["Cetaceans", "Rodents", "Primates"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://openstax.org/books/biology-2e/pages/29-6-mammals"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0045"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which slow plant-eating sea mammal is nicknamed the sea cow?"
+answer = "Manatee"
+wrong = ["Walrus", "Elephant seal", "Sea lion"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/manatee"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0046"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Cows chew the cud and have a stomach with how many compartments?"
+answer = "Four"
+wrong = ["Two", "Three", "Six"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/ruminant"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0047"
+subcategory = "Mammals"
+difficulty = "easy"
+text = "Which Arctic animal's fur turns from white in winter to brown or grey in summer?"
+answer = "Arctic fox"
+wrong = ["Polar bear", "Musk ox", "Walrus"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/Arctic-fox"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0048"
+subcategory = "Birds"
+difficulty = "easy"
+text = "The extinct dodo lived on which island?"
+answer = "Mauritius"
+wrong = ["Madagascar", "Sri Lanka", "Seychelles"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Dodo"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0049"
+subcategory = "Birds"
+difficulty = "easy"
+text = "Which Australian bird is famous for a call that sounds like loud laughter?"
+answer = "Kookaburra"
+wrong = ["Cockatoo", "Lyrebird", "Galah"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/kookaburra"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0050"
+subcategory = "Birds"
+difficulty = "easy"
+text = "What is a group of crows traditionally called?"
+answer = "A murder"
+wrong = ["A parliament", "A gaggle", "A pod"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0051"
+subcategory = "Birds"
+difficulty = "easy"
+text = "What is a group of owls traditionally called?"
+answer = "A parliament"
+wrong = ["A murder", "A pride", "A school"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0052"
+subcategory = "Birds"
+difficulty = "easy"
+text = "What is the scientific study of birds called?"
+answer = "Ornithology"
+wrong = ["Entomology", "Herpetology", "Ichthyology"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/science/ornithology"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0053"
+subcategory = "Classification"
+difficulty = "easy"
+text = "In which country does the Komodo dragon live in the wild?"
+answer = "Indonesia"
+wrong = ["Philippines", "Malaysia", "Papua New Guinea"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Komodo_dragon"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0054"
+subcategory = "Classification"
+difficulty = "easy"
+text = "Which lizard can climb glass thanks to millions of tiny hairs on its toes?"
+answer = "Gecko"
+wrong = ["Iguana", "Chameleon", "Monitor lizard"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Gecko"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0055"
+subcategory = "Classification"
+difficulty = "easy"
+text = "What is an animal that eats both plants and meat called?"
+answer = "Omnivore"
+wrong = ["Herbivore", "Carnivore", "Insectivore"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://education.nationalgeographic.org/resource/omnivore/"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0056"
+subcategory = "Sea life"
+difficulty = "easy"
+text = "In which fish does the male carry the eggs in a pouch until they hatch?"
+answer = "Seahorse"
+wrong = ["Clownfish", "Pufferfish", "Anglerfish"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/sea-horse"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0057"
+subcategory = "Insects"
+difficulty = "easy"
+text = "Most commercial silk comes from the cocoons of which insect?"
+answer = "Silk moth"
+wrong = ["Honeybee", "Monarch butterfly", "Cicada"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/silkworm-moth"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0058"
+subcategory = "Behaviour"
+difficulty = "easy"
+text = "What is the deep winter sleep of animals such as dormice called?"
+answer = "Hibernation"
+wrong = ["Migration", "Aestivation", "Metamorphosis"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Hibernation"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0059"
+subcategory = "Plants"
+difficulty = "easy"
+text = "Which pigment gives leaves their green color?"
+answer = "Chlorophyll"
+wrong = ["Carotene", "Anthocyanin", "Melanin"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Photosynthesis-An-Overview-219983.html"
+check = "https://openstax.org/books/biology-2e/pages/8-2-the-light-dependent-reactions-of-photosynthesis"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0060"
+subcategory = "Plants"
+difficulty = "easy"
+text = "Which gas do plants give off as a by-product of photosynthesis?"
+answer = "Oxygen"
+wrong = ["Carbon dioxide", "Nitrogen", "Methane"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Photosynthesis-An-Overview-219983.html"
+check = "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0061"
+subcategory = "Plants"
+difficulty = "easy"
+text = "What are the tiny pores on a leaf that let gases in and out?"
+answer = "Stomata"
+wrong = ["Lenticels", "Root hairs", "Trichomes"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Leaves-275405.html"
+check = "https://openstax.org/books/biology-2e/pages/30-4-leaves"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0062"
+subcategory = "Plants"
+difficulty = "easy"
+text = "The gel of which succulent plant is widely used to soothe burns?"
+answer = "Aloe vera"
+wrong = ["Agave", "Jade plant", "Yucca"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Facts-About-Plants-48216.html"
+check = "https://www.nccih.nih.gov/health/aloe-vera"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0063"
+subcategory = "Plants"
+difficulty = "easy"
+text = "Which of these plants traps and digests insects?"
+answer = "Venus flytrap"
+wrong = ["Sunflower", "Clover", "Daffodil"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Facts-About-Plants-48216.html"
+check = "https://www.britannica.com/plant/Venus-flytrap"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0064"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "The okapi's closest living relative is which animal?"
+answer = "Giraffe"
+wrong = ["Zebra", "Tapir", "Horse"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/okapi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0065"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which cat-like carnivore is the largest predator native to Madagascar?"
+answer = "Fossa"
+wrong = ["Serval", "Caracal", "Genet"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Fossa_(animal)"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0066"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which Australian marsupial produces cube-shaped droppings?"
+answer = "Wombat"
+wrong = ["Koala", "Wallaby", "Bandicoot"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Wombat"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0067"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "The name aardvark comes from Afrikaans for what?"
+answer = "Earth pig"
+wrong = ["Ant eater", "Night dog", "Digging bear"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/aardvark"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0068"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which Madagascan lemur finds grubs by tapping wood with a long thin middle finger?"
+answer = "Aye-aye"
+wrong = ["Indri", "Sifaka", "Ring-tailed lemur"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Aye-aye"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0069"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which is the second-largest living animal, after the blue whale?"
+answer = "Fin whale"
+wrong = ["Sperm whale", "Humpback whale", "Whale shark"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.fisheries.noaa.gov/species/fin-whale"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0070"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Which land mammal has the longest pregnancy, about 22 months?"
+answer = "African elephant"
+wrong = ["Giraffe", "Rhinoceros", "Hippopotamus"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.britannica.com/animal/elephant-mammal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0071"
+subcategory = "Mammals"
+difficulty = "medium"
+text = "Seals, sea lions and walruses form which group, whose name means \"fin-footed\"?"
+answer = "Pinnipeds"
+wrong = ["Cetaceans", "Sirenians", "Mustelids"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/pinniped"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0072"
+subcategory = "Birds"
+difficulty = "medium"
+text = "Which flightless bird is the only one with nostrils at the tip of its beak?"
+answer = "Kiwi"
+wrong = ["Kakapo", "Emu", "Takahe"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Kiwi_(bird)"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0073"
+subcategory = "Birds"
+difficulty = "medium"
+text = "Which Australian bird is famous for mimicking sounds such as chainsaws and camera shutters?"
+answer = "Lyrebird"
+wrong = ["Kookaburra", "Cockatoo", "Galah"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Lyrebird"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0074"
+subcategory = "Classification"
+difficulty = "easy"
+text = "The axolotl of Mexico is a kind of which animal?"
+answer = "Salamander"
+wrong = ["Lizard", "Frog", "Lungfish"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/axolotl"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0075"
+subcategory = "Classification"
+difficulty = "medium"
+text = "Which microscopic eight-legged animals are nicknamed water bears?"
+answer = "Tardigrades"
+wrong = ["Rotifers", "Nematodes", "Copepods"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/tardigrade"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0076"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "Which reef fish lives among sea anemones and can change from male to female?"
+answer = "Clownfish"
+wrong = ["Blue tang", "Lionfish", "Moorish idol"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Amphiprioninae"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0077"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "Which fish knocks insects off overhanging leaves by spitting jets of water?"
+answer = "Archerfish"
+wrong = ["Pufferfish", "Mudskipper", "Triggerfish"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Archerfish"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0078"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "Which fish clings to sharks and whales with a sucking disc on top of its head?"
+answer = "Remora"
+wrong = ["Pilot fish", "Cleaner wrasse", "Moray eel"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Remora"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0079"
+subcategory = "Sea life"
+difficulty = "medium"
+text = "Which animal has the largest eyes ever measured?"
+answer = "Colossal squid"
+wrong = ["Blue whale", "Swordfish", "Giant Pacific octopus"]
+source = "https://kwizzbit.com/animal-quiz-questions-and-answers/"
+check = "https://www.tepapa.govt.nz/discover-collections/read-watch-play/science/colossal-squid"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0080"
+subcategory = "Behaviour"
+difficulty = "medium"
+text = "What word describes animals that are most active at dawn and dusk?"
+answer = "Crepuscular"
+wrong = ["Nocturnal", "Diurnal", "Arboreal"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Crepuscular_animal"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0081"
+subcategory = "Behaviour"
+difficulty = "medium"
+text = "What is the underground home of a badger called?"
+answer = "Sett"
+wrong = ["Drey", "Holt", "Form"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/European_badger"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0082"
+subcategory = "Plants"
+difficulty = "easy"
+text = "Tapioca is made from the root of which plant?"
+answer = "Cassava"
+wrong = ["Taro", "Yam", "Sweet potato"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Root-Modifications-in-Plants-289062.html"
+check = "https://en.wikipedia.org/wiki/Cassava"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0083"
+subcategory = "Plants"
+difficulty = "medium"
+text = "A potato tuber is a swollen part of which plant organ?"
+answer = "Stem"
+wrong = ["Root", "Leaf", "Flower"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Root-Modifications-in-Plants-289062.html"
+check = "https://www.britannica.com/science/tuber"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0084"
+subcategory = "Plants"
+difficulty = "medium"
+text = "Which tough compound stiffens the cell walls of wood?"
+answer = "Lignin"
+wrong = ["Chitin", "Keratin", "Starch"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Plant-Tissues-293290.html"
+check = "https://www.britannica.com/science/lignin"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0085"
+subcategory = "Plants"
+difficulty = "medium"
+text = "What is the plant tissue of actively dividing cells at root and shoot tips called?"
+answer = "Meristem"
+wrong = ["Phloem", "Cortex", "Pith"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Plant-Tissues-293290.html"
+check = "https://openstax.org/books/biology-2e/pages/30-1-the-plant-body"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0086"
+subcategory = "Plants"
+difficulty = "medium"
+text = "Atropa belladonna is better known by which common name?"
+answer = "Deadly nightshade"
+wrong = ["Hemlock", "Wolfsbane", "Mandrake"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://www.britannica.com/plant/belladonna"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0087"
+subcategory = "Plants"
+difficulty = "medium"
+text = "The heart drug digitalis was first made from which plant?"
+answer = "Foxglove"
+wrong = ["Opium poppy", "Willow", "Periwinkle"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://en.wikipedia.org/wiki/Digitalis"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0088"
+subcategory = "Plants"
+difficulty = "medium"
+text = "The poison ricin comes from the seeds of which plant?"
+answer = "Castor oil plant"
+wrong = ["Rosary pea", "Oleander", "Hemlock"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://en.wikipedia.org/wiki/Ricin"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0089"
+subcategory = "Trees"
+difficulty = "medium"
+text = "Which European conifer, often planted in churchyards, has poisonous seeds and needles?"
+answer = "Yew"
+wrong = ["Scots pine", "Norway spruce", "Silver fir"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://en.wikipedia.org/wiki/Taxus_baccata"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0090"
+subcategory = "Mammals"
+difficulty = "hard"
+text = "The llama was domesticated from which wild South American camelid?"
+answer = "Guanaco"
+wrong = ["Vicuna", "Alpaca", "Bactrian camel"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/animal/llama"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0091"
+subcategory = "Mammals"
+difficulty = "hard"
+text = "What is the largest wild member of the dog family in South America?"
+answer = "Maned wolf"
+wrong = ["Bush dog", "Culpeo", "Crab-eating fox"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://nationalzoo.si.edu/animals/maned-wolf"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0092"
+subcategory = "Sea life"
+difficulty = "hard"
+text = "Which small shark bites round plugs of flesh out of whales and large fish?"
+answer = "Cookiecutter shark"
+wrong = ["Spiny dogfish", "Wobbegong", "Lemon shark"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/isistius-brasiliensis/"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0093"
+subcategory = "Sea life"
+difficulty = "hard"
+text = "What are the jelly-filled pores that let sharks sense electric fields called?"
+answer = "Ampullae of Lorenzini"
+wrong = ["Lateral line", "Spiracles", "Gill rakers"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://www.britannica.com/science/ampulla-of-Lorenzini"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0094"
+subcategory = "Sea life"
+difficulty = "hard"
+text = "What term describes fish such as salmon that live at sea but breed in fresh water?"
+answer = "Anadromous"
+wrong = ["Catadromous", "Potamodromous", "Oceanodromous"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Fish_migration"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0095"
+subcategory = "Insects"
+difficulty = "hard"
+text = "What is the final, adult stage of an insect's metamorphosis called?"
+answer = "Imago"
+wrong = ["Pupa", "Nymph", "Instar"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Imago"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0096"
+subcategory = "Classification"
+difficulty = "hard"
+text = "Heliciculture is the farming of which animals?"
+answer = "Snails"
+wrong = ["Bees", "Silkworms", "Oysters"]
+source = "https://watercoolertrivia.com/trivia-questions/animal-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Heliciculture"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0097"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Spanish moss belongs to the same plant family as which fruit?"
+answer = "Pineapple"
+wrong = ["Banana", "Fig", "Kiwi fruit"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Facts-About-Plants-48216.html"
+check = "https://www.britannica.com/plant/Spanish-moss"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0098"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Which genus of duckweed, called watermeal, includes the smallest flowering plants?"
+answer = "Wolffia"
+wrong = ["Lemna", "Spirodela", "Azolla"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Facts-About-Plants-48216.html"
+check = "https://en.wikipedia.org/wiki/Wolffia"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0099"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Which plant hormone, first found in a fungus that makes rice seedlings overgrow, lengthens stems?"
+answer = "Gibberellin"
+wrong = ["Abscisic acid", "Ethylene", "Cytokinin"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basics-of-Plant-Biology-353342.html"
+check = "https://en.wikipedia.org/wiki/Gibberella_fujikuroi"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0100"
+subcategory = "Plants"
+difficulty = "hard"
+text = "In flowering plants, the endosperm that feeds the seed is usually what ploidy?"
+answer = "Triploid"
+wrong = ["Haploid", "Diploid", "Tetraploid"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basics-of-Plant-Biology-353342.html"
+check = "https://openstax.org/books/biology-2e/pages/32-2-pollination-and-fertilization"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0101"
+subcategory = "Plants"
+difficulty = "hard"
+text = "What are the raised pores in bark that let a woody stem exchange gases?"
+answer = "Lenticels"
+wrong = ["Stomata", "Hydathodes", "Trichomes"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Basics-of-Plant-Biology-353342.html"
+check = "https://en.wikipedia.org/wiki/Lenticel"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0102"
+subcategory = "Plants"
+difficulty = "hard"
+text = "What are the upward-growing roots that let mangroves get air in waterlogged mud?"
+answer = "Pneumatophores"
+wrong = ["Rhizomes", "Tendrils", "Haustoria"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Root-Modifications-in-Plants-289062.html"
+check = "https://en.wikipedia.org/wiki/Aerial_root"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0103"
+subcategory = "Plants"
+difficulty = "hard"
+text = "In which part of the chloroplast does the Calvin cycle take place?"
+answer = "Stroma"
+wrong = ["Thylakoid membrane", "Thylakoid space", "Outer membrane"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Photosynthesis-An-Overview-219983.html"
+check = "https://openstax.org/books/biology-2e/pages/8-3-using-light-energy-to-make-organic-molecules"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0104"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Which chemist showed in the 1770s that a plant could restore air spoiled by a burning candle?"
+answer = "Joseph Priestley"
+wrong = ["Jan Ingenhousz", "Antoine Lavoisier", "Stephen Hales"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Photosynthesis-An-Overview-219983.html"
+check = "https://en.wikipedia.org/wiki/Photosynthesis"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0105"
+subcategory = "Plants"
+difficulty = "hard"
+text = "Which Australian plant is notorious for stinging hairs that can cause months of pain?"
+answer = "Gympie-gympie"
+wrong = ["Wait-a-while", "Kangaroo paw", "Bunya pine"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://en.wikipedia.org/wiki/Dendrocnide_moroides"
+reviewed = false
+
+[[question]]
+id = "flora_and_fauna-0106"
+subcategory = "Trees"
+difficulty = "hard"
+text = "Which Caribbean beach tree is so toxic that rain dripping from it can blister skin?"
+answer = "Manchineel"
+wrong = ["Sea grape", "Coconut palm", "Red mangrove"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Barking-Up-the-Wrong-Tree-382793.html"
+check = "https://en.wikipedia.org/wiki/Hippomane_mancinella"
+reviewed = false

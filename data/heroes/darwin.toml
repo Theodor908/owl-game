@@ -1,0 +1,10 @@
+id = "darwin"
+name = "Charles Darwin"
+title = "Father of Evolution"
+category = "flora_and_fauna"
+hp = 32
+category_bonus = 25
+kind = "Darwin"
+
+[params]
+uses = 2

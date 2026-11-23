@@ -1,0 +1,10 @@
+id = "marie_curie"
+name = "Marie Curie"
+title = "Pioneer of Radioactivity"
+category = "physics"
+hp = 35
+category_bonus = 25
+kind = "MarieCurie"
+
+[params]
+armor_percent = 50

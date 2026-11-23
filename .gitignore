@@ -1,0 +1,28 @@
+/target
+/client/data
+/client/lib
+/build
+# Browser automation leftovers: page snapshots, logs and raw captures.
+/.playwright-mcp/*.yml
+/.playwright-mcp/*.log
+/.playwright-mcp/gemini*.jpg
+/.playwright-mcp/__pycache__
+/.playwright-mcp/gen/*.b64
+/.playwright-mcp/gen/*.json
+
+# The server writes these beside itself when run from the project.
+/owl.db*
+/owl.key
+/server-data
+/.playwright-mcp/Gemini-Generated-Image-*
+/deploy/.env
+/owl-deploy.tar
+
+# What android.bat writes into the project about the build it makes.
+/client/base.json
+# The key that signs releases lives outside the project; this is a safety net.
+release.key
+*.key
+
+# Local signing settings for android.bat; never committed.
+/android.local.bat

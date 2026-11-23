@@ -1,0 +1,10 @@
+id = "cleopatra"
+name = "Cleopatra"
+title = "Last Pharaoh of Egypt"
+category = "history"
+hp = 35
+category_bonus = 25
+kind = "Cleopatra"
+
+[params]
+cap_percent = 150

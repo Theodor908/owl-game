@@ -1,0 +1,51 @@
+# The Owl server and the Cloudflare tunnel that makes it reachable.
+#
+# Nothing here publishes a port: the server is reachable only by the tunnel
+# container beside it, and the tunnel only dials out to Cloudflare. The
+# router needs no change and the home address stays private.
+#
+# Needs a file named .env next to this one, holding the tunnel's token
+# (see .env.example and docs/server.md).
+
+services:
+  owl:
+    # The image the GitHub pipeline builds. `docker compose pull` fetches it;
+    # `docker compose up --build` builds it here instead, from the sources.
+    image: ghcr.io/theodor908/owl-server:latest
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    # The server shuts down cleanly on this signal.
+    stop_signal: SIGINT
+    environment:
+      # Every request arrives from the tunnel container, so the player's
+      # own address, which the limits count by, is in Cloudflare's
+      # CF-Connecting-IP header. Safe only because nothing but the tunnel
+      # can reach the server: no port is published.
+      - OWL_TRUST_CF_IP=1
+    volumes:
+      - owl-db:/var/lib/owl
+      - owl-key:/etc/owl
+      # The newest build of the game, put there by release.bat on the PC.
+      - ../releases:/opt/owl/releases:ro
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - owl
+
+volumes:
+  # The account database.
+  owl-db:
+  # The key file. Back it up once, offline; never together with the database.
+  owl-key:

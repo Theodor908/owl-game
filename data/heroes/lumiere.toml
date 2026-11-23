@@ -1,0 +1,10 @@
+id = "lumiere"
+name = "Lumiere brothers"
+title = "Pioneers of Cinema"
+category = "film"
+hp = 36
+category_bonus = 25
+kind = "Lumiere"
+
+[params]
+cost = 2

@@ -1,0 +1,14 @@
+id = "double_or_nothing"
+name = "Double or Nothing"
+tier = 4
+kind = "bet"
+text = "+50% damage on win. When you lose, take +2 damage"
+golden_text = "+100% damage on win. When you lose, take +4 damage"
+
+[[effects]]
+effect = "DamageMultiplier"
+percent = 50
+
+[[effects]]
+effect = "ExtraDamageOnLoss"
+amount = 2

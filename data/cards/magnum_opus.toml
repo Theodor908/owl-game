@@ -1,0 +1,11 @@
+id = "magnum_opus"
+name = "Magnum Opus"
+tier = 3
+kind = "difficulty"
+text = "Questions in your top category are always hard, for both players. Counts as two steps against cards that make them easier"
+unique = true
+
+[[effects]]
+effect = "DifficultyShift"
+steps = 2
+all = false

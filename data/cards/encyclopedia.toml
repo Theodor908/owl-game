@@ -1,0 +1,9 @@
+id = "encyclopedia"
+name = "Encyclopedia"
+tier = 6
+kind = "category"
+text = "Counts as a card of every category for category bonuses"
+golden_text = "No extra effect. Counts as a card of every category for category bonuses"
+
+[[effects]]
+effect = "AllCategories"

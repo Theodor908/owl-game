@@ -1,0 +1,11 @@
+id = "streak_banner"
+name = "Streak Banner"
+tier = 4
+kind = "damage"
+text = "+1 damage for each battle won in a row, up to +5"
+golden_text = "+2 damage for each battle won in a row, up to +10"
+
+[[effects]]
+effect = "StreakDamage"
+per_win = 1
+max = 5

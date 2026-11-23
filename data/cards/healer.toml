@@ -1,0 +1,20 @@
+id = "healer"
+name = "Healer"
+tier = 6
+kind = "healing"
+text = "Heals you 1 HP every turn. Golden: heals you a quarter of your starting HP and everyone else an eighth of theirs"
+golden_text = "Heals you 1 HP every turn. When it is made, it heals you a quarter of your starting HP and everyone else an eighth of theirs"
+max_on_board = 1
+
+[[effects]]
+effect = "HealPerTurn"
+amount = 1
+
+[[golden_effects]]
+effect = "HealPerTurn"
+amount = 1
+
+[[golden_effects]]
+effect = "GoldenHeal"
+owner_div = 4
+others_div = 8

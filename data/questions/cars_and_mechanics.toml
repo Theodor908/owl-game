@@ -1,0 +1,1255 @@
+# Cars and Mechanics. Format and rules: docs/questions.md.
+
+[[question]]
+id = "cars_and_mechanics-0001"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which company makes the Mustang?"
+answer = "Ford"
+wrong = ["Chevrolet", "Dodge", "Pontiac"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Ford_Mustang"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0002"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which German company makes the 911 sports car?"
+answer = "Porsche"
+wrong = ["BMW", "Audi", "Mercedes-Benz"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Porsche_911"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0003"
+subcategory = "Manufacturers' origins"
+difficulty = "easy"
+text = "Which German carmaker's name means \"people's car\"?"
+answer = "Volkswagen"
+wrong = ["Opel", "Audi", "BMW"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Volkswagen"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0004"
+subcategory = "Manufacturers' origins"
+difficulty = "easy"
+text = "What was the first name of the man who founded Ferrari?"
+answer = "Enzo"
+wrong = ["Ferruccio", "Giovanni", "Luigi"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Ferrari"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0005"
+subcategory = "Brakes"
+difficulty = "easy"
+text = "In a car's ABS, what does the \"A\" stand for?"
+answer = "Anti-lock"
+wrong = ["Automatic", "Assisted", "Adaptive"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Anti-lock_braking_system"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0006"
+subcategory = "Engine parts"
+difficulty = "easy"
+text = "Which part ignites the air-fuel mixture in a petrol engine?"
+answer = "Spark plug"
+wrong = ["Fuel injector", "Alternator", "Thermostat"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Spark_plug"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0007"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "Which dashboard instrument shows the engine's speed in revolutions per minute?"
+answer = "Tachometer"
+wrong = ["Odometer", "Speedometer", "Voltmeter"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Tachometer"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0008"
+subcategory = "Exhaust"
+difficulty = "easy"
+text = "Which part of the exhaust system is there to reduce engine noise?"
+answer = "Muffler (silencer)"
+wrong = ["Catalytic converter", "Exhaust manifold", "Oxygen sensor"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Muffler"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0009"
+subcategory = "Electrical"
+difficulty = "easy"
+text = "Which part charges a car's battery while the engine is running?"
+answer = "Alternator"
+wrong = ["Starter motor", "Ignition coil", "Distributor"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Alternator_(automotive)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0010"
+subcategory = "Cars in film"
+difficulty = "easy"
+text = "What kind of car is Herbie in the Disney films?"
+answer = "Volkswagen Beetle"
+wrong = ["Mini", "Fiat 500", "Citroën 2CV"]
+source = "https://www.irishtimes.com/life-and-style/motors/motors-quiz-1.748038"
+check = "https://en.wikipedia.org/wiki/Herbie"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0011"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Lexus is the luxury division of which carmaker?"
+answer = "Toyota"
+wrong = ["Honda", "Nissan", "Mazda"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Lexus"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0012"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which country is the carmaker Hyundai from?"
+answer = "South Korea"
+wrong = ["Japan", "China", "Taiwan"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Hyundai_Motor_Company"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0013"
+subcategory = "Motorsport"
+difficulty = "easy"
+text = "In which country is the 24 Hours of Le Mans held?"
+answer = "France"
+wrong = ["Belgium", "Italy", "Monaco"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/24_Hours_of_Le_Mans"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0014"
+subcategory = "Motorsport"
+difficulty = "easy"
+text = "Which flag is waved at the finish line to show that a motor race is over?"
+answer = "Chequered"
+wrong = ["Yellow", "Blue", "Green"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Racing_flags"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0015"
+subcategory = "Cooling system"
+difficulty = "easy"
+text = "Which part passes the heat of the engine coolant to the air flowing through the front of the car?"
+answer = "Radiator"
+wrong = ["Water pump", "Thermostat", "Expansion tank"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Radiator_(engine_cooling)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0016"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "Who was granted a patent in 1886 for a three-wheeled motor car?"
+answer = "Karl Benz"
+wrong = ["Gottlieb Daimler", "Henry Ford", "Rudolf Diesel"]
+source = "https://www.myimprov.com/blog/how-do-you-rate-in-your-knowledge-about-cars/"
+check = "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0017"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "Which engine part turns the up-and-down motion of the pistons into rotation?"
+answer = "Crankshaft"
+wrong = ["Camshaft", "Flywheel", "Driveshaft"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Crankshaft"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0018"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "Which engine part opens and closes the intake and exhaust valves?"
+answer = "Camshaft"
+wrong = ["Crankshaft", "Flywheel", "Piston ring"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Camshaft"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0019"
+subcategory = "How engines work"
+difficulty = "medium"
+text = "What ignites the fuel in a diesel engine?"
+answer = "Heat from compression"
+wrong = ["A spark plug", "A pilot flame", "An ignition coil"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Diesel_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0020"
+subcategory = "Drivetrain"
+difficulty = "medium"
+text = "Which component lets the two driven wheels turn at different speeds in a corner?"
+answer = "Differential"
+wrong = ["Gearbox", "Clutch", "Torque converter"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Differential_(mechanical_device)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0021"
+subcategory = "Exhaust"
+difficulty = "medium"
+text = "Which exhaust component turns toxic gases into less harmful ones?"
+answer = "Catalytic converter"
+wrong = ["Muffler", "Turbocharger", "Exhaust manifold"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Catalytic_converter"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0022"
+subcategory = "Tools"
+difficulty = "medium"
+text = "Which tool tightens a nut or bolt to a specified tightness?"
+answer = "Torque wrench"
+wrong = ["Feeler gauge", "Breaker bar", "Impact driver"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Torque_wrench"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0023"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "In the engine abbreviation DOHC, what does the \"C\" stand for?"
+answer = "Camshaft"
+wrong = ["Cylinder", "Crankshaft", "Carburettor"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Internal-Combustion-Basics-89969.html"
+check = "https://en.wikipedia.org/wiki/Camshaft"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0024"
+subcategory = "Engine types"
+difficulty = "medium"
+text = "Which Japanese carmaker is best known for the Wankel rotary engine, as in the RX-7?"
+answer = "Mazda"
+wrong = ["Subaru", "Honda", "Toyota"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Mechanical-Mayhem-313178.html"
+check = "https://en.wikipedia.org/wiki/Mazda_Wankel_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0025"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "Which car, launched in 1959, was designed by Alec Issigonis?"
+answer = "Mini"
+wrong = ["Fiat 500", "Volkswagen Beetle", "Citroën 2CV"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Alec_Issigonis"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0026"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "Which part links a piston to the crankshaft?"
+answer = "Connecting rod"
+wrong = ["Pushrod", "Tie rod", "Rocker arm"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Internal-Combustion-Basics-89969.html"
+check = "https://en.wikipedia.org/wiki/Crankshaft"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0027"
+subcategory = "Motorsport history"
+difficulty = "medium"
+text = "In which year was the first Indianapolis 500 run?"
+answer = "1911"
+wrong = ["1901", "1921", "1931"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Motor-Racing-1894-1914-337229.html"
+check = "https://en.wikipedia.org/wiki/1911_Indianapolis_500"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0028"
+subcategory = "Fuel"
+difficulty = "medium"
+text = "What does a petrol's octane rating measure?"
+answer = "Resistance to knocking"
+wrong = ["Energy content", "Sulphur content", "Boiling point"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Octane_rating"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0029"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "The Trabant was the everyday car of which country?"
+answer = "East Germany"
+wrong = ["Poland", "Czechoslovakia", "Soviet Union"]
+source = "https://funtrivia.com/trivia-quiz/World/My-Kingdom-For-A-Car-319704.html"
+check = "https://en.wikipedia.org/wiki/Trabant"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0030"
+subcategory = "Manufacturers' origins"
+difficulty = "medium"
+text = "Which car brand's four-ring badge stands for the four makes that formed Auto Union?"
+answer = "Audi"
+wrong = ["Opel", "BMW", "Volkswagen"]
+source = "https://www.irishtimes.com/life-and-style/motors/motors-quiz-1.1268063"
+check = "https://en.wikipedia.org/wiki/Auto_Union"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0031"
+subcategory = "Manufacturers' origins"
+difficulty = "hard"
+text = "The name FIAT is an acronym. Which Italian city does its \"T\" stand for?"
+answer = "Turin"
+wrong = ["Trieste", "Taranto", "Trento"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Origins-of-Corporate-Names-139253.html"
+check = "https://en.wikipedia.org/wiki/Fiat_S.p.A."
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0032"
+subcategory = "Manufacturers' origins"
+difficulty = "hard"
+text = "The name Volvo is Latin. What does it mean?"
+answer = "I roll"
+wrong = ["I drive", "I fly", "I am strong"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Origins-of-Corporate-Names-139253.html"
+check = "https://en.wikipedia.org/wiki/Volvo"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0033"
+subcategory = "Motorsport history"
+difficulty = "hard"
+text = "In which year was the 24 Hours of Le Mans first run?"
+answer = "1923"
+wrong = ["1906", "1913", "1933"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Le-Mans-History-21610.html"
+check = "https://en.wikipedia.org/wiki/24_Hours_of_Le_Mans"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0034"
+subcategory = "Motorsport history"
+difficulty = "hard"
+text = "Which English circuit, opened in 1907, was the world's first purpose-built banked motor racing track?"
+answer = "Brooklands"
+wrong = ["Silverstone", "Goodwood", "Donington Park"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/Motor-Racing-1894-1914-337229.html"
+check = "https://en.wikipedia.org/wiki/Brooklands"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0035"
+subcategory = "Motorsport history"
+difficulty = "hard"
+text = "Who won the first Formula One World Drivers' Championship, in 1950?"
+answer = "Giuseppe Farina"
+wrong = ["Juan Manuel Fangio", "Alberto Ascari", "Luigi Fagioli"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/History-of-F1-46884.html"
+check = "https://en.wikipedia.org/wiki/Giuseppe_Farina"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0036"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which safety idea is the Mercedes-Benz engineer Béla Barényi credited with developing?"
+answer = "Crumple zone"
+wrong = ["Three-point seat belt", "Airbag", "Disc brake"]
+source = "https://irishtimes.com/life-and-style/motors/quiz-1.787168"
+check = "https://en.wikipedia.org/wiki/B%C3%A9la_Bar%C3%A9nyi"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0037"
+subcategory = "Engine parts"
+difficulty = "hard"
+text = "What is the pin that joins a piston to its connecting rod called?"
+answer = "Gudgeon pin"
+wrong = ["Cotter pin", "Crankpin", "Dowel pin"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Mechanical-Mayhem-313178.html"
+check = "https://en.wikipedia.org/wiki/Gudgeon_pin"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0038"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which car part did Mary Anderson patent in 1903?"
+answer = "Windscreen wiper"
+wrong = ["Rear-view mirror", "Turn signal", "Brake light"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Mary_Anderson_(inventor)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0039"
+subcategory = "Manufacturers' origins"
+difficulty = "hard"
+text = "Cadillac is named after the French explorer who founded which American city?"
+answer = "Detroit"
+wrong = ["Chicago", "St. Louis", "New Orleans"]
+source = "https://www.myimprov.com/blog/how-do-you-rate-in-your-knowledge-about-cars/"
+check = "https://en.wikipedia.org/wiki/Cadillac"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0040"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which driving aid did the American engineer Ralph Teetor invent?"
+answer = "Cruise control"
+wrong = ["Power steering", "Automatic gearbox", "Electric starter"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Ralph_Teetor"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0041"
+subcategory = "Engine parts"
+difficulty = "easy"
+text = "Which part slides up and down inside a cylinder, pushed by the burning fuel?"
+answer = "Piston"
+wrong = ["Crankshaft", "Camshaft", "Flywheel"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Piston"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0042"
+subcategory = "Lubrication"
+difficulty = "easy"
+text = "Where is the engine oil held at the bottom of most engines?"
+answer = "Oil pan (sump)"
+wrong = ["Oil filter", "Rocker cover", "Air box"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Sump"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0043"
+subcategory = "Electrical"
+difficulty = "easy"
+text = "What does a fuse protect a car's electrical circuit against?"
+answer = "Too much current"
+wrong = ["Low voltage", "Static charge", "Moisture"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Fuse_(electrical)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0044"
+subcategory = "Electrical"
+difficulty = "easy"
+text = "Which electric motor turns the engine over to start it?"
+answer = "Starter motor"
+wrong = ["Alternator", "Fuel pump", "Blower motor"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Starter_(engine)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0045"
+subcategory = "Drivetrain"
+difficulty = "easy"
+text = "In a manual car, which part connects and disconnects the engine from the gearbox?"
+answer = "Clutch"
+wrong = ["Differential", "Driveshaft", "Torque converter"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Clutch"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0046"
+subcategory = "Cooling system"
+difficulty = "easy"
+text = "Which part pumps coolant around the engine and radiator?"
+answer = "Water pump"
+wrong = ["Radiator fan", "Thermostat", "Oil pump"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Internal_combustion_engine_cooling"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0047"
+subcategory = "Vehicle types"
+difficulty = "easy"
+text = "What does the abbreviation SUV stand for?"
+answer = "Sport utility vehicle"
+wrong = ["Small urban vehicle", "Special use van", "Standard utility vehicle"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Sport_utility_vehicle"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0048"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which company makes the Civic and the Accord?"
+answer = "Honda"
+wrong = ["Toyota", "Nissan", "Mazda"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Honda_Civic"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0049"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which company made the Huracán and the Aventador?"
+answer = "Lamborghini"
+wrong = ["Ferrari", "Maserati", "Pagani"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Lamborghini"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0050"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which company makes the Phantom and the Ghost?"
+answer = "Rolls-Royce"
+wrong = ["Bentley", "Maybach", "Aston Martin"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Rolls-Royce_Motor_Cars"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0051"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which carmaker names its models the 3 Series, 5 Series and 7 Series?"
+answer = "BMW"
+wrong = ["Mercedes-Benz", "Audi", "Volvo"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/BMW"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0052"
+subcategory = "Cars in film"
+difficulty = "easy"
+text = "Which company built the DB5 that James Bond drives in Goldfinger?"
+answer = "Aston Martin"
+wrong = ["Jaguar", "Lotus", "Bentley"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Aston_Martin_DB5"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0053"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Acura is the luxury division of which carmaker?"
+answer = "Honda"
+wrong = ["Toyota", "Nissan", "Mitsubishi"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Acura"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0054"
+subcategory = "Badges"
+difficulty = "easy"
+text = "Which French carmaker has a diamond-shaped badge?"
+answer = "Renault"
+wrong = ["Peugeot", "Citroën", "Bugatti"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Renault"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0055"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which brand makes the Escalade?"
+answer = "Cadillac"
+wrong = ["Lincoln", "Buick", "GMC"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0056"
+subcategory = "Manufacturers"
+difficulty = "easy"
+text = "Which company makes the Prius hybrid?"
+answer = "Toyota"
+wrong = ["Honda", "Nissan", "Hyundai"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Toyota_Prius"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0057"
+subcategory = "Motorsport"
+difficulty = "easy"
+text = "What is it called when a racing driver follows close behind another car to cut drag?"
+answer = "Slipstreaming"
+wrong = ["Apexing", "Feathering", "Overcutting"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Slipstream"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0058"
+subcategory = "Engine types"
+difficulty = "easy"
+text = "What is an engine with all its cylinders in one straight row called?"
+answer = "Inline engine"
+wrong = ["V engine", "Flat engine", "Rotary engine"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Straight_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0059"
+subcategory = "Vehicle types"
+difficulty = "easy"
+text = "What is a car with a roof that folds down or comes off called?"
+answer = "Convertible"
+wrong = ["Coupé", "Estate", "Hatchback"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Convertible"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0060"
+subcategory = "Badges"
+difficulty = "easy"
+text = "Which carmaker's badge is known as the bowtie?"
+answer = "Chevrolet"
+wrong = ["Ford", "Buick", "Dodge"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/Chevrolet"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0061"
+subcategory = "Badges"
+difficulty = "easy"
+text = "Which French carmaker has a lion on its badge?"
+answer = "Peugeot"
+wrong = ["Renault", "Citroën", "Alpine"]
+source = "https://funtrivia.com/quiz/world/badges-of-car-manufacturers-why-do-we-have-them-415058.html"
+check = "https://en.wikipedia.org/wiki/Peugeot"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0062"
+subcategory = "Engine parts"
+difficulty = "easy"
+text = "What does a turbocharger force into an engine to give it more power?"
+answer = "Extra air"
+wrong = ["Extra oil", "Coolant", "Water"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Turbocharger"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0063"
+subcategory = "Suspension"
+difficulty = "easy"
+text = "Which part damps the bouncing of a car's springs?"
+answer = "Shock absorber"
+wrong = ["Anti-roll bar", "Leaf spring", "Bump stop"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Shock_absorber"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0064"
+subcategory = "Air conditioning"
+difficulty = "easy"
+text = "In a car's air conditioning, what does the compressor compress?"
+answer = "Refrigerant"
+wrong = ["Cabin air", "Engine coolant", "Outside air"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Automotive_air_conditioning"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0065"
+subcategory = "Badges"
+difficulty = "easy"
+text = "The three points of the Mercedes-Benz star stand for land, sea and what?"
+answer = "Air"
+wrong = ["Fire", "Road", "Rail"]
+source = "https://funtrivia.com/quiz/world/badges-of-car-manufacturers-why-do-we-have-them-415058.html"
+check = "https://en.wikipedia.org/wiki/Mercedes-Benz"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0066"
+subcategory = "Tyres and wheels"
+difficulty = "easy"
+text = "Toe, camber and caster are adjusted during which service?"
+answer = "Wheel alignment"
+wrong = ["Wheel balancing", "Tyre rotation", "Brake bleeding"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Wheel_alignment"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0067"
+subcategory = "History of the car"
+difficulty = "easy"
+text = "Which car was the first built on Ford's moving assembly line, from 1913?"
+answer = "Model T"
+wrong = ["Model A", "Model N", "Model K"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Ford_Model_T"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0068"
+subcategory = "Motorsport"
+difficulty = "easy"
+text = "In the name NASCAR, what do the letters SC stand for?"
+answer = "Stock Car"
+wrong = ["Sports Car", "Speed Circuit", "Super Cup"]
+source = "https://kwizzbit.com/sport-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/NASCAR"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0069"
+subcategory = "How engines work"
+difficulty = "easy"
+text = "Which stroke of a four-stroke engine draws in the air and fuel?"
+answer = "Intake"
+wrong = ["Compression", "Power", "Exhaust"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Four-stroke_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0070"
+subcategory = "Cooling system"
+difficulty = "easy"
+text = "Which part opens to let coolant flow to the radiator once the engine has warmed up?"
+answer = "Thermostat"
+wrong = ["Water pump", "Radiator cap", "Heater core"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Thermostat"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0071"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "Which belt or chain keeps the camshaft turning in step with the crankshaft?"
+answer = "Timing belt"
+wrong = ["Serpentine belt", "Fan belt", "Drive chain"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Timing_belt_(camshaft)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0072"
+subcategory = "Electrical"
+difficulty = "medium"
+text = "Which part uses a small control current to switch a much larger current on and off?"
+answer = "Relay"
+wrong = ["Fuse", "Resistor", "Diode"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Relay"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0073"
+subcategory = "Brakes"
+difficulty = "medium"
+text = "On a disc brake, which part squeezes the pads against the disc?"
+answer = "Caliper"
+wrong = ["Master cylinder", "Brake drum", "Wheel cylinder"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Disc_brake"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0074"
+subcategory = "Brakes"
+difficulty = "medium"
+text = "In a drum brake, which parts press against the inside of the drum?"
+answer = "Brake shoes"
+wrong = ["Brake pads", "Calipers", "Rotors"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Drum_brake"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0075"
+subcategory = "Brakes"
+difficulty = "medium"
+text = "What in the hydraulic lines is the usual cause of a spongy brake pedal?"
+answer = "Air"
+wrong = ["Excess fluid", "Rust", "Grease"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Brake_bleeding"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0076"
+subcategory = "Steering"
+difficulty = "medium"
+text = "Which rods link the steering rack to the steering knuckles?"
+answer = "Tie rods"
+wrong = ["Pushrods", "Connecting rods", "Anti-roll bars"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Tie_rod"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0077"
+subcategory = "Diagnosis"
+difficulty = "medium"
+text = "What does blue-grey smoke from the exhaust usually show the engine is burning?"
+answer = "Oil"
+wrong = ["Coolant", "Too much fuel", "Brake fluid"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://freeasestudyguides.com/exhaust-color.html"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0078"
+subcategory = "Diagnosis"
+difficulty = "medium"
+text = "Thick, sweet-smelling white exhaust smoke usually means the engine is burning what?"
+answer = "Coolant"
+wrong = ["Oil", "Too much fuel", "Brake fluid"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://freeasestudyguides.com/exhaust-color.html"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0079"
+subcategory = "Engine parts"
+difficulty = "medium"
+text = "Which long belt drives the alternator, water pump and power-steering pump on a modern engine?"
+answer = "Serpentine belt"
+wrong = ["Timing belt", "Cam chain", "Drive chain"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Serpentine_belt"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0080"
+subcategory = "Sensors"
+difficulty = "medium"
+text = "Which sensor in the exhaust tells the engine computer how rich or lean it is running?"
+answer = "Oxygen sensor"
+wrong = ["Mass airflow sensor", "Knock sensor", "Coolant sensor"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Oxygen_sensor"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0081"
+subcategory = "Sensors"
+difficulty = "medium"
+text = "What does a mass airflow sensor measure?"
+answer = "Air entering the engine"
+wrong = ["Fuel pressure", "Oil flow", "Exhaust flow"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Mass_flow_sensor"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0082"
+subcategory = "Cooling system"
+difficulty = "medium"
+text = "Which part warms the cabin using heat from the engine coolant?"
+answer = "Heater core"
+wrong = ["Radiator", "Evaporator", "Condenser"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Heater_core"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0083"
+subcategory = "Diagnosis"
+difficulty = "medium"
+text = "On a mechanic's scan tool, what does DTC stand for?"
+answer = "Diagnostic trouble code"
+wrong = ["Digital timing control", "Drive train check", "Direct torque calibration"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/On-board_diagnostics"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0084"
+subcategory = "Tools"
+difficulty = "medium"
+text = "Which tool measures small gaps such as a spark plug gap or valve clearance?"
+answer = "Feeler gauge"
+wrong = ["Torque wrench", "Multimeter", "Hydrometer"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Feeler_gauge"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0085"
+subcategory = "Tyres and wheels"
+difficulty = "medium"
+text = "Where does an over-inflated tyre wear fastest?"
+answer = "Centre of the tread"
+wrong = ["Both edges", "Outer edge only", "Inner edge only"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Tire_maintenance"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0086"
+subcategory = "Lubrication"
+difficulty = "medium"
+text = "What does the viscosity grade of an engine oil describe?"
+answer = "Resistance to flow"
+wrong = ["Detergent content", "Boiling point", "Colour"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Motor_oil"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0087"
+subcategory = "How engines work"
+difficulty = "medium"
+text = "What does an engine's displacement measure?"
+answer = "Swept volume of its cylinders"
+wrong = ["Its weight", "Its power output", "Its fuel tank volume"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Engine_displacement"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0088"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "Which engineer designed the original Volkswagen Beetle?"
+answer = "Ferdinand Porsche"
+wrong = ["Ferdinand Piëch", "Wilhelm Maybach", "August Horch"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Volkswagen_Beetle"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0089"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "Which French car was designed as an \"umbrella on four wheels\" for farmers?"
+answer = "Citroën 2CV"
+wrong = ["Renault 4", "Peugeot 203", "Citroën DS"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0090"
+subcategory = "History of the car"
+difficulty = "medium"
+text = "Enzo Ferrari is said to have called which British car the most beautiful ever made?"
+answer = "Jaguar E-Type"
+wrong = ["Aston Martin DB5", "Jaguar XK120", "Lotus Elan"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0091"
+subcategory = "Badges"
+difficulty = "medium"
+text = "Which carmaker's badge shows a serpent, the Biscione of Milan?"
+answer = "Alfa Romeo"
+wrong = ["Lancia", "Maserati", "Fiat"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/Alfa_Romeo"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0092"
+subcategory = "Badges"
+difficulty = "medium"
+text = "The coat of arms of which city sits at the centre of the Porsche badge?"
+answer = "Stuttgart"
+wrong = ["Munich", "Wolfsburg", "Ingolstadt"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/Porsche"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0093"
+subcategory = "Badges"
+difficulty = "medium"
+text = "Subaru is the Japanese name for which star cluster, shown on its badge?"
+answer = "Pleiades"
+wrong = ["Orion", "Hyades", "Plough"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/Subaru"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0094"
+subcategory = "Badges"
+difficulty = "medium"
+text = "Which carmaker's badge is a winged arrow?"
+answer = "Škoda"
+wrong = ["Seat", "Saab", "Lancia"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/%C5%A0koda_Auto"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0095"
+subcategory = "Badges"
+difficulty = "medium"
+text = "The name Mitsubishi describes the shape on its badge. What is it?"
+answer = "Three diamonds"
+wrong = ["Three stars", "Three rings", "Three arrows"]
+source = "https://funtrivia.com/quiz/world/badges-of-car-manufacturers-why-do-we-have-them-415058.html"
+check = "https://en.wikipedia.org/wiki/Mitsubishi"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0096"
+subcategory = "Badges"
+difficulty = "medium"
+text = "Volvo's circle-and-arrow badge is the ancient symbol for which metal?"
+answer = "Iron"
+wrong = ["Copper", "Tin", "Lead"]
+source = "https://funtrivia.com/trivia-quiz/World/Zooming-in-on-Car-Badges-403692.html"
+check = "https://en.wikipedia.org/wiki/Volvo_Cars"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0097"
+subcategory = "Motorsport history"
+difficulty = "medium"
+text = "At which circuit did Formula One hold its first night race, in 2008?"
+answer = "Marina Bay"
+wrong = ["Sepang", "Yas Marina", "Shanghai"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0098"
+subcategory = "How engines work"
+difficulty = "hard"
+text = "In engine specifications, what is the bore?"
+answer = "Cylinder diameter"
+wrong = ["Piston travel", "Valve diameter", "Crank radius"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Bore_(engine)"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0099"
+subcategory = "Emissions"
+difficulty = "hard"
+text = "In an engine's PCV system, what does the \"C\" stand for?"
+answer = "Crankcase"
+wrong = ["Combustion", "Coolant", "Catalyst"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Crankcase_ventilation_system"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0100"
+subcategory = "Diagnosis"
+difficulty = "hard"
+text = "Black smoke from a petrol engine's exhaust usually points to what?"
+answer = "A rich fuel mixture"
+wrong = ["A lean fuel mixture", "Burning oil", "Burning coolant"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://freeasestudyguides.com/exhaust-color.html"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0101"
+subcategory = "Drivetrain"
+difficulty = "hard"
+text = "Which joints let front-wheel-drive shafts deliver power while the wheels steer?"
+answer = "Constant-velocity joints"
+wrong = ["Ball joints", "Tie-rod ends", "Rubber bushings"]
+source = "https://num8ers.com/guides/asvab-automotive-information-practice-test/"
+check = "https://en.wikipedia.org/wiki/Constant-velocity_joint"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0102"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which carmaker fitted an electric self-starter as standard in 1912?"
+answer = "Cadillac"
+wrong = ["Ford", "Oldsmobile", "Buick"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Cadillac"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0103"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "In which year did Chrysler put power steering on sale, on the Imperial?"
+answer = "1951"
+wrong = ["1938", "1946", "1959"]
+source = "https://travelnoire.com/car-trivia"
+check = "https://en.wikipedia.org/wiki/Power_steering"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0104"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which car, built in Ohio from 1982, was the first Japanese-brand car made in the US?"
+answer = "Honda Accord"
+wrong = ["Toyota Camry", "Nissan Sentra", "Mazda 626"]
+source = "https://www.myimprov.com/blog/how-do-you-rate-in-your-knowledge-about-cars/"
+check = "https://en.wikipedia.org/wiki/Honda_Accord"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0105"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "In which year was the first Chevrolet Corvette produced?"
+answer = "1953"
+wrong = ["1948", "1958", "1963"]
+source = "https://www.myimprov.com/blog/how-do-you-rate-in-your-knowledge-about-cars/"
+check = "https://en.wikipedia.org/wiki/Chevrolet_Corvette"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0106"
+subcategory = "Manufacturers' origins"
+difficulty = "hard"
+text = "What did the letters DAT in the name Datsun come from?"
+answer = "Its founders' initials"
+wrong = ["A Tokyo district", "The founder's first name", "A model number"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Origins-of-Corporate-Names-139253.html"
+check = "https://en.wikipedia.org/wiki/Datsun"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0107"
+subcategory = "Motorsport history"
+difficulty = "hard"
+text = "Which team took over the Toleman Formula One team in 1986?"
+answer = "Benetton"
+wrong = ["Lotus", "Ligier", "Minardi"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/History-of-F1-46884.html"
+check = "https://en.wikipedia.org/wiki/Benetton_Formula"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0108"
+subcategory = "Motorsport history"
+difficulty = "hard"
+text = "How many Formula One world titles did Jim Clark win?"
+answer = "2"
+wrong = ["1", "3", "4"]
+source = "https://www.funtrivia.com/trivia-quiz/Sports/History-of-F1-46884.html"
+check = "https://en.wikipedia.org/wiki/Jim_Clark"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0109"
+subcategory = "How engines work"
+difficulty = "hard"
+text = "At high revs, what is it called when weak springs let the valves fail to close in time?"
+answer = "Valve float"
+wrong = ["Pre-ignition", "Vapour lock", "Piston slap"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Internal-Combustion-Basics-89969.html"
+check = "https://en.wikipedia.org/wiki/Valve_float"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0110"
+subcategory = "Engine parts"
+difficulty = "hard"
+text = "With the camshaft in the block, which parts carry its motion up to the rocker arms?"
+answer = "Pushrods"
+wrong = ["Connecting rods", "Tie rods", "Torsion bars"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Internal-Combustion-Basics-89969.html"
+check = "https://en.wikipedia.org/wiki/Overhead_valve_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0111"
+subcategory = "Engine types"
+difficulty = "hard"
+text = "Which gas, used to boost German aircraft engines in WWII, gives drag cars extra power?"
+answer = "Nitrous oxide"
+wrong = ["Hydrogen", "Methane", "Nitrogen"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Internal-Combustion-Basics-89969.html"
+check = "https://en.wikipedia.org/wiki/Nitrous_oxide_engine"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0112"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which company built the first civilian Jeep, the CJ-2A of 1945?"
+answer = "Willys-Overland"
+wrong = ["Ford", "Dodge", "American Motors"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Jeep_CJ"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0113"
+subcategory = "History of the car"
+difficulty = "hard"
+text = "Which 1966 Lamborghini set the pattern for the mid-engined supercar?"
+answer = "Miura"
+wrong = ["Countach", "Espada", "Islero"]
+source = "https://www.funtrivia.com/trivia-quiz/World/Icons-On-Four-Wheels-405275.html"
+check = "https://en.wikipedia.org/wiki/Lamborghini_Miura"
+reviewed = false
+
+[[question]]
+id = "cars_and_mechanics-0114"
+subcategory = "Badges"
+difficulty = "hard"
+text = "Citroën's double-chevron badge is based on what?"
+answer = "Herringbone gear teeth"
+wrong = ["Military rank stripes", "Mountain peaks", "Bird wings"]
+source = "https://funtrivia.com/quiz/world/badges-of-car-manufacturers-why-do-we-have-them-415058.html"
+check = "https://en.wikipedia.org/wiki/Citro%C3%ABn"
+reviewed = false

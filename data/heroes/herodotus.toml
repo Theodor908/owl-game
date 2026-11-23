@@ -1,0 +1,10 @@
+id = "herodotus"
+name = "Herodotus"
+title = "Father of History"
+category = "history"
+hp = 35
+category_bonus = 25
+kind = "Herodotus"
+
+[params]
+uses = 1

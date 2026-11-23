@@ -1,0 +1,7 @@
+# Only the server's sources, the content and the notice go into the image.
+*
+!Cargo.toml
+!Cargo.lock
+!crates
+!data
+!docs/privacy.md

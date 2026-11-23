@@ -1,0 +1,11 @@
+id = "unabridged_edition"
+name = "Unabridged Edition"
+tier = 2
+kind = "difficulty"
+text = "Every question in your battle is always hard, for both players. Counts as two steps against cards that make them easier"
+unique = true
+
+[[effects]]
+effect = "DifficultyShift"
+steps = 2
+all = true

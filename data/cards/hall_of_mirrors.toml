@@ -1,0 +1,10 @@
+id = "hall_of_mirrors"
+name = "Hall of Mirrors"
+tier = 5
+kind = "reflect"
+text = "40% reflect"
+golden_text = "80% reflect"
+
+[[effects]]
+effect = "Reflect"
+percent = 40

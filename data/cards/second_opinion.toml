@@ -1,0 +1,10 @@
+id = "second_opinion"
+name = "Second Opinion"
+tier = 3
+kind = "help"
+text = "Once per battle, remove one wrong answer on a question you choose"
+unique = true
+
+[[effects]]
+effect = "RemoveWrong"
+uses = 1

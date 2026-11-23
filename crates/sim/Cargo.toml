@@ -1,0 +1,11 @@
+[package]
+name = "owl-sim"
+edition.workspace = true
+version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+owl-core = { path = "../core" }
+owl-lobby = { path = "../lobby" }

@@ -1,0 +1,12 @@
+id = "skull"
+name = "Skull"
+tier = 0
+kind = "token"
+text = "Place it on your board: it disables a random card of your next opponent for that battle, then vanishes"
+cost = 2
+golden = false
+shop = false
+copies = 0
+
+[[effects]]
+effect = "Skull"

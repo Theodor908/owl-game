@@ -1,0 +1,10 @@
+id = "steel_bulwark"
+name = "Steel Bulwark"
+tier = 5
+kind = "armor"
+text = "10 armor. Breaks when depleted"
+golden = false
+
+[[effects]]
+effect = "Armor"
+amount = 10

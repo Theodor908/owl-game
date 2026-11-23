@@ -1,0 +1,1242 @@
+[[question]]
+id = "anatomy-0001"
+subcategory = "Bones"
+difficulty = "easy"
+text = "How many bones are there in the adult human skeleton?"
+answer = "206"
+wrong = ["196", "216", "226"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-1-divisions-of-the-skeletal-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0002"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Which is the longest bone in the human body?"
+answer = "Femur"
+wrong = ["Tibia", "Humerus", "Fibula"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0003"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What is the anatomical name for the kneecap?"
+answer = "Patella"
+wrong = ["Scapula", "Fibula", "Clavicle"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0004"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Which is the single bone of the upper arm, between shoulder and elbow?"
+answer = "Humerus"
+wrong = ["Femur", "Radius", "Tibia"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0005"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "How many chambers does the human heart have?"
+answer = "Four"
+wrong = ["Two", "Three", "Six"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+reviewed = false
+
+[[question]]
+id = "anatomy-0006"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "Which blood vessels carry blood away from the heart?"
+answer = "Arteries"
+wrong = ["Veins", "Capillaries", "Lymph vessels"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-1-structure-and-function-of-blood-vessels"
+reviewed = false
+
+[[question]]
+id = "anatomy-0007"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "Which component of blood carries most of the oxygen around the body?"
+answer = "Red blood cells"
+wrong = ["White blood cells", "Platelets", "Plasma"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+reviewed = false
+
+[[question]]
+id = "anatomy-0008"
+subcategory = "Senses"
+difficulty = "easy"
+text = "What is the colored part of the eye called?"
+answer = "Iris"
+wrong = ["Pupil", "Cornea", "Retina"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0009"
+subcategory = "Organs"
+difficulty = "easy"
+text = "Which organ produces bile?"
+answer = "Liver"
+wrong = ["Gallbladder", "Pancreas", "Spleen"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder"
+reviewed = false
+
+[[question]]
+id = "anatomy-0010"
+subcategory = "Organs"
+difficulty = "easy"
+text = "Which organ produces the hormone insulin?"
+answer = "Pancreas"
+wrong = ["Liver", "Thyroid", "Adrenal gland"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas"
+reviewed = false
+
+[[question]]
+id = "anatomy-0011"
+subcategory = "Organs"
+difficulty = "easy"
+text = "How many teeth are in a full adult set, wisdom teeth included?"
+answer = "32"
+wrong = ["28", "30", "36"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus"
+reviewed = false
+
+[[question]]
+id = "anatomy-0012"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "Which dome-shaped muscle below the lungs is the main muscle of breathing?"
+answer = "Diaphragm"
+wrong = ["Trapezius", "Pectoralis major", "Rectus abdominis"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-3-the-process-of-breathing"
+reviewed = false
+
+[[question]]
+id = "anatomy-0013"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "What kind of tissue attaches a muscle to a bone?"
+answer = "Tendon"
+wrong = ["Ligament", "Cartilage", "Nerve"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+reviewed = false
+
+[[question]]
+id = "anatomy-0014"
+subcategory = "Cells"
+difficulty = "easy"
+text = "Which pigment, made by melanocytes, gives skin and hair their color?"
+answer = "Melanin"
+wrong = ["Keratin", "Collagen", "Elastin"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+reviewed = false
+
+[[question]]
+id = "anatomy-0015"
+subcategory = "Cells"
+difficulty = "easy"
+text = "Which organelles are known as the powerhouses of the cell?"
+answer = "Mitochondria"
+wrong = ["Ribosomes", "Lysosomes", "Nuclei"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Cell-Organelles-371403.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+reviewed = false
+
+[[question]]
+id = "anatomy-0016"
+subcategory = "Bones"
+difficulty = "medium"
+text = "What is the name of the lower jawbone, the only movable bone of the skull?"
+answer = "Mandible"
+wrong = ["Maxilla", "Zygomatic bone", "Hyoid"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0017"
+subcategory = "Bones"
+difficulty = "medium"
+text = "Which is the smallest bone in the human body?"
+answer = "Stapes"
+wrong = ["Incus", "Malleus", "Hyoid"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://my.clevelandclinic.org/health/body/ossicles"
+reviewed = false
+
+[[question]]
+id = "anatomy-0018"
+subcategory = "Bones"
+difficulty = "medium"
+text = "Which fluid lubricates joints such as the knee and the shoulder?"
+answer = "Synovial fluid"
+wrong = ["Lymph", "Plasma", "Cerebrospinal fluid"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+reviewed = false
+
+[[question]]
+id = "anatomy-0019"
+subcategory = "Nervous system"
+difficulty = "medium"
+text = "Which lobe of the brain processes vision?"
+answer = "Occipital lobe"
+wrong = ["Frontal lobe", "Parietal lobe", "Temporal lobe"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0020"
+subcategory = "Nervous system"
+difficulty = "medium"
+text = "Which part of the brain, at the back below the cerebrum, coordinates balance and movement?"
+answer = "Cerebellum"
+wrong = ["Hypothalamus", "Thalamus", "Hippocampus"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://www.britannica.com/science/cerebellum"
+reviewed = false
+
+[[question]]
+id = "anatomy-0021"
+subcategory = "Nervous system"
+difficulty = "medium"
+text = "Which small gland in the brain secretes melatonin?"
+answer = "Pineal gland"
+wrong = ["Thyroid gland", "Adrenal gland", "Pituitary gland"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-7-the-pineal-gland"
+reviewed = false
+
+[[question]]
+id = "anatomy-0022"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "What is the liquid part of blood called?"
+answer = "Plasma"
+wrong = ["Lymph", "Hemoglobin", "Platelets"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-1-an-overview-of-blood"
+reviewed = false
+
+[[question]]
+id = "anatomy-0023"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Which blood type is known as the universal donor?"
+answer = "O negative"
+wrong = ["AB positive", "A positive", "B negative"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-6-blood-typing"
+reviewed = false
+
+[[question]]
+id = "anatomy-0024"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Which chamber of the heart pumps blood into the aorta?"
+answer = "Left ventricle"
+wrong = ["Right ventricle", "Left atrium", "Right atrium"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Human-Anatomy-337846.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+reviewed = false
+
+[[question]]
+id = "anatomy-0025"
+subcategory = "Organs"
+difficulty = "medium"
+text = "Which flap closes over the windpipe when you swallow?"
+answer = "Epiglottis"
+wrong = ["Uvula", "Soft palate", "Tonsil"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0026"
+subcategory = "Organs"
+difficulty = "medium"
+text = "What is the filtering unit of the kidney called?"
+answer = "Nephron"
+wrong = ["Neuron", "Alveolus", "Villus"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney"
+reviewed = false
+
+[[question]]
+id = "anatomy-0027"
+subcategory = "Organs"
+difficulty = "medium"
+text = "What is the first section of the small intestine, directly after the stomach?"
+answer = "Duodenum"
+wrong = ["Jejunum", "Ileum", "Cecum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines"
+reviewed = false
+
+[[question]]
+id = "anatomy-0028"
+subcategory = "Organs"
+difficulty = "medium"
+text = "Which enzyme in saliva begins the digestion of starch?"
+answer = "Amylase"
+wrong = ["Pepsin", "Lipase", "Trypsin"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus"
+reviewed = false
+
+[[question]]
+id = "anatomy-0029"
+subcategory = "Senses"
+difficulty = "medium"
+text = "Which spiral part of the inner ear turns sound vibrations into nerve signals?"
+answer = "Cochlea"
+wrong = ["Eustachian tube", "Semicircular canals", "Eardrum"]
+source = "https://www.meredithplays.com/?p=55736"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0030"
+subcategory = "Cells"
+difficulty = "medium"
+text = "Which organelle uses enzymes to digest worn-out cell parts?"
+answer = "Lysosome"
+wrong = ["Ribosome", "Golgi apparatus", "Mitochondrion"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Cell-Organelles-371403.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+reviewed = false
+
+[[question]]
+id = "anatomy-0031"
+subcategory = "Muscles"
+difficulty = "hard"
+text = "Which is the longest muscle in the human body?"
+answer = "Sartorius"
+wrong = ["Rectus femoris", "Latissimus dorsi", "Gracilis"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Human-Anatomy-62135.html"
+check = "https://www.kenhub.com/en/library/anatomy/the-sartorius-muscle"
+reviewed = false
+
+[[question]]
+id = "anatomy-0032"
+subcategory = "Muscles"
+difficulty = "hard"
+text = "Which nerve supplies the diaphragm?"
+answer = "Phrenic nerve"
+wrong = ["Vagus nerve", "Sciatic nerve", "Median nerve"]
+source = "https://www.funtrivia.com/trivia-quiz/SciTech/Human-Anatomy-62135.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-4-the-peripheral-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0033"
+subcategory = "Nervous system"
+difficulty = "hard"
+text = "In which space between the meninges does cerebrospinal fluid circulate around the brain?"
+answer = "Subarachnoid space"
+wrong = ["Epidural space", "Subdural space", "Pericardial space"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Human-Anatomy-337846.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0034"
+subcategory = "Nervous system"
+difficulty = "hard"
+text = "Which area of the brain's frontal lobe controls the production of speech?"
+answer = "Broca's area"
+wrong = ["Wernicke's area", "Amygdala", "Hippocampus"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0035"
+subcategory = "Nervous system"
+difficulty = "hard"
+text = "What is the point where fibers of the two optic nerves cross called?"
+answer = "Optic chiasm"
+wrong = ["Optic disc", "Corpus callosum", "Pons"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-2-central-processing"
+reviewed = false
+
+[[question]]
+id = "anatomy-0036"
+subcategory = "Senses"
+difficulty = "hard"
+text = "Which small pit in the retina gives the sharpest vision?"
+answer = "Fovea"
+wrong = ["Optic disc", "Ciliary body", "Sclera"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/General-Human-Anatomy-337846.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0037"
+subcategory = "Bones"
+difficulty = "hard"
+text = "Which bone in the neck does not touch any other bone?"
+answer = "Hyoid"
+wrong = ["Atlas", "Clavicle", "Sternum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0038"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What is the anatomical name of the heel bone?"
+answer = "Calcaneus"
+wrong = ["Talus", "Cuboid", "Navicular"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0039"
+subcategory = "Cells"
+difficulty = "hard"
+text = "Which structure inside the cell nucleus makes the RNA that builds ribosomes?"
+answer = "Nucleolus"
+wrong = ["Centrosome", "Golgi apparatus", "Lysosome"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Cell-Organelles-371403.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-3-the-nucleus-and-dna-replication"
+reviewed = false
+
+[[question]]
+id = "anatomy-0040"
+subcategory = "Cells"
+difficulty = "hard"
+text = "What is the rough endoplasmic reticulum studded with, giving it its name?"
+answer = "Ribosomes"
+wrong = ["Lysosomes", "Vacuoles", "Centrioles"]
+source = "https://funtrivia.com/trivia-quiz/SciTech/Cell-Organelles-371403.html"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+reviewed = false
+
+[[question]]
+id = "anatomy-0041"
+subcategory = "Organs"
+difficulty = "easy"
+text = "Counting inside and out, what is the largest organ of the human body?"
+answer = "Skin"
+wrong = ["Liver", "Lungs", "Brain"]
+source = "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-introduction"
+check = "https://my.clevelandclinic.org/health/articles/10978-skin"
+reviewed = false
+
+[[question]]
+id = "anatomy-0042"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What is the anatomical name for the shoulder blade?"
+answer = "Scapula"
+wrong = ["Clavicle", "Sternum", "Patella"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-1-the-pectoral-girdle"
+reviewed = false
+
+[[question]]
+id = "anatomy-0043"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What is the medical name for the collarbone?"
+answer = "Clavicle"
+wrong = ["Scapula", "Sternum", "Ulna"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-1-the-pectoral-girdle"
+reviewed = false
+
+[[question]]
+id = "anatomy-0044"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Which flat bone in the middle of the chest is also called the breastbone?"
+answer = "Sternum"
+wrong = ["Clavicle", "Scapula", "Hyoid"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-4-the-thoracic-cage"
+reviewed = false
+
+[[question]]
+id = "anatomy-0045"
+subcategory = "Bones"
+difficulty = "easy"
+text = "How many pairs of ribs does a typical adult human have?"
+answer = "12"
+wrong = ["10", "11", "14"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-4-the-thoracic-cage"
+reviewed = false
+
+[[question]]
+id = "anatomy-0046"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What are the bones of the fingers and toes called?"
+answer = "Phalanges"
+wrong = ["Metacarpals", "Carpals", "Tarsals"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0047"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What is the part of the skull that encloses the brain called?"
+answer = "Cranium"
+wrong = ["Mandible", "Sacrum", "Thorax"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0048"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Which forearm bone lies on the little-finger side?"
+answer = "Ulna"
+wrong = ["Radius", "Humerus", "Fibula"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0049"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Which is the larger of the two lower leg bones, known as the shinbone?"
+answer = "Tibia"
+wrong = ["Fibula", "Femur", "Talus"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0050"
+subcategory = "Bones"
+difficulty = "easy"
+text = "What type of joint is the shoulder?"
+answer = "Ball-and-socket"
+wrong = ["Hinge", "Pivot", "Gliding"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+reviewed = false
+
+[[question]]
+id = "anatomy-0051"
+subcategory = "Bones"
+difficulty = "easy"
+text = "Where in the adult body are red blood cells made?"
+answer = "Red bone marrow"
+wrong = ["Liver", "Spleen", "Heart"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-2-production-of-the-formed-elements"
+reviewed = false
+
+[[question]]
+id = "anatomy-0052"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "Which tendon joins the calf muscles to the heel bone?"
+answer = "Achilles tendon"
+wrong = ["Patellar tendon", "Biceps tendon", "Quadriceps tendon"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0053"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "Which is the largest of the three gluteal muscles of the buttock?"
+answer = "Gluteus maximus"
+wrong = ["Gluteus medius", "Gluteus minimus", "Piriformis"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Gluteus_maximus"
+reviewed = false
+
+[[question]]
+id = "anatomy-0054"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "Which group of four shoulder muscles holds the head of the upper arm bone in its socket?"
+answer = "Rotator cuff"
+wrong = ["Hamstrings", "Quadriceps", "Pectorals"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0055"
+subcategory = "Muscles"
+difficulty = "easy"
+text = "Where are the intercostal muscles found?"
+answer = "Between the ribs"
+wrong = ["In the neck", "In the forearm", "Behind the knee"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-4-axial-muscles-of-the-abdominal-wall-and-thorax"
+reviewed = false
+
+[[question]]
+id = "anatomy-0056"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "What are the smallest blood vessels, where exchange with the tissues happens?"
+answer = "Capillaries"
+wrong = ["Arteries", "Veins", "Lymphatic ducts"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-1-structure-and-function-of-blood-vessels"
+reviewed = false
+
+[[question]]
+id = "anatomy-0057"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "Which iron-containing protein in red blood cells carries oxygen?"
+answer = "Hemoglobin"
+wrong = ["Myoglobin", "Collagen", "Fibrinogen"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+reviewed = false
+
+[[question]]
+id = "anatomy-0058"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "What is the largest artery in the human body?"
+answer = "Aorta"
+wrong = ["Carotid artery", "Femoral artery", "Pulmonary artery"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-5-circulatory-pathways"
+reviewed = false
+
+[[question]]
+id = "anatomy-0059"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "What are the two upper chambers of the heart called?"
+answer = "Atria"
+wrong = ["Ventricles", "Septa", "Sinuses"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+reviewed = false
+
+[[question]]
+id = "anatomy-0060"
+subcategory = "Organs"
+difficulty = "easy"
+text = "Which muscular tube carries food from the throat to the stomach?"
+answer = "Esophagus"
+wrong = ["Trachea", "Larynx", "Duodenum"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus"
+reviewed = false
+
+[[question]]
+id = "anatomy-0061"
+subcategory = "Organs"
+difficulty = "easy"
+text = "What is the medical name for the windpipe?"
+answer = "Trachea"
+wrong = ["Esophagus", "Larynx", "Bronchus"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0062"
+subcategory = "Organs"
+difficulty = "easy"
+text = "In which organs are the tiny air sacs called alveoli found?"
+answer = "Lungs"
+wrong = ["Kidneys", "Liver", "Stomach"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0063"
+subcategory = "Organs"
+difficulty = "easy"
+text = "The word \"renal\" refers to which organ?"
+answer = "Kidney"
+wrong = ["Liver", "Lung", "Heart"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney"
+reviewed = false
+
+[[question]]
+id = "anatomy-0064"
+subcategory = "Organs"
+difficulty = "easy"
+text = "Which organ in the upper left abdomen breaks down old red blood cells?"
+answer = "Spleen"
+wrong = ["Appendix", "Gallbladder", "Bladder"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems"
+reviewed = false
+
+[[question]]
+id = "anatomy-0065"
+subcategory = "Senses"
+difficulty = "easy"
+text = "What is the tough white outer layer of the eyeball called?"
+answer = "Sclera"
+wrong = ["Cornea", "Retina", "Choroid"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0066"
+subcategory = "Senses"
+difficulty = "easy"
+text = "The tympanic membrane is better known as what?"
+answer = "Eardrum"
+wrong = ["Ear canal", "Earlobe", "Inner ear"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0067"
+subcategory = "Cells"
+difficulty = "easy"
+text = "How many chromosomes does a typical human body cell contain?"
+answer = "46"
+wrong = ["23", "44", "48"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://medlineplus.gov/genetics/understanding/basics/howmanychromosomes/"
+reviewed = false
+
+[[question]]
+id = "anatomy-0068"
+subcategory = "Cells"
+difficulty = "easy"
+text = "What is the outermost layer of the skin called?"
+answer = "Epidermis"
+wrong = ["Dermis", "Hypodermis", "Periosteum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+reviewed = false
+
+[[question]]
+id = "anatomy-0069"
+subcategory = "Cells"
+difficulty = "easy"
+text = "What is the body's keeping of a stable internal environment called?"
+answer = "Homeostasis"
+wrong = ["Metabolism", "Peristalsis", "Osmosis"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-5-homeostasis"
+reviewed = false
+
+[[question]]
+id = "anatomy-0070"
+subcategory = "Blood and heart"
+difficulty = "easy"
+text = "What is normal human body temperature in degrees Celsius, roughly?"
+answer = "37"
+wrong = ["35", "39", "41"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-5-homeostasis"
+reviewed = false
+
+[[question]]
+id = "anatomy-0071"
+subcategory = "Senses"
+difficulty = "medium"
+text = "Besides rods, which light-sensitive cells of the retina detect color?"
+answer = "Cones"
+wrong = ["Ganglion cells", "Bipolar cells", "Hair cells"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0072"
+subcategory = "Senses"
+difficulty = "medium"
+text = "What clear jelly fills the eyeball between the lens and the retina?"
+answer = "Vitreous humor"
+wrong = ["Aqueous humor", "Synovial fluid", "Lymph"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0073"
+subcategory = "Senses"
+difficulty = "medium"
+text = "Which tube connects the middle ear to the back of the throat?"
+answer = "Eustachian tube"
+wrong = ["Cochlear duct", "Ear canal", "Semicircular canal"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0074"
+subcategory = "Senses"
+difficulty = "medium"
+text = "What is the group name for the hammer, anvil and stirrup of the ear?"
+answer = "Ossicles"
+wrong = ["Phalanges", "Carpals", "Conchae"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0075"
+subcategory = "Senses"
+difficulty = "medium"
+text = "Which Japanese word names the savory basic taste?"
+answer = "Umami"
+wrong = ["Wasabi", "Shoyu", "Dashi"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+reviewed = false
+
+[[question]]
+id = "anatomy-0076"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Which double-walled sac surrounds the heart?"
+answer = "Pericardium"
+wrong = ["Pleura", "Peritoneum", "Meninges"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+reviewed = false
+
+[[question]]
+id = "anatomy-0077"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Which pair of arteries runs up the neck to supply the head and brain?"
+answer = "Carotid arteries"
+wrong = ["Femoral arteries", "Coronary arteries", "Renal arteries"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-5-circulatory-pathways"
+reviewed = false
+
+[[question]]
+id = "anatomy-0078"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Thrombocyte is another name for which part of the blood?"
+answer = "Platelet"
+wrong = ["Red blood cell", "White blood cell", "Plasma"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-4-leukocytes-and-platelets"
+reviewed = false
+
+[[question]]
+id = "anatomy-0079"
+subcategory = "Blood and heart"
+difficulty = "medium"
+text = "Which English physician published the first full account of blood circulation in 1628?"
+answer = "William Harvey"
+wrong = ["Edward Jenner", "Joseph Lister", "Thomas Willis"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://www.britannica.com/biography/William-Harvey"
+reviewed = false
+
+[[question]]
+id = "anatomy-0080"
+subcategory = "Organs"
+difficulty = "medium"
+text = "Which thin membranes cover the lungs and line the chest cavity?"
+answer = "Pleurae"
+wrong = ["Meninges", "Pericardia", "Peritonea"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-2-the-lungs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0081"
+subcategory = "Organs"
+difficulty = "medium"
+text = "What are the tiny finger-like projections lining the small intestine called?"
+answer = "Villi"
+wrong = ["Cilia", "Alveoli", "Rugae"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines"
+reviewed = false
+
+[[question]]
+id = "anatomy-0082"
+subcategory = "Organs"
+difficulty = "medium"
+text = "In which organ, just behind the breastbone, do T cells mature?"
+answer = "Thymus"
+wrong = ["Spleen", "Thyroid", "Tonsils"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems"
+reviewed = false
+
+[[question]]
+id = "anatomy-0083"
+subcategory = "Organs"
+difficulty = "medium"
+text = "Which small glands on the back of the thyroid control blood calcium?"
+answer = "Parathyroid glands"
+wrong = ["Adrenal glands", "Salivary glands", "Pineal glands"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-5-the-parathyroid-glands"
+reviewed = false
+
+[[question]]
+id = "anatomy-0084"
+subcategory = "Organs"
+difficulty = "medium"
+text = "Which tube carries urine from each kidney to the bladder?"
+answer = "Ureter"
+wrong = ["Urethra", "Bile duct", "Vas deferens"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-2-gross-anatomy-of-urine-transport"
+reviewed = false
+
+[[question]]
+id = "anatomy-0085"
+subcategory = "Organs"
+difficulty = "medium"
+text = "What are the waves of muscle contraction that push food along the gut called?"
+answer = "Peristalsis"
+wrong = ["Mastication", "Osmosis", "Emulsification"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-2-digestive-system-processes-and-regulation"
+reviewed = false
+
+[[question]]
+id = "anatomy-0086"
+subcategory = "Organs"
+difficulty = "medium"
+text = "How many lobes does the left lung have?"
+answer = "Two"
+wrong = ["One", "Three", "Four"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-2-the-lungs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0087"
+subcategory = "Nervous system"
+difficulty = "medium"
+text = "Which is the longest and widest nerve in the human body?"
+answer = "Sciatic nerve"
+wrong = ["Femoral nerve", "Ulnar nerve", "Radial nerve"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://www.britannica.com/science/sciatic-nerve"
+reviewed = false
+
+[[question]]
+id = "anatomy-0088"
+subcategory = "Nervous system"
+difficulty = "medium"
+text = "What is the thick band of nerve fibers that joins the two halves of the brain?"
+answer = "Corpus callosum"
+wrong = ["Medulla oblongata", "Brainstem", "Pons"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0089"
+subcategory = "Muscles"
+difficulty = "medium"
+text = "Which shoulder muscle is named after a Greek letter because of its triangular shape?"
+answer = "Deltoid"
+wrong = ["Trapezius", "Rhomboid", "Teres major"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0090"
+subcategory = "Cells"
+difficulty = "medium"
+text = "Which oily substance do glands in the skin release to protect skin and hair?"
+answer = "Sebum"
+wrong = ["Keratin", "Melanin", "Mucus"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-2-accessory-structures-of-the-skin"
+reviewed = false
+
+[[question]]
+id = "anatomy-0091"
+subcategory = "Cells"
+difficulty = "medium"
+text = "Which is the most abundant protein in the human body?"
+answer = "Collagen"
+wrong = ["Keratin", "Hemoglobin", "Actin"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://my.clevelandclinic.org/health/articles/23089-collagen"
+reviewed = false
+
+[[question]]
+id = "anatomy-0092"
+subcategory = "Cells"
+difficulty = "medium"
+text = "What is the body tissue that stores fat called?"
+answer = "Adipose tissue"
+wrong = ["Epithelial tissue", "Cartilage", "Osseous tissue"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-3-connective-tissue-supports-and-protects"
+reviewed = false
+
+[[question]]
+id = "anatomy-0093"
+subcategory = "Bones"
+difficulty = "medium"
+text = "What is the bone of the upper jaw called?"
+answer = "Maxilla"
+wrong = ["Mandible", "Vomer", "Sphenoid"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0094"
+subcategory = "Bones"
+difficulty = "medium"
+text = "How many bones are in one adult human foot?"
+answer = "26"
+wrong = ["20", "28", "33"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://www.arthritis.org/health-wellness/about-arthritis/where-it-hurts/anatomy-of-the-foot"
+reviewed = false
+
+[[question]]
+id = "anatomy-0095"
+subcategory = "Bones"
+difficulty = "medium"
+text = "The scaphoid is a bone in which part of the body?"
+answer = "Wrist"
+wrong = ["Ankle", "Skull", "Spine"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0096"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What is the name of the second cervical vertebra?"
+answer = "Axis"
+wrong = ["Coccyx", "Vertebra prominens", "Sacrum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+reviewed = false
+
+[[question]]
+id = "anatomy-0097"
+subcategory = "Bones"
+difficulty = "hard"
+text = "The name \"coccyx\" comes from the Greek word for which bird?"
+answer = "Cuckoo"
+wrong = ["Sparrow", "Crow", "Pigeon"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Coccyx"
+reviewed = false
+
+[[question]]
+id = "anatomy-0098"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What is the anatomical name for the cheekbone?"
+answer = "Zygomatic bone"
+wrong = ["Sphenoid bone", "Lacrimal bone", "Temporal bone"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0099"
+subcategory = "Bones"
+difficulty = "hard"
+text = "Which skull bone between the eyes has a sieve-like plate for the nerves of smell?"
+answer = "Ethmoid"
+wrong = ["Sphenoid", "Vomer", "Lacrimal"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+reviewed = false
+
+[[question]]
+id = "anatomy-0100"
+subcategory = "Bones"
+difficulty = "hard"
+text = "Which ankle bone sits on the heel bone and joins the foot to the leg?"
+answer = "Talus"
+wrong = ["Navicular", "Cuboid", "Cuneiform"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0101"
+subcategory = "Bones"
+difficulty = "hard"
+text = "Which wrist bone has a hook-like projection on its palm side?"
+answer = "Hamate"
+wrong = ["Lunate", "Pisiform", "Trapezoid"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+reviewed = false
+
+[[question]]
+id = "anatomy-0102"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What is the thin membrane lining the inner marrow cavity of a bone called?"
+answer = "Endosteum"
+wrong = ["Periosteum", "Perichondrium", "Endometrium"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-3-bone-structure"
+reviewed = false
+
+[[question]]
+id = "anatomy-0103"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What kind of joint is found at the base of the thumb?"
+answer = "Saddle joint"
+wrong = ["Hinge joint", "Pivot joint", "Plane joint"]
+source = "https://www.trivianerd.com/topic/human-body-trivia"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+reviewed = false
+
+[[question]]
+id = "anatomy-0104"
+subcategory = "Bones"
+difficulty = "hard"
+text = "What is a small bone that forms inside a tendon, like the kneecap, called?"
+answer = "Sesamoid bone"
+wrong = ["Sutural bone", "Irregular bone", "Flat bone"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-2-bone-classification"
+reviewed = false
+
+[[question]]
+id = "anatomy-0105"
+subcategory = "Muscles"
+difficulty = "hard"
+text = "Which calf muscle lies beneath the gastrocnemius and shares its tendon?"
+answer = "Soleus"
+wrong = ["Gracilis", "Tibialis anterior", "Peroneus longus"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs"
+reviewed = false
+
+[[question]]
+id = "anatomy-0106"
+subcategory = "Blood and heart"
+difficulty = "hard"
+text = "Which bundle of fibers carries the heartbeat signal from the AV node to the ventricles?"
+answer = "Bundle of His"
+wrong = ["Sinoatrial node", "Chordae tendineae", "Papillary muscle"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-2-cardiac-muscle-and-electrical-activity"
+reviewed = false
+
+[[question]]
+id = "anatomy-0107"
+subcategory = "Blood and heart"
+difficulty = "hard"
+text = "What is the thick muscular middle layer of the heart wall called?"
+answer = "Myocardium"
+wrong = ["Endocardium", "Epicardium", "Pericardium"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+reviewed = false
+
+[[question]]
+id = "anatomy-0108"
+subcategory = "Organs"
+difficulty = "hard"
+text = "What is the pouch at the start of the large intestine, where the appendix hangs, called?"
+answer = "Cecum"
+wrong = ["Sigmoid colon", "Rectum", "Ileum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines"
+reviewed = false
+
+[[question]]
+id = "anatomy-0109"
+subcategory = "Organs"
+difficulty = "hard"
+text = "What is the ridge of cartilage where the trachea splits into the two main bronchi?"
+answer = "Carina"
+wrong = ["Glottis", "Hilum", "Cricoid"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0110"
+subcategory = "Organs"
+difficulty = "hard"
+text = "What is the medical name for earwax?"
+answer = "Cerumen"
+wrong = ["Sebum", "Mucin", "Serum"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://medlineplus.gov/ency/article/000979.htm"
+reviewed = false
+
+[[question]]
+id = "anatomy-0111"
+subcategory = "Nervous system"
+difficulty = "hard"
+text = "Which almond-shaped structure deep in the temporal lobe is central to fear?"
+answer = "Amygdala"
+wrong = ["Hippocampus", "Thalamus", "Putamen"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://www.britannica.com/science/amygdala"
+reviewed = false
+
+[[question]]
+id = "anatomy-0112"
+subcategory = "Nervous system"
+difficulty = "hard"
+text = "Which cranial nerve carries most of the body's parasympathetic fibers?"
+answer = "Vagus nerve"
+wrong = ["Facial nerve", "Trigeminal nerve", "Oculomotor nerve"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-1-divisions-of-the-autonomic-nervous-system"
+reviewed = false
+
+[[question]]
+id = "anatomy-0113"
+subcategory = "History"
+difficulty = "hard"
+text = "Which Flemish anatomist wrote \"De humani corporis fabrica\" in 1543?"
+answer = "Andreas Vesalius"
+wrong = ["Gabriele Falloppio", "Hieronymus Fabricius", "Bartolomeo Eustachi"]
+source = "https://watercoolertrivia.com/trivia-questions/anatomy-trivia-questions"
+check = "https://www.britannica.com/biography/Andreas-Vesalius"
+reviewed = false

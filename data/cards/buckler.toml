@@ -1,0 +1,13 @@
+id = "buckler"
+name = "Buckler"
+tier = 0
+kind = "armor"
+text = "2 armor. Three Bucklers combine into a Tower Shield"
+golden = false
+shop = false
+copies = 0
+merges_into = "tower_shield"
+
+[[effects]]
+effect = "Armor"
+amount = 2

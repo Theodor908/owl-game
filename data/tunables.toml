@@ -1,0 +1,49 @@
+# Every number that is not on a card or hero. Placeholders, tuned from sim results.
+max_tavern_level = 6
+gold_start = 3
+gold_per_turn = 1
+gold_cap = 10
+gold_carries_over = false
+card_cost = 3
+sell_value = 1
+reroll_cost = 1
+upgrade_costs = [5, 7, 8, 9, 10]
+shop_size = [3, 4, 4, 5, 5, 6]
+pool_copies = [12, 11, 10, 8, 6, 4]
+board_slots = 7
+hand_size = 10
+damage_base = 2
+max_battle_damage = 15
+overtime_turn = 12
+endgame_min_turn = 5
+split_threshold = 40
+house_questions = 2
+weighted_questions = 4
+answer_time = 9
+answer_time_bonus_cap = 3
+endgame_answer_time = 10
+reflect_cap = 80
+category_bonus_cards = 3
+category_bonus_damage = 2
+category_bonus_damage_golden = 3
+zero_zero_cap = 1
+golden_reward_choices = 3
+# Percent chance that a question's base difficulty is easy, medium, hard.
+difficulty_odds = [40, 40, 20]
+potion_chance_base = 2
+potion_chance_per_turn = 1
+skull_healer_weight = 3
+herodotus_shield = 3
+hero_offer_size = 2
+# Lobby pacing. Seconds for phases, milliseconds for pauses.
+hero_select_seconds = 30
+shop_seconds = 30
+category_reveal_ms = 2000
+answer_reveal_ms = 2500
+answer_grace_ms = 300
+# How far behind the match an eliminated player watches the others.
+spectate_delay_ms = 5000
+categories = [
+  "history", "flora_and_fauna", "cars_and_mechanics", "film", "physics",
+  "philosophy", "theater", "anatomy", "geography", "sport",
+]
