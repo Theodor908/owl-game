@@ -22,7 +22,8 @@ weighted_questions = 4
 answer_time = 9
 answer_time_bonus_cap = 3
 endgame_answer_time = 10
-reflect_cap = 80
+# A hero may set its own cap with a reflect_cap param (Herophilus: 80).
+reflect_cap = 60
 category_bonus_cards = 3
 category_bonus_damage = 2
 category_bonus_damage_golden = 3
@@ -39,6 +40,12 @@ hero_offer_size = 2
 hero_select_seconds = 30
 shop_seconds = 30
 category_reveal_ms = 2000
+# After the category, the question and its answers are shown to be read before the
+# answers open and the answer time starts: a base, plus a little for every word of the
+# question and its four answers, capped. The same for both players. All 0 means none.
+reading_base_ms = 6000
+reading_per_word_ms = 150
+reading_max_ms = 10000
 answer_reveal_ms = 2500
 answer_grace_ms = 300
 # How far behind the match an eliminated player watches the others.

@@ -53,6 +53,8 @@ pub struct Tunables {
     pub answer_time: u32,
     pub answer_time_bonus_cap: u32,
     pub endgame_answer_time: u32,
+    /// The most reflect a player can have, in percent, unless their hero
+    /// sets its own cap with a `reflect_cap` param.
     pub reflect_cap: u32,
     pub category_bonus_cards: u32,
     pub category_bonus_damage: u32,
@@ -71,6 +73,12 @@ pub struct Tunables {
     pub shop_seconds: u32,
     /// Pause between showing the category and opening the question.
     pub category_reveal_ms: u32,
+    /// Time to read a question and its answers before they open and the
+    /// answer time starts: the base, plus this much per word of the question
+    /// and its four answers, capped. See `Tunables::reading_ms`.
+    pub reading_base_ms: u32,
+    pub reading_per_word_ms: u32,
+    pub reading_max_ms: u32,
     /// Pause on the revealed answer before the next question.
     pub answer_reveal_ms: u32,
     /// How late an answer may arrive after its deadline and still count.
@@ -260,7 +268,16 @@ impl HeroDef {
     pub fn param(&self, key: &str) -> u32 {
         self.params.get(key).copied().unwrap_or(0)
     }
+
+    /// The most reflect this hero's player can have, in percent: the hero's
+    /// own `reflect_cap` param, or the tunable that holds for everyone else.
+    pub fn reflect_cap(&self, tunables: &Tunables) -> u32 {
+        self.params.get(REFLECT_CAP).copied().unwrap_or(tunables.reflect_cap)
+    }
 }
+
+/// The hero param that overrides the tunable reflect cap.
+const REFLECT_CAP: &str = "reflect_cap";
 
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -332,6 +349,9 @@ impl Content {
                 if !raw.params.contains_key(*key) {
                     return Err(invalid(format!("hero {} is missing param {key}", raw.id)));
                 }
+            }
+            if raw.params.get(REFLECT_CAP).is_some_and(|&cap| cap > 100) {
+                return Err(invalid(format!("hero {}: {REFLECT_CAP} must be at most 100", raw.id)));
             }
             heroes.push(HeroDef {
                 id: raw.id,
@@ -461,7 +481,7 @@ fn required_params(kind: HeroKind) -> &'static [&'static str] {
         HeroKind::Newton => &["questions", "removed", "cost", "chance"],
         HeroKind::Nietzsche => &["cost", "options"],
         HeroKind::Shakespeare => &["skull_chance", "skulls", "skip_above", "skips"],
-        HeroKind::Herophilus => &["reflect"],
+        HeroKind::Herophilus => &["reflect", REFLECT_CAP],
         HeroKind::MarcoPolo => &["cost"],
         HeroKind::Pheidippides => &["per_correct", "max"],
         HeroKind::Cleopatra => &["cap_percent"],
@@ -482,11 +502,32 @@ fn check_tunables(t: &Tunables) -> Result<(), ContentError> {
     if !ok {
         return Err(invalid("tunables: list lengths do not match max_tavern_level".into()));
     }
+    if t.reflect_cap > 100 {
+        return Err(invalid("tunables: reflect_cap must be at most 100".into()));
+    }
     if t.difficulty_odds.iter().sum::<u32>() != 100 {
         return Err(invalid("tunables: difficulty_odds must add up to 100".into()));
     }
+    if t.reading_base_ms > t.reading_max_ms || t.reading_max_ms > MAX_READING_MS {
+        return Err(invalid(format!(
+            "tunables: reading_base_ms must not exceed reading_max_ms, which must be at most {MAX_READING_MS}"
+        )));
+    }
     Ok(())
 }
+
+impl Tunables {
+    /// How long a question of `words` words (its text and four answers
+    /// together) is read before its answers open. Both players read the
+    /// same question, so both get the same time.
+    pub fn reading_ms(&self, words: u32) -> u32 {
+        self.reading_per_word_ms.saturating_mul(words).saturating_add(self.reading_base_ms).min(self.reading_max_ms)
+    }
+}
+
+/// The longest reading time the tunables may set. Anything longer is a typo
+/// (seconds written as milliseconds the other way round, say), not a choice.
+const MAX_READING_MS: u32 = 30_000;
 
 fn category_of(t: &Tunables, slug: &str) -> Result<Category, ContentError> {
     t.categories
@@ -519,4 +560,48 @@ fn parse<T: DeserializeOwned>(path: &Path) -> Result<T, ContentError> {
         .map_err(|source| ContentError::Io { path: path.to_path_buf(), source })?;
     toml::from_str(&text)
         .map_err(|source| ContentError::Parse { path: path.to_path_buf(), source: Box::new(source) })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn tunables() -> Tunables {
+        parse(Path::new(concat!(env!("CARGO_MANIFEST_DIR"), "/../../data/tunables.toml"))).expect("tunables parse")
+    }
+
+    #[test]
+    fn a_short_question_is_read_for_the_base_and_a_little_per_word() {
+        let t = tunables();
+        assert_eq!((t.reading_base_ms, t.reading_per_word_ms, t.reading_max_ms), (6000, 150, 10000));
+        // "What is the capital of France?" and four one-word answers.
+        let words = crate::question::word_count("What is the capital of France?", ["Paris", "Lyon", "Nice", "Lille"]);
+        assert_eq!(words, 10);
+        assert_eq!(t.reading_ms(words), 6000 + 10 * 150);
+        assert_eq!(t.reading_ms(0), 6000);
+    }
+
+    #[test]
+    fn a_long_question_is_read_for_at_most_the_cap() {
+        let t = tunables();
+        assert_eq!(t.reading_ms(26), 9900);
+        assert_eq!(t.reading_ms(27), 10000);
+        assert_eq!(t.reading_ms(200), 10000);
+        assert_eq!(t.reading_ms(u32::MAX), 10000);
+    }
+
+    #[test]
+    fn reading_time_may_be_zero_but_not_absurdly_long() {
+        let mut t = tunables();
+        (t.reading_base_ms, t.reading_per_word_ms, t.reading_max_ms) = (0, 0, 0);
+        assert!(check_tunables(&t).is_ok(), "no reading time is allowed");
+        assert_eq!(t.reading_ms(40), 0);
+        t.reading_max_ms = MAX_READING_MS;
+        assert!(check_tunables(&t).is_ok());
+        t.reading_max_ms = MAX_READING_MS + 1;
+        assert!(check_tunables(&t).is_err());
+        t.reading_max_ms = 5000;
+        t.reading_base_ms = 6000;
+        assert!(check_tunables(&t).is_err(), "the base cannot exceed the cap");
+    }
 }

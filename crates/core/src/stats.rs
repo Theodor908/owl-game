@@ -146,7 +146,7 @@ pub fn fold_stats(player: &Player, content: &Content) -> BattleStats {
     }
     stats.weight_total = sum.min(100);
     stats.time_bonus = stats.time_bonus.min(t.answer_time_bonus_cap);
-    stats.reflect = stats.reflect.min(t.reflect_cap);
+    stats.reflect = stats.reflect.min(hero.map_or(t.reflect_cap, |h| h.reflect_cap(t)));
     stats.reflect_pierce = stats.reflect_pierce.min(100);
     stats.armor_pierce_percent = stats.armor_pierce_percent.min(100);
     stats.zero_zero = stats.zero_zero.min(t.zero_zero_cap);

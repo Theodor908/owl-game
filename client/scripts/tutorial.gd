@@ -182,8 +182,8 @@ func _steps() -> Array:
 			var battle = _battle()
 			return battle != null and battle.has("question_text") and not battle["locked"],
 			"Answer",
-			"Pick one of the four answers. You have %d seconds, and cards can add up to %d more. The question ends as soon as you have both answered. Only being right counts, never being fast." % [
-				_number("answer_time"), _number("answer_time_bonus_cap")]],
+			"First you get %d seconds or more, longer for a long question, to read the question and its answers. Then pick one of the four answers. You have %d seconds, and cards can add up to %d more. The question ends as soon as you have both answered. Only being right counts, never being fast." % [
+				roundi(_number("reading_base_ms") / 1000.0), _number("answer_time"), _number("answer_time_bonus_cap")]],
 		["damage", "battle", "", func() -> bool: return _happened.has("battle_scored"),
 			"Damage",
 			"The player with more right answers wins and deals damage: the difference in right answers, plus %d, plus their library level, plus what their cards add. Armor takes damage before health does. An equal score is a tie and deals nothing." % _number("damage_base")],

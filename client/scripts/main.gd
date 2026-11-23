@@ -975,6 +975,12 @@ func _autoplay_step() -> void:
 				else:
 					_shoot("battle_reveal")
 				return
+			# The question is read first; the host refuses an answer before its answers open.
+			if battle.get("answers_at") != null and Transport.now() < int(battle["answers_at"]):
+				# Pictured halfway through, so the reading bar shows.
+				if Transport.now() * 2 >= int(battle["opens_at"]) + int(battle["answers_at"]):
+					_shoot("endgame_reading" if endgame else "battle_reading")
+				return
 			if battle["locked"] or not battle.has("question_text"):
 				return
 			if _shot_first("endgame_question" if endgame else "battle_question"):

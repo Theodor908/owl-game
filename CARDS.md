@@ -25,7 +25,7 @@ Conventions:
 ## Tier 2
 | Card | Type | Effect |
 |---|---|---|
-| Mirror Shard | Reflect | 15% reflect |
+| Mirror Shard | Reflect | 10% reflect |
 | Scales of Judgment | Tie | Tie-breaker: on a tie where both got at least one right, deal half your tavern level, minimum 1. Cancels if both hold one |
 | Coin Purse | Economy | If you got 4 or more right in the battle, +1 gold next shop |
 | Consolation | Defense | When you lose a battle, add a 2-armor shield card to your hand. Three of these shields combine into one 6-armor shield. A shield must be placed on the board to count |
@@ -42,7 +42,7 @@ Conventions:
 | Long Hourglass | Time | +2 s answer time |
 | Last Laugh | Tie | On a 0-0 tie, deal 1 damage. Cancels if both hold one |
 | Second Opinion | Help | Once per battle, on a question you choose, remove one wrong answer. Can be used on the same question as Newton's Flaming Laser Sword |
-| Thorned Mirror | Reflect | 25% reflect |
+| Thorned Mirror | Reflect | 20% reflect |
 | Primer | Difficulty | Questions in your top category are one step easier, for both players |
 | Treatise | Difficulty | Questions in your top category are one step harder, for both players |
 | Abridged Edition | Difficulty | Questions in your top category are always easy, for both players. Counts as two steps against cards that make them harder |
@@ -63,7 +63,7 @@ Conventions:
 | [Category] Master | Category | +25% chance of [category] on your weighted questions |
 | Steel Bulwark | Armor | 10 armor. Breaks when depleted |
 | Perfect Mind | Damage | If you answer all 6 questions correctly and win, double your damage |
-| Hall of Mirrors | Reflect | 40% reflect |
+| Hall of Mirrors | Reflect | 30% reflect |
 | Narrowed Choice (cost 8) | Endgame effect | In the endgame, you choose between 3 answers instead of 4 |
 | Deep Breath (cost 8) | Endgame effect | In the endgame, +3 s answer time |
 

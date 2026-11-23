@@ -17,7 +17,7 @@ const BY_ID := {
 	"pheidippides": ["Marathon", "When you win a battle, each of your own correct answers adds 1 damage, up to 6."],
 	"cleopatra": ["Royal Treasury", "Gold you do not spend carries over to the next turn. Your gold stops at one and a half times the usual cap."],
 	"marie_curie": ["Half-Life", "Only half of your opponent's armor counts against your damage, rounded down. This also works in the endgame."],
-	"herophilus": ["Open Heart", "25% of any damage he takes is reflected back at the opponent. Cards can raise the percentage."],
+	"herophilus": ["Open Heart", "25% of any damage he takes is reflected back at the opponent. Cards can raise the percentage up to 80%, where everyone else stops at 60%."],
 }
 
 

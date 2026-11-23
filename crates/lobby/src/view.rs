@@ -22,9 +22,21 @@ use crate::Millis;
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct Outgoing {
     pub event: Event,
-    /// When the question opens, or when the shop phase began.
+    /// When the question shows, or when the shop phase began.
     pub opens_at: Option<Millis>,
+    /// When the question's answers open and its answer time starts. Only on
+    /// `QuestionShown`.
+    pub answers_at: Option<Millis>,
     pub deadline: Option<Millis>,
+}
+
+/// When an open question shows, when its answers open, and when one
+/// player's answer time ends.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct QuestionTiming {
+    pub opens_at: Millis,
+    pub answers_at: Millis,
+    pub deadline: Millis,
 }
 
 /// What everyone may know about a player.
@@ -77,8 +89,9 @@ pub struct Spectated {
     pub battle: Option<BattleView>,
 }
 
-/// The living players, as an eliminated player may watch them.
-pub fn spectated(state: &GameState) -> Vec<Spectated> {
+/// The living players, as an eliminated player may watch them. `timing`
+/// gives the open question of a player, `now` is the time of the snapshot.
+pub fn spectated(state: &GameState, timing: impl Fn(PlayerId) -> Option<QuestionTiming>, now: Millis) -> Vec<Spectated> {
     state
         .players
         .iter()
@@ -90,7 +103,7 @@ pub fn spectated(state: &GameState) -> Vec<Spectated> {
             gold: p.gold,
             tavern: p.tavern,
             hand_size: p.hand.len(),
-            battle: battle_view(state, p.id, None),
+            battle: battle_view(state, p.id, timing(p.id)).map(|b| b.at(now)),
         })
         .collect()
 }
@@ -138,7 +151,10 @@ pub struct BattleView {
     pub second_opinion_left: u32,
     pub sword_left: u32,
     pub oracle_left: u32,
+    /// When the question shows. Its answers can be read but not chosen until `answers_at`.
     pub opens_at: Option<Millis>,
+    /// When the answers open and the answer time starts.
+    pub answers_at: Option<Millis>,
     pub deadline: Option<Millis>,
 }
 
@@ -166,7 +182,7 @@ pub fn player_view(
     state: &GameState,
     content: &Content,
     you: PlayerId,
-    question_timing: Option<(Millis, Millis)>,
+    question_timing: Option<QuestionTiming>,
     phase_deadline: Option<Millis>,
     recent: &[Vec<RecentBattle>],
     spectate: Vec<Spectated>,
@@ -206,8 +222,22 @@ pub fn player_view(
     }
 }
 
-fn battle_view(state: &GameState, you: PlayerId, timing: Option<(Millis, Millis)>) -> Option<BattleView> {
-    let (opens_at, deadline) = timing.unzip();
+impl BattleView {
+    /// The view as it stands at `now`. No one can lock in while the question
+    /// is read; a ghost has answered at once in the engine, so its answer is
+    /// hidden until the answers open.
+    pub fn at(mut self, now: Millis) -> Self {
+        if self.answers_at.is_some_and(|at| now < at) {
+            self.opponent_locked = false;
+        }
+        self
+    }
+}
+
+fn battle_view(state: &GameState, you: PlayerId, timing: Option<QuestionTiming>) -> Option<BattleView> {
+    let opens_at = timing.map(|t| t.opens_at);
+    let answers_at = timing.map(|t| t.answers_at);
+    let deadline = timing.map(|t| t.deadline);
     if let Some(endgame) = &state.endgame
         && state.phase == Phase::Endgame
     {
@@ -232,6 +262,7 @@ fn battle_view(state: &GameState, you: PlayerId, timing: Option<(Millis, Millis)
             sword_left: 0,
             oracle_left: endgame.oracle_left[side],
             opens_at,
+            answers_at,
             deadline,
         });
     }
@@ -262,6 +293,7 @@ fn battle_view(state: &GameState, you: PlayerId, timing: Option<(Millis, Millis)
         sword_left: mine.sword_left,
         oracle_left: mine.oracle_left,
         opens_at,
+        answers_at,
         deadline,
     })
 }

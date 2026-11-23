@@ -41,6 +41,17 @@ pub struct Question {
     /// nothing left of the wanted difficulty gives the nearest one.
     pub difficulty: Difficulty,
     pub correct: u8,
+    /// Words in the question and its four answers, counted by the source
+    /// that holds the text. Sets how long the question is read before its
+    /// answers open (`Tunables::reading_ms`).
+    #[serde(default)]
+    pub words: u32,
+}
+
+/// Words in a question and its answers, split on whitespace.
+pub fn word_count<'a>(text: &str, options: impl IntoIterator<Item = &'a str>) -> u32 {
+    let count = |s: &str| s.split_whitespace().count() as u32;
+    count(text) + options.into_iter().map(count).sum::<u32>()
 }
 
 /// A question bank. The prototype reads files; the real game uses a database.
@@ -63,6 +74,12 @@ pub struct SyntheticQuestions {
     next: u64,
 }
 
+impl SyntheticQuestions {
+    /// Words given to every synthetic question: about what a real question
+    /// and its four answers come to, so reading times stay realistic.
+    pub const TYPICAL_WORDS: u32 = 20;
+}
+
 impl QuestionSource for SyntheticQuestions {
     fn draw(
         &mut self,
@@ -73,6 +90,12 @@ impl QuestionSource for SyntheticQuestions {
         rng: &mut LobbyRng,
     ) -> Question {
         self.next += 1;
-        Question { id: QuestionId(self.next), category, difficulty, correct: rng.below(u32::from(OPTIONS)) as u8 }
+        Question {
+            id: QuestionId(self.next),
+            category,
+            difficulty,
+            correct: rng.below(u32::from(OPTIONS)) as u8,
+            words: Self::TYPICAL_WORDS,
+        }
     }
 }

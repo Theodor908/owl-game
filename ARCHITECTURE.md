@@ -72,6 +72,7 @@ Before events leave the lobby they pass through a per-player filter. Each player
 ### Timing and latency
 - Deadlines are sent to clients as server timestamps. The client shows a countdown; the server decides.
 - An answer counts if the server receives it before the deadline plus a small grace window (tunable).
+- A question is shown at `opens_at` and read until `answers_at`; the answer time runs from then to the deadline. `lobby` refuses an answer or a help sent while the question is read. That check is in `lobby`, not `core`, because `core` never reads a clock and a replayed log carries no times.
 - Answer speed never affects results (game rule), so latency only matters at the deadline itself.
 - Reveal pauses (category reveal, answer reveal) are fixed server-side durations, so both players stay in step regardless of device speed. Game logic never waits for a client animation.
 

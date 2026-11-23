@@ -2,8 +2,9 @@
 
 use std::sync::Arc;
 
-use owl_core::{Command, Content, Event, HeroId, Phase, PlayerId, RuleError, SyntheticQuestions};
+use owl_core::{Command, Content, Event, Help, HeroId, Phase, PlayerId, RuleError, SyntheticQuestions};
 use owl_lobby::bot::{Bot, Knowledge, Strategy};
+use owl_lobby::placeholder::{PlaceholderQuestions, Texts};
 use owl_lobby::{Lobby, LobbyError, Millis, Outgoing, Seat, replay};
 
 const P0: PlayerId = PlayerId(0);
@@ -47,6 +48,11 @@ fn in_shop() -> Lobby {
 
 /// The same lobby with the shop over: the first question was shown at `SHOP_END`.
 const SHOP_END: Millis = 1 + 30_000;
+/// How long a synthetic question (20 words) is read before its answers open:
+/// 6 s, plus 150 ms a word.
+const READING: Millis = 9_000;
+/// When the first question's answers open: the category for 2 s, then the reading time.
+const ANSWERS_OPEN: Millis = SHOP_END + 2_000 + READING;
 fn in_battle() -> Lobby {
     let mut lobby = in_shop();
     lobby.tick(SHOP_END);
@@ -151,12 +157,111 @@ fn an_answer_is_refused_before_the_question_opens() {
     let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
     // The category is shown for 2 seconds before the question opens.
     assert_eq!(lobby.handle(SHOP_END + 1_999, P0, answer.clone()), Err(LobbyError::TooEarly));
-    assert_eq!(lobby.handle(SHOP_END + 2_000, P0, answer), Ok(()));
+    assert_eq!(lobby.handle(ANSWERS_OPEN, P0, answer), Ok(()));
+}
+
+#[test]
+fn an_answer_or_a_help_is_refused_while_the_question_is_being_read() {
+    let mut lobby = in_battle();
+    let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
+    let help = Command::UseHelp { player: P0, help: Help::SecondOpinion };
+    let reading = SHOP_END + 2_000;
+    for now in [reading, ANSWERS_OPEN - 1] {
+        assert_eq!(lobby.handle(now, P0, answer.clone()), Err(LobbyError::StillReading));
+        assert_eq!(lobby.handle(now, P0, help.clone()), Err(LobbyError::StillReading));
+    }
+    assert_eq!(LobbyError::StillReading.to_string(), "the answers are not open yet");
+    assert!(lobby.log().iter().all(|c| !matches!(c, Command::SubmitAnswer { .. } | Command::UseHelp { .. })));
+    assert_eq!(lobby.handle(ANSWERS_OPEN, P0, answer), Ok(()));
+}
+
+#[test]
+fn the_answer_deadline_counts_from_the_end_of_the_reading_time() {
+    assert_eq!(Millis::from(content().tunables.reading_ms(SyntheticQuestions::TYPICAL_WORDS)), READING);
+    let mut lobby = in_battle();
+    let shown = lobby.drain(P0).into_iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("shown");
+    assert_eq!(shown.opens_at, Some(SHOP_END + 2_000));
+    assert_eq!(shown.answers_at, Some(ANSWERS_OPEN));
+    assert_eq!(shown.deadline, Some(ANSWERS_OPEN + 9_000));
+    let battle = lobby.view(P0).battle.expect("in a battle");
+    assert_eq!((battle.opens_at, battle.answers_at, battle.deadline), (shown.opens_at, shown.answers_at, shown.deadline));
+    // Nothing times out while the question is being read.
+    lobby.tick(ANSWERS_OPEN + 9_000 + 300);
+    assert_eq!(lobby.state().battles[0].current, 0, "still on the first question");
+}
+
+#[test]
+fn both_players_read_a_question_for_the_same_time_set_by_its_words() {
+    // Placeholder sums: "What is 12 + 34?" and four numbers, 9 words.
+    let texts = Texts::default();
+    let seats = vec![Seat::Human, Seat::Human];
+    let source = Box::new(PlaceholderQuestions::new(SEED, texts.clone()));
+    let mut lobby = Lobby::new(content(), seats, SEED, source, 0).expect("enough heroes");
+    for player in [P0, P1] {
+        let hero = offer(&lobby, player)[0];
+        lobby.handle(0, player, Command::PickHero { player, hero }).unwrap();
+    }
+    lobby.tick(1);
+    lobby.tick(SHOP_END);
+    let shown = |events: Vec<Outgoing>| {
+        events.into_iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("shown")
+    };
+    let (a, b) = (shown(lobby.drain(P0)), shown(lobby.drain(P1)));
+    let question = lobby.state().battles[0].plan[0].question;
+    let (text, options) = texts.get(question.id).expect("text");
+    let words = text.split_whitespace().count() + options.iter().map(|o| o.split_whitespace().count()).sum::<usize>();
+    assert_eq!((question.words, words), (9, 9));
+    let reading = 6_000 + 9 * 150;
+    for item in [&a, &b] {
+        assert_eq!(item.opens_at, Some(SHOP_END + 2_000));
+        assert_eq!(item.answers_at, Some(SHOP_END + 2_000 + reading));
+    }
+    let (mine, theirs) = (lobby.view(P0).battle.unwrap(), lobby.view(P1).battle.unwrap());
+    assert_eq!((mine.answers_at, theirs.answers_at), (a.answers_at, a.answers_at));
+}
+
+#[test]
+fn a_ghost_is_not_shown_as_answered_until_the_answers_open() {
+    let mut lobby = humans(3);
+    for player in [P0, P1, PlayerId(2)] {
+        let hero = offer(&lobby, player)[0];
+        lobby.handle(0, player, Command::PickHero { player, hero }).unwrap();
+    }
+    lobby.tick(1);
+    lobby.tick(SHOP_END);
+    let fighter = (0..3).map(PlayerId).find(|&p| lobby.view(p).battle.is_some_and(|b| b.ghost_of.is_some()));
+    let fighter = fighter.expect("someone fights a ghost");
+    assert!(!lobby.view(fighter).battle.expect("in a battle").opponent_locked);
+    lobby.tick(ANSWERS_OPEN);
+    assert!(lobby.view(fighter).battle.expect("in a battle").opponent_locked);
+}
+
+#[test]
+fn the_endgame_question_is_read_before_its_ten_seconds_start() {
+    let mut lobby = in_shop();
+    let mut now = SHOP_END;
+    while lobby.state().phase != Phase::Endgame {
+        now += 250;
+        lobby.tick(now);
+        assert!(now < 60 * 60 * 1000, "two idle players never reached the endgame");
+    }
+    let shown = lobby
+        .drain(P0)
+        .into_iter()
+        .rev()
+        .find(|o| matches!(o.event, Event::QuestionShown { .. }))
+        .expect("the first endgame question");
+    let (opens_at, answers_at) = (shown.opens_at.unwrap(), shown.answers_at.unwrap());
+    assert_eq!(answers_at, opens_at + READING);
+    assert_eq!(shown.deadline, Some(answers_at + 10_000));
+    let answer = Command::SubmitAnswer { player: P0, choice: Some(0) };
+    assert_eq!(lobby.handle(answers_at - 1, P0, answer.clone()), Err(LobbyError::StillReading));
+    assert_eq!(lobby.handle(answers_at, P0, answer), Ok(()));
 }
 
 #[test]
 fn an_answer_counts_within_the_grace_window_and_is_refused_after_it() {
-    let closes = SHOP_END + 2_000 + 9_000;
+    let closes = ANSWERS_OPEN + 9_000;
     let mut lobby = in_battle();
     assert_eq!(lobby.handle(closes + 300, P0, Command::SubmitAnswer { player: P0, choice: Some(0) }), Ok(()));
     assert_eq!(
@@ -167,7 +272,7 @@ fn an_answer_counts_within_the_grace_window_and_is_refused_after_it() {
 
 #[test]
 fn an_unanswered_question_times_out_and_the_next_one_is_paced_by_the_reveal_pause() {
-    let closes = SHOP_END + 2_000 + 9_000;
+    let closes = ANSWERS_OPEN + 9_000;
     let mut lobby = in_battle();
     lobby.drain(P0);
     lobby.tick(closes + 300);
@@ -175,17 +280,18 @@ fn an_unanswered_question_times_out_and_the_next_one_is_paced_by_the_reveal_paus
     lobby.tick(closes + 301);
     let events = lobby.drain(P0);
     assert!(has(&events, |e| matches!(e, Event::AnswerRevealed { a_correct: false, b_correct: false, .. })));
-    // Next question: answer shown for 2.5 s, category for 2 s, then 9 s to answer.
+    // Next question: answer shown for 2.5 s, category for 2 s, 4 s to read, then 9 s to answer.
     let shown = events.iter().find(|o| matches!(o.event, Event::QuestionShown { .. })).expect("next question");
     assert_eq!(shown.opens_at, Some(closes + 301 + 4_500));
-    assert_eq!(shown.deadline, Some(closes + 301 + 4_500 + 9_000));
+    assert_eq!(shown.answers_at, Some(closes + 301 + 4_500 + READING));
+    assert_eq!(shown.deadline, Some(closes + 301 + 4_500 + READING + 9_000));
 }
 
 #[test]
 fn a_question_ends_the_moment_both_players_lock_in() {
     let mut lobby = in_battle();
     lobby.drain(P0);
-    let opens = SHOP_END + 2_000;
+    let opens = ANSWERS_OPEN;
     lobby.handle(opens + 100, P0, Command::SubmitAnswer { player: P0, choice: Some(0) }).unwrap();
     assert!(!has(&lobby.drain(P0), |e| matches!(e, Event::AnswerRevealed { .. })));
     lobby.handle(opens + 200, P1, Command::SubmitAnswer { player: P1, choice: Some(0) }).unwrap();
@@ -235,7 +341,7 @@ fn an_opponents_board_is_visible_only_during_the_battle() {
     assert_eq!(battle.opponent, Some(P1));
     assert_eq!(battle.opponent_board, lobby.state().players[1].board);
     assert_eq!((battle.question_number, battle.question_count), (1, 6));
-    assert_eq!(battle.deadline, Some(SHOP_END + 2_000 + 9_000));
+    assert_eq!(battle.deadline, Some(ANSWERS_OPEN + 9_000));
 }
 
 /// One idle human and five bots, run until `stop` says so. Returns the lobby and the time.
@@ -373,7 +479,7 @@ fn bots_fill_seats_and_a_lobby_plays_itself_to_the_end() {
 }
 
 #[test]
-fn bots_answer_after_the_question_opens_and_before_its_deadline() {
+fn bots_answer_after_the_answers_open_and_before_the_deadline() {
     let content = content();
     let seats = vec![bot(&content, 0), bot(&content, 1)];
     let mut lobby = Lobby::new(content, seats, SEED, Box::new(SyntheticQuestions::default()), 0).expect("enough heroes");
@@ -383,9 +489,13 @@ fn bots_answer_after_the_question_opens_and_before_its_deadline() {
     lobby.tick(shop_end);
     assert_eq!(lobby.state().phase, Phase::Battle);
     lobby.drain(P0);
-    lobby.tick(shop_end + 2_000 + 1_499);
+    // Bots think for 1.5 to 6 seconds, counted from when the answers open.
+    let answers_open = shop_end + 2_000 + READING;
+    lobby.tick(answers_open - 1);
+    assert!(lobby.drain(P0).is_empty(), "no bot answers while the question is read");
+    lobby.tick(answers_open + 1_499);
     assert!(lobby.drain(P0).is_empty(), "no bot answers this fast");
-    lobby.tick(shop_end + 2_000 + 6_000);
+    lobby.tick(answers_open + 6_000);
     assert!(has(&lobby.drain(P0), |e| matches!(e, Event::AnswerRevealed { .. })));
 }
 

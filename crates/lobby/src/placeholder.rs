@@ -7,7 +7,7 @@
 use std::collections::{BTreeMap, BTreeSet};
 use std::sync::{Arc, Mutex};
 
-use owl_core::question::OPTIONS;
+use owl_core::question::{OPTIONS, word_count};
 use owl_core::{Category, Difficulty, LobbyRng, Question, QuestionId, QuestionSource};
 
 type Text = (String, Vec<String>);
@@ -63,11 +63,13 @@ impl QuestionSource for PlaceholderQuestions {
         let mut offsets = [-10i64, -2, -1, 1, 2, 10];
         self.numbers.shuffle(&mut offsets);
         let mut wrong = offsets.iter().map(|d| i64::from(answer) + d);
-        let options = (0..OPTIONS)
+        let options: Vec<String> = (0..OPTIONS)
             .map(|i| if i == correct { i64::from(answer) } else { wrong.next().unwrap_or(0) })
             .map(|value| value.to_string())
             .collect();
-        self.texts.insert(id, (format!("What is {a} + {b}?"), options));
-        Question { id, category, difficulty, correct }
+        let text = format!("What is {a} + {b}?");
+        let words = word_count(&text, options.iter().map(String::as_str));
+        self.texts.insert(id, (text, options));
+        Question { id, category, difficulty, correct, words }
     }
 }

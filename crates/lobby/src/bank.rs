@@ -12,7 +12,7 @@ use std::fs;
 use std::path::Path;
 use std::sync::Arc;
 
-use owl_core::question::OPTIONS;
+use owl_core::question::{OPTIONS, word_count};
 use owl_core::{Category, Difficulty, LobbyRng, Question, QuestionId, QuestionSource};
 use serde::{Deserialize, Deserializer};
 
@@ -224,13 +224,15 @@ impl QuestionSource for BankQuestions {
                     wrong.next().unwrap_or_default()
                 }
             })
-            .collect();
+            .collect::<Vec<String>>();
+        let words = word_count(&entry.text, options.iter().map(String::as_str));
         self.texts.insert(id, (entry.text.clone(), options));
         Question {
             id,
             category,
             difficulty: entry.difficulty,
             correct,
+            words,
         }
     }
 }
@@ -355,5 +357,46 @@ mod tests {
         let dir = concat!(env!("CARGO_MANIFEST_DIR"), "/../../data");
         let content = owl_core::Content::load(dir).unwrap();
         QuestionBank::load(dir, &content.tunables.categories).unwrap();
+    }
+
+    #[test]
+    fn a_question_counts_the_words_of_its_text_and_its_four_answers() {
+        let texts = Texts::default();
+        let mut source = BankQuestions::new(Arc::new(bank()), 3, texts.clone());
+        let q = source.draw(Category(0), Difficulty::Easy, &BTreeSet::new(), &BTreeSet::new(), &mut LobbyRng::from_seed(9));
+        // "Question x-1?" and "Right", "A", "B", "C".
+        assert_eq!(q.words, 6);
+        let sum = source.draw(Category(1), Difficulty::Easy, &BTreeSet::new(), &BTreeSet::new(), &mut LobbyRng::from_seed(9));
+        // "What is 12 + 34?" and four numbers.
+        assert_eq!(sum.words, 9);
+    }
+
+    /// Prints the reading times the shipped bank gives, for tuning:
+    /// `cargo test -p owl-lobby shipped_reading_times -- --nocapture`.
+    #[test]
+    fn shipped_reading_times_stay_within_the_tunables() {
+        let dir = concat!(env!("CARGO_MANIFEST_DIR"), "/../../data");
+        let content = owl_core::Content::load(dir).unwrap();
+        let bank = QuestionBank::load(dir, &content.tunables.categories).unwrap();
+        let t = &content.tunables;
+        let mut times: Vec<u32> = bank
+            .by_category
+            .iter()
+            .flatten()
+            .map(|e| {
+                let options = std::iter::once(e.answer.as_str()).chain(e.wrong.iter().map(String::as_str));
+                t.reading_ms(word_count(&e.text, options))
+            })
+            .collect();
+        times.sort_unstable();
+        assert!(times.iter().all(|&ms| (t.reading_base_ms..=t.reading_max_ms).contains(&ms)));
+        if let (Some(min), Some(max)) = (times.first(), times.last()) {
+            let capped = times.iter().filter(|&&ms| ms == t.reading_max_ms).count();
+            println!(
+                "{} questions: reading min {min} ms, median {} ms, max {max} ms, {capped} at the cap",
+                times.len(),
+                times[times.len() / 2]
+            );
+        }
     }
 }

@@ -78,6 +78,19 @@ var _stage_key := ""
 var _timer: Label
 ## The countdown ticks over this many last seconds of the answer time.
 @export var tick_from := 3
+## While the question is read: the word over the timer, its size, and the
+## slim bar that fills under the timer until the answers open.
+@export var reading_text := "Read…"
+@export var reading_font := 40
+@export var reading_bar_height := 8
+@export var reading_bar_color := Color("8fb3d9")
+## How much the answers are dimmed while they are read and not yet open.
+@export var reading_answer_tint := Color(0.8, 0.8, 0.84)
+## The soft cue as the answers open: the reveal sound, this many decibels
+## quieter. Turned off with `answers_open_cue` false.
+@export var answers_open_cue := true
+@export var answers_open_quieter := 10.0
+var _read_bar: ColorRect
 var _sound_stage := ""
 var _ticked := -1
 var _bar: ColorRect
@@ -145,12 +158,15 @@ func _picture(which: String) -> Control:
 
 
 ## Sounds that follow what is on screen: a sweep as a category is revealed,
-## a chime or a thud as the player's answer turns out right or wrong, and a tick each second over
-## the last `tick_from` seconds of the answer time.
+## a softer one as the answers open, a chime or a thud as the player's answer
+## turns out right or wrong, and a tick each second over the last `tick_from`
+## seconds of the answer time, counted to the host's deadline.
 func _sounds(stage: String, battle: Variant) -> void:
 	if stage != _sound_stage:
 		if stage == "category":
 			Sound.instance.play("reveal")
+		elif stage == "question" and _sound_stage == "reading" and answers_open_cue:
+			Sound.instance.play("reveal", answers_open_quieter)
 		elif stage == "reveal" and _sound_stage == "question" and not _reveal.is_empty():
 			Sound.instance.play("correct" if bool(_reveal["mine"]) else "wrong")
 		_sound_stage = stage
@@ -176,7 +192,8 @@ func _process(_delta: float) -> void:
 	else:
 		var opens := int(battle["opens_at"]) if battle["opens_at"] != null else now
 		if now >= opens:
-			stage = "question"
+			# The question and its answers are read first; they open at `answers_at`.
+			stage = "question" if now >= _answers_at(battle) else "reading"
 			_take_question(battle)
 		elif _reveal.is_empty() or now >= opens - int(Store.tunables["category_reveal_ms"]):
 			stage = "category"
@@ -196,15 +213,36 @@ func _process(_delta: float) -> void:
 	_play_hits(stage)
 
 	if _timer != null and _bar != null:
+		_timer.add_theme_font_size_override("font_size", reading_font if stage == "reading" else UI.NUMERAL)
+		if _read_bar != null:
+			_read_bar.visible = stage == "reading"
 		if stage == "question" and battle != null and battle["deadline"] != null:
 			var left := UI.ms_left(battle["deadline"])
-			var total := maxf(1.0, float(battle["deadline"]) - float(battle["opens_at"]))
+			var total := maxf(1.0, float(battle["deadline"]) - float(_answers_at(battle)))
 			_timer.text = str(ceili(left / 1000.0))
 			_bar.anchor_right = clampf(left / total, 0.0, 1.0)
 			_bar.color = UI.VERMILION if left < 3000 else UI.VERDIGRIS
+		elif stage == "reading" and battle != null:
+			# The answer time has not started: the bar stays full and still,
+			# and a slim bar under it fills until the answers open.
+			_timer.text = reading_text
+			_bar.anchor_right = 1.0
+			_bar.color = UI.VERDIGRIS
+			if _read_bar != null:
+				var opens := float(battle["opens_at"])
+				var span := maxf(1.0, float(_answers_at(battle)) - opens)
+				_read_bar.anchor_right = clampf((now - opens) / span, 0.0, 1.0)
 		else:
 			_timer.text = ""
 			_bar.anchor_right = 1.0
+
+
+## When the open question's answers open. A host without reading time sends
+## no `answers_at`; then they open with the question.
+func _answers_at(battle: Dictionary) -> int:
+	if battle.get("answers_at") != null:
+		return int(battle["answers_at"])
+	return int(battle["opens_at"]) if battle.get("opens_at") != null else 0
 
 
 ## Copies the open question from the host's snapshot onto the screen.
@@ -260,6 +298,7 @@ func _build(stage: String, battle: Variant) -> void:
 	_pictures.clear()
 	_timer = null
 	_bar = null
+	_read_bar = null
 	if stage == "result":
 		_build_result()
 		return
@@ -338,7 +377,7 @@ func _plate(stage: String, battle: Variant, own: bool) -> Control:
 	if stage == "reveal" and not _reveal.is_empty():
 		var right: bool = _reveal["mine"] if own else _reveal["theirs"]
 		status = UI.Mark.new("check" if right else "cross", UI.VERDIGRIS if right else UI.VERMILION, 64)
-	elif stage == "question" and battle != null:
+	elif (stage == "question" or stage == "reading") and battle != null:
 		var locked: bool = battle["locked"] if own else battle["opponent_locked"]
 		status = UI.Mark.new("lock" if locked else "ring", UI.GILT if locked else UI.SLATE, 56)
 	else:
@@ -536,6 +575,9 @@ func _answer(index: int, stage: String, left: bool) -> Button:
 		button.modulate = Color(0.32, 0.3, 0.3) if plaque != null else Color(1, 1, 1, 0.3)
 	elif (stage == "reveal" and not correct and not mine) or (stage == "question" and _locked and not mine):
 		button.modulate = Color(0.5, 0.48, 0.46) if plaque != null else Color(1, 1, 1, 0.5)
+	elif stage == "reading":
+		# Readable, but not yet to be chosen: they light up when they open.
+		button.modulate = reading_answer_tint
 	UI.quiet(button)
 	if stage == "question" and not _locked and not gone:
 		button.pressed.connect(_answer_pressed.bind(index))
@@ -594,6 +636,11 @@ func _centre(stage: String, battle: Variant) -> Control:
 		top.add_child(names)
 	_timer = UI.centered("", UI.NUMERAL, UI.PAPER, false)
 	_timer.custom_minimum_size.x = 140
+	# As tall as the numeral even while the smaller "Read…" shows, so nothing
+	# moves when the answers open.
+	var numeral_font := _timer.get_theme_font("font")
+	if numeral_font != null:
+		_timer.custom_minimum_size.y = numeral_font.get_height(UI.NUMERAL)
 	top.add_child(_timer)
 	var count_text := ""
 	if _is_endgame():
@@ -653,6 +700,15 @@ func _centre(stage: String, battle: Variant) -> Control:
 	_bar.color = UI.VERDIGRIS
 	_bar.set_anchors_preset(Control.PRESET_FULL_RECT)
 	track.add_child(_bar)
+	# Along the foot of the bar: fills while the question is read.
+	_read_bar = ColorRect.new()
+	_read_bar.color = reading_bar_color
+	_read_bar.anchor_top = 1.0
+	_read_bar.anchor_bottom = 1.0
+	_read_bar.anchor_right = 0.0
+	_read_bar.offset_top = -reading_bar_height
+	_read_bar.visible = stage == "reading"
+	track.add_child(_read_bar)
 	frame.add_child(track)
 	centre.add_child(frame)
 	centre.add_child(UI.spacer(0, 16))

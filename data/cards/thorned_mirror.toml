@@ -2,9 +2,9 @@ id = "thorned_mirror"
 name = "Thorned Mirror"
 tier = 3
 kind = "reflect"
-text = "25% reflect"
-golden_text = "50% reflect"
+text = "20% reflect"
+golden_text = "40% reflect"
 
 [[effects]]
 effect = "Reflect"
-percent = 25
+percent = 20

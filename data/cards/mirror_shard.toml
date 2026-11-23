@@ -2,9 +2,9 @@ id = "mirror_shard"
 name = "Mirror Shard"
 tier = 2
 kind = "reflect"
-text = "15% reflect"
-golden_text = "30% reflect"
+text = "10% reflect"
+golden_text = "20% reflect"
 
 [[effects]]
 effect = "Reflect"
-percent = 15
+percent = 10

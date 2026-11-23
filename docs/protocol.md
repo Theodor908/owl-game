@@ -1,4 +1,4 @@
-# Owl protocol, version 5
+# Owl protocol, version 6
 
 How a client talks to the server. The message types are defined in `crates/protocol`; this page explains them. Any change a client could notice bumps `VERSION` there and is written down here.
 
@@ -101,6 +101,8 @@ The token goes in this message, never in the address. A wrong version, a bad tok
 
 `view` is `owl_lobby::PlayerView` as JSON, with the text of an open question added as `battle.question_text`. Each item of `events` is an event with its timing, plus `question` (text and four options) on `QuestionShown`. Neither ever contains the correct answer before the reveal.
 
+A question has three times, on its `QuestionShown` event and in `battle` of the view (and of each `spectate` entry): `opens_at`, when the question and its four answers show; `answers_at`, when the answers open and the answer time starts; and `deadline`, when the player's own answer time ends. Between `opens_at` and `answers_at` (`reading_base_ms`, plus `reading_per_word_ms` for every word of the question and its four answers, at most `reading_max_ms`; the same for both players) the question is only read: `SubmitAnswer` and `UseHelp` are refused with "the answers are not open yet", and an opponent, a ghost included, is never shown as having answered. Answer time bonuses count from `answers_at`. Other events with timing (`TurnStarted`) have `answers_at: null`.
+
 A question's difficulty (`"Easy"`, `"Medium"` or `"Hard"`) is sent with its category: as `difficulty` on the `CategoryRevealed` event and in `battle.difficulty` of the view. It is the difficulty of the question that was drawn, after cards have moved it.
 
 A golden reward is on offer while `me.rewards` is not empty; `PickReward` takes from the first entry. A golden card in `me.hand` whose part has `reward_due: true` has not given its reward yet. The reward card is an ordinary card instance in `me.hand` (card id `golden_reward`); the `Place` command opens its pick.
@@ -140,6 +142,7 @@ These are additions to HTTP answers that older games ignore, so they did not cha
 
 ## Versions
 
+- **6:** reading time: `answers_at` on each event (set on `QuestionShown`) and in every battle view, beside `opens_at` and `deadline`; the deadline now counts from `answers_at`; an answer or help before it is refused ("the answers are not open yet"); `reading_base_ms`, `reading_per_word_ms` and `reading_max_ms` in the tunables; `words` on each question in the state.
 - **5:** questions have a difficulty (`difficulty` on `CategoryRevealed` and in `battle`); eight difficulty cards (`DifficultyShift` effect, card kind `difficulty`); the golden reward is offered when the golden card is placed (`reward_due` on a card part), and an unpicked one becomes a `golden_reward` card in hand; `difficulty_odds` in the tunables; a hero ability with limited uses per match is refused a second time in one round ("already used this round"), and `hero_state.used_turn` now also records the round of the last use for Darwin, Benz, Herodotus and Shakespeare (the view's shape is unchanged).
 - **4:** the privacy notice has a version; a player who has not confirmed the current one gets `Error` on `Hello` until they do (`GET /api/notice`, `POST /api/me/notice`). Accounts unused for a year are erased.
 - **3:** bots in lobbies (`AddBot`, `RemoveBot`, `bots` in `LobbyState`); a lobby can be joined by its code alone; guests; the version check and download.

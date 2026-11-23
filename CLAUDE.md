@@ -17,12 +17,12 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - A battle has 6 questions, the same for both players, answered simultaneously:
   - 2 from the house, fully random category.
   - 4 from the players' category weights, split 2-2 or 3-1 depending on weights. Never 4-0.
-- Each question: reveal category, then the question, then the timer starts. Same sequence in every format.
+- Each question: reveal category, then the question and its answers to read, then the answers open and the timer starts. While the question is read, the answers cannot be chosen, no help card or ability can be used on it and the clock does not run. The reading time is a base plus a little for every word of the question and its four answers, up to a cap; it is the same for both players, since they read the same question, and answer time bonuses apply after it. Same sequence in every format, the endgame included.
 - 9 seconds to answer. Cards or heroes can add 3 seconds, hard cap 12.
 - A question ends the moment both players lock in.
 - Battle damage on a win: (own correct answers - opponent's correct answers) + base 2 + own tavern level, plus card bonuses. Damage grows over the match through tavern level; a bigger margin deals more.
 - Armor is bought in the shop and also comes from cards and passives.
-- A reflect build is available to everyone through cards; heroes can make it better. Reflect sends a percentage of the damage its holder takes back at the opponent. A player's total reflect, hero and cards together, is capped at 80%. Reflect carries no damage penalty for its holder.
+- A reflect build is available to everyone through cards; heroes can make it better. Reflect sends a percentage of the damage its holder takes back at the opponent. A player's total reflect, hero and cards together, is capped at 60%, except for Herophilus, whose cap is 80%, the highest in the game. Reflect carries no damage penalty for its holder.
 - A tie on correct answers is a tie: no damage, whatever the score (0-0 through 6-6). Answer speed never decides anything (latency makes it unfair).
 - Tie-breaker card: on a tie where both players got at least one question right (including all correct), the holder deals damage equal to half their tavern level, minimum 1. If both players hold one, nothing happens.
 - 0-0 card: a separate card that deals damage on a 0-0 tie, capped at 1.
@@ -104,10 +104,12 @@ Every value here is a starting guess so `core` and `sim` can run. They live in o
 | Copies of each card in the shared pool, by tier | 12, 11, 10, 8, 6, 4 |
 | Base term in the battle damage formula | 2 |
 | Max damage from one regular battle | 15 |
+| Reflect cap | 60% (Herophilus 80%, set in his hero data) |
 | Overtime starts | turn 12 |
 | Earliest turn the endgame can start | 5 |
 | 3-1 split threshold | weight total leads the opponent's by 40 points |
 | Endgame answer time | 10 s |
+| Reading time before answers open | 6 s, plus 150 ms per word of the question and its four answers, at most 10 s |
 | Healer healing per turn | 1 HP |
 | Potion healing / cost | 5 HP / 3 gold |
 | Potion chance to appear in a shop, per round | 2% on turn 1, +1% per turn |

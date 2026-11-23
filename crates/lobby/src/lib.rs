@@ -14,12 +14,12 @@ use std::collections::VecDeque;
 use std::sync::Arc;
 
 use owl_core::{
-    Command, Content, Env, Event, GameState, LobbyRng, Phase, PlayerId, QuestionSource, RuleError, apply,
+    Command, Content, Env, Event, GameState, LobbyRng, Phase, PlayerId, Question, QuestionSource, RuleError, apply,
 };
 use thiserror::Error;
 
 use bot::Bot;
-pub use view::{Outgoing, PlayerView};
+pub use view::{Outgoing, PlayerView, QuestionTiming};
 use view::{RECENT_BATTLES, RecentBattle, Spectated};
 
 /// Milliseconds on the host's clock. Only differences matter.
@@ -35,6 +35,8 @@ pub enum LobbyError {
     HostOnly,
     #[error("the question is not open yet")]
     TooEarly,
+    #[error("the answers are not open yet")]
+    StillReading,
     #[error("the deadline has passed")]
     TooLate,
 }
@@ -45,14 +47,30 @@ pub enum Seat {
     Bot(Box<Bot>),
 }
 
-/// Timing of the question a battle is currently on.
+/// Timing of the question a battle is currently on: the question shows at
+/// `opens_at`, its answers open at `answers_at`, and each side's answer time
+/// runs from then to its own deadline.
 #[derive(Debug, Clone, Default)]
 struct QuestionClock {
     players: [Option<PlayerId>; 2],
     asked: u32,
     open: bool,
     opens_at: Millis,
+    answers_at: Millis,
     deadline: [Millis; 2],
+}
+
+impl QuestionClock {
+    /// The times one player is shown: their own deadline, or the later of
+    /// the two for anyone else.
+    fn timing_for(&self, player: PlayerId) -> QuestionTiming {
+        let deadline = self
+            .players
+            .iter()
+            .position(|&p| p == Some(player))
+            .map_or(self.deadline[0].max(self.deadline[1]), |side| self.deadline[side]);
+        QuestionTiming { opens_at: self.opens_at, answers_at: self.answers_at, deadline }
+    }
 }
 
 pub struct Lobby {
@@ -161,13 +179,12 @@ impl Lobby {
 
     /// A full snapshot of what one player may see, for joining and reconnecting.
     pub fn view(&self, player: PlayerId) -> PlayerView {
-        let clock = self.clocks.iter().find(|c| c.open && c.players.contains(&Some(player)));
-        let timing = clock.map(|c| {
-            let side = usize::from(c.players[1] == Some(player));
-            (c.opens_at, c.deadline[side])
-        });
+        let timing = open_clock(&self.clocks, player).map(|c| c.timing_for(player));
         let phase_deadline = matches!(self.state.phase, Phase::HeroSelect | Phase::Shop).then_some(self.phase_deadline);
-        view::player_view(&self.state, &self.content, player, timing, phase_deadline, &self.recent, self.spectate(player))
+        let mut view =
+            view::player_view(&self.state, &self.content, player, timing, phase_deadline, &self.recent, self.spectate(player));
+        view.battle = view.battle.map(|b| b.at(self.now));
+        view
     }
 
     /// What an eliminated player watches: the newest snapshot that is at
@@ -194,7 +211,9 @@ impl Lobby {
         }
         if self.watched_at_log != self.log.len() {
             self.watched_at_log = self.log.len();
-            self.watched.push_back((now, view::spectated(&self.state)));
+            let clocks = &self.clocks;
+            let timing = |player| open_clock(clocks, player).map(|c| c.timing_for(player));
+            self.watched.push_back((now, view::spectated(&self.state, timing, now)));
         }
         // Only the newest snapshot that is already old enough is still needed.
         let delay = Millis::from(self.content.tunables.spectate_delay_ms);
@@ -204,7 +223,11 @@ impl Lobby {
     }
 
     /// A command from a player. Rejected unless it is theirs to send and, for
-    /// answers, arrives while their question is open.
+    /// answers and helps, arrives while their question's answers are open.
+    ///
+    /// The reading time is enforced here rather than in `core`: the engine
+    /// never reads a clock, and a replayed log carries no times. An answer
+    /// refused here never reaches the engine or the log.
     pub fn handle(&mut self, now: Millis, from: PlayerId, command: Command) -> Result<(), LobbyError> {
         match owner(&command) {
             None => return Err(LobbyError::HostOnly),
@@ -212,14 +235,16 @@ impl Lobby {
             Some(_) => {}
         }
         if matches!(command, Command::SubmitAnswer { .. } | Command::UseHelp { .. })
-            && let Some(clock) = self.clocks.iter().find(|c| c.open && c.players.contains(&Some(from)))
+            && let Some(clock) = open_clock(&self.clocks, from)
         {
-            let side = usize::from(clock.players[1] == Some(from));
             let grace = Millis::from(self.content.tunables.answer_grace_ms);
             if now < clock.opens_at {
                 return Err(LobbyError::TooEarly);
             }
-            if now > clock.deadline[side] + grace {
+            if now < clock.answers_at {
+                return Err(LobbyError::StillReading);
+            }
+            if now > clock.timing_for(from).deadline + grace {
                 return Err(LobbyError::TooLate);
             }
         }
@@ -268,7 +293,7 @@ impl Lobby {
                     let due = self
                         .clocks
                         .iter()
-                        .any(|c| c.open && c.players.contains(&Some(player)) && now >= c.opens_at.max(self.think_at[seat]));
+                        .any(|c| c.open && c.players.contains(&Some(player)) && now >= c.answers_at.max(self.think_at[seat]));
                     if due {
                         bot.answer(&mut self.state, &mut env);
                     }
@@ -312,11 +337,11 @@ impl Lobby {
     fn absorb(&mut self, now: Millis, events: Vec<Event>) {
         let t = &self.content.tunables;
         for event in events {
-            let mut timing = None;
+            let mut window = None;
             match event {
                 Event::TurnStarted { .. } => {
                     self.phase_deadline = now + Millis::from(t.shop_seconds) * 1000;
-                    timing = Some((now, self.phase_deadline));
+                    window = Some((now, self.phase_deadline));
                 }
                 Event::BattleStarted { battle, a, b, .. } => {
                     if battle == 0 {
@@ -329,18 +354,21 @@ impl Lobby {
                     self.clocks = vec![QuestionClock { players: [Some(a), Some(b)], ..Default::default() }];
                 }
                 Event::QuestionShown { battle, time_a, time_b, .. } => {
+                    let reading = t.reading_ms(open_question(&self.state, battle).map_or(0, |q| q.words));
                     if let Some(clock) = self.clocks.get_mut(battle) {
                         let pause = if clock.asked > 0 { t.answer_reveal_ms } else { 0 } + t.category_reveal_ms;
                         clock.asked += 1;
                         clock.open = true;
                         clock.opens_at = now + Millis::from(pause);
+                        // One question, so one reading time for both sides; answer time and its bonuses run after it.
+                        clock.answers_at = clock.opens_at + Millis::from(reading);
                         clock.deadline =
-                            [time_a, time_b].map(|seconds| clock.opens_at + Millis::from(seconds) * 1000);
+                            [time_a, time_b].map(|seconds| clock.answers_at + Millis::from(seconds) * 1000);
                         for player in clock.players.into_iter().flatten() {
-                            // Bots take between 1.5 and 6 seconds to answer.
-                            self.think_at[player.index()] = clock.opens_at + 1500 + Millis::from(self.pacing.below(4500));
+                            // Bots take between 1.5 and 6 seconds to answer, counted from when the answers open.
+                            self.think_at[player.index()] =
+                                clock.answers_at + 1500 + Millis::from(self.pacing.below(4500));
                         }
-                        timing = Some((clock.opens_at, clock.deadline[0].max(clock.deadline[1])));
                     }
                 }
                 Event::BattleScored { battle, a_correct, b_correct } => {
@@ -372,24 +400,42 @@ impl Lobby {
             let recipients = view::audience(&event, self.in_endgame, battle_players, |player| {
                 self.clocks.iter().find(|c| c.players.contains(&Some(player))).map(|c| c.players).unwrap_or_default()
             });
+            let shown = match event {
+                Event::QuestionShown { battle, .. } => self.clocks.get(battle).filter(|c| c.open),
+                _ => None,
+            };
             for seat in 0..self.outbox.len() {
                 let player = PlayerId(seat as u8);
                 if recipients.includes(player) {
-                    let (opens_at, deadline) = match (&event, timing) {
+                    let mut item = Outgoing { event: event.clone(), opens_at: None, answers_at: None, deadline: None };
+                    if let Some(clock) = shown {
                         // Each player gets their own answer deadline.
-                        (Event::QuestionShown { battle, .. }, Some((opens_at, latest))) => {
-                            let clock = &self.clocks[*battle];
-                            let own = clock.players.iter().position(|&p| p == Some(player)).map(|side| clock.deadline[side]);
-                            (Some(opens_at), Some(own.unwrap_or(latest)))
-                        }
-                        (_, Some((opens_at, deadline))) => (Some(opens_at), Some(deadline)),
-                        (_, None) => (None, None),
-                    };
-                    self.outbox[seat].push(Outgoing { event: event.clone(), opens_at, deadline });
+                        let timing = clock.timing_for(player);
+                        item.opens_at = Some(timing.opens_at);
+                        item.answers_at = Some(timing.answers_at);
+                        item.deadline = Some(timing.deadline);
+                    } else if let Some((opens_at, deadline)) = window {
+                        item.opens_at = Some(opens_at);
+                        item.deadline = Some(deadline);
+                    }
+                    self.outbox[seat].push(item);
                 }
             }
         }
     }
+}
+
+/// The question a battle is on, or the endgame's.
+fn open_question(state: &GameState, battle: usize) -> Option<Question> {
+    if state.phase == Phase::Endgame {
+        return state.endgame.as_ref().and_then(|e| e.question);
+    }
+    state.battles.get(battle).and_then(|b| b.plan.get(b.current)).map(|slot| slot.question)
+}
+
+/// The clock of the open question a player is in, if any.
+fn open_clock(clocks: &[QuestionClock], player: PlayerId) -> Option<&QuestionClock> {
+    clocks.iter().find(|c| c.open && c.players.contains(&Some(player)))
 }
 
 /// Replays a match log from the start and returns the final state. With the

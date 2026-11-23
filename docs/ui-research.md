@@ -380,7 +380,7 @@ Elements and interactions:
 | Category chip | Emblem 72 px and name at 48 px; "Question 3 of 6" at 32 px under it | none | `battle.category`, `question_number`, `question_count` |
 | Slot tag | "House", "Yours" or "Theirs" beside the chip | none | **needs view addition V17.** Until then: none. |
 | Timer numeral | Seconds left at 96 px, right end of the row | none | `battle.deadline` |
-| Timer bar | Full and still during the category and reveal stages; drains during the question. Bonus time shows as a longer drain, not a tap. Under 3 s the bar doubles in height, the numeral pulses each second and a tick plays. | none | `opens_at`, `deadline` |
+| Timer bar | Full and still during the category, reading and reveal stages; drains during the question. While reading, a slim calm bar fills toward `answers_at` with a "Read…" label. Bonus time shows as a longer drain, not a tap. Under 3 s the bar doubles in height, the numeral pulses each second and a tick plays. | none | `opens_at`, `deadline` |
 | Question panel | The question at 60 px, centred, on a paper panel | none | `question_text` (offline today; online delivery is part of V11) |
 | Board tokens | One 88 px token per card: type glyph, one value, golden mark, armor left on shields, hatch and skull stamp on a disabled card | none (use the plates) | `opponent_board`, `me.board` |
 | Answer buttons A to D | Letter badge (96 px disc, 64 px letter) at the outer end, answer text at the inner end. A and C on the left, B and D on the right, read in Z order. | One tap sends `SubmitAnswer` and locks. No confirmation, no change. | `question_text.options`, `battle.removed`, `battle.locked` |
@@ -393,14 +393,15 @@ Why the helps are on the right, above the answers: a wasted help cannot be taken
 |---|---|---|---|
 | Battle intro (first question only) | first 700 ms after `BattleStarted` | Versus card: both portraits, names, "Ghost of" if a ghost | Plates slide in; answers blank |
 | Category | from `opens_at` minus 2000 ms (1300 ms on the first question, after the intro) | Category emblem at 240 px, name at 96 px, "Question 3 of 6". Timer bar full. | Answer buttons present but blank and hatched, so nothing moves when the question opens. Helps flat. |
-| Question | from `opens_at` to lock-in or `deadline` | Question text; timer draining | Answers and helps live |
+| Reading | from `opens_at` to `answers_at` (6 s plus 150 ms a word, at most 10 s) | Question text; timer bar full and still, a slim reading bar fills under it | Answers shown but inactive; helps flat |
+| Question | from `answers_at` to lock-in or `deadline` | Question text; timer draining | Answers and helps live, with a short soft cue as they open |
 | Locked, waiting | from own lock-in until `AnswerRevealed` | Unchanged | Own pick outlined with the own-portrait marker; the other three dim. Helps flat. |
 | Reveal | 2500 ms from `AnswerRevealed` | Question stays; timer bar still | Correct answer: thick outline, check icon, raised. Own wrong pick: cross icon and hatch. Each plate shows a check or a cross; the ledger cell fills; the score ticks. |
 
 - A removed option stays in place, faded to 30% with a strike line through the text and no response to touch, so the layout does not shift.
 - The opponent's pick is shown at the reveal as their portrait marker on the button's opponent-side end. This **needs view addition V3** (`AnswerRevealed` carries only who was right). Until then only the check or cross on their plate is shown. The player's own pick is remembered locally.
 - When the Oracle answers, the view only reports "locked", so the plate reads "Answered by the Oracle" and no button is marked until the reveal.
-- Whether the question text may be shown before the timer starts is open question 4. This design follows today's behaviour: text and options appear together at `opens_at`.
+- The question text and its options appear together at `opens_at` and are read until `answers_at`; the host refuses an answer before then (decided after a tester could not read a question in 9 seconds).
 
 Wide screens: both wings keep 552 px and pin to the safe edges. The centre column takes all the extra width (about 838 on an iPhone, up to 1048). The question panel grows to at most 900 px wide and stays centred; tokens grow to at most 116 px (7 x 116 + 6 x 12 = 884).
 
@@ -953,7 +954,7 @@ All 29 variants of `Event`. "Seen by" is the audience the lobby filter gives the
 | `BattleStarted` | the two fighters | Shop slides away; the versus card brings both splashes in from the sides with names; a ghost is translucent and labelled. Ends on the battle screen with plates in place. | 700 ms | stage | `preview_battle_started` |
 | `CardDisabled` | the two fighters (everyone in the endgame) | A skull stamp lands on the token and the hatch draws across it. Plays during the intro. | 300 ms | overlay | `preview_card_disabled` |
 | `CategoryRevealed` | the two fighters (everyone in the endgame) | The category emblem turns face up in the question panel and its name writes in; answer buttons reset to blank. Holds until the question opens. | 400 ms, then hold | stage | `preview_category_revealed` |
-| `QuestionShown` | the two fighters (everyone in the endgame) | At `opens_at`: question text and answers appear, the timer bar starts. Input is live from the first frame; the entrance is short so it costs no answer time. | 150 ms | stage, non-blocking | `preview_question_shown` |
+| `QuestionShown` | the two fighters (everyone in the endgame) | At `opens_at`: question text and answers appear, inactive, to be read. At `answers_at` they light up and the timer bar starts. | 150 ms | stage, non-blocking | `preview_question_shown` |
 | `OptionsRemoved` | the help's user | The removed answers are struck through and fade to 30%; the help button's count ticks down. Flaming Sword cuts two at once. | 200 ms | overlay | `preview_options_removed` |
 | `AnswerRevealed` | the two fighters (everyone in the endgame) | Correct answer gets its outline and check and rises; a wrong own pick gets its cross and a short shake; both plates are stamped; the ledger cell fills; the score ticks. Holds for the rest of the reveal. | 500 ms, then hold to 2500 | stage | `preview_answer_revealed` |
 | `BattleScored` | the two fighters | The battle screen gives way to the result screen; the verdict word and score land. | 600 ms | stage | `preview_battle_scored` |

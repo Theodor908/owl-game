@@ -2,6 +2,10 @@
 
 Every published build, newest first. The version is for people; the build number is what the game's updates go by.
 
+## 0.2.0 alpha, build 15 (2026-11-23)
+
+Time to read each question before the answers open, and reflect is capped at 60 percent except for Herophilus at 80, with weaker mirror cards
+
 ## 0.1.1 alpha, build 14 (2026-11-23)
 
 The account screen says Connecting to the server instead of the address

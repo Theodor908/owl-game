@@ -17,6 +17,18 @@ const TURN_LIMIT: u32 = 80;
 const SHOP_SECONDS: u32 = 30;
 const QUESTION_SECONDS: u32 = 15;
 
+/// Rough seconds per question: `QUESTION_SECONDS` plus the reading time
+/// before the answers open, for a question of typical length, rounded to
+/// the nearest second.
+fn question_seconds(content: &Content) -> u32 {
+    QUESTION_SECONDS + (reading_ms(content) + 500) / 1000
+}
+
+/// The reading time of a synthetic question, which has a typical length.
+fn reading_ms(content: &Content) -> u32 {
+    content.tunables.reading_ms(SyntheticQuestions::TYPICAL_WORDS)
+}
+
 #[derive(Default, Clone, Copy)]
 struct Tally {
     games: u32,
@@ -142,8 +154,9 @@ fn run_lobby(content: &Content, players: usize, seed: u64, report: &mut Report) 
     let questions_per_battle = content.tunables.house_questions + content.tunables.weighted_questions;
     report.turns.push(state.turn);
     report.endgame_questions += endgame_questions;
+    let question_seconds = question_seconds(content);
     report.seconds.push(
-        state.turn * (SHOP_SECONDS + questions_per_battle * QUESTION_SECONDS) + endgame_questions * QUESTION_SECONDS,
+        state.turn * (SHOP_SECONDS + questions_per_battle * question_seconds) + endgame_questions * question_seconds,
     );
     for (bot, player) in bots.iter().zip(&state.players) {
         let placement = player.placement.unwrap_or(players as u32);
@@ -206,11 +219,13 @@ fn main() -> ExitCode {
     );
     println!("Endgame questions per match: mean {:.1}", report.endgame_questions as f32 / finished);
     println!(
-        "Estimated match length: median {:.0} min, 90th percentile {:.0} min ({}s shop, {}s per question)",
+        "Estimated match length: mean {:.1} min, median {:.0} min, 90th percentile {:.0} min ({}s shop, {}s per question with {} ms reading)",
+        seconds.iter().map(|&s| f64::from(s)).sum::<f64>() / f64::from(finished) / 60.0,
         pick(&seconds, 0.5) as f32 / 60.0,
         pick(&seconds, 0.9) as f32 / 60.0,
         SHOP_SECONDS,
-        QUESTION_SECONDS
+        question_seconds(&content),
+        reading_ms(&content)
     );
     println!(
         "Battles: {}, ties: {:.1}%",

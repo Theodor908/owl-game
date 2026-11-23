@@ -4,6 +4,7 @@
 //! breaks a rule shows up here.
 
 use owl_core::battle::{split, wanted_difficulty};
+use owl_core::content::Effect;
 use owl_core::damage::net_reflect;
 use owl_core::state::Fighter;
 use owl_core::stats::{BattleStats, fold_stats};
@@ -693,9 +694,9 @@ fn reflect_sends_part_of_the_incoming_damage_back_before_armor() {
     lobby.give(1, "hall_of_mirrors");
     lobby.give(1, "iron_shield");
     let events = lobby.battle(&[4, 2]);
-    // 5 incoming, fully absorbed by armor, and 40% of the 5 still goes back.
+    // 5 incoming, fully absorbed by armor, and 30% of the 5, rounded down, still goes back.
     assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(5, 5, 0)]);
-    assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(2, 0, 2)]);
+    assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(1, 0, 1)]);
 }
 
 #[test]
@@ -719,16 +720,63 @@ fn when_two_reflect_players_meet_the_lower_percentage_is_subtracted_from_both() 
     lobby.give(0, "mirror_shard");
     lobby.give(1, "hall_of_mirrors");
     let events = lobby.battle(&[4, 2]);
-    // 40% against 15% leaves 25% of 5, rounded down.
+    // 30% against 10% leaves 20% of 5.
     assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(1, 0, 1)]);
 }
 
 #[test]
-fn total_reflect_is_capped() {
-    let mut lobby = Lobby::new(&["herophilus", "darwin"]);
-    lobby.give(0, "hall_of_mirrors");
+fn the_mirror_cards_reflect_ten_twenty_and_thirty_percent_and_double_when_golden() {
+    let content = load_content();
+    let reflect = |name: &str, golden: bool| -> u32 {
+        let card = content.card(content.card_id(name).expect("card exists"));
+        card.effects_for(golden)
+            .iter()
+            .map(|e| match *e {
+                Effect::Reflect { percent } => percent,
+                _ => 0,
+            })
+            .sum()
+    };
+    assert_eq!((reflect("mirror_shard", false), reflect("mirror_shard", true)), (10, 20));
+    assert_eq!((reflect("thorned_mirror", false), reflect("thorned_mirror", true)), (20, 40));
+    assert_eq!((reflect("hall_of_mirrors", false), reflect("hall_of_mirrors", true)), (30, 60));
+}
+
+#[test]
+fn a_players_total_reflect_is_capped_at_sixty_percent() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    assert_eq!(lobby.content.tunables.reflect_cap, 60);
+    lobby.give_golden(0, "hall_of_mirrors");
     lobby.give(0, "thorned_mirror");
-    assert_eq!(lobby.stats(0).reflect, lobby.content.tunables.reflect_cap);
+    // 60 + 20 from the cards.
+    assert_eq!(lobby.stats(0).reflect, 60);
+}
+
+#[test]
+fn herophilus_has_the_highest_reflect_cap_at_eighty_percent() {
+    let mut lobby = Lobby::new(&["herophilus", "darwin"]);
+    lobby.give_golden(0, "hall_of_mirrors");
+    lobby.give(0, "thorned_mirror");
+    // 25 from Open Heart, 60 + 20 from the cards.
+    assert_eq!(lobby.stats(0).reflect, 80);
+    let cap = |name: &str| lobby.content.hero(lobby.content.hero_id(name).unwrap()).reflect_cap(&lobby.content.tunables);
+    assert!(lobby.content.heroes.iter().all(|h| h.reflect_cap(&lobby.content.tunables) <= cap("herophilus")));
+}
+
+#[test]
+fn two_reflect_players_net_their_capped_percentages() {
+    let mut lobby = Lobby::new(&["benz", "herophilus"]);
+    for player in 0..2 {
+        lobby.give_golden(player, "hall_of_mirrors");
+        lobby.give(player, "thorned_mirror");
+    }
+    // Benz has 80 capped to 60, Herophilus 105 capped to 80: Herophilus keeps
+    // 20%, where the uncapped numbers would have left him 25%.
+    assert_eq!((lobby.stats(0).reflect, lobby.stats(1).reflect), (60, 80));
+    let events = lobby.battle(&[6, 0]);
+    // 6 + 2 + 1 = 9 incoming, 20% of it back, rounded down.
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(9, 0, 9)]);
+    assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(1, 0, 1)]);
 }
 
 #[test]
@@ -736,7 +784,8 @@ fn piercing_quill_halves_the_opponents_reflect() {
     let mut lobby = Lobby::new(&["benz", "darwin"]);
     lobby.give(0, "piercing_quill");
     lobby.give(1, "hall_of_mirrors");
-    let events = lobby.battle(&[4, 2]);
+    let events = lobby.battle(&[6, 0]);
+    // 9 incoming, and half of the 30% leaves 15% of it, rounded down.
     assert_eq!(damage_to(&events, P0, DamageSource::Reflect), vec![(1, 0, 1)]);
 }
 

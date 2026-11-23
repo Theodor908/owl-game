@@ -8,3 +8,4 @@ kind = "Herophilus"
 
 [params]
 reflect = 25
+reflect_cap = 80

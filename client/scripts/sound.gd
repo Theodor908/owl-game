@@ -104,15 +104,15 @@ func music(track: String) -> void:
 		_fade.chain().tween_callback(old.stop)
 
 
-## Plays effect `name` once, now.
-func play(name: String) -> void:
+## Plays effect `name` once, now, `quieter` decibels below its usual level.
+func play(name: String, quieter := 0.0) -> void:
 	var stream := _stream(EFFECTS.get(name, ""))
 	if stream == null:
 		return
 	var voice := _voices[_next_voice]
 	_next_voice = (_next_voice + 1) % _voices.size()
 	voice.stream = stream
-	voice.volume_db = float(effect_db.get(name, 0.0))
+	voice.volume_db = float(effect_db.get(name, 0.0)) - quieter
 	voice.pitch_scale = 1.0 if STEADY.has(name) else 1.0 + randf_range(-pitch_jitter, pitch_jitter)
 	voice.play()
 
