@@ -1,0 +1,11 @@
+id = "goethe"
+name = "Goethe"
+title = "Poet of Weimar"
+category = "poetry"
+hp = 35
+category_bonus = 25
+kind = "Goethe"
+
+[params]
+cost = 3
+boost = 15

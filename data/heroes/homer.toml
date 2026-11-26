@@ -1,0 +1,16 @@
+id = "homer"
+name = "Homer"
+title = "The Blind Poet"
+category = "poetry"
+hp = 35
+category_bonus = 25
+kind = "Homer"
+endgame_category = "music"
+
+[params]
+cost = 3
+payments = 3
+bard_chance = 20
+royalty = 1
+endgame_poetry = 30
+endgame_music = 20

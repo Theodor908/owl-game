@@ -91,6 +91,8 @@ extends Control
 ## Height of each shop button in the right column, and the gap between its items.
 @export var side_button := 150
 @export var side_gap := 18
+## The clock plate's tint while this player is ready (the clock is the ready button).
+@export var ready_tint := Color(1.0, 0.82, 0.42)
 ## The player list on the left: its portraits grow as the lobby is smaller,
 ## up to this size, and never beyond what six of them need to fit.
 @export var rail_max := 190
@@ -137,6 +139,10 @@ var _pressed := false
 var _stale := false
 ## The opened card shows its golden version, as a preview.
 var _preview_golden := false
+## The tick beside a ready player in the list: its size as a share of the
+## portrait, and its colour.
+@export var ready_tick := 0.34
+@export var ready_tick_color := UI.VERDIGRIS
 ## The colour of ice, for a reserved shop.
 @export var frozen_color := Color("7fd4ff")
 ## The shop was reserved the last time the screen was built, so a change
@@ -204,7 +210,9 @@ func _process(_delta: float) -> void:
 	var deadline = Store.view.get("phase_deadline")
 	if _timer != null:
 		_timer.text = str(UI.seconds_left(deadline))
-		_timer.add_theme_color_override("font_color", UI.VERMILION if UI.ms_left(deadline) < 10000 else UI.PAPER)
+		var done_shopping := bool(Store.view["players"][Store.my_id()].get("ready", false))
+		var ink := UI.GILT if done_shopping else (UI.VERMILION if UI.ms_left(deadline) < 10000 else UI.PAPER)
+		_timer.add_theme_color_override("font_color", ink)
 		# The clock ticks once a second over the last `tick_from` seconds of the shop.
 		var second := UI.seconds_left(deadline) if deadline != null else 0
 		if second >= 1 and second <= tick_from and second != _ticked:
@@ -531,12 +539,30 @@ func _rail() -> Control:
 		if not alive:
 			icon.modulate = Color(0.5, 0.5, 0.5, 0.6)
 		entry.add_child(icon)
+		if alive and bool(player.get("ready", false)):
+			entry.add_child(_tick(px))
 		UI.quiet(entry)
 		var hero := Store.hero_of(seat)
 		if not hero.is_empty():
 			Peek.attach(entry, HeroCard.info.bind(hero, _player_state(player)))
 		rail.add_child(entry)
 	return rail
+
+
+## A round tick at the top right of a portrait: that player is ready.
+func _tick(px: int) -> Control:
+	var side := px * ready_tick
+	var tick := Control.new()
+	tick.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	tick.size = Vector2(side, side)
+	tick.position = Vector2(px - side, 0)
+	var color := ready_tick_color
+	tick.draw.connect(func() -> void:
+		var r := side / 2.0
+		tick.draw_circle(Vector2(r, r), r, color)
+		tick.draw_polyline(PackedVector2Array([Vector2(r * 0.5, r * 1.0), Vector2(r * 0.85, r * 1.35), Vector2(r * 1.5, r * 0.65)]),
+			UI.PAPER, maxf(2.0, r * 0.22), true))
+	return tick
 
 
 ## How large each portrait of the player list is: they share the height of
@@ -925,9 +951,44 @@ func _hero_button(me: Dictionary, hero: Dictionary) -> Button:
 	var health := UI.token("health", str(int(me["hp"])), UI.z(96), UI.z(38), UI.PAPER, UI.VERMILION_DEEP)
 	health.position = Vector2(hero_size - UI.z(84), hero_size - UI.z(88))
 	plate.add_child(health)
+	var status := _hero_status(me, hero)
+	if status != "":
+		var tag := PanelContainer.new()
+		tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		tag.add_theme_stylebox_override("panel", UI.box(Color(0.07, 0.08, 0.14, 0.95), 16, 4, Color("b9c6dc"), 2))
+		tag.get_theme_stylebox("panel").content_margin_left = 12
+		tag.get_theme_stylebox("panel").content_margin_right = 12
+		tag.add_child(UI.centered(status, UI.t(UI.z(22)), UI.PAPER, false))
+		tag.set_anchors_preset(Control.PRESET_CENTER_TOP)
+		tag.grow_horizontal = Control.GROW_DIRECTION_BOTH
+		tag.offset_top = UI.z(8)
+		plate.add_child(tag)
 	UI.quiet(plate)
 	Peek.attach(plate, HeroCard.info.bind(hero, _player_state(Store.view["players"][Store.my_id()])))
 	return plate
+
+
+## Beethoven's phases, in the order his Notes move him through them.
+const BEETHOVEN_PHASES := ["Syncope", "Passionate Composer", "Can't Hear the Critics"]
+
+
+## A short line on the hero's state, shown on the portrait: Beethoven's
+## phase once his Notes are unlocked, Goethe's boost while it waits for the
+## battle. Empty for every other hero.
+func _hero_status(me: Dictionary, hero: Dictionary) -> String:
+	var hero_state: Dictionary = me["hero_state"]
+	var params: Dictionary = hero.get("params", {})
+	match String(hero.get("kind", "")):
+		"Beethoven":
+			var stage := int(hero_state.get("stage", 0))
+			if stage > 0:
+				return BEETHOVEN_PHASES[(stage - 1) % BEETHOVEN_PHASES.size()]
+			if int(hero_state.get("uses", 0)) >= int(params.get("payments", 0)):
+				return "No phase"
+		"Goethe":
+			if bool(hero_state.get("boosted", false)):
+				return "%d%% Poetry next battle" % (int(hero.get("category_bonus", 0)) + int(params.get("boost", 0)))
+	return ""
 
 
 ## The hero's ability as a round button beside the hero. Tap to use it, hold
@@ -1025,11 +1086,7 @@ func _side(me: Dictionary) -> Control:
 	column.custom_minimum_size.x = side_width
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
 
-	var clock := PanelContainer.new()
-	clock.add_theme_stylebox_override("panel", UI.plate(60, 8))
-	clock.custom_minimum_size.y = UI.z(112)
-	_timer = UI.centered("", UI.z(78), UI.PAPER, false)
-	clock.add_child(_timer)
+	var clock := _clock(me)
 	Tutorial.mark(clock, "timer")
 	column.add_child(clock)
 	# Late in the match battle damage is multiplied; the tag says by how much.
@@ -1053,6 +1110,37 @@ func _side(me: Dictionary) -> Control:
 	Tutorial.mark(purse, "gold")
 	column.add_child(purse)
 	return column
+
+
+## The clock, which is also the ready button: a tap says this player is done
+## shopping, and the plate turns gilt while they are; a second tap takes it
+## back. The shop closes as soon as every living player is ready. The host
+## says who is ready; any other shop action clears it there. A player locked
+## out of the shop ("not to be") already counts as ready, so it does nothing.
+func _clock(me: Dictionary) -> Button:
+	var done := bool(Store.view["players"][Store.my_id()].get("ready", false))
+	var clock := Button.new()
+	clock.custom_minimum_size.y = UI.z(112)
+	clock.focus_mode = Control.FOCUS_NONE
+	var plate := UI.plate(60, 8)
+	if done:
+		plate = plate.duplicate()
+		if plate is StyleBoxTexture:
+			(plate as StyleBoxTexture).modulate_color = ready_tint
+		elif plate is StyleBoxFlat:
+			(plate as StyleBoxFlat).border_color = UI.GILT
+			(plate as StyleBoxFlat).set_border_width_all(UI.z(5))
+	for state in ["normal", "hover", "pressed", "disabled", "focus"]:
+		clock.add_theme_stylebox_override(state, plate)
+	_timer = UI.centered("", UI.z(78), UI.GILT if done else UI.PAPER, false)
+	_timer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_timer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	clock.add_child(_timer)
+	if bool(me.get("locked_out", false)):
+		clock.disabled = true
+	else:
+		clock.pressed.connect(Peek.guard(_me_command.bind("SetReady", {"ready": not done})))
+	return clock
 
 
 ## A plate over the foot of the felt for hints and refusals. Hidden while empty.
@@ -1166,6 +1254,14 @@ func _hero_pressed(hero: Dictionary) -> void:
 			_ability("Ubermensch")
 		"MarcoPolo":
 			_ability("SilkRoad")
+		"Beethoven":
+			_ability("FrenziedNotes")
+		"Goethe":
+			_ability("PoetryBoost")
+		"Cervantes":
+			_ability("DonQuixote")
+		"Homer":
+			_ability("BardOfTheCenturies")
 		_:
 			var ability := Ability.of(hero)
 			if ability != null and ability.when == Ability.When.BATTLE and ability.cost > 0:

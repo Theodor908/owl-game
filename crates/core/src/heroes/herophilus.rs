@@ -9,7 +9,7 @@ use crate::stats::BattleStats;
 pub struct Herophilus;
 
 impl HeroAbility for Herophilus {
-    fn modify_stats(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
+    fn battle_passive(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
         stats.reflect += hero.param("reflect");
     }
 }

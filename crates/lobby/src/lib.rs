@@ -117,6 +117,7 @@ fn owner(command: &Command) -> Option<PlayerId> {
         | Command::PickReward { player, .. }
         | Command::UseAbility { player, .. }
         | Command::ChooseEndgameEffect { player, .. }
+        | Command::SetReady { player, .. }
         | Command::UseHelp { player, .. }
         | Command::SubmitAnswer { player, .. } => Some(player),
     }
@@ -317,7 +318,7 @@ impl Lobby {
                 let all_picked = self.state.players.iter().all(|p| p.hero.is_some());
                 (all_picked || now >= self.phase_deadline).then_some(Command::StartMatch)
             }
-            Phase::Shop => (now >= self.phase_deadline).then_some(Command::EndShop),
+            Phase::Shop => (now >= self.phase_deadline || self.all_ready()).then_some(Command::EndShop),
             Phase::Battle | Phase::Endgame => self
                 .clocks
                 .iter()
@@ -330,6 +331,20 @@ impl Lobby {
             // player error; leaving the state alone is the safe response.
             let _ = self.apply(now, command);
         }
+    }
+
+    /// True when the shop can close early: every living human is ready and
+    /// every bot has done its shopping this turn, so a human's quick ready
+    /// never cuts a bot's turn short.
+    fn all_ready(&self) -> bool {
+        let turn = self.state.turn;
+        let shopped: Vec<bool> = self
+            .seats
+            .iter()
+            .zip(&self.shopped)
+            .map(|(seat, &last)| matches!(seat, Seat::Bot(_)) && last == turn)
+            .collect();
+        owl_core::shop::all_ready(&self.state, &shopped)
     }
 
     /// Updates the clocks from new events and files each event in the

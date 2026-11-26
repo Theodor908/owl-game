@@ -147,7 +147,7 @@ func _steps() -> Array:
 			"A card costs %d gold. Drag a card down to buy it, or tap it and press Buy. What you buy goes to your hand." % _number("card_cost")],
 		["timer", "shop", "timer", func() -> bool: return true,
 			"The clock",
-			"The shop closes when this runs out, and the battle begins. While this note is up, the clock waits for you."],
+			"The shop closes when this runs out, and the battle begins. Done early? Tap the clock: it turns gold, and once every player has tapped theirs the battle starts at once. Tap it again, or do anything in the shop, to take it back. While this note is up, the clock waits for you."],
 		["hand", "shop", "hand", func() -> bool: return not (me.get("hand", []) as Array).is_empty(),
 			"Your hand",
 			"Cards in your hand do nothing yet. Tap the hand to open it, then drag a card up to your board, or tap it and press Place. Hold a card to read it. You can hold up to %d cards." % _number("hand_size")],

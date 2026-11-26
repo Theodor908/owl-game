@@ -26,10 +26,10 @@ const WHEN := {
 	"MarieCurie": When.PASSIVE,
 }
 ## Hero kinds whose ability can be used once in each shop phase.
-const ONCE_A_TURN := ["MarcoPolo"]
+const ONCE_A_TURN := ["MarcoPolo", "Goethe"]
 ## Hero kind -> the param in its data file that holds its uses per match.
 ## A limited ability is used at most once in each round (the rule is in core).
-const LIMIT := {"Darwin": "uses", "Benz": "uses", "Herodotus": "uses", "Shakespeare": "skips"}
+const LIMIT := {"Darwin": "uses", "Benz": "uses", "Herodotus": "uses", "Shakespeare": "skips", "Beethoven": "payments", "Cervantes": "uses", "Homer": "payments"}
 ## Hero kind -> the param that says how many players alive the limit counts above.
 ## With fewer left the ability is not limited (Shakespeare's "to be").
 const LIMIT_ABOVE := {"Shakespeare": "skip_above"}

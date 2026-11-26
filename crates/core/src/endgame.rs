@@ -59,11 +59,12 @@ fn open_question(state: &mut GameState, env: &mut Env<'_>, events: &mut Vec<Even
     let Some(eg) = state.endgame.as_mut() else { return };
     let pair = eg.players.map(PlayerId::index);
 
-    // Random category, biased by both heroes' category bonuses added into one draw.
+    // Random category, biased by both heroes' endgame bias (their category
+    // bonus, or Homer's Lyrical Peak) added into one draw.
     let mut weights = vec![0; t.categories.len()];
     for idx in pair {
-        if let Some(hero) = state.players[idx].hero.map(|h| content.hero(h)) {
-            weights[usize::from(hero.category.0)] += hero.category_bonus;
+        for (category, percent) in crate::heroes::endgame_bias(&state.players[idx], content) {
+            weights[usize::from(category.0)] += percent;
         }
     }
     let category: Category = crate::battle::roll_category(&weights, env.rng);

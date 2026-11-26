@@ -52,6 +52,11 @@ impl CardInstance {
     pub fn has_effect(&self, content: &Content, pred: impl Fn(&Effect) -> bool) -> bool {
         self.effects(content).any(pred)
     }
+
+    /// True when any part of the card leaves the board after one battle.
+    pub fn lasts_one_battle(&self, content: &Content) -> bool {
+        self.parts.iter().any(|p| content.card(p.def).one_battle)
+    }
 }
 
 /// Per-hero ability bookkeeping. Each hero module uses the fields it needs.
@@ -65,6 +70,12 @@ pub struct HeroState {
     pub house_options: Vec<Category>,
     pub house_choice: Option<(Category, Category)>,
     pub recorded: Option<Question>,
+    /// The hero's current stage, moved on by cards that advance it; 0 before the first.
+    #[serde(default)]
+    pub stage: u32,
+    /// A one-battle boost bought with an ability, cleared when the battle ends.
+    #[serde(default)]
+    pub boosted: bool,
 }
 
 #[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize)]
@@ -107,6 +118,9 @@ pub struct Player {
     pub hero_state: HeroState,
     pub acted_this_shop: bool,
     pub locked_out: bool,
+    /// Ready to end the shop early. Cleared by any other shop command and at the start of a turn.
+    #[serde(default)]
+    pub ready: bool,
     pub skip_battle: bool,
     pub endgame_choice: Option<CardInstanceId>,
     pub heal_blocked: bool,
@@ -144,6 +158,7 @@ impl Player {
             hero_state: HeroState::default(),
             acted_this_shop: false,
             locked_out: false,
+            ready: false,
             skip_battle: false,
             endgame_choice: None,
             heal_blocked: false,

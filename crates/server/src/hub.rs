@@ -22,6 +22,12 @@ use tokio::sync::{Mutex, mpsc};
 pub const MAX_PLAYERS: usize = 6;
 /// How often a match looks at its clock.
 const TICK: Duration = Duration::from_millis(50);
+/// How long a player whose connection dropped keeps their place in a lobby
+/// that has not started. Fixed in the server, not a game rule: phones drop
+/// their connection soon after the game goes to the background.
+pub const LOBBY_GRACE: Duration = Duration::from_secs(3 * 60);
+/// How often players away for longer than `LOBBY_GRACE` are let go.
+pub const AWAY_SWEEP_EVERY: Duration = Duration::from_secs(10);
 /// Names for bots that fill empty seats.
 const BOT_NAMES: [&str; 6] = ["Minerva", "Archie", "Tawny", "Sage", "Strix", "Quill"];
 
@@ -42,6 +48,9 @@ pub enum GameInput {
     Command { seat: PlayerId, id: u64, command: Command },
     /// Send this seat its whole view again.
     Sync { seat: PlayerId },
+    /// The seat's connection dropped: it is no longer ready to end the
+    /// shop. Sent to the match as `SetReady` on their behalf; a refusal is ignored.
+    Dropped { seat: PlayerId },
 }
 
 struct Room {
@@ -62,6 +71,9 @@ pub struct Hub {
     online: HashMap<String, Client>,
     /// By lobby code.
     rooms: HashMap<String, Room>,
+    /// Lobby members whose connection dropped, by lower-cased username, and
+    /// since when. Kept in memory only.
+    away: HashMap<String, Instant>,
     connections: u64,
 }
 
@@ -94,6 +106,7 @@ impl Hub {
             invited: room.invited.clone(),
             bots: room.bots,
             max: MAX_PLAYERS,
+            away: room.members.iter().filter(|m| self.away.contains_key(&key(m))).cloned().collect(),
         })
     }
 
@@ -104,23 +117,30 @@ impl Hub {
         }
     }
 
+    /// The code of the lobby that has a player among its members.
+    fn room_of(&self, name: &str) -> Option<String> {
+        self.rooms.iter().find(|(_, room)| room.members.iter().any(|m| key(m) == key(name))).map(|(code, _)| code.clone())
+    }
+
     /// A player connected. An older connection of the same player is dropped.
+    /// A player who was away is back in their lobby, or their seat.
     /// Returns the number of this connection.
     pub fn connect(&mut self, name: &str, outbox: Outbox) -> u64 {
         self.connections += 1;
-        let lobby = self.online.get(&key(name)).and_then(|old| old.lobby.clone()).or_else(|| {
-            // Still seated in a running match from before the connection dropped.
-            self.rooms.iter().find(|(_, room)| room.members.iter().any(|m| key(m) == key(name))).map(|(code, _)| code.clone())
-        });
+        self.away.remove(&key(name));
+        let lobby = self.online.get(&key(name)).and_then(|old| old.lobby.clone()).or_else(|| self.room_of(name));
         self.online.insert(key(name), Client { name: name.to_string(), outbox, connection: self.connections, lobby });
         self.connections
     }
 
     /// Sends a returning player where they are: their lobby and, if a match is on, their view.
+    /// The others in a lobby that has not started see that they are back.
     pub fn resume(&self, name: &str) {
         let Some(code) = self.online.get(&key(name)).and_then(|c| c.lobby.clone()) else { return };
         let Some(room) = self.rooms.get(&code) else { return };
-        if let Some(state) = self.room_state(&code) {
+        if room.game.is_none() {
+            self.broadcast_room(&code);
+        } else if let Some(state) = self.room_state(&code) {
             self.send(name, state);
         }
         if let Some((game, seats)) = &room.game
@@ -131,28 +151,69 @@ impl Hub {
         }
     }
 
-    /// A connection closed. The player leaves a lobby that has not started;
-    /// in a running match their seat is kept for when they come back.
+    /// A connection closed. The player is away: their place in a lobby is
+    /// kept for `LOBBY_GRACE` (see `sweep_away`), and their seat in a
+    /// running match for as long as it runs. In a match they are no longer
+    /// ready to end the shop.
     pub fn disconnect(&mut self, name: &str, connection: u64) {
         if self.online.get(&key(name)).is_none_or(|c| c.connection != connection) {
             return;
         }
-        let in_match = self
-            .online
-            .get(&key(name))
-            .and_then(|c| c.lobby.as_ref())
-            .and_then(|code| self.rooms.get(code))
-            .is_some_and(|room| room.game.is_some());
-        if !in_match {
-            self.leave(name);
+        if let Some((game, seat)) = self.seat_of(name) {
+            let _ = game.send(GameInput::Dropped { seat });
         }
-        self.online.remove(&key(name));
+        let Some(code) = self.online.remove(&key(name)).and_then(|c| c.lobby) else { return };
+        let Some(room) = self.rooms.get(&code) else { return };
+        self.away.insert(key(name), Instant::now());
+        if room.game.is_none() {
+            self.broadcast_room(&code);
+        }
+    }
+
+    /// Lets go of every player away for longer than `LOBBY_GRACE`: they
+    /// leave their lobby as if they had left it themselves. A seat in a
+    /// running match is kept until the match ends.
+    pub fn sweep_away(&mut self, now: Instant) {
+        let due: Vec<String> = self
+            .away
+            .iter()
+            .filter(|(_, since)| now.saturating_duration_since(**since) >= LOBBY_GRACE)
+            .map(|(name, _)| name.clone())
+            .collect();
+        for name in due {
+            match self.room_of(&name) {
+                Some(code) if self.rooms.get(&code).is_some_and(|room| room.game.is_some()) => {}
+                Some(code) => self.drop_member(&code, &name),
+                None => {
+                    self.away.remove(&name);
+                }
+            }
+        }
+    }
+
+    /// A lobby's match ended at `now`; the lobby stays open for another.
+    /// Members still away get the full grace from now, as if they had
+    /// dropped from the lobby just then, and everyone sees who is away.
+    pub fn match_ended(&mut self, code: &str, now: Instant) {
+        let Some(room) = self.rooms.get_mut(code) else { return };
+        room.game = None;
+        for member in &room.members {
+            if let Some(since) = self.away.get_mut(&key(member)) {
+                *since = now;
+            }
+        }
+        self.broadcast_room(code);
     }
 
     /// Drops a player's connection and their place anywhere: after logout or account deletion.
     pub fn remove(&mut self, name: &str) {
         self.leave(name);
         self.online.remove(&key(name));
+        if self.away.remove(&key(name)).is_some()
+            && let Some(code) = self.room_of(name)
+        {
+            self.drop_member(&code, name);
+        }
     }
 
     pub fn is_online(&self, name: &str) -> bool {
@@ -272,16 +333,24 @@ impl Hub {
     pub fn leave(&mut self, name: &str) {
         let Some(code) = self.online.get_mut(&key(name)).and_then(|c| c.lobby.take()) else { return };
         self.send(name, ServerMessage::LobbyClosed);
-        let Some(room) = self.rooms.get_mut(&code) else { return };
+        self.drop_member(&code, name);
+    }
+
+    /// Takes a player out of a lobby's members. The lobby closes for
+    /// everyone when they were its owner or its last member.
+    fn drop_member(&mut self, code: &str, name: &str) {
+        self.away.remove(&key(name));
+        let Some(room) = self.rooms.get_mut(code) else { return };
         room.members.retain(|m| key(m) != key(name));
         let closes = room.owner == key(name) || room.members.is_empty();
         if !closes {
-            self.broadcast_room(&code);
+            self.broadcast_room(code);
             return;
         }
         // Dropping the room drops the match's inbox, which ends the match task.
-        let Some(room) = self.rooms.remove(&code) else { return };
+        let Some(room) = self.rooms.remove(code) else { return };
         for member in room.members {
+            self.away.remove(&key(&member));
             if let Some(client) = self.online.get_mut(&key(&member)) {
                 client.lobby = None;
                 let _ = client.outbox.send(ServerMessage::LobbyClosed);
@@ -375,6 +444,10 @@ async fn run_match(
                         *flag = true;
                     }
                 }
+                Some(GameInput::Dropped { seat }) => {
+                    // Refused outside the shop, where there is nothing to take back.
+                    let _ = lobby.handle(now(), seat, Command::SetReady { player: seat, ready: false });
+                }
                 Some(GameInput::Command { seat, id, command }) => {
                     let reply = match lobby.handle(now(), seat, command) {
                         Ok(()) => ServerMessage::Accepted { id },
@@ -404,10 +477,7 @@ async fn run_match(
         }
         if lobby.is_finished() {
             // The lobby stays open so the same friends can play again.
-            let mut guard = hub.lock().await;
-            if let Some(room) = guard.rooms.get_mut(&code) {
-                room.game = None;
-            }
+            hub.lock().await.match_ended(&code, Instant::now());
             return;
         }
     }

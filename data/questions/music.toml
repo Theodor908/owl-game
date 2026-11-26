@@ -1,0 +1,1101 @@
+# Written questions: each comes from a published quiz with its answer key (source) and is checked against a second reference (check).
+
+[[question]]
+id = "music-0101"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Who composed the set of violin concertos called The Four Seasons?"
+answer = "Antonio Vivaldi"
+wrong = ["Arcangelo Corelli", "Tomaso Albinoni", "Domenico Scarlatti"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)"
+reviewed = false
+
+[[question]]
+id = "music-0102"
+subcategory = "Classical"
+difficulty = "medium"
+text = "In Holst's suite The Planets, which planet is \"the Bringer of Old Age\"?"
+answer = "Saturn"
+wrong = ["Jupiter", "Uranus", "Neptune"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/The_Planets"
+reviewed = false
+
+[[question]]
+id = "music-0103"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Which Austrian composer wrote the waltz The Blue Danube?"
+answer = "Johann Strauss II"
+wrong = ["Johann Strauss I", "Franz Lehár", "Joseph Lanner"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/The_Blue_Danube"
+reviewed = false
+
+[[question]]
+id = "music-0104"
+subcategory = "Classical"
+difficulty = "medium"
+text = "Torvill and Dean skated to which Ravel piece at the 1984 Winter Olympics?"
+answer = "Boléro"
+wrong = ["La valse", "Daphnis et Chloé", "Pavane"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Boléro"
+reviewed = false
+
+[[question]]
+id = "music-0105"
+subcategory = "Classical"
+difficulty = "medium"
+text = "Who composed the piano suite Pictures at an Exhibition?"
+answer = "Modest Mussorgsky"
+wrong = ["Nikolai Rimsky-Korsakov", "Alexander Borodin", "Pyotr Tchaikovsky"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Pictures_at_an_Exhibition"
+reviewed = false
+
+[[question]]
+id = "music-0106"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Who composed Appalachian Spring and Fanfare for the Common Man?"
+answer = "Aaron Copland"
+wrong = ["Leonard Bernstein", "Samuel Barber", "Charles Ives"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Aaron_Copland"
+reviewed = false
+
+[[question]]
+id = "music-0107"
+subcategory = "Classical"
+difficulty = "hard"
+text = "Which Mozart piano concerto is nicknamed \"Elvira Madigan\"?"
+answer = "No. 21"
+wrong = ["No. 20", "No. 23", "No. 26"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Piano_Concerto_No._21_(Mozart)"
+reviewed = false
+
+[[question]]
+id = "music-0108"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Who composed the Symphonie fantastique?"
+answer = "Hector Berlioz"
+wrong = ["Camille Saint-Saëns", "Georges Bizet", "Charles Gounod"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Symphonie_fantastique"
+reviewed = false
+
+[[question]]
+id = "music-0109"
+subcategory = "Classical"
+difficulty = "hard"
+text = "Who conducted the first performance of Schubert's \"Great\" C major symphony in 1839?"
+answer = "Felix Mendelssohn"
+wrong = ["Robert Schumann", "Franz Liszt", "Johannes Brahms"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Symphony_No._9_(Schubert)"
+reviewed = false
+
+[[question]]
+id = "music-0110"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Which composer is often called the \"Father of the Symphony\"?"
+answer = "Joseph Haydn"
+wrong = ["Wolfgang Amadeus Mozart", "J. S. Bach", "Ludwig van Beethoven"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classical-Music-Volume-1-97726.html"
+check = "https://en.wikipedia.org/wiki/Joseph_Haydn"
+reviewed = false
+
+[[question]]
+id = "music-0111"
+subcategory = "Classical"
+difficulty = "medium"
+text = "Who wrote the symphonies nicknamed \"Little Russian\", \"Polish\" and \"Pathétique\"?"
+answer = "Pyotr Tchaikovsky"
+wrong = ["Sergei Rachmaninoff", "Alexander Borodin", "Nikolai Rimsky-Korsakov"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Well-Known-Classical-Composers-222054.html"
+check = "https://en.wikipedia.org/wiki/Symphony_No._3_(Tchaikovsky)"
+reviewed = false
+
+[[question]]
+id = "music-0112"
+subcategory = "Classical"
+difficulty = "medium"
+text = "Which 12th-century abbess, later declared a saint, composed the Ordo Virtutum?"
+answer = "Hildegard of Bingen"
+wrong = ["Clare of Assisi", "Catherine of Siena", "Teresa of Ávila"]
+source = "https://interlude.hk/twenty-trivia-questions-about-classical-music/"
+check = "https://en.wikipedia.org/wiki/Hildegard_of_Bingen"
+reviewed = false
+
+[[question]]
+id = "music-0113"
+subcategory = "Classical"
+difficulty = "hard"
+text = "Which Italian prince and madrigal composer killed his wife and her lover in 1590?"
+answer = "Carlo Gesualdo"
+wrong = ["Claudio Monteverdi", "Luca Marenzio", "Giovanni Palestrina"]
+source = "https://interlude.hk/twenty-trivia-questions-about-classical-music/"
+check = "https://en.wikipedia.org/wiki/Carlo_Gesualdo"
+reviewed = false
+
+[[question]]
+id = "music-0114"
+subcategory = "Classical"
+difficulty = "hard"
+text = "Which composer died of gangrene after striking his foot with his conducting staff?"
+answer = "Jean-Baptiste Lully"
+wrong = ["Jean-Philippe Rameau", "François Couperin", "Marc-Antoine Charpentier"]
+source = "https://interlude.hk/twenty-trivia-questions-about-classical-music/"
+check = "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully"
+reviewed = false
+
+[[question]]
+id = "music-0115"
+subcategory = "Classical"
+difficulty = "easy"
+text = "Which deaf composer was turned round to see the applause at the premiere of his Ninth Symphony?"
+answer = "Ludwig van Beethoven"
+wrong = ["Johannes Brahms", "Franz Schubert", "Anton Bruckner"]
+source = "https://interlude.hk/twenty-trivia-questions-about-classical-music/"
+check = "https://en.wikipedia.org/wiki/Symphony_No._9_(Beethoven)"
+reviewed = false
+
+[[question]]
+id = "music-0116"
+subcategory = "Classical"
+difficulty = "medium"
+text = "Which eerie orchestral piece did Saint-Saëns write in 1874?"
+answer = "Danse macabre"
+wrong = ["Night on Bald Mountain", "The Sorcerer's Apprentice", "Carnival of the Animals"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/Danse_macabre_(Saint-Saëns)"
+reviewed = false
+
+[[question]]
+id = "music-0117"
+subcategory = "Jazz and blues"
+difficulty = "easy"
+text = "Who first recorded \"What a Wonderful World\" in 1967?"
+answer = "Louis Armstrong"
+wrong = ["Nat King Cole", "Ray Charles", "Frank Sinatra"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/What_a_Wonderful_World"
+reviewed = false
+
+[[question]]
+id = "music-0118"
+subcategory = "Jazz and blues"
+difficulty = "easy"
+text = "Which singer and pianist had a 2002 hit with \"Don't Know Why\"?"
+answer = "Norah Jones"
+wrong = ["Diana Krall", "Alicia Keys", "Corinne Bailey Rae"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Don't_Know_Why"
+reviewed = false
+
+[[question]]
+id = "music-0119"
+subcategory = "Jazz and blues"
+difficulty = "easy"
+text = "What was saxophonist Charlie Parker's best-known nickname?"
+answer = "Bird"
+wrong = ["Satchmo", "Prez", "Duke"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Charlie_Parker"
+reviewed = false
+
+[[question]]
+id = "music-0120"
+subcategory = "Jazz and blues"
+difficulty = "easy"
+text = "Which trumpeter led the 1959 album Kind of Blue?"
+answer = "Miles Davis"
+wrong = ["Chet Baker", "Dizzy Gillespie", "Clifford Brown"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Kind_of_Blue"
+reviewed = false
+
+[[question]]
+id = "music-0121"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Who composed \"Take the 'A' Train\", the signature tune of Duke Ellington's orchestra?"
+answer = "Billy Strayhorn"
+wrong = ["Count Basie", "Cab Calloway", "Fletcher Henderson"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Take_the_%22A%22_Train"
+reviewed = false
+
+[[question]]
+id = "music-0122"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Which genre is named after Bill Monroe's band, the Blue Grass Boys?"
+answer = "Bluegrass"
+wrong = ["Honky-tonk", "Rockabilly", "Western swing"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Bluegrass_music"
+reviewed = false
+
+[[question]]
+id = "music-0123"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Esperanza Spalding is a jazz virtuoso of which instrument?"
+answer = "Double bass"
+wrong = ["Saxophone", "Trumpet", "Vibraphone"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Esperanza_Spalding"
+reviewed = false
+
+[[question]]
+id = "music-0124"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Which singer won an Apollo talent contest and then joined Chick Webb's band?"
+answer = "Ella Fitzgerald"
+wrong = ["Billie Holiday", "Sarah Vaughan", "Dinah Washington"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Jazz-History-84135.html"
+check = "https://en.wikipedia.org/wiki/Ella_Fitzgerald"
+reviewed = false
+
+[[question]]
+id = "music-0125"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Who composed and recorded the jazz piece \"Giant Steps\"?"
+answer = "John Coltrane"
+wrong = ["Sonny Rollins", "Charlie Parker", "Ornette Coleman"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Jazz-History-84135.html"
+check = "https://en.wikipedia.org/wiki/Giant_Steps"
+reviewed = false
+
+[[question]]
+id = "music-0126"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Which saxophonist is regarded as the father of free jazz?"
+answer = "Ornette Coleman"
+wrong = ["Charles Mingus", "Dave Brubeck", "Stan Getz"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Jazz-History-84135.html"
+check = "https://en.wikipedia.org/wiki/Ornette_Coleman"
+reviewed = false
+
+[[question]]
+id = "music-0127"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Whose swing orchestra played the famous 1938 concert at Carnegie Hall?"
+answer = "Benny Goodman"
+wrong = ["Glenn Miller", "Artie Shaw", "Tommy Dorsey"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classic-Jazz-56119.html"
+check = "https://en.wikipedia.org/wiki/Benny_Goodman"
+reviewed = false
+
+[[question]]
+id = "music-0128"
+subcategory = "Jazz and blues"
+difficulty = "hard"
+text = "Which Harlem stride pianist wrote \"The Charleston\"?"
+answer = "James P. Johnson"
+wrong = ["Fats Waller", "Jelly Roll Morton", "Eubie Blake"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Classic-Jazz-56119.html"
+check = "https://en.wikipedia.org/wiki/James_P._Johnson"
+reviewed = false
+
+[[question]]
+id = "music-0129"
+subcategory = "Jazz and blues"
+difficulty = "hard"
+text = "Milt Jackson, John Lewis, Percy Heath and Kenny Clarke formed which group in 1952?"
+answer = "Modern Jazz Quartet"
+wrong = ["Jazz Messengers", "Dave Brubeck Quartet", "Weather Report"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Jazz-History-2-97141.html"
+check = "https://en.wikipedia.org/wiki/Modern_Jazz_Quartet"
+reviewed = false
+
+[[question]]
+id = "music-0130"
+subcategory = "Jazz and blues"
+difficulty = "hard"
+text = "Which trumpeter was called the \"James Dean of jazz\" in the 1950s?"
+answer = "Chet Baker"
+wrong = ["Stan Getz", "Gerry Mulligan", "Art Pepper"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Jazz-History-2-97141.html"
+check = "https://en.wikipedia.org/wiki/Chet_Baker"
+reviewed = false
+
+[[question]]
+id = "music-0131"
+subcategory = "Jazz and blues"
+difficulty = "hard"
+text = "Which blues singer first recorded \"Killing Floor\" in 1964?"
+answer = "Howlin' Wolf"
+wrong = ["Muddy Waters", "B.B. King", "John Lee Hooker"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/Killing_Floor_(song)"
+reviewed = false
+
+[[question]]
+id = "music-0132"
+subcategory = "Jazz and blues"
+difficulty = "medium"
+text = "Who wrote the music of \"Georgia on My Mind\" and first recorded it in 1930?"
+answer = "Hoagy Carmichael"
+wrong = ["Ray Charles", "Irving Berlin", "Cole Porter"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/Georgia_on_My_Mind"
+reviewed = false
+
+[[question]]
+id = "music-0133"
+subcategory = "Rock"
+difficulty = "medium"
+text = "Eric Clapton, Jeff Beck and Jimmy Page all played in which band?"
+answer = "The Yardbirds"
+wrong = ["Cream", "Led Zeppelin", "The Who"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/The_Yardbirds"
+reviewed = false
+
+[[question]]
+id = "music-0134"
+subcategory = "Rock"
+difficulty = "easy"
+text = "In which Liverpool club did the Beatles play hundreds of times in the early 1960s?"
+answer = "The Cavern Club"
+wrong = ["The Marquee", "The Casbah", "The Star-Club"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/The_Cavern_Club"
+reviewed = false
+
+[[question]]
+id = "music-0135"
+subcategory = "Rock"
+difficulty = "medium"
+text = "Who wrote and first recorded \"Blue Suede Shoes\" in 1955?"
+answer = "Carl Perkins"
+wrong = ["Elvis Presley", "Chuck Berry", "Buddy Holly"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/Blue_Suede_Shoes"
+reviewed = false
+
+[[question]]
+id = "music-0136"
+subcategory = "Rock"
+difficulty = "hard"
+text = "Which Pink Floyd album came between Wish You Were Here and The Wall?"
+answer = "Animals"
+wrong = ["Meddle", "Atom Heart Mother", "The Final Cut"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/Animals_(Pink_Floyd_album)"
+reviewed = false
+
+[[question]]
+id = "music-0137"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Robert Zimmerman is better known by which name?"
+answer = "Bob Dylan"
+wrong = ["Paul Simon", "Leonard Cohen", "Neil Young"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Bob_Dylan"
+reviewed = false
+
+[[question]]
+id = "music-0138"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Flea is the bassist of which band?"
+answer = "Red Hot Chili Peppers"
+wrong = ["Nirvana", "Pearl Jam", "Foo Fighters"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Flea_(musician)"
+reviewed = false
+
+[[question]]
+id = "music-0139"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Which 1990s rock genre grew out of Seattle?"
+answer = "Grunge"
+wrong = ["Britpop", "Shoegaze", "Nu metal"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Grunge"
+reviewed = false
+
+[[question]]
+id = "music-0140"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Which band was Oasis's rival in the 1995 \"Battle of Britpop\"?"
+answer = "Blur"
+wrong = ["Pulp", "Suede", "Supergrass"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Britpop"
+reviewed = false
+
+[[question]]
+id = "music-0141"
+subcategory = "Rock"
+difficulty = "hard"
+text = "Who founded the Manchester label Factory Records?"
+answer = "Tony Wilson"
+wrong = ["Alan McGee", "Geoff Travis", "Richard Branson"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Factory_Records"
+reviewed = false
+
+[[question]]
+id = "music-0142"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Linkin Park's debut album of 2000 was called what?"
+answer = "Hybrid Theory"
+wrong = ["Meteora", "Minutes to Midnight", "Mezmerize"]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Hybrid_Theory"
+reviewed = false
+
+[[question]]
+id = "music-0143"
+subcategory = "Rock"
+difficulty = "medium"
+text = "Which band released In Rainbows in 2007 as a pay-what-you-want download?"
+answer = "Radiohead"
+wrong = ["Coldplay", "Muse", "Arcade Fire"]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/In_Rainbows"
+reviewed = false
+
+[[question]]
+id = "music-0144"
+subcategory = "Rock"
+difficulty = "easy"
+text = "Which Las Vegas band recorded \"Mr. Brightside\"?"
+answer = "The Killers"
+wrong = ["The Strokes", "Kings of Leon", "Franz Ferdinand"]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Mr._Brightside"
+reviewed = false
+
+[[question]]
+id = "music-0145"
+subcategory = "Pop"
+difficulty = "easy"
+text = "Which Norwegian band had a 1985 hit with \"Take On Me\"?"
+answer = "A-ha"
+wrong = ["Europe", "Roxette", "Ace of Base"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Take_On_Me"
+reviewed = false
+
+[[question]]
+id = "music-0146"
+subcategory = "Pop"
+difficulty = "medium"
+text = "What was Elvis Presley's first number one on the US Billboard pop chart?"
+answer = "Heartbreak Hotel"
+wrong = ["Hound Dog", "Love Me Tender", "Jailhouse Rock"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Heartbreak_Hotel"
+reviewed = false
+
+[[question]]
+id = "music-0147"
+subcategory = "Pop"
+difficulty = "hard"
+text = "Which star sang every vocal and played every instrument on his 1978 debut album For You?"
+answer = "Prince"
+wrong = ["Stevie Wonder", "Lenny Kravitz", "Michael Jackson"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/For_You_(Prince_album)"
+reviewed = false
+
+[[question]]
+id = "music-0148"
+subcategory = "Pop"
+difficulty = "medium"
+text = "In which year did ABBA win the Eurovision Song Contest with \"Waterloo\"?"
+answer = "1974"
+wrong = ["1972", "1976", "1978"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Waterloo_(ABBA_song)"
+reviewed = false
+
+[[question]]
+id = "music-0149"
+subcategory = "Pop"
+difficulty = "medium"
+text = "Who was the first woman inducted into the Rock and Roll Hall of Fame?"
+answer = "Aretha Franklin"
+wrong = ["Tina Turner", "Janis Joplin", "Etta James"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Aretha_Franklin"
+reviewed = false
+
+[[question]]
+id = "music-0150"
+subcategory = "Pop"
+difficulty = "easy"
+text = "Which singer won five Grammys in 2008 with the album Back to Black?"
+answer = "Amy Winehouse"
+wrong = ["Adele", "Duffy", "Lily Allen"]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Amy_Winehouse"
+reviewed = false
+
+[[question]]
+id = "music-0151"
+subcategory = "Pop"
+difficulty = "easy"
+text = "Which singer gave his albums maths-symbol titles such as + and ÷?"
+answer = "Ed Sheeran"
+wrong = ["Sam Smith", "James Bay", "Lewis Capaldi"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Ed_Sheeran"
+reviewed = false
+
+[[question]]
+id = "music-0152"
+subcategory = "Pop"
+difficulty = "easy"
+text = "Which South Korean singer had the 2012 viral hit \"Gangnam Style\"?"
+answer = "Psy"
+wrong = ["Rain", "G-Dragon", "Taeyang"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Gangnam_Style"
+reviewed = false
+
+[[question]]
+id = "music-0153"
+subcategory = "Pop"
+difficulty = "easy"
+text = "Who sang \"Waka Waka\", the official song of the 2010 World Cup?"
+answer = "Shakira"
+wrong = ["Jennifer Lopez", "Gloria Estefan", "Thalía"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Waka_Waka_(This_Time_for_Africa)"
+reviewed = false
+
+[[question]]
+id = "music-0154"
+subcategory = "Pop"
+difficulty = "medium"
+text = "Blackstar, released in 2016, was the final album of which artist?"
+answer = "David Bowie"
+wrong = ["Prince", "George Michael", "Lou Reed"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Blackstar_(album)"
+reviewed = false
+
+[[question]]
+id = "music-0155"
+subcategory = "Pop"
+difficulty = "medium"
+text = "Which singer joined Luis Fonsi and Daddy Yankee on the 2017 remix of \"Despacito\"?"
+answer = "Justin Bieber"
+wrong = ["Ed Sheeran", "Shawn Mendes", "Drake"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Despacito"
+reviewed = false
+
+[[question]]
+id = "music-0156"
+subcategory = "Pop"
+difficulty = "medium"
+text = "Which Norwegian duo had a viral 2013 hit asking what the fox says?"
+answer = "Ylvis"
+wrong = ["Kygo", "Röyksopp", "Madcon"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/The_Fox_(What_Does_the_Fox_Say%3F)"
+reviewed = false
+
+[[question]]
+id = "music-0157"
+subcategory = "Pop"
+difficulty = "medium"
+text = "How many members did BTS have when the group debuted in 2013?"
+answer = "Seven"
+wrong = ["Five", "Six", "Nine"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/BTS"
+reviewed = false
+
+[[question]]
+id = "music-0158"
+subcategory = "Pop"
+difficulty = "medium"
+text = "The Prodigy were leading names in which 1990s electronic style?"
+answer = "Big beat"
+wrong = ["Trip hop", "Dubstep", "Trance"]
+source = "https://sports.yahoo.com/60-best-music-quiz-questions-122000296.html"
+check = "https://en.wikipedia.org/wiki/Big_beat"
+reviewed = false
+
+[[question]]
+id = "music-0159"
+subcategory = "Hip-hop"
+difficulty = "medium"
+text = "Which group's \"Rapper's Delight\" (1979) was the first rap single in the US Top 40?"
+answer = "Sugarhill Gang"
+wrong = ["Run-DMC", "Beastie Boys", "Public Enemy"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Rapper's_Delight"
+reviewed = false
+
+[[question]]
+id = "music-0160"
+subcategory = "Hip-hop"
+difficulty = "medium"
+text = "O'Shea Jackson is better known as which rapper?"
+answer = "Ice Cube"
+wrong = ["Ice-T", "Dr. Dre", "Eazy-E"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Ice_Cube"
+reviewed = false
+
+[[question]]
+id = "music-0161"
+subcategory = "Hip-hop"
+difficulty = "easy"
+text = "Joseph Simmons, Darryl McDaniels and Jason Mizell formed which group?"
+answer = "Run-DMC"
+wrong = ["Public Enemy", "Beastie Boys", "N.W.A"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Run-DMC"
+reviewed = false
+
+[[question]]
+id = "music-0162"
+subcategory = "Hip-hop"
+difficulty = "hard"
+text = "Blunted on Reality (1994) was the debut album of which group?"
+answer = "Fugees"
+wrong = ["The Roots", "A Tribe Called Quest", "De La Soul"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Blunted_on_Reality"
+reviewed = false
+
+[[question]]
+id = "music-0163"
+subcategory = "Hip-hop"
+difficulty = "easy"
+text = "Shawn Carter is better known as which rapper?"
+answer = "Jay-Z"
+wrong = ["Nas", "Diddy", "Kanye West"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Jay-Z"
+reviewed = false
+
+[[question]]
+id = "music-0164"
+subcategory = "Hip-hop"
+difficulty = "easy"
+text = "Who released the album Late Registration in 2005?"
+answer = "Kanye West"
+wrong = ["50 Cent", "Jay-Z", "Lil Wayne"]
+source = "https://groupgames101.com/hip-hop-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Late_Registration"
+reviewed = false
+
+[[question]]
+id = "music-0165"
+subcategory = "Hip-hop"
+difficulty = "easy"
+text = "Get Rich or Die Tryin' (2003) was the debut album of which rapper?"
+answer = "50 Cent"
+wrong = ["Nelly", "Ja Rule", "T.I."]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Get_Rich_or_Die_Tryin'"
+reviewed = false
+
+[[question]]
+id = "music-0166"
+subcategory = "Hip-hop"
+difficulty = "medium"
+text = "Which British MC released the grime single \"Fix Up, Look Sharp\" in 2003?"
+answer = "Dizzee Rascal"
+wrong = ["Wiley", "Skepta", "Stormzy"]
+source = "https://kwizzbit.com/2000s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Fix_Up,_Look_Sharp"
+reviewed = false
+
+[[question]]
+id = "music-0167"
+subcategory = "Hip-hop"
+difficulty = "hard"
+text = "In which year did Kendrick Lamar release good kid, m.A.A.d city?"
+answer = "2012"
+wrong = ["2010", "2014", "2015"]
+source = "https://kwizzbit.com/2010s-music-quiz-questions-and-answers/"
+check = "https://en.wikipedia.org/wiki/Good_Kid,_M.A.A.D_City"
+reviewed = false
+
+[[question]]
+id = "music-0168"
+subcategory = "World music"
+difficulty = "medium"
+text = "Bossa nova is a Portuguese name meaning roughly what?"
+answer = "New trend"
+wrong = ["Old dance", "Sweet song", "Beach rhythm"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Bossa_nova"
+reviewed = false
+
+[[question]]
+id = "music-0169"
+subcategory = "World music"
+difficulty = "hard"
+text = "Which guitar-and-horn popular music of Ghana is named for its upper-class audience?"
+answer = "Highlife"
+wrong = ["Jùjú", "Soukous", "Mbalax"]
+source = "https://www.watercoolertrivia.com/trivia-questions/jazz-trivia-questions"
+check = "https://en.wikipedia.org/wiki/Highlife"
+reviewed = false
+
+[[question]]
+id = "music-0170"
+subcategory = "World music"
+difficulty = "easy"
+text = "Los del Río had a worldwide 1996 hit with which dance song?"
+answer = "Macarena"
+wrong = ["La Bamba", "Lambada", "Asereje"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Macarena_(song)"
+reviewed = false
+
+[[question]]
+id = "music-0171"
+subcategory = "World music"
+difficulty = "easy"
+text = "Ravi Shankar was a master of which instrument?"
+answer = "Sitar"
+wrong = ["Sarod", "Veena", "Tabla"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/World-Music-76956.html"
+check = "https://en.wikipedia.org/wiki/Ravi_Shankar"
+reviewed = false
+
+[[question]]
+id = "music-0172"
+subcategory = "World music"
+difficulty = "easy"
+text = "The erhu, pipa and sheng are traditional instruments of which country?"
+answer = "China"
+wrong = ["Japan", "Korea", "Vietnam"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/World-Music-76956.html"
+check = "https://en.wikipedia.org/wiki/Erhu"
+reviewed = false
+
+[[question]]
+id = "music-0173"
+subcategory = "World music"
+difficulty = "medium"
+text = "Qawwali singer Nusrat Fateh Ali Khan came from which country?"
+answer = "Pakistan"
+wrong = ["India", "Afghanistan", "Bangladesh"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/World-Music-76956.html"
+check = "https://en.wikipedia.org/wiki/Nusrat_Fateh_Ali_Khan"
+reviewed = false
+
+[[question]]
+id = "music-0174"
+subcategory = "World music"
+difficulty = "medium"
+text = "The merengue is the national dance and music of which country?"
+answer = "Dominican Republic"
+wrong = ["Cuba", "Puerto Rico", "Colombia"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/World-Music-76956.html"
+check = "https://en.wikipedia.org/wiki/Merengue_music"
+reviewed = false
+
+[[question]]
+id = "music-0175"
+subcategory = "World music"
+difficulty = "hard"
+text = "In which city was the mambo bandleader Tito Puente born?"
+answer = "New York City"
+wrong = ["Havana", "San Juan", "Miami"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/World-Music-76956.html"
+check = "https://en.wikipedia.org/wiki/Tito_Puente"
+reviewed = false
+
+[[question]]
+id = "music-0176"
+subcategory = "World music"
+difficulty = "medium"
+text = "What is the only string instrument used in capoeira music?"
+answer = "Berimbau"
+wrong = ["Cavaquinho", "Charango", "Viola caipira"]
+source = "https://www.funtrivia.com/quizzes/music/international_music/latin_american_music.html"
+check = "https://en.wikipedia.org/wiki/Berimbau"
+reviewed = false
+
+[[question]]
+id = "music-0177"
+subcategory = "World music"
+difficulty = "easy"
+text = "Who composed the music of \"The Girl from Ipanema\"?"
+answer = "Antônio Carlos Jobim"
+wrong = ["João Gilberto", "Sérgio Mendes", "Baden Powell"]
+source = "https://www.funtrivia.com/quizzes/music/international_music/latin_american_music.html"
+check = "https://en.wikipedia.org/wiki/The_Girl_from_Ipanema"
+reviewed = false
+
+[[question]]
+id = "music-0178"
+subcategory = "World music"
+difficulty = "hard"
+text = "Who wrote the original Portuguese lyrics of \"The Girl from Ipanema\"?"
+answer = "Vinícius de Moraes"
+wrong = ["Chico Buarque", "Caetano Veloso", "Gilberto Gil"]
+source = "https://www.funtrivia.com/quizzes/music/international_music/latin_american_music.html"
+check = "https://en.wikipedia.org/wiki/The_Girl_from_Ipanema"
+reviewed = false
+
+[[question]]
+id = "music-0179"
+subcategory = "World music"
+difficulty = "medium"
+text = "Which American saxophonist helped make bossa nova popular worldwide?"
+answer = "Stan Getz"
+wrong = ["Dave Brubeck", "Charlie Parker", "Sonny Rollins"]
+source = "https://www.funtrivia.com/quizzes/music/international_music/latin_american_music.html"
+check = "https://en.wikipedia.org/wiki/Stan_Getz"
+reviewed = false
+
+[[question]]
+id = "music-0180"
+subcategory = "Instruments"
+difficulty = "medium"
+text = "The sackbut was an early form of which instrument?"
+answer = "Trombone"
+wrong = ["Trumpet", "Tuba", "French horn"]
+source = "https://laffgaff.com/music-trivia-questions-answers/"
+check = "https://en.wikipedia.org/wiki/Sackbut"
+reviewed = false
+
+[[question]]
+id = "music-0181"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "Which is the largest and lowest instrument of the orchestra's string section?"
+answer = "Double bass"
+wrong = ["Cello", "Viola", "Harp"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/About-Musical-Instruments-210000.html"
+check = "https://en.wikipedia.org/wiki/Double_bass"
+reviewed = false
+
+[[question]]
+id = "music-0182"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "Which of these instruments is not a woodwind?"
+answer = "Cornet"
+wrong = ["Oboe", "Clarinet", "Bassoon"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/About-Musical-Instruments-210000.html"
+check = "https://en.wikipedia.org/wiki/Cornet"
+reviewed = false
+
+[[question]]
+id = "music-0183"
+subcategory = "Instruments"
+difficulty = "medium"
+text = "Which brass instrument, used for military calls, has no valves or keys?"
+answer = "Bugle"
+wrong = ["Cornet", "Flugelhorn", "Euphonium"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/About-Musical-Instruments-210000.html"
+check = "https://en.wikipedia.org/wiki/Bugle"
+reviewed = false
+
+[[question]]
+id = "music-0184"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "Which long wooden horn is most associated with the Swiss Alps?"
+answer = "Alphorn"
+wrong = ["Didgeridoo", "Shofar", "Lur"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/All-About-Musical-Instruments-342714.html"
+check = "https://en.wikipedia.org/wiki/Alphorn"
+reviewed = false
+
+[[question]]
+id = "music-0185"
+subcategory = "Instruments"
+difficulty = "hard"
+text = "Which double-reed instrument of the Middle Ages and Renaissance came before the oboe?"
+answer = "Shawm"
+wrong = ["Recorder", "Cornett", "Sackbut"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/All-About-Musical-Instruments-342714.html"
+check = "https://en.wikipedia.org/wiki/Shawm"
+reviewed = false
+
+[[question]]
+id = "music-0186"
+subcategory = "Instruments"
+difficulty = "easy"
+text = "What kind of reed is the oboe played with?"
+answer = "Double reed"
+wrong = ["Single reed", "Free reed", "No reed"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Musical-Instruments-258661.html"
+check = "https://en.wikipedia.org/wiki/Oboe"
+reviewed = false
+
+[[question]]
+id = "music-0187"
+subcategory = "Instruments"
+difficulty = "medium"
+text = "Who is credited with inventing the piano around 1700?"
+answer = "Bartolomeo Cristofori"
+wrong = ["Antonio Stradivari", "Johann Andreas Stein", "Sébastien Érard"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Technicalities-339664.html"
+check = "https://en.wikipedia.org/wiki/Bartolomeo_Cristofori"
+reviewed = false
+
+[[question]]
+id = "music-0188"
+subcategory = "Theory and notation"
+difficulty = "easy"
+text = "What do you call music sung without instrumental accompaniment?"
+answer = "A cappella"
+wrong = ["Cantabile", "Recitative", "Obbligato"]
+source = "https://www.funtrivia.com/quizzes/music/music_grab_bag/a_mix_of_musical_genres.html"
+check = "https://en.wikipedia.org/wiki/A_cappella"
+reviewed = false
+
+[[question]]
+id = "music-0189"
+subcategory = "Theory and notation"
+difficulty = "easy"
+text = "In a time signature, what does the top number show?"
+answer = "Beats per bar"
+wrong = ["Value of each beat", "Tempo", "Key"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Theory-for-Beginners-156454.html"
+check = "https://en.wikipedia.org/wiki/Time_signature"
+reviewed = false
+
+[[question]]
+id = "music-0190"
+subcategory = "Theory and notation"
+difficulty = "easy"
+text = "Which term is the opposite of staccato?"
+answer = "Legato"
+wrong = ["Fermata", "Forte", "Tutti"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Theory-for-Beginners-156454.html"
+check = "https://en.wikipedia.org/wiki/Legato"
+reviewed = false
+
+[[question]]
+id = "music-0191"
+subcategory = "Theory and notation"
+difficulty = "easy"
+text = "What is the common name of the G clef?"
+answer = "Treble clef"
+wrong = ["Bass clef", "Alto clef", "Tenor clef"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Theory-for-Beginners-156454.html"
+check = "https://en.wikipedia.org/wiki/Clef"
+reviewed = false
+
+[[question]]
+id = "music-0192"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "Which notes sit on the five lines of the treble staff, bottom to top?"
+answer = "E G B D F"
+wrong = ["F A C E G", "G B D F A", "D F A C E"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Theory-for-Beginners-156454.html"
+check = "https://en.wikipedia.org/wiki/Treble_clef"
+reviewed = false
+
+[[question]]
+id = "music-0193"
+subcategory = "Theory and notation"
+difficulty = "easy"
+text = "What does the marking \"ff\" tell a musician?"
+answer = "Play very loudly"
+wrong = ["Play very softly", "Play very fast", "Play very slowly"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Theory-for-Beginners-156454.html"
+check = "https://en.wikipedia.org/wiki/Dynamics_(music)"
+reviewed = false
+
+[[question]]
+id = "music-0194"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "What is the interval between a white key and the black key next to it?"
+answer = "Semitone"
+wrong = ["Whole tone", "Octave", "Fifth"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Simple-Music-Theory-394072.html"
+check = "https://en.wikipedia.org/wiki/Semitone"
+reviewed = false
+
+[[question]]
+id = "music-0195"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "Which musical form follows the pattern ABA?"
+answer = "Ternary form"
+wrong = ["Binary form", "Rondo form", "Strophic form"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Music-Terminology-and-Theory-93721.html"
+check = "https://en.wikipedia.org/wiki/Ternary_form"
+reviewed = false
+
+[[question]]
+id = "music-0196"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "What does \"D.C.\" stand for in a score?"
+answer = "Da capo"
+wrong = ["Dal segno", "Decrescendo", "Diminuendo"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Musical-Terms-133420.html"
+check = "https://en.wikipedia.org/wiki/Da_capo"
+reviewed = false
+
+[[question]]
+id = "music-0197"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "What are two notes called that sound the same but are written differently, like C♯ and D♭?"
+answer = "Enharmonic"
+wrong = ["Chromatic", "Diatonic", "Harmonic"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Musical-Terms-133420.html"
+check = "https://en.wikipedia.org/wiki/Enharmonic_equivalence"
+reviewed = false
+
+[[question]]
+id = "music-0198"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "How many flats are in the key signature of E♭ major?"
+answer = "Three"
+wrong = ["Two", "Four", "Five"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Basic-Music-182970.html"
+check = "https://en.wikipedia.org/wiki/E-flat_major"
+reviewed = false
+
+[[question]]
+id = "music-0199"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "What does a fermata tell a player to do?"
+answer = "Hold the note longer"
+wrong = ["Play the note softly", "Play the note detached", "Repeat the bar"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Basic-Music-182970.html"
+check = "https://en.wikipedia.org/wiki/Fermata"
+reviewed = false
+
+[[question]]
+id = "music-0200"
+subcategory = "Theory and notation"
+difficulty = "medium"
+text = "What does \"ritardando\" mean?"
+answer = "Gradually slow down"
+wrong = ["Gradually speed up", "Gradually get louder", "Gradually get softer"]
+source = "https://www.funtrivia.com/trivia-quiz/Music/Basic-Music-182970.html"
+check = "https://en.wikipedia.org/wiki/Tempo"
+reviewed = false

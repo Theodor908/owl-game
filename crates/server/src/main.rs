@@ -66,6 +66,8 @@ async fn run() -> Result<(), String> {
             }
         }
     });
+    // A lobby place kept for a dropped player runs out.
+    tokio::spawn(owl_server::sweep_away_forever(state.hub.clone()));
     // The address of each connection, for the limits (`ConnectInfo`).
     axum::serve(listener, app(state).into_make_service_with_connect_info::<SocketAddr>())
         .with_graceful_shutdown(async {

@@ -30,9 +30,10 @@ const MARGIN_BOTTOM := 76
 const CATEGORY_TINTS: Array[Color] = [
 	Color("c9973b"), Color("6fa85a"), Color("8c9bb0"), Color("9a6bb5"), Color("5aa9d6"),
 	Color("6c78d8"), Color("d86c7e"), Color("e08a6a"), Color("3fa7a0"), Color("c9c94a"),
+	Color("b8587a"), Color("7fa6c9"), Color("a8865a"),
 ]
 ## Two-letter stand-ins for the category emblems.
-const CATEGORY_MARKS: Array[String] = ["Hi", "Fl", "Ca", "Fi", "Ph", "Pl", "Th", "An", "Ge", "Sp"]
+const CATEGORY_MARKS: Array[String] = ["Hi", "Fl", "Ca", "Fi", "Ph", "Pl", "Th", "An", "Ge", "Sp", "Mu", "Po", "Pr"]
 
 ## Card kind -> [two-letter stand-in for the seal glyph, family tint].
 const KINDS := {

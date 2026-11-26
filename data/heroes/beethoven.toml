@@ -1,0 +1,15 @@
+id = "beethoven"
+name = "Ludwig van Beethoven"
+title = "Composer of the Ninth"
+category = "music"
+hp = 35
+category_bonus = 25
+kind = "Beethoven"
+
+[params]
+cost = 3
+payments = 4
+note_chance = 30
+syncope = 2
+passion = 15
+critics_reflect = 15

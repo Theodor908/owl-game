@@ -1,0 +1,17 @@
+id = "knight"
+name = "Knight"
+tier = 0
+kind = "token"
+text = "Place it: deal 2 damage to your next opponent whatever the result. Knocks a Windmill off your board. Lasts one battle"
+golden = false
+shop = false
+copies = 0
+one_battle = true
+
+[[effects]]
+effect = "Strike"
+amount = 2
+
+[[effects]]
+effect = "Displaces"
+card = "windmill"

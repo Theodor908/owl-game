@@ -12,7 +12,7 @@ use serde_json::{Value, json};
 
 /// Bumped on every change a client could notice. The server refuses a
 /// client that says another number.
-pub const VERSION: u32 = 7;
+pub const VERSION: u32 = 8;
 
 /// Events for one player, each with the text of a question it shows. The
 /// correct answer is never part of it.
@@ -82,8 +82,18 @@ pub enum ClientMessage {
 pub enum ServerMessage {
     /// The session is good. `content` is the cards, heroes and tunables.
     Welcome { username: String, content: Value, now: u64 },
-    /// The lobby the player is in, whenever it changes.
-    LobbyState { code: String, owner: String, members: Vec<String>, invited: Vec<String>, bots: usize, max: usize },
+    /// The lobby the player is in, whenever it changes. `away` names the
+    /// members whose connection dropped and whose place is being kept.
+    LobbyState {
+        code: String,
+        owner: String,
+        members: Vec<String>,
+        invited: Vec<String>,
+        bots: usize,
+        max: usize,
+        #[serde(default)]
+        away: Vec<String>,
+    },
     /// A friend invites the player to their lobby.
     Invited { from: String, code: String },
     /// The player is no longer in a lobby: it closed, or they left.

@@ -36,6 +36,9 @@ pub struct Entry {
     pub check: String,
     #[serde(default)]
     pub reviewed: bool,
+    /// A generated stand-in, to be replaced by a written question.
+    #[serde(default)]
+    pub placeholder: bool,
 }
 
 fn medium() -> Difficulty {
@@ -252,6 +255,7 @@ mod tests {
             source: String::new(),
             check: String::new(),
             reviewed: false,
+            placeholder: false,
         }
     }
 
@@ -357,6 +361,35 @@ mod tests {
         let dir = concat!(env!("CARGO_MANIFEST_DIR"), "/../../data");
         let content = owl_core::Content::load(dir).unwrap();
         QuestionBank::load(dir, &content.tunables.categories).unwrap();
+    }
+
+    #[test]
+    fn bank_loads_all_categories() {
+        let dir = concat!(env!("CARGO_MANIFEST_DIR"), "/../../data");
+        let content = owl_core::Content::load(dir).unwrap();
+        let categories = &content.tunables.categories;
+        for slug in ["music", "poetry", "prose"] {
+            assert!(categories.iter().any(|c| c == slug), "{slug} is a category");
+        }
+        let bank = QuestionBank::load(dir, categories).unwrap();
+        for (i, slug) in categories.iter().enumerate() {
+            let entries = &bank.by_category[i];
+            // The written categories hold close to a hundred each; the
+            // generated ones exactly a hundred.
+            assert!(entries.len() >= 90, "{slug} holds {} questions", entries.len());
+            if entries.iter().any(|e| e.placeholder) {
+                assert_eq!(entries.len(), 100, "{slug}");
+                assert!(entries.iter().all(|e| e.placeholder && e.source == "generated" && !e.reviewed));
+            }
+        }
+    }
+
+    #[test]
+    fn a_question_without_placeholder_is_not_one() {
+        let raw = "id = \"x-1\"\ntext = \"Q?\"\nanswer = \"A\"\nwrong = [\"B\", \"C\", \"D\"]\n";
+        assert!(!toml::from_str::<Entry>(raw).unwrap().placeholder);
+        let marked = format!("{raw}placeholder = true\n");
+        assert!(toml::from_str::<Entry>(&marked).unwrap().placeholder);
     }
 
     #[test]

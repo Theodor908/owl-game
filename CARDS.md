@@ -10,7 +10,7 @@ Conventions:
 - Difficulty: a question is easy, medium or hard. A difficulty card moves the questions of its holder's battle one step ("one step easier", "one step harder") or two ("always easy", "always hard"), for both players, house questions included. Steps from both boards add up and cancel, then the result stops at easy or hard.
 - "Top category" is the holder's category with the highest weight percentage, hero and cards together, when the battle starts. Categories tied for the highest all count. With no weights the card does nothing.
 - A card can appear in a shop only if its tier is at or below the player's tavern level.
-- "[Category]" cards exist once per category, so each line of that kind is 10 cards in the prototype.
+- "[Category]" cards exist once per category, so each line of that kind is 13 cards in the prototype.
 - "On win" means the holder got more questions right than the opponent.
 - Category bonus (3 or more cards of one category on the board): on win, +2 damage for each question of that category the holder answered correctly. A golden category card counts as 3 cards and makes the bonus +3. The bonus does not stack with more cards.
 
@@ -90,8 +90,19 @@ Healing never raises a player above their starting HP. A player can have one Hea
 |---|---|---|---|
 | Golden Reward | none | Reward card | Stands for a golden reward that was not picked before the shop closed. Place it to pick one of three cards from the next tier up; it then disappears and takes no place on the board. Sells for nothing and is never in the pool |
 
+## Hero cards
+Cards that only a hero's ability brings into the game. They are not pool cards: they are never golden, sell for nothing and never enter the pool.
+
+| Card | Hero | Effect |
+|---|---|---|
+| Skull (cost 2) | Shakespeare | Appears in every shop while he is in the lobby, as an extra card beside the normal offers. Placed, it disables a random card of the next opponent for that battle, then vanishes. Takes a board slot |
+| Note (cost 1) | Beethoven | Appears only in his shop, as an extra card beside the normal offers, once his four Frenzied Notes payments are made (30% chance per shop roll). Placed, it moves him to his next phase and vanishes. Takes no board slot |
+| Knight | Cervantes | From Don Quixote. Placed, it deals 2 damage to the next opponent whatever the result (ordinary damage). Takes a board slot and is removed after that battle. Knocks a Windmill off his board |
+| Windmill | Cervantes | From Don Quixote. Placed, he takes no damage in his next battle: battle, reflected, Arrow and overtime tie damage. He still deals his own. Takes a board slot and is removed after that battle. A Knight on his board knocks it off, whichever was placed second |
+| Bard (cost 1) | Homer | Appears in every shop while he is alive, as an extra card beside the normal offers, once his three Bard of the Centuries payments are made (20% chance per shop roll). Placed, it gives +25% Music on its holder's weighted questions for the next battle, then vanishes. Takes a board slot. Not a Music card for the category bonus. Each Bard another player buys pays Homer 1 gold at his next shop |
+
 ## Totals
-22 unique cards, 8 difficulty cards and 3 category lines (30 cards across 10 categories): 60 cards.
+26 unique cards in the tiers, 3 healing and hunting cards (Healer, Hunter, Potion), 8 difficulty cards and 3 category lines (39 cards across 13 categories): 76 cards in the pool. The Arrow, the Golden Reward and the hero cards are not in the pool.
 
 ## Archetypes this pool should support
 - Specialist: Apprentice, Scholar and Master of one or two categories, category bonus, Rival's Notes for the 3-1 split.

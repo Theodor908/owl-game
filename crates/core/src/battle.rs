@@ -10,7 +10,7 @@ use crate::ids::{Category, PlayerId};
 use crate::question::{Difficulty, OPTIONS, Question};
 use crate::rng::LobbyRng;
 use crate::state::{BattleState, Fighter, GameState, LastBattle, Phase, PlanSlot};
-use crate::stats::{BattleStats, fold_stats};
+use crate::stats::{BattleStats, fold_stats_with};
 use crate::{endgame, heroes, pairing, shop};
 
 enum Opponent {
@@ -175,12 +175,27 @@ pub fn split(a: &BattleStats, b: &BattleStats, weighted: u32, threshold: u32) ->
 fn build_battle(state: &mut GameState, a: usize, opponent: Opponent, env: &mut Env<'_>) -> BattleState {
     let content = env.content;
     let t = &content.tunables;
-    let stats_a = fold_stats(&state.players[a], content);
+    // A hero that silences its opponent turns off the other side's battle
+    // passive; a ghost's side is its source player.
+    let silences = |idx: usize| {
+        state.players[idx].hero.is_some_and(|h| {
+            let hero = content.hero(h);
+            heroes::ability(hero.kind).silences_opponent(hero)
+        })
+    };
+    let other = match opponent {
+        Opponent::Player(b) | Opponent::Ghost(b) => b,
+    };
+    let (silenced_a, silenced_b) = (silences(other), silences(a));
+    let stats_a = fold_stats_with(&state.players[a], content, !silenced_a);
     let (b, fighter_b) = match opponent {
-        Opponent::Player(b) => (Some(b), new_fighter(Some(b), None, (0, 0), fold_stats(&state.players[b], content))),
+        Opponent::Player(b) => {
+            let stats = fold_stats_with(&state.players[b], content, !silenced_b);
+            (Some(b), new_fighter(Some(b), None, (0, 0), stats))
+        }
         Opponent::Ghost(source) => {
             let p = &state.players[source];
-            (None, new_fighter(None, Some(source), (p.correct, p.asked), fold_stats(p, content)))
+            (None, new_fighter(None, Some(source), (p.correct, p.asked), fold_stats_with(p, content, !silenced_b)))
         }
     };
     let fighter_a = new_fighter(Some(a), None, (0, 0), stats_a);
@@ -515,6 +530,7 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
     if let Some(w) = winner {
         let l = 1 - w;
         let amount = win_damage(&b.fighters[w].stats, &b.fighters[l].stats, base(w, score[w] - score[l]), score[w] == total, t);
+        let amount = (amount + b.fighters[w].stats.strike).min(t.max_battle_damage);
         hit(state, w, escalate(amount), DamageSource::Battle);
     } else {
         // A tie deals nothing by itself; tie cards and overtime create damage.
@@ -538,12 +554,38 @@ fn resolve_battle(state: &mut GameState, battle: usize, env: &mut Env<'_>, event
         }
     }
 
+    // A strike hits whatever the result. The winner's is already in the battle damage.
+    for side in (0..2).filter(|&side| winner != Some(side)) {
+        let strike = b.fighters[side].stats.strike.min(t.max_battle_damage);
+        if strike > 0 {
+            hit(state, side, escalate(strike), DamageSource::Battle);
+        }
+    }
+
     // Arrows hit whatever the result, then vanish.
     for side in 0..2 {
         let arrow = b.fighters[side].stats.arrow_damage;
         if let (Some(i), true) = (idx[side], arrow > 0) {
             hit(state, side, escalate(arrow), DamageSource::Arrow);
             state.players[i].board.retain(|c| c.disabled || !c.has_effect(content, |e| matches!(e, Effect::Arrow { .. })));
+        }
+    }
+
+    // One-battle cards leave the board after the battle they fought in,
+    // disabled or not, and the hero sees the battle end.
+    for i in idx.into_iter().flatten() {
+        let player = state.players[i].id;
+        let (gone, kept) = std::mem::take(&mut state.players[i].board)
+            .into_iter()
+            .partition(|c| c.lasts_one_battle(content));
+        state.players[i].board = kept;
+        for card in gone {
+            state.return_instance(&card, content);
+            events.push(Event::CardUsed { player, card: card.id });
+        }
+        if let Some(hero) = state.players[i].hero {
+            let hero = content.hero(hero);
+            heroes::ability(hero.kind).on_battle_end(hero, &mut state.players[i]);
         }
     }
 

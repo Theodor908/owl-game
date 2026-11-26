@@ -3,7 +3,7 @@
 
 use std::net::SocketAddr;
 use std::sync::Arc;
-use std::time::Duration;
+use std::time::{Duration, Instant};
 
 use argon2::Params;
 use axum::body::Body;
@@ -15,6 +15,7 @@ use owl_lobby::bank::QuestionBank;
 use owl_protocol::{ClientMessage, Envelope, ServerMessage, VERSION};
 use owl_server::crypto::{KEY_BYTES, Keys};
 use owl_server::limits::{self, Busy, Clock, HashGate};
+use owl_server::hub::LOBBY_GRACE;
 use owl_server::store::Store;
 use owl_server::{AppState, Options, app};
 use serde_json::{Value, json};
@@ -767,4 +768,196 @@ async fn one_address_may_keep_only_a_few_game_connections_open() {
     })
     .await;
     assert!(reopened.is_ok(), "a closed connection frees its place");
+}
+
+/// Waits until the server has seen a player's connection close.
+async fn gone(state: &Arc<AppState>, name: &str) {
+    for _ in 0..200 {
+        if !state.hub.lock().await.is_online(name) {
+            return;
+        }
+        tokio::time::sleep(Duration::from_millis(10)).await;
+    }
+    panic!("{name} still looks online");
+}
+
+/// An owner and a member in a lobby that has not started. Returns the two
+/// players, the member's token and the lobby code.
+async fn two_in_a_lobby(state: &Arc<AppState>, address: &str) -> (Player, Player, String, String) {
+    let (a_token, b_token) = (register(state, "Minerva").await, register(state, "Archie").await);
+    let mut a = Player::connect(address, &a_token).await;
+    let mut b = Player::connect(address, &b_token).await;
+    for player in [&mut a, &mut b] {
+        assert!(matches!(player.next().await, Some(ServerMessage::Welcome { .. })));
+    }
+    a.send(ClientMessage::CreateLobby).await;
+    let code = a.until(|m| if let ServerMessage::LobbyState { code, .. } = m { Some(code) } else { None }).await;
+    b.send(ClientMessage::JoinLobby { code: code.clone() }).await;
+    a.until(|m| matches!(m, ServerMessage::LobbyState { ref members, .. } if members.len() == 2).then_some(())).await;
+    b.until(|m| matches!(m, ServerMessage::LobbyState { .. }).then_some(())).await;
+    (a, b, b_token, code)
+}
+
+fn lobby_of(message: ServerMessage) -> Option<(Vec<String>, Vec<String>)> {
+    if let ServerMessage::LobbyState { members, away, .. } = message { Some((members, away)) } else { None }
+}
+
+#[tokio::test]
+async fn dropped_member_keeps_place_within_grace() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, b, b_token, code) = two_in_a_lobby(&state, &address).await;
+
+    drop(b);
+    gone(&state, "Archie").await;
+    let (members, away) = a.until(lobby_of).await;
+    assert_eq!(members, vec!["Minerva", "Archie"], "his place is kept");
+    assert_eq!(away, vec!["Archie"], "and the others see him away");
+    state.hub.lock().await.sweep_away(Instant::now() + LOBBY_GRACE / 2);
+
+    let mut b = Player::connect(&address, &b_token).await;
+    let back = b.until(|m| if let ServerMessage::LobbyState { code, members, away, .. } = m { Some((code, members, away)) } else { None }).await;
+    assert_eq!(back, (code, vec!["Minerva".to_string(), "Archie".to_string()], vec![]));
+    let (_, away) = a.until(lobby_of).await;
+    assert!(away.is_empty(), "he is back");
+}
+
+#[tokio::test]
+async fn dropped_member_leaves_after_grace() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, b, b_token, _) = two_in_a_lobby(&state, &address).await;
+
+    drop(b);
+    gone(&state, "Archie").await;
+    a.until(|m| lobby_of(m).filter(|(_, away)| !away.is_empty())).await;
+    state.hub.lock().await.sweep_away(Instant::now() + LOBBY_GRACE + Duration::from_secs(1));
+    let (members, away) = a.until(lobby_of).await;
+    assert_eq!((members, away), (vec!["Minerva".to_string()], vec![]));
+
+    // Back too late, he is in no lobby and may open his own.
+    let mut b = Player::connect(&address, &b_token).await;
+    assert!(matches!(b.next().await, Some(ServerMessage::Welcome { .. })));
+    b.send(ClientMessage::CreateLobby).await;
+    let (members, _) = b.until(lobby_of).await;
+    assert_eq!(members, vec!["Archie"]);
+}
+
+#[tokio::test]
+async fn dropped_owner_keeps_lobby_open() {
+    let state = state();
+    let address = serve(&state).await;
+    let (a, mut b, _, _) = two_in_a_lobby(&state, &address).await;
+
+    drop(a);
+    gone(&state, "Minerva").await;
+    let (members, away) = b.until(|m| match m {
+        ServerMessage::LobbyClosed => panic!("the lobby closed when its owner dropped"),
+        other => lobby_of(other),
+    })
+    .await;
+    assert_eq!((members.len(), away), (2, vec!["Minerva".to_string()]));
+
+    // Once the grace runs out the owner has left, and the lobby closes as when an owner leaves.
+    state.hub.lock().await.sweep_away(Instant::now() + LOBBY_GRACE + Duration::from_secs(1));
+    b.until(|m| matches!(m, ServerMessage::LobbyClosed).then_some(())).await;
+}
+
+#[tokio::test]
+async fn match_starts_with_away_member_who_rejoins() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, b, b_token, _) = two_in_a_lobby(&state, &address).await;
+
+    drop(b);
+    gone(&state, "Archie").await;
+    a.until(|m| lobby_of(m).filter(|(_, away)| !away.is_empty())).await;
+    a.send(ClientMessage::StartMatch { fill_with_bots: true }).await;
+    let seats = a.until(|m| if let ServerMessage::MatchStarted { seats, .. } = m { Some(seats) } else { None }).await;
+    assert_eq!(&seats[..2], ["Minerva", "Archie"], "the away member is seated");
+
+    let mut b = Player::connect(&address, &b_token).await;
+    let you = b.until(|m| if let ServerMessage::MatchStarted { you, .. } = m { Some(you) } else { None }).await;
+    assert_eq!(you, 1);
+    let view = b.until(|m| if let ServerMessage::Snapshot { view, .. } = m { Some(view) } else { None }).await;
+    assert_eq!(view["you"], 1);
+}
+
+#[tokio::test]
+async fn a_ready_player_who_drops_is_no_longer_ready() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, mut b, _, _) = two_in_a_lobby(&state, &address).await;
+    a.send(ClientMessage::StartMatch { fill_with_bots: true }).await;
+
+    let a_view = a.view_in("HeroSelect").await;
+    let b_view = b.view_in("HeroSelect").await;
+    let pick = |seat: u64, view: &Value| {
+        let hero = view["me"]["hero_offer"][0].clone();
+        serde_json::from_value(json!({ "PickHero": { "player": seat, "hero": hero } })).unwrap()
+    };
+    a.send(ClientMessage::Command { id: 1, command: pick(0, &a_view) }).await;
+    b.send(ClientMessage::Command { id: 1, command: pick(1, &b_view) }).await;
+    b.view_in("Shop").await;
+    b.send(ClientMessage::Command { id: 2, command: serde_json::from_value(json!({ "SetReady": { "player": 1, "ready": true } })).unwrap() })
+        .await;
+    a.until(|m| match m {
+        ServerMessage::Events { view, .. } if view["phase"] == "Shop" && view["players"][1]["ready"] == true => Some(()),
+        _ => None,
+    })
+    .await;
+
+    drop(b);
+    let view = a
+        .until(|m| match m {
+            ServerMessage::Events { view, .. } if view["players"][1]["ready"] == false => Some(view),
+            _ => None,
+        })
+        .await;
+    assert_eq!(view["phase"], "Shop", "the shop stays open for the one who is still deciding");
+}
+
+#[tokio::test]
+async fn a_player_away_when_the_match_ends_gets_the_whole_grace_from_then() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, mut b, _, code) = two_in_a_lobby(&state, &address).await;
+    a.send(ClientMessage::StartMatch { fill_with_bots: true }).await;
+    b.until(|m| matches!(m, ServerMessage::MatchStarted { .. }).then_some(())).await;
+    drop(b);
+    gone(&state, "Archie").await;
+
+    // The match ends long after he dropped: what the match task does at its end.
+    let ended = Instant::now() + LOBBY_GRACE * 2;
+    state.hub.lock().await.match_ended(&code, ended);
+    let (members, away) = a.until(lobby_of).await;
+    assert_eq!((members.len(), away), (2, vec!["Archie".to_string()]), "the others see him away");
+
+    state.hub.lock().await.sweep_away(ended + LOBBY_GRACE / 2);
+    // Any change to the lobby says who is in it.
+    a.send(ClientMessage::AddBot).await;
+    let (members, away) = a.until(lobby_of).await;
+    assert_eq!((members.len(), away), (2, vec!["Archie".to_string()]), "his place is still kept");
+
+    state.hub.lock().await.sweep_away(ended + LOBBY_GRACE + Duration::from_secs(1));
+    let (members, away) = a.until(lobby_of).await;
+    assert_eq!((members, away), (vec!["Minerva".to_string()], vec![]), "and then he has left");
+}
+
+#[tokio::test]
+async fn a_seat_in_a_running_match_outlasts_the_grace() {
+    let state = state();
+    let address = serve(&state).await;
+    let (mut a, mut b, b_token, _) = two_in_a_lobby(&state, &address).await;
+    a.send(ClientMessage::StartMatch { fill_with_bots: true }).await;
+    b.until(|m| matches!(m, ServerMessage::MatchStarted { .. }).then_some(())).await;
+    drop(b);
+    gone(&state, "Archie").await;
+
+    state.hub.lock().await.sweep_away(Instant::now() + LOBBY_GRACE + Duration::from_secs(1));
+    let mut b = Player::connect(&address, &b_token).await;
+    let you = b.until(|m| if let ServerMessage::MatchStarted { you, .. } = m { Some(you) } else { None }).await;
+    assert_eq!(you, 1, "he is back in his seat");
+    let view = b.until(|m| if let ServerMessage::Snapshot { view, .. } = m { Some(view) } else { None }).await;
+    assert_eq!(view["you"], 1);
 }

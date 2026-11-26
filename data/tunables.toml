@@ -42,7 +42,7 @@ herodotus_shield = 3
 hero_offer_size = 2
 # Lobby pacing. Seconds for phases, milliseconds for pauses.
 hero_select_seconds = 30
-shop_seconds = 30
+shop_seconds = 60
 # The category, the question and its answers show together and are read before the
 # answers open and the answer time starts: a base, plus a little for every word of the
 # question and its four answers, capped. The same for both players. All 0 means none.
@@ -56,4 +56,5 @@ spectate_delay_ms = 5000
 categories = [
   "history", "flora_and_fauna", "cars_and_mechanics", "film", "physics",
   "philosophy", "theater", "anatomy", "geography", "sport",
+  "music", "poetry", "prose",
 ]

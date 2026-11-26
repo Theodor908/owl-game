@@ -1,0 +1,13 @@
+id = "windmill"
+name = "Windmill"
+tier = 0
+kind = "token"
+text = "Place it: take no damage in your next battle. A Knight on your board knocks it off. Lasts one battle"
+golden = false
+shop = false
+copies = 0
+one_battle = true
+
+[[effects]]
+effect = "DamageCap"
+amount = 0

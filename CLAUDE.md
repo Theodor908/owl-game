@@ -9,7 +9,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - No minions fighting. Players buy cards from a shop and place them on their board; cards modify questions and battle outcomes (category odds, extra answer time, damage, defense).
 - Each hero has one or two passives. When a lobby starts, each player is dealt a private offer of 2 distinct heroes, drawn at random from the whole list; no hero appears in two players' offers, so each hero appears at most once per lobby. A player may pick only a hero from their own offer, and cannot see anyone else's offer. A player who has not picked when the hero-select timer runs out gets a random one of their two. The hero list must hold at least 2 heroes per player in the lobby (12 for 6 players).
 - A player can see an opponent's board only during their battle.
-- Everyone can see a short summary of each player: tavern level, the category they hold the most cards of on the board and how many (no category is named when two or more share the lead), golden cards on the board, current win streak, and the score of their last two battles. The summary never shows the cards themselves.
+- Everyone can see a short summary of each player: tavern level, the category they hold the most cards of on the board and how many (no category is named when two or more share the lead), golden cards on the board, current win streak, the score of their last two battles, and, during the shop, whether they are ready. The summary never shows the cards themselves.
 - A player who has been eliminated may spectate: they see each living player's board, shop offers, gold, level, hand size and current battle (question, answers on offer and score, never the correct answer), delayed by a set time. Spectating ends when the match ends. A living player never sees any of this.
 - Every card that can be golden states in its data what the golden version does (`golden_text`), so a player can preview it.
 - All damage, reflected damage included, is applied through the character itself, which checks armor, armor bypass and HP and fires its own triggers.
@@ -37,7 +37,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - A player with a full hand may still buy a card if buying it makes a golden card at once.
 - Categories act as tribes, with a bonus at 3 cards of the same category.
 - 3-1 split: a player gets 3 of the 4 weighted questions when their total weight investment beats the opponent's by a set threshold; otherwise 2-2.
-- Shop phase lasts 25-30 s. Board has 7 slots.
+- Shop phase lasts 60 s; it closes early when every living human is ready (bots count as ready). Board has 7 slots.
 - Three identical cards merge into a golden one. Shields cannot be made golden.
 - There are 6 tavern tiers. Every card has a tier number; a card can appear in a player's shop only if its tier is at or below that player's tavern level.
 - A player can freeze their shop, for free, to keep its cards for the next turn.
@@ -80,7 +80,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - Balance principle: defensive builds raise the floor, knowledge raises the ceiling. Knowing more must be rewarded.
 
 ### Endgame (last two players)
-- Different format: one question at a time, 10 seconds. The category is random but biased by both players' hero category bonuses, added into one draw: with a +25% History hero against a +25% Physics hero, each question has a 25% chance to be History, 25% to be Physics, and the remaining 50% is drawn uniformly from all categories.
+- Different format: one question at a time, 10 seconds. The category is random but biased by both players' hero category bonuses, added into one draw: with a +25% History hero against a +25% Physics hero, each question has a 25% chance to be History, 25% to be Physics, and the remaining 50% is drawn uniformly from all categories (Homer's Lyrical Peak changes his bias; see HEROES.md).
 - Damage starts at 1 and goes up one step per question, with no cap.
 - Heroes and regular cards stop working, except hero passives explicitly marked as carrying into the endgame.
 - HP and armor carry over.
@@ -90,7 +90,7 @@ Mobile game (Android, iOS): an auto-battler built on general-knowledge questions
 - One endgame effect per player. A player holding several chooses one before the endgame starts.
 
 ### Heroes
-The 12 starting heroes, their abilities and their tunable numbers are in `HEROES.md`: the 12 a 6-player lobby needs.
+The 16 starting heroes, their abilities and their tunable numbers are in `HEROES.md`: more than the 12 a 6-player lobby needs.
 
 ### Tunables (placeholders, not decisions)
 Every value here is a starting guess so `core` and `sim` can run. They live in one config file (`data/tunables.toml`), never as constants in code. Change them from `sim` results.
@@ -101,6 +101,7 @@ Every value here is a starting guess so `core` and `sim` can run. They live in o
 | Gold per turn | 3 on turn 1, +1 per turn, cap 10 |
 | Card cost / sell value / reroll | 3 / 1 / 1 gold |
 | Tavern upgrade cost (to level 2..6) | 5, 7, 8, 9, 10, each 1 cheaper per turn not bought |
+| Shop phase | 60 s |
 | Shop size by tavern level | 3, 4, 4, 5, 5, 6 |
 | Copies of each card in the shared pool, by tier | 12, 11, 10, 8, 6, 4 |
 | Base term in the battle damage formula | 2 |
@@ -128,7 +129,7 @@ Every value here is a starting guess so `core` and `sim` can run. They live in o
 - A weight is a percentage chance that one of the player's weighted questions comes from a given category. Example: 25% history means each of that player's weighted questions has a 25% chance to be history; the remainder is drawn uniformly from all categories.
 - A player's percentages add up across hero and cards, capped at 100% in total.
 - "Total weight investment" for the 3-1 split is that sum.
-- Prototype categories (10): History, Flora and Fauna, Cars and Mechanics, Film, Physics, Philosophy, Theater, Anatomy, Geography, Sport.
+- Prototype categories (13): History, Flora and Fauna, Cars and Mechanics, Film, Physics, Philosophy, Theater, Anatomy, Geography, Sport, Music, Poetry, Prose.
 
 The card pool is in `CARDS.md`. Hero numbers are in `HEROES.md`.
 

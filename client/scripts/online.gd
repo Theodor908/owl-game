@@ -20,7 +20,7 @@ signal refused(text: String)
 const FILE := "user://online.cfg"
 ## The game's own server. Players never type an address.
 const DEFAULT_SERVER := "https://owl.predictionlegend.com"
-const PROTOCOL := 7
+const PROTOCOL := 8
 ## The privacy notice this build carries, readable offline. `android.bat`
 ## and `play.bat` copy it from `docs/privacy.md`.
 const BUNDLED_NOTICE := "res://data/privacy.md"
@@ -36,7 +36,7 @@ var username := ""
 var guest := false
 ## {"friends": [{"username", "online"}], "incoming": [names], "outgoing": [names]}
 var friends := {"friends": [], "incoming": [], "outgoing": []}
-## The lobby the player is in ({"code", "owner", "members", "invited", "max"}), or empty.
+## The lobby the player is in ({"code", "owner", "members", "invited", "bots", "max", "away"}), or empty.
 var lobby := {}
 ## The socket is open and the server has said Welcome.
 var connected := false
@@ -396,6 +396,24 @@ func _send(type: String, payload: Variant = null) -> void:
 	_socket.send_text(JSON.stringify(message))
 
 
+## Back from the background, the game reconnects at once instead of
+## waiting for the next retry. A socket the phone left stale is closed first.
+func _notification(what: int) -> void:
+	if what != NOTIFICATION_APPLICATION_RESUMED and what != NOTIFICATION_APPLICATION_FOCUS_IN:
+		return
+	if _socket != null:
+		_socket.poll()
+		var state := _socket.get_ready_state()
+		if state == WebSocketPeer.STATE_OPEN or state == WebSocketPeer.STATE_CONNECTING:
+			return
+		_socket.close()
+		_socket = null
+		if connected:
+			connected = false
+			changed.emit()
+	_retry_at = 0
+
+
 func _process(_delta: float) -> void:
 	if _socket == null:
 		if logged_in() and _notice_known and not notice_pending and Time.get_ticks_msec() >= _retry_at:
@@ -425,6 +443,8 @@ func _on_message(type: String, payload: Variant) -> void:
 		"Welcome":
 			connected = true
 			username = String(payload["username"])
+			# The server says the lobby again right after, if the place was kept.
+			lobby = {}
 			Store.set_content(payload["content"])
 			refresh_friends()
 			changed.emit()

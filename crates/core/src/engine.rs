@@ -2,6 +2,7 @@
 
 use crate::api::{Command, Event, RuleError};
 use crate::content::Content;
+use crate::ids::PlayerId;
 use crate::question::QuestionSource;
 use crate::rng::LobbyRng;
 use crate::state::{GameState, Phase};
@@ -18,6 +19,7 @@ pub struct Env<'a> {
 pub fn apply(state: &mut GameState, command: Command, env: &mut Env<'_>) -> Result<Vec<Event>, RuleError> {
     let mut events = Vec::new();
     let ev = &mut events;
+    let shopper = shop_actor(&command);
     match command {
         Command::PickHero { player, hero } => heroes::pick_hero(state, player, hero, env, ev)?,
         Command::StartMatch => heroes::start_match(state, env, ev)?,
@@ -33,6 +35,7 @@ pub fn apply(state: &mut GameState, command: Command, env: &mut Env<'_>) -> Resu
         Command::PickReward { player, index } => shop::pick_reward(state, player, index, env, ev)?,
         Command::UseAbility { player, action } => heroes::use_ability(state, player, &action, env, ev)?,
         Command::ChooseEndgameEffect { player, card } => shop::choose_endgame(state, player, card, env)?,
+        Command::SetReady { player, ready } => shop::set_ready(state, player, ready, ev)?,
         Command::EndShop => {
             if state.phase != Phase::Shop {
                 return Err(RuleError::WrongPhase);
@@ -56,5 +59,26 @@ pub fn apply(state: &mut GameState, command: Command, env: &mut Env<'_>) -> Resu
             _ => return Err(RuleError::WrongPhase),
         },
     }
+    if let Some(player) = shopper {
+        shop::clear_ready(state, player, ev);
+    }
     Ok(events)
+}
+
+/// The player whose shop command, once it succeeds, clears their ready mark.
+fn shop_actor(command: &Command) -> Option<PlayerId> {
+    match *command {
+        Command::Buy { player, .. }
+        | Command::BuyExtra { player, .. }
+        | Command::Sell { player, .. }
+        | Command::Place { player, .. }
+        | Command::UseCard { player, .. }
+        | Command::Reroll { player }
+        | Command::ToggleFreeze { player }
+        | Command::UpgradeTavern { player }
+        | Command::PickReward { player, .. }
+        | Command::UseAbility { player, .. }
+        | Command::ChooseEndgameEffect { player, .. } => Some(player),
+        _ => None,
+    }
 }

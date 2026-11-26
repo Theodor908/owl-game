@@ -1,0 +1,16 @@
+id = "bard"
+name = "Bard"
+tier = 0
+kind = "token"
+text = "Place it: +25% Music on your weighted questions for your next battle, then it vanishes"
+cost = 1
+golden = false
+shop = false
+copies = 0
+one_battle = true
+category = "music"
+tribe = false
+
+[[effects]]
+effect = "CategoryWeight"
+percent = 25

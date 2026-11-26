@@ -7,7 +7,7 @@ use std::collections::BTreeSet;
 
 use owl_core::content::{CardDef, HeroKind};
 use owl_core::question::OPTIONS;
-use owl_core::state::Player;
+use owl_core::state::{CardInstance, Player};
 use owl_core::{
     AbilityAction, CardDefId, Category, Command, Content, Difficulty, Effect, Env, Event, GameState, Help, LobbyRng,
     Phase, PlayerId, Question, QuestionId, apply,
@@ -192,6 +192,8 @@ impl Bot {
         self.hero_ability(state, env);
         let mut rerolls = 0;
         let mut unplaceable = BTreeSet::new();
+        let (knight, windmill) = (content.card_id("knight"), content.card_id("windmill"));
+        let bard = content.card_id("bard");
 
         for _ in 0..60 {
             let me = &self.me(state).clone();
@@ -217,8 +219,9 @@ impl Bot {
                     continue;
                 }
 
-            // A reward card opens its pick when placed and takes no slot.
-            let is_reward = |e: &Effect| matches!(e, Effect::GoldenReward);
+            // A reward card opens its pick when placed, and a Note moves the
+            // hero on; neither takes a slot.
+            let is_reward = |e: &Effect| matches!(e, Effect::GoldenReward | Effect::AdvanceHeroStage);
             let reward_card =
                 me.hand.iter().find(|c| !unplaceable.contains(&c.id) && c.has_effect(content, is_reward));
             if let Some(card) = reward_card {
@@ -228,11 +231,17 @@ impl Bot {
                 continue;
             }
 
+            // A Windmill only when badly hurt, and then no Knight that round,
+            // since the Knight would topple it.
+            let hurt = me.hp * 3 <= me.max_hp;
+            let held_back_def = if hurt { knight } else { windmill };
+            let held_back = |c: &&CardInstance| held_back_def.is_some_and(|d| c.has_def(d));
             // Place the best card in hand, making room if it beats the worst on the board.
             let placeable = me
                 .hand
                 .iter()
                 .filter(|c| !unplaceable.contains(&c.id))
+                .filter(|c| !held_back(c))
                 .filter(|c| !c.has_effect(content, |e| e.is_used_from_hand() || is_reward(e)))
                 .map(|c| (c.id, self.card_score(c, state, content)))
                 .max_by(|a, b| a.1.total_cmp(&b.1));
@@ -263,10 +272,14 @@ impl Bot {
             }
 
             let extra = me.extras.iter().position(|&d| {
-                let wants = if d == content.skull {
-                    !me.hand.iter().any(|c| c.has_def(d))
-                } else {
+                // A potion when hurt; a token (skull, Note) when none is in
+                // hand. A Bard waits until the main purchases are done.
+                let wants = if Some(d) == bard {
+                    false
+                } else if d == content.potion {
                     me.hp < me.max_hp
+                } else {
+                    !me.hand.iter().any(|c| c.has_def(d))
                 };
                 wants && content.card(d).cost <= me.gold
             });
@@ -293,6 +306,14 @@ impl Bot {
                     continue;
                 }
             }
+            // Gold left after the main purchases: a Bard, if one is offered
+            // and the board has room for it.
+            let bard_offer = me.extras.iter().position(|&d| Some(d) == bard);
+            if let Some(index) = bard_offer
+                && me.board.len() < t.board_slots as usize
+                && self.act(state, Command::BuyExtra { player, index }, env) {
+                    continue;
+                }
             // Nothing worth buying: put spare gold into the tavern.
             if self.act(state, Command::UpgradeTavern { player }, env) {
                 continue;
@@ -307,8 +328,19 @@ impl Bot {
         let player = self.id;
         let me = self.me(state);
         let Some(hero) = me.hero.map(|h| content.hero(h)) else { return };
-        // An ability limited per match works at most once a round.
-        let limited = matches!(hero.kind, HeroKind::Darwin | HeroKind::Benz | HeroKind::Herodotus | HeroKind::Shakespeare);
+        // An ability limited per match, or once a round by its own rule,
+        // works at most once a round.
+        let limited = matches!(
+            hero.kind,
+            HeroKind::Darwin
+                | HeroKind::Benz
+                | HeroKind::Herodotus
+                | HeroKind::Shakespeare
+                | HeroKind::Beethoven
+                | HeroKind::Goethe
+                | HeroKind::Cervantes
+                | HeroKind::Homer
+        );
         if limited && me.hero_state.used_turn == state.turn {
             return;
         }
@@ -350,6 +382,24 @@ impl Bot {
                 && !me.shop.is_empty()
                 && me.gold >= hero.param("cost") + content.tunables.card_cost)
                 .then_some(AbilityAction::SilkRoad),
+            // The payments that unlock his Notes, when he can still buy a card.
+            HeroKind::Beethoven => (me.hero_state.uses < hero.param("payments")
+                && me.gold >= hero.param("cost") + content.tunables.card_cost)
+                .then_some(AbilityAction::FrenziedNotes),
+            // The payments that unlock Bards, when he can still buy a card.
+            HeroKind::Homer => (me.hero_state.uses < hero.param("payments")
+                && me.gold >= hero.param("cost") + content.tunables.card_cost)
+                .then_some(AbilityAction::BardOfTheCenturies),
+            // The boost when he can pay for it and still buy a card.
+            HeroKind::Goethe => (!me.hero_state.boosted
+                && me.gold >= hero.param("cost") + content.tunables.card_cost)
+                .then_some(AbilityAction::PoetryBoost),
+            // A Knight and a Windmill whenever the hand has room for both and
+            // holds no Windmill yet, so they do not pile up.
+            HeroKind::Cervantes => (me.hero_state.uses < hero.param("uses")
+                && me.hand.len() + 2 <= content.tunables.hand_size as usize
+                && !content.card_id("windmill").is_some_and(|d| me.hand.iter().any(|c| c.has_def(d))))
+                .then_some(AbilityAction::DonQuixote),
             HeroKind::Herophilus
             | HeroKind::Pheidippides
             | HeroKind::Cleopatra

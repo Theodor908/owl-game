@@ -184,9 +184,13 @@ func _lobby_panel() -> Control:
 	code_line.add_child(copy)
 	stack.add_child(code_line)
 	stack.add_child(UI.label("%d of %d seats taken" % [members.size() + bots, seats], 28, UI.SLATE, false))
+	# Members whose connection dropped keep their place for a while.
+	var away: Array = Online.lobby.get("away", [])
 	for member in members:
 		var owner := String(member) == String(Online.lobby["owner"])
-		stack.add_child(UI.label("%s%s" % [String(member), "  ·  owner" if owner else ""], 34, UI.PAPER, false))
+		var gone := away.has(member)
+		var text := "%s%s%s" % [String(member), "  ·  owner" if owner else "", "  (away)" if gone else ""]
+		stack.add_child(UI.label(text, 34, UI.SLATE if gone else UI.PAPER, false))
 	for index in bots:
 		stack.add_child(UI.label("Bot %d" % (index + 1), 34, Color("9fb4d8"), false))
 	for waiting in Online.lobby["invited"]:

@@ -46,12 +46,21 @@ pub struct BattleStats {
     pub sword_removes: u32,
     pub hunts: bool,
     pub arrow_damage: u32,
+    /// Damage dealt to the opponent whatever the result (Knight).
+    pub strike: u32,
     /// Difficulty steps this player's cards add to the questions of each
     /// category, positive is harder. Indexed by category.
     pub difficulty: Vec<i32>,
 }
 
+/// The player's battle numbers with every hero passive working.
 pub fn fold_stats(player: &Player, content: &Content) -> BattleStats {
+    fold_stats_with(player, content, true)
+}
+
+/// The player's battle numbers. With `passives` false the hero's battle
+/// passive is silenced (Goethe's opponent); the category bonus and cards still count.
+pub fn fold_stats_with(player: &Player, content: &Content, passives: bool) -> BattleStats {
     let t = &content.tunables;
     let categories = t.categories.len();
     let mut stats = BattleStats { tavern: player.tavern, weights: vec![0; categories], ..Default::default() };
@@ -69,7 +78,7 @@ pub fn fold_stats(player: &Player, content: &Content) -> BattleStats {
     for card in player.board.iter().filter(|c| !c.disabled) {
         for part in &card.parts {
             let def = content.card(part.def);
-            if let Some(category) = def.category {
+            if let Some(category) = def.category.filter(|_| def.tribe) {
                 let i = usize::from(category.0);
                 tribe[i] += if part.golden { t.category_bonus_cards } else { 1 };
                 tribe_golden[i] |= part.golden;
@@ -106,6 +115,7 @@ pub fn fold_stats(player: &Player, content: &Content) -> BattleStats {
                     }
                     Effect::HuntHealer => stats.hunts = true,
                     Effect::Arrow { damage } => stats.arrow_damage += damage,
+                    Effect::Strike { amount } => stats.strike += amount,
                     Effect::DifficultyShift { steps, all } => {
                         *(if all { &mut shift_all } else { &mut shift_top }) += steps;
                     }
@@ -119,14 +129,20 @@ pub fn fold_stats(player: &Player, content: &Content) -> BattleStats {
                     | Effect::Skull
                     | Effect::GrantOnGolden { .. }
                     | Effect::GoldenHeal { .. }
-                    | Effect::GoldenReward => {}
+                    | Effect::GoldenReward
+                    | Effect::Displaces { .. }
+                    | Effect::AdvanceHeroStage => {}
                 }
             }
         }
     }
 
     if let Some(hero) = hero {
-        heroes::ability(hero.kind).modify_stats(hero, player, &mut stats);
+        let ability = heroes::ability(hero.kind);
+        ability.modify_stats(hero, player, &mut stats);
+        if passives {
+            ability.battle_passive(hero, player, &mut stats);
+        }
     }
 
     // The top category is the one with the highest weight, hero and cards

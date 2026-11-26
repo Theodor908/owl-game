@@ -1,4 +1,4 @@
-# Owl protocol, version 7
+# Owl protocol, version 8
 
 How a client talks to the server. The message types are defined in `crates/protocol`; this page explains them. Any change a client could notice bumps `VERSION` there and is written down here.
 
@@ -85,7 +85,7 @@ The token goes in this message, never in the address. A wrong version, a bad tok
 | Type | Payload | Meaning |
 |---|---|---|
 | `Welcome` | `username`, `content`, `now` | Logged in. `content` is the cards, heroes and numbers. |
-| `LobbyState` | `code`, `owner`, `members`, `invited`, `bots`, `max` | The sender's lobby, whenever it changes. `bots` is how many seats bots hold. |
+| `LobbyState` | `code`, `owner`, `members`, `invited`, `bots`, `max`, `away` | The sender's lobby, whenever it changes. `bots` is how many seats bots hold. `away` names the members whose connection dropped and whose place is kept. |
 | `Invited` | `from`, `code` | A friend invites the player. |
 | `LobbyClosed` | | The player is no longer in a lobby. |
 | `MatchStarted` | `seats`, `you` | Names by seat (bots end in "(bot)") and the player's own seat. |
@@ -107,11 +107,13 @@ A question's difficulty (`"Easy"`, `"Medium"` or `"Hard"`) is sent with its cate
 
 `damage_percent` in the view is what this turn's regular battle damage is multiplied by, in percent: 100 until `escalation_turn`, then one entry of `escalation_percent` per turn (the last repeating), and 100 in the endgame. The amounts on `DamageDealt` are already multiplied.
 
+During the shop phase a player sends `SetReady` (`player`, `ready`) to mark themselves ready or take it back. Any other shop command they send clears it. Every player gets `ReadyChanged` (`player`, `ready`) when a ready changes, and each entry of `players` in the view has `ready`, which is `false` outside the shop phase. Ready flags are cleared when a turn starts, with no event. The shop closes as soon as every living human is ready and every bot has shopped; a player who is locked out of the shop counts as ready.
+
 A golden reward is on offer while `me.rewards` is not empty; `PickReward` takes from the first entry. A golden card in `me.hand` whose part has `reward_due: true` has not given its reward yet. The reward card is an ordinary card instance in `me.hand` (card id `golden_reward`); the `Place` command opens its pick.
 
 ### Disconnects
 
-In a lobby that has not started, a dropped connection leaves the lobby. In a running match the seat is kept: questions the player misses count as unanswered, and when they connect again they get `LobbyState`, `MatchStarted` and a `Snapshot`.
+A player whose connection drops is away. In a lobby that has not started, their place is kept for 3 minutes, a time fixed in the server (`LOBBY_GRACE` in `crates/server/src/hub.rs`), even if they own the lobby; the others get `LobbyState` with them in `away`. If they connect again in time they are back as before and everyone gets `LobbyState` without them in `away`; if not, they leave the lobby, and an owner leaving closes it. The owner may start the match while someone is away: the away member is seated and joins it on return. In a running match the seat is kept for as long as the match runs: questions the player misses count as unanswered, the server takes back their ready mark (`SetReady` with `ready: false`, sent on their behalf), and when they connect again they get `LobbyState`, `MatchStarted` and a `Snapshot`. When the match ends, everyone gets `LobbyState`, and a player still away gets the whole grace again from that moment before they leave the lobby.
 
 A lobby stays open after its match ends, so the same friends can start another.
 
@@ -144,6 +146,7 @@ These are additions to HTTP answers that older games ignore, so they did not cha
 
 ## Versions
 
+- **8:** ready in the shop: the `SetReady` command, the `ReadyChanged` event, `ready` on each entry of the view's `players`; the shop closes early when everyone is ready; `shop_seconds` is 60. A dropped player keeps their lobby place for a while: `away` in `LobbyState`; a dropped player in a match is no longer ready. Four new heroes (Beethoven, Goethe, Cervantes, Homer) and three new categories (Music, Poetry, Prose), 13 in all. `AbilityAction` gains `FrenziedNotes`, `PoetryBoost`, `DonQuixote` and `BardOfTheCenturies`. New effects: `Strike` (`amount`), `Displaces` (`card`) and `AdvanceHeroStage`. A card def has `one_battle` (it leaves the board after one battle) and `tribe` (it counts toward its category's bonus); a card that is not a per-category card may now carry `category` too, so a category alone no longer marks a tribe card: check `tribe`. A hero def has `endgame_category`, a second category for its endgame bias, or null. `hero_state` has `stage` (the hero's current stage) and `boosted` (a bought one-battle boost).
 - **7:** escalating damage: `damage_percent` in the view; `escalation_turn` and `escalation_percent` in the tunables. The category shows with its question: `category_reveal_ms` is gone from the tunables, and the next question shows `answer_reveal_ms` (now 1500) after the last answer was revealed. `CategoryRevealed` is still sent, just before `QuestionShown`.
 - **6:** reading time: `answers_at` on each event (set on `QuestionShown`) and in every battle view, beside `opens_at` and `deadline`; the deadline now counts from `answers_at`; an answer or help before it is refused ("the answers are not open yet"); `reading_base_ms`, `reading_per_word_ms` and `reading_max_ms` in the tunables; `words` on each question in the state.
 - **5:** questions have a difficulty (`difficulty` on `CategoryRevealed` and in `battle`); eight difficulty cards (`DifficultyShift` effect, card kind `difficulty`); the golden reward is offered when the golden card is placed (`reward_due` on a card part), and an unpicked one becomes a `golden_reward` card in hand; `difficulty_odds` in the tunables; a hero ability with limited uses per match is refused a second time in one round ("already used this round"), and `hero_state.used_turn` now also records the round of the last use for Darwin, Benz, Herodotus and Shakespeare (the view's shape is unchanged).

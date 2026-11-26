@@ -113,6 +113,16 @@ pub fn notice_version(notice: &str) -> u32 {
 /// How often run-out sessions, guests and accounts unused for a year are erased.
 pub const SWEEP_EVERY: std::time::Duration = std::time::Duration::from_secs(6 * 60 * 60);
 
+/// Lets go of lobby members who stayed away too long, every
+/// `hub::AWAY_SWEEP_EVERY`, for as long as the server runs.
+pub async fn sweep_away_forever(hub: Arc<Mutex<Hub>>) {
+    let mut every = tokio::time::interval(hub::AWAY_SWEEP_EVERY);
+    loop {
+        every.tick().await;
+        hub.lock().await.sweep_away(std::time::Instant::now());
+    }
+}
+
 /// The files of a published build, served from the releases folder under
 /// `/download/`.
 pub const DOWNLOADS: [&str; 3] = ["owl.apk", "owl.pck", "libowl_local.so"];

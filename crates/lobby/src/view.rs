@@ -7,9 +7,9 @@
 //!
 //! Two things soften that for everyone's benefit. Each player carries a
 //! public summary (leading category on the board, golden cards, win streak,
-//! last two battles), which hints at a build without showing it. And a
-//! player who has been eliminated may watch the others' boards and shops,
-//! a set delay behind the match.
+//! last two battles, ready in the shop), which hints at a build without
+//! showing it. And a player who has been eliminated may watch the others'
+//! boards and shops, a set delay behind the match.
 
 use owl_core::state::{CardInstance, Player};
 use owl_core::{CardDefId, Category, Content, Difficulty, Event, GameState, HeroId, Phase, PlayerId, QuestionId};
@@ -61,6 +61,8 @@ pub struct PublicPlayer {
     pub top_category_cards: u32,
     /// The last battles, oldest first; at most `RECENT_BATTLES`.
     pub recent: Vec<RecentBattle>,
+    /// Marked ready in the shop. Always `false` outside the shop phase.
+    pub ready: bool,
 }
 
 /// How many past battles everyone can see for each player.
@@ -113,7 +115,8 @@ pub fn spectated(state: &GameState, timing: impl Fn(PlayerId) -> Option<Question
 fn top_category(player: &Player, content: &Content) -> (Option<Category>, u32) {
     let mut counts = vec![0u32; content.tunables.categories.len()];
     for part in player.board.iter().flat_map(|card| &card.parts) {
-        if let Some(category) = content.card(part.def).category {
+        let def = content.card(part.def);
+        if let Some(category) = def.category.filter(|_| def.tribe) {
             counts[usize::from(category.0)] += 1;
         }
     }
@@ -209,6 +212,7 @@ pub fn player_view(
                 top_category,
                 top_category_cards,
                 recent: recent.get(p.id.index()).cloned().unwrap_or_default(),
+                ready: p.ready && state.phase == Phase::Shop,
             }
         })
         .collect();
@@ -359,6 +363,7 @@ pub fn audience(
         }
 
         Event::HeroPicked { .. }
+        | Event::ReadyChanged { .. }
         | Event::TurnStarted { .. }
         | Event::TavernUpgraded { .. }
         | Event::Healed { .. }
@@ -368,5 +373,32 @@ pub fn audience(
         | Event::EndgameStarted { .. }
         | Event::SharedVictory { .. }
         | Event::MatchFinished { .. } => Audience::Everyone,
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use owl_core::LobbyRng;
+
+    use super::*;
+
+    #[test]
+    fn a_placed_bard_does_not_change_the_top_category() {
+        let content = Content::load(concat!(env!("CARGO_MANIFEST_DIR"), "/../../data")).expect("data loads");
+        let mut state = GameState::new(2, &content, &mut LobbyRng::from_seed(0)).expect("enough heroes");
+        let def = |name: &str| content.card_id(name).expect("card exists");
+        let history = content.card(def("apprentice_history")).category;
+        let card = state.new_instance(def("apprentice_history"), false, 1, &content);
+        state.players[0].board.push(card);
+        assert_eq!(top_category(&state.players[0], &content), (history, 1));
+        // Two Bards would lead with Music if they counted; they do not.
+        for _ in 0..2 {
+            let bard = state.new_instance(def("bard"), false, 1, &content);
+            state.players[0].board.push(bard);
+        }
+        assert_eq!(top_category(&state.players[0], &content), (history, 1));
+        // A board of Bards alone names no category.
+        state.players[1].board = state.players[0].board.split_off(1);
+        assert_eq!(top_category(&state.players[1], &content), (None, 0));
     }
 }

@@ -9,7 +9,7 @@ use crate::stats::BattleStats;
 pub struct Pheidippides;
 
 impl HeroAbility for Pheidippides {
-    fn modify_stats(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
+    fn battle_passive(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
         stats.damage_per_correct += hero.param("per_correct");
         stats.damage_per_correct_max += hero.param("max");
     }

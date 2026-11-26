@@ -24,6 +24,7 @@ reviewed = false
 - `answer` is the correct option and `wrong` holds exactly three others. The game shuffles them.
 - Options are short, plausible and of the same kind (four people, four years, four countries). Exactly one is right, and none is right under another reading.
 - No question depends on the date it is asked ("the current champion", "the tallest building").
+- `placeholder = true` marks a generated stand-in (`source = "generated"`) for a category that has no written questions yet; it is replaced by written ones. Leaving it out means false. No category uses it now.
 - `difficulty` records how hard the source rated it, or the writer's judgement when the source has no levels. A question that leaves it out counts as medium; any other word is refused when the bank loads.
 
 ## Difficulty in play

@@ -4,7 +4,7 @@
 ## `res://build.txt`, not by this. See docs/versioning.md.
 class_name Version
 
-const NAME := "0.3.0-alpha"
+const NAME := "0.4.0-alpha"
 
 
 ## The version as shown: "0.1.0 alpha".

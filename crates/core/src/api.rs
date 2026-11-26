@@ -27,6 +27,9 @@ pub enum Command {
     PickReward { player: PlayerId, index: usize },
     UseAbility { player: PlayerId, action: AbilityAction },
     ChooseEndgameEffect { player: PlayerId, card: CardInstanceId },
+    /// Marks the player ready, or not, to end the shop early. Any other shop
+    /// command by the player clears it.
+    SetReady { player: PlayerId, ready: bool },
     /// The shop deadline passed. Sent by the host.
     EndShop,
 
@@ -64,6 +67,14 @@ pub enum AbilityAction {
     BuySword,
     /// Marco Polo: pay to swap a random shop card for one a tier higher.
     SilkRoad,
+    /// Beethoven: one of the payments that unlock Notes in his shop.
+    FrenziedNotes,
+    /// Goethe: pay to raise his Poetry bonus for the next battle.
+    PoetryBoost,
+    /// Cervantes: a Knight and a Windmill for the hand.
+    DonQuixote,
+    /// Homer: one of the three payments that unlock Bards in every shop.
+    BardOfTheCenturies,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -95,6 +106,7 @@ pub enum Event {
     Healed { player: PlayerId, amount: u32 },
     AbilityUsed { player: PlayerId },
     HouseOptionsShown { player: PlayerId, options: Vec<Category> },
+    ReadyChanged { player: PlayerId, ready: bool },
 
     BattleStarted { battle: usize, a: PlayerId, b: Option<PlayerId>, ghost_of: Option<PlayerId> },
     CardDisabled { player: PlayerId, card: CardInstanceId },

@@ -1,0 +1,10 @@
+id = "cervantes"
+name = "Miguel de Cervantes"
+title = "Author of Don Quixote"
+category = "prose"
+hp = 35
+category_bonus = 25
+kind = "Cervantes"
+
+[params]
+uses = 3

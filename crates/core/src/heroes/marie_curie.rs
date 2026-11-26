@@ -9,7 +9,7 @@ use crate::stats::BattleStats;
 pub struct MarieCurie;
 
 impl HeroAbility for MarieCurie {
-    fn modify_stats(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
+    fn battle_passive(&self, hero: &HeroDef, _player: &Player, stats: &mut BattleStats) {
         stats.armor_pierce_percent += hero.param("armor_percent");
     }
 

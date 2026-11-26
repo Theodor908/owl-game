@@ -1,0 +1,1090 @@
+# Written from published quizzes with answer keys, each checked against Wikipedia or Wikiquote.
+
+[[question]]
+id = "prose-0101"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "What does Dorian Gray keep hidden in his attic?"
+answer = "His portrait"
+wrong = ["His diary", "A mirror", "His will"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray"
+reviewed = false
+
+[[question]]
+id = "prose-0102"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "Which word completes the first line of Moby-Dick, \"Call me ...\"?"
+answer = "Ishmael"
+wrong = ["Ahab", "Queequeg", "Starbuck"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikiquote.org/wiki/Moby-Dick"
+reviewed = false
+
+[[question]]
+id = "prose-0103"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "In The Great Gatsby, what is Jay Gatsby's real name?"
+answer = "James Gatz"
+wrong = ["John Gates", "Jake Getz", "James Gatsby"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/Jay_Gatsby"
+reviewed = false
+
+[[question]]
+id = "prose-0104"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "In Lord of the Flies, what do the boys use to call their assemblies?"
+answer = "A conch shell"
+wrong = ["A bell", "A whistle", "A drum"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/Lord_of_the_Flies"
+reviewed = false
+
+[[question]]
+id = "prose-0105"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "How much time does the story of Virginia Woolf's Mrs Dalloway cover?"
+answer = "A single day"
+wrong = ["A week", "A month", "A year"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Mrs_Dalloway"
+reviewed = false
+
+[[question]]
+id = "prose-0106"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "In which English county is Wuthering Heights set?"
+answer = "Yorkshire"
+wrong = ["Cornwall", "Lancashire", "Devon"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Wuthering_Heights"
+reviewed = false
+
+[[question]]
+id = "prose-0107"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "In which year was Aldous Huxley's Brave New World published?"
+answer = "1932"
+wrong = ["1924", "1949", "1953"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Brave_New_World"
+reviewed = false
+
+[[question]]
+id = "prose-0108"
+subcategory = "Classic novels"
+difficulty = "hard"
+text = "Who wrote the 1920 novel Main Street, set in a small Minnesota town?"
+answer = "Sinclair Lewis"
+wrong = ["Upton Sinclair", "Theodore Dreiser", "Sherwood Anderson"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Main_Street_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0109"
+subcategory = "Classic novels"
+difficulty = "hard"
+text = "Dick Swiveller and Little Nell appear in which Dickens novel?"
+answer = "The Old Curiosity Shop"
+wrong = ["Bleak House", "Dombey and Son", "Little Dorrit"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/The_Old_Curiosity_Shop"
+reviewed = false
+
+[[question]]
+id = "prose-0110"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "Which novel by R. D. Blackmore is subtitled \"A Romance of Exmoor\"?"
+answer = "Lorna Doone"
+wrong = ["Jamaica Inn", "Rebecca", "Tess of the d'Urbervilles"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Lorna_Doone"
+reviewed = false
+
+[[question]]
+id = "prose-0111"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "Which letter never appears in Ernest Vincent Wright's 50,000-word novel Gadsby?"
+answer = "E"
+wrong = ["A", "S", "T"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Gadsby_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0112"
+subcategory = "Classic novels"
+difficulty = "hard"
+text = "Which novel gave English the phrase \"something nasty in the woodshed\"?"
+answer = "Cold Comfort Farm"
+wrong = ["Brideshead Revisited", "Scoop", "Lucky Jim"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Cold_Comfort_Farm"
+reviewed = false
+
+[[question]]
+id = "prose-0113"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "Which author's novel The Jungle, about Chicago's meatpacking plants, led to US food safety laws?"
+answer = "Upton Sinclair"
+wrong = ["Sinclair Lewis", "Frank Norris", "Theodore Dreiser"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_Jungle"
+reviewed = false
+
+[[question]]
+id = "prose-0114"
+subcategory = "Classic novels"
+difficulty = "hard"
+text = "In Brideshead Revisited, what is Aloysius?"
+answer = "A teddy bear"
+wrong = ["A dog", "A tortoise", "A parrot"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Brideshead_Revisited"
+reviewed = false
+
+[[question]]
+id = "prose-0115"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "In Animal Farm, who owns Manor Farm before the animals rebel?"
+answer = "Mr Jones"
+wrong = ["Mr Pilkington", "Mr Frederick", "Mr Whymper"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Animal_Farm"
+reviewed = false
+
+[[question]]
+id = "prose-0116"
+subcategory = "Classic novels"
+difficulty = "easy"
+text = "In To Kill a Mockingbird, what is the name of Scout's brother?"
+answer = "Jem"
+wrong = ["Dill", "Atticus", "Boo"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird"
+reviewed = false
+
+[[question]]
+id = "prose-0117"
+subcategory = "Classic novels"
+difficulty = "medium"
+text = "Which James Joyce novel, long banned, did US judge John M. Woolsey rule was not obscene?"
+answer = "Ulysses"
+wrong = ["Dubliners", "Finnegans Wake", "Stephen Hero"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/Ulysses_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0118"
+subcategory = "European and Russian classics"
+difficulty = "easy"
+text = "Who wrote Don Quixote?"
+answer = "Miguel de Cervantes"
+wrong = ["Lope de Vega", "Pedro Calderón", "Francisco de Quevedo"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Great-Non-English-Novels-187817.html"
+check = "https://en.wikipedia.org/wiki/Don_Quixote"
+reviewed = false
+
+[[question]]
+id = "prose-0119"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "What is Madame Bovary's first name?"
+answer = "Emma"
+wrong = ["Berthe", "Héloïse", "Marie"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Great-Non-English-Novels-187817.html"
+check = "https://en.wikipedia.org/wiki/Emma_Bovary"
+reviewed = false
+
+[[question]]
+id = "prose-0120"
+subcategory = "European and Russian classics"
+difficulty = "hard"
+text = "Which novel did Alexandre Dumas fils write, rather than his father?"
+answer = "The Lady of the Camellias"
+wrong = ["The Three Musketeers", "The Count of Monte Cristo", "The Black Tulip"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Great-Non-English-Novels-187817.html"
+check = "https://en.wikipedia.org/wiki/La_Dame_aux_Camélias"
+reviewed = false
+
+[[question]]
+id = "prose-0121"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "How many stories are told in Boccaccio's Decameron?"
+answer = "100"
+wrong = ["10", "50", "1,001"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Great-Non-English-Novels-187817.html"
+check = "https://en.wikipedia.org/wiki/The_Decameron"
+reviewed = false
+
+[[question]]
+id = "prose-0122"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Which novel opens by saying that happy families are all alike?"
+answer = "Anna Karenina"
+wrong = ["War and Peace", "Fathers and Sons", "Crime and Punishment"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Famous-First-Words-European-Literature-342307.html"
+check = "https://en.wikiquote.org/wiki/Anna_Karenina"
+reviewed = false
+
+[[question]]
+id = "prose-0123"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Whose novel The Outsider opens with a telegram announcing the narrator's mother's death?"
+answer = "Albert Camus"
+wrong = ["Jean-Paul Sartre", "André Gide", "Louis-Ferdinand Céline"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Famous-First-Words-European-Literature-342307.html"
+check = "https://en.wikipedia.org/wiki/The_Stranger_(Camus_novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0124"
+subcategory = "European and Russian classics"
+difficulty = "easy"
+text = "Who wrote the novel In Search of Lost Time?"
+answer = "Marcel Proust"
+wrong = ["Gustave Flaubert", "Émile Zola", "Honoré de Balzac"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Famous-First-Words-European-Literature-342307.html"
+check = "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time"
+reviewed = false
+
+[[question]]
+id = "prose-0125"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "In which Algerian city is Camus's The Plague set?"
+answer = "Oran"
+wrong = ["Algiers", "Constantine", "Annaba"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_Plague_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0126"
+subcategory = "European and Russian classics"
+difficulty = "hard"
+text = "Who wrote the unfinished novel The Man Without Qualities?"
+answer = "Robert Musil"
+wrong = ["Joseph Roth", "Hermann Broch", "Stefan Zweig"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Famous-First-Words-European-Literature-342307.html"
+check = "https://en.wikipedia.org/wiki/The_Man_Without_Qualities"
+reviewed = false
+
+[[question]]
+id = "prose-0127"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Which Dostoevsky novel contains the story of the Grand Inquisitor?"
+answer = "The Brothers Karamazov"
+wrong = ["The Idiot", "Demons", "Crime and Punishment"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/The_Grand_Inquisitor"
+reviewed = false
+
+[[question]]
+id = "prose-0128"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "In Gogol's Dead Souls, who are the \"dead souls\"?"
+answer = "Dead serfs"
+wrong = ["Murdered children", "Exiled prisoners", "Fallen soldiers"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/Dead_Souls"
+reviewed = false
+
+[[question]]
+id = "prose-0129"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Where does Goncharov's Oblomov spend most of his time?"
+answer = "In bed"
+wrong = ["In prison", "In a casino", "On his estate"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/Oblomov"
+reviewed = false
+
+[[question]]
+id = "prose-0130"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Who wrote the short story \"The Lady with the Dog\"?"
+answer = "Anton Chekhov"
+wrong = ["Maxim Gorky", "Ivan Bunin", "Boris Pasternak"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/The_Lady_with_the_Dog"
+reviewed = false
+
+[[question]]
+id = "prose-0131"
+subcategory = "European and Russian classics"
+difficulty = "hard"
+text = "What does the pen name \"Gorky\" mean in Russian?"
+answer = "Bitter"
+wrong = ["Poor", "Homeless", "Black"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/Maxim_Gorky"
+reviewed = false
+
+[[question]]
+id = "prose-0132"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "In The Master and Margarita, which character is Satan in disguise?"
+answer = "Woland"
+wrong = ["Azazello", "Behemoth", "The Master"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/The_Master_and_Margarita"
+reviewed = false
+
+[[question]]
+id = "prose-0133"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "In which language did Vladimir Nabokov write Lolita?"
+answer = "English"
+wrong = ["Russian", "French", "German"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/Lolita"
+reviewed = false
+
+[[question]]
+id = "prose-0134"
+subcategory = "European and Russian classics"
+difficulty = "hard"
+text = "In Pushkin's \"The Queen of Spades\", what secret does the old countess keep?"
+answer = "How to win at cards"
+wrong = ["Who killed her brother", "A secret marriage", "A false identity"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/The_Queen_of_Spades_(story)"
+reviewed = false
+
+[[question]]
+id = "prose-0135"
+subcategory = "European and Russian classics"
+difficulty = "easy"
+text = "Who is Ivan Denisovich in Solzhenitsyn's novella?"
+answer = "A labour camp prisoner"
+wrong = ["A monk", "A music teacher", "A tsarist officer"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Russian-Prose-240495.html"
+check = "https://en.wikipedia.org/wiki/One_Day_in_the_Life_of_Ivan_Denisovich"
+reviewed = false
+
+[[question]]
+id = "prose-0136"
+subcategory = "European and Russian classics"
+difficulty = "medium"
+text = "Who wrote Bonjour Tristesse, published when she was 18?"
+answer = "Françoise Sagan"
+wrong = ["Simone de Beauvoir", "Marguerite Duras", "Marguerite Yourcenar"]
+source = "https://funtrivia.com/trivia-quiz/Literature/European-Literary-Highlights-403533.html"
+check = "https://en.wikipedia.org/wiki/Bonjour_Tristesse"
+reviewed = false
+
+[[question]]
+id = "prose-0137"
+subcategory = "European and Russian classics"
+difficulty = "hard"
+text = "Alain Robbe-Grillet's novel Jealousy belongs to which French movement?"
+answer = "Nouveau roman"
+wrong = ["Surrealism", "Naturalism", "Existentialism"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Famous-First-Words-European-Literature-342307.html"
+check = "https://en.wikipedia.org/wiki/Jealousy_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0138"
+subcategory = "World literature"
+difficulty = "easy"
+text = "In which fictional town is One Hundred Years of Solitude set?"
+answer = "Macondo"
+wrong = ["Comala", "Santa María", "Yoknapatawpha"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude"
+reviewed = false
+
+[[question]]
+id = "prose-0139"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Which Argentine writer wrote the novel Hopscotch?"
+answer = "Julio Cortázar"
+wrong = ["Jorge Luis Borges", "Adolfo Bioy Casares", "Ernesto Sabato"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Latin-American-Writers-23808.html"
+check = "https://en.wikipedia.org/wiki/Hopscotch_(Cortázar_novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0140"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Which family's three generations of women are followed in Isabel Allende's The House of the Spirits?"
+answer = "The Truebas"
+wrong = ["The Buendías", "The del Valles", "The Sotomayors"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_House_of_the_Spirits"
+reviewed = false
+
+[[question]]
+id = "prose-0141"
+subcategory = "World literature"
+difficulty = "easy"
+text = "Which Argentine writer wrote the story collections Ficciones and The Aleph?"
+answer = "Jorge Luis Borges"
+wrong = ["Julio Cortázar", "Ernesto Sabato", "Manuel Puig"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Latin-American-Literature-303577.html"
+check = "https://en.wikipedia.org/wiki/Jorge_Luis_Borges"
+reviewed = false
+
+[[question]]
+id = "prose-0142"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Which Mexican writer wrote the essay collection The Labyrinth of Solitude?"
+answer = "Octavio Paz"
+wrong = ["Carlos Fuentes", "Juan Rulfo", "Alfonso Reyes"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_Labyrinth_of_Solitude"
+reviewed = false
+
+[[question]]
+id = "prose-0143"
+subcategory = "World literature"
+difficulty = "medium"
+text = "What is the title of Banana Yoshimoto's first novel?"
+answer = "Kitchen"
+wrong = ["Pachinko", "Goodbye Tsugumi", "Shogun"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Japanese-Literature-Explored-409570.html"
+check = "https://en.wikipedia.org/wiki/Kitchen_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0144"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Which Haruki Murakami novel's title is a pun on Orwell's Nineteen Eighty-Four?"
+answer = "1Q84"
+wrong = ["Kafka on the Shore", "Norwegian Wood", "Killing Commendatore"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Japanese-Literature-Explored-409570.html"
+check = "https://en.wikipedia.org/wiki/1Q84"
+reviewed = false
+
+[[question]]
+id = "prose-0145"
+subcategory = "World literature"
+difficulty = "hard"
+text = "Yasunari Kawabata wrote a novel about a match between an old master and a young challenger at which game?"
+answer = "Go"
+wrong = ["Shogi", "Chess", "Mahjong"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Japanese-Literature-Explored-409570.html"
+check = "https://en.wikipedia.org/wiki/The_Master_of_Go"
+reviewed = false
+
+[[question]]
+id = "prose-0146"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Who wrote The Tale of Genji?"
+answer = "Murasaki Shikibu"
+wrong = ["Sei Shōnagon", "Ihara Saikaku", "Yoshida Kenkō"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+reviewed = false
+
+[[question]]
+id = "prose-0147"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Which of these is one of the Four Great Classical Novels of Chinese literature?"
+answer = "Journey to the West"
+wrong = ["The Analects", "The Art of War", "Tao Te Ching"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/Classic_Chinese_Novels"
+reviewed = false
+
+[[question]]
+id = "prose-0148"
+subcategory = "World literature"
+difficulty = "easy"
+text = "Which Salman Rushdie novel led to a fatwa calling for his death?"
+answer = "The Satanic Verses"
+wrong = ["Midnight's Children", "Shame", "Grimus"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/The_Satanic_Verses"
+reviewed = false
+
+[[question]]
+id = "prose-0149"
+subcategory = "World literature"
+difficulty = "medium"
+text = "What was Chimamanda Ngozi Adichie's first novel, published in 2003?"
+answer = "Purple Hibiscus"
+wrong = ["Half of a Yellow Sun", "Americanah", "The Thing Around Your Neck"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-Part-Two-307966.html"
+check = "https://en.wikipedia.org/wiki/Purple_Hibiscus"
+reviewed = false
+
+[[question]]
+id = "prose-0150"
+subcategory = "World literature"
+difficulty = "easy"
+text = "In which country are The No. 1 Ladies' Detective Agency novels set?"
+answer = "Botswana"
+wrong = ["Zimbabwe", "Zambia", "Lesotho"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-Part-Two-307966.html"
+check = "https://en.wikipedia.org/wiki/The_No._1_Ladies'_Detective_Agency"
+reviewed = false
+
+[[question]]
+id = "prose-0151"
+subcategory = "World literature"
+difficulty = "medium"
+text = "Adichie's Half of a Yellow Sun is set during the war over which breakaway state?"
+answer = "Biafra"
+wrong = ["Katanga", "Eritrea", "Somaliland"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-Part-Two-307966.html"
+check = "https://en.wikipedia.org/wiki/Half_of_a_Yellow_Sun"
+reviewed = false
+
+[[question]]
+id = "prose-0152"
+subcategory = "World literature"
+difficulty = "easy"
+text = "Who wrote Things Fall Apart?"
+answer = "Chinua Achebe"
+wrong = ["Wole Soyinka", "Ngũgĩ wa Thiong'o", "Alan Paton"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-282586.html"
+check = "https://en.wikipedia.org/wiki/Things_Fall_Apart"
+reviewed = false
+
+[[question]]
+id = "prose-0153"
+subcategory = "World literature"
+difficulty = "hard"
+text = "In Things Fall Apart, why is Okonkwo exiled from his village?"
+answer = "His gun kills a boy by accident"
+wrong = ["He burns a church", "He kills a messenger", "He sides with missionaries"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-282586.html"
+check = "https://en.wikipedia.org/wiki/Things_Fall_Apart"
+reviewed = false
+
+[[question]]
+id = "prose-0154"
+subcategory = "World literature"
+difficulty = "medium"
+text = "In Cry, the Beloved Country, to which city does Stephen Kumalo travel?"
+answer = "Johannesburg"
+wrong = ["Cape Town", "Durban", "Pretoria"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-282586.html"
+check = "https://en.wikipedia.org/wiki/Cry,_the_Beloved_Country"
+reviewed = false
+
+[[question]]
+id = "prose-0155"
+subcategory = "World literature"
+difficulty = "hard"
+text = "What event is at the heart of Ousmane Sembène's novel God's Bits of Wood?"
+answer = "A railway strike"
+wrong = ["A dock riot", "An election", "A famine"]
+source = "https://funtrivia.com/trivia-quiz/Literature/African-Novels-282586.html"
+check = "https://en.wikipedia.org/wiki/God's_Bits_of_Wood"
+reviewed = false
+
+[[question]]
+id = "prose-0156"
+subcategory = "Literary prizes"
+difficulty = "hard"
+text = "Who won the first Booker Prize, in 1969?"
+answer = "P. H. Newby"
+wrong = ["Muriel Spark", "Bernice Rubens", "Iris Murdoch"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/The-Man-Booker-Prize-for-Fiction-97993.html"
+check = "https://en.wikipedia.org/wiki/Something_to_Answer_For"
+reviewed = false
+
+[[question]]
+id = "prose-0157"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Who won the 1993 \"Booker of Bookers\" for Midnight's Children?"
+answer = "Salman Rushdie"
+wrong = ["J. M. Coetzee", "William Golding", "Iris Murdoch"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/The-Man-Booker-Prize-for-Fiction-97993.html"
+check = "https://en.wikipedia.org/wiki/Midnight's_Children"
+reviewed = false
+
+[[question]]
+id = "prose-0158"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Which Margaret Atwood novel won the Booker Prize in 2000?"
+answer = "The Blind Assassin"
+wrong = ["The Handmaid's Tale", "Alias Grace", "Cat's Eye"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/The-Man-Booker-Prize-for-Fiction-97993.html"
+check = "https://en.wikipedia.org/wiki/The_Blind_Assassin"
+reviewed = false
+
+[[question]]
+id = "prose-0159"
+subcategory = "Literary prizes"
+difficulty = "easy"
+text = "Which Booker-winning novel has a boy adrift in a lifeboat with a tiger?"
+answer = "Life of Pi"
+wrong = ["Dirt Music", "Family Matters", "The Story of Lucy Gault"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/The-Man-Booker-Prize-for-Fiction-97993.html"
+check = "https://en.wikipedia.org/wiki/Life_of_Pi"
+reviewed = false
+
+[[question]]
+id = "prose-0160"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Which Australian won the 1982 Booker Prize for Schindler's Ark?"
+answer = "Thomas Keneally"
+wrong = ["Peter Carey", "Tim Winton", "David Malouf"]
+source = "https://www.funtrivia.com/quiz/literature/around-the-world-of-literature-305694.html"
+check = "https://en.wikipedia.org/wiki/Schindler's_Ark"
+reviewed = false
+
+[[question]]
+id = "prose-0161"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Bernardine Evaristo shared the 2019 Booker Prize for which novel?"
+answer = "Girl, Woman, Other"
+wrong = ["Mr Loverman", "Lara", "Blonde Roots"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Girl,_Woman,_Other"
+reviewed = false
+
+[[question]]
+id = "prose-0162"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Which Elizabeth Strout book won the 2009 Pulitzer Prize for Fiction?"
+answer = "Olive Kitteridge"
+wrong = ["My Name Is Lucy Barton", "Amy and Isabelle", "Abide with Me"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Olive_Kitteridge"
+reviewed = false
+
+[[question]]
+id = "prose-0163"
+subcategory = "Literary prizes"
+difficulty = "easy"
+text = "In 1993, who became the first Black woman to win the Nobel Prize in Literature?"
+answer = "Toni Morrison"
+wrong = ["Alice Walker", "Maya Angelou", "Nadine Gordimer"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Toni_Morrison"
+reviewed = false
+
+[[question]]
+id = "prose-0164"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "Which Russian won the 1958 Nobel Prize in Literature but was made to decline it?"
+answer = "Boris Pasternak"
+wrong = ["Aleksandr Solzhenitsyn", "Mikhail Sholokhov", "Ivan Bunin"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Great-Non-English-Novels-187817.html"
+check = "https://en.wikipedia.org/wiki/Boris_Pasternak"
+reviewed = false
+
+[[question]]
+id = "prose-0165"
+subcategory = "Literary prizes"
+difficulty = "easy"
+text = "Alice Munro, the 2013 Nobel laureate known for short stories, is from which country?"
+answer = "Canada"
+wrong = ["Ireland", "Australia", "New Zealand"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Countries-of-Nobel-Prize-Winning-Authors-386564.html"
+check = "https://en.wikipedia.org/wiki/Alice_Munro"
+reviewed = false
+
+[[question]]
+id = "prose-0166"
+subcategory = "Literary prizes"
+difficulty = "medium"
+text = "José Saramago, the 1998 Nobel laureate, came from which country?"
+answer = "Portugal"
+wrong = ["Spain", "Brazil", "Italy"]
+source = "https://www.funtrivia.com/trivia-quiz/People/Countries-of-Nobel-Prize-Winning-Authors-386564.html"
+check = "https://en.wikipedia.org/wiki/José_Saramago"
+reviewed = false
+
+[[question]]
+id = "prose-0167"
+subcategory = "Literary prizes"
+difficulty = "hard"
+text = "In which city was Thomas Mann born?"
+answer = "Lübeck"
+wrong = ["Munich", "Berlin", "Hamburg"]
+source = "https://funtrivia.com/trivia-quiz/People/Literary-Nobel-Laureates-From-386620.html"
+check = "https://en.wikipedia.org/wiki/Thomas_Mann"
+reviewed = false
+
+[[question]]
+id = "prose-0168"
+subcategory = "Contemporary fiction"
+difficulty = "easy"
+text = "Who wrote Atonement (2001)?"
+answer = "Ian McEwan"
+wrong = ["Kazuo Ishiguro", "Julian Barnes", "Martin Amis"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/New-Classics-in-Literature-342922.html"
+check = "https://en.wikipedia.org/wiki/Atonement_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0169"
+subcategory = "Contemporary fiction"
+difficulty = "easy"
+text = "In which country is The Girl with the Dragon Tattoo set?"
+answer = "Sweden"
+wrong = ["Norway", "Denmark", "Finland"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Match-the-21st-Century-Book-with-its-Setting-391669.html"
+check = "https://en.wikipedia.org/wiki/The_Girl_with_the_Dragon_Tattoo"
+reviewed = false
+
+[[question]]
+id = "prose-0170"
+subcategory = "Contemporary fiction"
+difficulty = "easy"
+text = "Which Gillian Flynn thriller begins with a wife vanishing on her fifth wedding anniversary?"
+answer = "Gone Girl"
+wrong = ["Sharp Objects", "Dark Places", "The Grownup"]
+source = "https://barcelonareview.com/79/e_quizans.html"
+check = "https://en.wikipedia.org/wiki/Gone_Girl_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0171"
+subcategory = "Contemporary fiction"
+difficulty = "medium"
+text = "In which Kate Atkinson novel does Ursula Todd die and live again many times?"
+answer = "Life After Life"
+wrong = ["Case Histories", "Transcription", "Behind the Scenes at the Museum"]
+source = "https://barcelonareview.com/79/e_quizans.html"
+check = "https://en.wikipedia.org/wiki/Life_After_Life_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0172"
+subcategory = "Contemporary fiction"
+difficulty = "medium"
+text = "In The Handmaid's Tale, what is a handmaid's name, such as Offred, made from?"
+answer = "Her Commander's name"
+wrong = ["Her mother's name", "Her home town", "Her number"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/The_Handmaid's_Tale"
+reviewed = false
+
+[[question]]
+id = "prose-0173"
+subcategory = "Science fiction and fantasy"
+difficulty = "easy"
+text = "Which Ray Bradbury novel is about firemen who burn books?"
+answer = "Fahrenheit 451"
+wrong = ["The Martian Chronicles", "Something Wicked This Way Comes", "Dandelion Wine"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/Fahrenheit_451"
+reviewed = false
+
+[[question]]
+id = "prose-0174"
+subcategory = "Science fiction and fantasy"
+difficulty = "medium"
+text = "Philip K. Dick's The Man in the High Castle imagines an America ruled by whom?"
+answer = "The Axis powers"
+wrong = ["The Soviet Union", "Alien invaders", "The Confederacy"]
+source = "https://www.funtrivia.com/quiz/literature/sci-fi-authors-and-their-titles-418658.html"
+check = "https://en.wikipedia.org/wiki/The_Man_in_the_High_Castle"
+reviewed = false
+
+[[question]]
+id = "prose-0175"
+subcategory = "Science fiction and fantasy"
+difficulty = "medium"
+text = "Who wrote The Left Hand of Darkness?"
+answer = "Ursula K. Le Guin"
+wrong = ["Octavia E. Butler", "Andre Norton", "Joanna Russ"]
+source = "https://www.funtrivia.com/quiz/literature/sci-fi-authors-and-their-titles-418658.html"
+check = "https://en.wikipedia.org/wiki/The_Left_Hand_of_Darkness"
+reviewed = false
+
+[[question]]
+id = "prose-0176"
+subcategory = "Science fiction and fantasy"
+difficulty = "medium"
+text = "Which author created Billy Pilgrim, who comes \"unstuck in time\"?"
+answer = "Kurt Vonnegut"
+wrong = ["Philip K. Dick", "Piers Anthony", "Joseph Heller"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Classic-Characters-in-Science-Fiction-and-Fantasy-318463.html"
+check = "https://en.wikipedia.org/wiki/Slaughterhouse-Five"
+reviewed = false
+
+[[question]]
+id = "prose-0177"
+subcategory = "Science fiction and fantasy"
+difficulty = "hard"
+text = "Who wrote Neuromancer, whose hero is the hacker Henry Case?"
+answer = "William Gibson"
+wrong = ["Neal Stephenson", "Bruce Sterling", "Charles Stross"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Classic-Characters-in-Science-Fiction-and-Fantasy-318463.html"
+check = "https://en.wikipedia.org/wiki/Neuromancer"
+reviewed = false
+
+[[question]]
+id = "prose-0178"
+subcategory = "Science fiction and fantasy"
+difficulty = "easy"
+text = "Who created Arthur Dent of The Hitchhiker's Guide to the Galaxy?"
+answer = "Douglas Adams"
+wrong = ["Terry Pratchett", "Neil Gaiman", "Ray Bradbury"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Classic-Characters-in-Science-Fiction-and-Fantasy-318463.html"
+check = "https://en.wikipedia.org/wiki/Arthur_Dent"
+reviewed = false
+
+[[question]]
+id = "prose-0179"
+subcategory = "Science fiction and fantasy"
+difficulty = "easy"
+text = "In Nineteen Eighty-Four, at which ministry does Winston Smith work?"
+answer = "The Ministry of Truth"
+wrong = ["The Ministry of Love", "The Ministry of Plenty", "The Ministry of Peace"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Classic-Characters-in-Science-Fiction-and-Fantasy-318463.html"
+check = "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+reviewed = false
+
+[[question]]
+id = "prose-0180"
+subcategory = "Science fiction and fantasy"
+difficulty = "hard"
+text = "At which university does Victor Frankenstein study?"
+answer = "Ingolstadt"
+wrong = ["Heidelberg", "Leipzig", "Geneva"]
+source = "https://funtrivia.com/trivia-quiz/Literature/Classic-Characters-in-Science-Fiction-and-Fantasy-318463.html"
+check = "https://en.wikipedia.org/wiki/Victor_Frankenstein"
+reviewed = false
+
+[[question]]
+id = "prose-0181"
+subcategory = "Science fiction and fantasy"
+difficulty = "easy"
+text = "Who wrote The Hunger Games?"
+answer = "Suzanne Collins"
+wrong = ["Veronica Roth", "Stephenie Meyer", "Lois Lowry"]
+source = "https://makeheadway.com/blog/literature-trivia/"
+check = "https://en.wikipedia.org/wiki/The_Hunger_Games"
+reviewed = false
+
+[[question]]
+id = "prose-0182"
+subcategory = "Crime fiction"
+difficulty = "easy"
+text = "What nationality is Agatha Christie's detective Hercule Poirot?"
+answer = "Belgian"
+wrong = ["French", "Swiss", "Dutch"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Hercule_Poirot"
+reviewed = false
+
+[[question]]
+id = "prose-0183"
+subcategory = "Crime fiction"
+difficulty = "medium"
+text = "Which author created the detective Lord Peter Wimsey?"
+answer = "Dorothy L. Sayers"
+wrong = ["Margery Allingham", "Ngaio Marsh", "Josephine Tey"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Lord_Peter_Wimsey"
+reviewed = false
+
+[[question]]
+id = "prose-0184"
+subcategory = "Crime fiction"
+difficulty = "medium"
+text = "Which author created Superintendent Roderick Alleyn?"
+answer = "Ngaio Marsh"
+wrong = ["Agatha Christie", "Dorothy L. Sayers", "Margery Allingham"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Detectives-and-their-creators-1-116171.html"
+check = "https://en.wikipedia.org/wiki/Roderick_Alleyn"
+reviewed = false
+
+[[question]]
+id = "prose-0185"
+subcategory = "Crime fiction"
+difficulty = "easy"
+text = "Which author created the priest-detective Father Brown?"
+answer = "G. K. Chesterton"
+wrong = ["Ronald Knox", "Graham Greene", "Evelyn Waugh"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Detectives-and-their-creators-1-116171.html"
+check = "https://en.wikipedia.org/wiki/Father_Brown"
+reviewed = false
+
+[[question]]
+id = "prose-0186"
+subcategory = "Crime fiction"
+difficulty = "hard"
+text = "Which author created the Chicago private eye V. I. Warshawski?"
+answer = "Sara Paretsky"
+wrong = ["Sue Grafton", "Janet Evanovich", "Marcia Muller"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/Detectives-and-their-creators-1-116171.html"
+check = "https://en.wikipedia.org/wiki/V._I._Warshawski"
+reviewed = false
+
+[[question]]
+id = "prose-0187"
+subcategory = "Crime fiction"
+difficulty = "medium"
+text = "Who wrote The Man Who Died Twice, the sequel to The Thursday Murder Club?"
+answer = "Richard Osman"
+wrong = ["Anthony Horowitz", "Robert Galbraith", "Mark Billingham"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/The_Man_Who_Died_Twice"
+reviewed = false
+
+[[question]]
+id = "prose-0188"
+subcategory = "Crime fiction"
+difficulty = "medium"
+text = "In which English county is Daphne du Maurier's Jamaica Inn set?"
+answer = "Cornwall"
+wrong = ["Devon", "Dorset", "Yorkshire"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Jamaica_Inn_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0189"
+subcategory = "Children's books"
+difficulty = "easy"
+text = "Which child in Charlie and the Chocolate Factory turns into a giant blueberry?"
+answer = "Violet Beauregarde"
+wrong = ["Veruca Salt", "Augustus Gloop", "Mike Teavee"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Charlie_and_the_Chocolate_Factory"
+reviewed = false
+
+[[question]]
+id = "prose-0190"
+subcategory = "Children's books"
+difficulty = "medium"
+text = "What is Anne's surname in Anne of Green Gables?"
+answer = "Shirley"
+wrong = ["Cuthbert", "Barry", "Blythe"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Anne_of_Green_Gables"
+reviewed = false
+
+[[question]]
+id = "prose-0191"
+subcategory = "Children's books"
+difficulty = "medium"
+text = "Where does Lyra grow up in Philip Pullman's Northern Lights?"
+answer = "Oxford"
+wrong = ["Cambridge", "London", "Edinburgh"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Northern_Lights_(Pullman_novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0192"
+subcategory = "Children's books"
+difficulty = "easy"
+text = "What is the name of the narrator of Jeff Kinney's Diary of a Wimpy Kid?"
+answer = "Greg Heffley"
+wrong = ["Rowley Jefferson", "Nate Wright", "Timmy Failure"]
+source = "https://www.penguin.co.uk/articles/2021/02/ideas-book-pub-quiz-questions-rounds"
+check = "https://en.wikipedia.org/wiki/Diary_of_a_Wimpy_Kid"
+reviewed = false
+
+[[question]]
+id = "prose-0193"
+subcategory = "Children's books"
+difficulty = "easy"
+text = "Mowgli is a character in which book?"
+answer = "The Jungle Book"
+wrong = ["Just So Stories", "Kim", "The Wind in the Willows"]
+source = "https://www.trivianerd.com/topic/novels-trivia"
+check = "https://en.wikipedia.org/wiki/Mowgli"
+reviewed = false
+
+[[question]]
+id = "prose-0194"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "\"Last night I dreamt I went to Manderley again\" opens which novel?"
+answer = "Rebecca"
+wrong = ["Jamaica Inn", "Jane Eyre", "My Cousin Rachel"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikiquote.org/wiki/Rebecca_(novel)"
+reviewed = false
+
+[[question]]
+id = "prose-0195"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "\"Marley was dead: to begin with\" opens which story?"
+answer = "A Christmas Carol"
+wrong = ["Great Expectations", "Oliver Twist", "The Pickwick Papers"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikiquote.org/wiki/A_Christmas_Carol"
+reviewed = false
+
+[[question]]
+id = "prose-0196"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "\"Christmas won't be Christmas without any presents\" opens which novel?"
+answer = "Little Women"
+wrong = ["Anne of Green Gables", "What Katy Did", "Pollyanna"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikiquote.org/wiki/Little_Women"
+reviewed = false
+
+[[question]]
+id = "prose-0197"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "\"All children, except one, grow up\" opens which book?"
+answer = "Peter Pan"
+wrong = ["Matilda", "Mary Poppins", "The Secret Garden"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikipedia.org/wiki/Peter_and_Wendy"
+reviewed = false
+
+[[question]]
+id = "prose-0198"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "\"Once there were four children whose names were Peter, Susan, Edmund and Lucy\" opens which book?"
+answer = "The Lion, the Witch and the Wardrobe"
+wrong = ["The Railway Children", "Five Children and It", "Swallows and Amazons"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikiquote.org/wiki/The_Chronicles_of_Narnia"
+reviewed = false
+
+[[question]]
+id = "prose-0199"
+subcategory = "Opening lines"
+difficulty = "easy"
+text = "Edward Bear comes downstairs \"bump, bump, bump\" at the start of which book?"
+answer = "Winnie-the-Pooh"
+wrong = ["The Wind in the Willows", "A Bear Called Paddington", "The House at Pooh Corner"]
+source = "https://www.funtrivia.com/trivia-quiz/Literature/First-Lines-of-Famous-Novels-140056.html"
+check = "https://en.wikiquote.org/wiki/Winnie-the-Pooh"
+reviewed = false

@@ -47,7 +47,7 @@ fn in_shop() -> Lobby {
 }
 
 /// The same lobby with the shop over: the first question was shown at `SHOP_END`.
-const SHOP_END: Millis = 1 + 30_000;
+const SHOP_END: Millis = 1 + 60_000;
 /// How long a synthetic question (20 words) is read before its answers open:
 /// 6 s, plus 150 ms a word.
 const READING: Millis = 9_000;
@@ -321,7 +321,7 @@ fn battle_events_reach_only_the_two_players_fighting() {
     for seat in 0..4 {
         lobby.drain(PlayerId(seat));
     }
-    lobby.tick(60_000);
+    lobby.tick(90_000);
     for seat in 0..4 {
         let events = lobby.drain(PlayerId(seat));
         let battles = events.iter().filter(|o| matches!(o.event, Event::BattleStarted { .. })).count();
@@ -368,7 +368,9 @@ fn bots_lobby_until(stop: impl Fn(&Lobby) -> bool) -> (Lobby, Millis) {
 
 #[test]
 fn everyone_sees_each_players_streak_goldens_leading_category_and_last_two_battles() {
-    let (lobby, _) = bots_lobby_until(|lobby| lobby.state().turn >= 6 && lobby.state().phase == Phase::Shop);
+    // Once the idle human is out, only bots are left and every shop closes at
+    // once, so the summary is read at the start of a battle.
+    let (lobby, _) = bots_lobby_until(|lobby| lobby.state().turn >= 6 && lobby.state().phase == Phase::Battle);
     let content = content();
     let view = lobby.view(P0);
     let mut some_category = false;
@@ -378,7 +380,9 @@ fn everyone_sees_each_players_streak_goldens_leading_category_and_last_two_battl
         let mut goldens = 0;
         for part in player.board.iter().flat_map(|card| &card.parts) {
             goldens += u32::from(part.golden);
-            if let Some(category) = content.card(part.def).category {
+            // A card that only adds weight (a Bard) is not a card of its category.
+            let def = content.card(part.def);
+            if let Some(category) = def.category.filter(|_| def.tribe) {
                 counts[usize::from(category.0)] += 1;
             }
         }
@@ -395,8 +399,8 @@ fn everyone_sees_each_players_streak_goldens_leading_category_and_last_two_battl
         assert!(!public.recent.is_empty() || !player.alive, "five turns in, a living player has fought");
     }
     assert!(some_category, "after five turns somebody leads with a category");
-    // The summary is all that shows: no board is sent outside a battle.
-    assert!(view.battle.is_none());
+    // The summary is all that shows: no board is sent to a player outside a battle.
+    assert!(!lobby.state().players[0].alive && view.battle.is_none());
 }
 
 #[test]
@@ -491,7 +495,7 @@ fn bots_answer_after_the_answers_open_and_before_the_deadline() {
     let mut lobby = Lobby::new(content, seats, SEED, Box::new(SyntheticQuestions::default()), 0).expect("enough heroes");
     lobby.tick(0);
     lobby.tick(1);
-    let shop_end = 1 + 30_000;
+    let shop_end = 1 + 60_000;
     lobby.tick(shop_end);
     assert_eq!(lobby.state().phase, Phase::Battle);
     lobby.drain(P0);
@@ -547,4 +551,54 @@ fn a_bot_places_its_golden_card_opens_its_reward_card_and_picks() {
     assert!(me.rewards.is_empty(), "both rewards were picked");
     let picks = bot.accepted.iter().filter(|c| matches!(c, Command::PickReward { .. })).count();
     assert_eq!(picks, 2);
+}
+
+#[test]
+fn shop_closes_when_only_human_is_ready() {
+    let content = content();
+    let seats = vec![Seat::Human, bot(&content, 1), bot(&content, 2)];
+    let mut lobby = Lobby::new(content, seats, SEED, Box::new(SyntheticQuestions::default()), 0).expect("enough heroes");
+    let hero = offer(&lobby, P0)[0];
+    lobby.handle(0, P0, Command::PickHero { player: P0, hero }).unwrap();
+    lobby.tick(0);
+    assert_eq!(lobby.state().phase, Phase::Shop);
+    lobby.handle(1_000, P0, Command::SetReady { player: P0, ready: true }).unwrap();
+    lobby.tick(1_000);
+    assert_eq!(lobby.state().phase, Phase::Battle, "the bots count as ready once they have shopped");
+}
+
+#[test]
+fn shop_waits_for_second_human() {
+    let mut lobby = in_shop();
+    lobby.handle(2, P0, Command::SetReady { player: P0, ready: true }).unwrap();
+    lobby.tick(SHOP_END - 1);
+    assert_eq!(lobby.state().phase, Phase::Shop, "one human is not ready");
+    lobby.tick(SHOP_END);
+    assert_eq!(lobby.state().phase, Phase::Battle);
+}
+
+#[test]
+fn shop_closes_when_both_humans_are_ready() {
+    let mut lobby = in_shop();
+    lobby.handle(2, P0, Command::SetReady { player: P0, ready: true }).unwrap();
+    lobby.handle(3, P1, Command::SetReady { player: P1, ready: true }).unwrap();
+    lobby.tick(3);
+    assert_eq!(lobby.state().phase, Phase::Battle);
+}
+
+#[test]
+fn everyone_sees_who_is_ready_and_only_during_the_shop() {
+    let mut lobby = in_shop();
+    lobby.drain(P0);
+    lobby.drain(P1);
+    lobby.handle(2, P0, Command::SetReady { player: P0, ready: true }).unwrap();
+    for viewer in [P0, P1] {
+        assert!(has(&lobby.drain(viewer), |e| matches!(e, Event::ReadyChanged { player: P0, ready: true })));
+        let view = lobby.view(viewer);
+        assert!(view.players[0].ready);
+        assert!(!view.players[1].ready);
+    }
+    lobby.tick(SHOP_END);
+    assert_eq!(lobby.state().phase, Phase::Battle);
+    assert!(lobby.view(P1).players.iter().all(|p| !p.ready), "no tick shows outside the shop");
 }

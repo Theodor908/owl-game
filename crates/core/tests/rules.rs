@@ -149,10 +149,11 @@ fn damage_to(events: &[Event], player: PlayerId, wanted: DamageSource) -> Vec<(u
 fn content_loads_with_the_documented_card_pool() {
     let lobby = Lobby::new(&["benz", "darwin"]);
     let in_shop = lobby.content.cards.iter().filter(|c| c.in_shop).count();
-    // 28 unique shop cards, 8 difficulty cards, and 3 category lines across 10 categories.
-    assert_eq!(in_shop, 28 + 8 + 30);
-    // 8 starting heroes plus 4 temporary placeholders.
-    assert_eq!(lobby.content.heroes.len(), 12);
+    // 28 unique shop cards, 8 difficulty cards, and 3 category lines across every category.
+    assert_eq!(lobby.content.tunables.categories.len(), 13);
+    assert_eq!(in_shop, 28 + 8 + 3 * lobby.content.tunables.categories.len());
+    // The 12 starting heroes, Beethoven, Goethe, Cervantes and Homer.
+    assert_eq!(lobby.content.heroes.len(), 16);
 }
 
 #[test]
@@ -1711,11 +1712,12 @@ fn herodotus_rewrite_refunds_his_loss_deals_max_damage_and_never_kills() {
 
 #[test]
 fn lumiere_replays_a_film_question_in_the_next_battle() {
-    let mut lobby = Lobby::new(&["lumiere", "darwin"]);
+    // Three players, so the endgame never starts while film is awaited.
+    let mut lobby = Lobby::new(&["lumiere", "darwin", "newton"]);
     let film = lobby.content.hero(lobby.state.players[0].hero.unwrap()).category;
     // Play until a film question has come up.
     let question = loop {
-        lobby.battle(&[0, 0]);
+        lobby.battle(&[0, 0, 0]);
         let last = lobby.state.players[0].last_battle.clone().unwrap();
         if let Some(q) = last.questions.into_iter().find(|q| q.category == film) {
             break q;
@@ -1723,7 +1725,8 @@ fn lumiere_replays_a_film_question_in_the_next_battle() {
     };
     lobby.apply(Command::UseAbility { player: P0, action: AbilityAction::Record { question: question.id } }).unwrap();
     lobby.apply(Command::EndShop).unwrap();
-    assert!(lobby.state.battles[0].plan.iter().any(|s| s.question == question));
+    let his = lobby.state.battles.iter().find(|b| b.fighters.iter().any(|f| f.player == Some(P0))).unwrap();
+    assert!(his.plan.iter().any(|s| s.question == question));
 }
 
 #[test]
@@ -2078,4 +2081,692 @@ fn escalation_never_touches_the_endgame() {
     assert_eq!(damage_to(&first, P1, DamageSource::EndgameStep), vec![(1, 0, 1)]);
     let second = lobby.endgame_answer(right);
     assert_eq!(damage_to(&second, P1, DamageSource::EndgameStep), vec![(2, 0, 2)]);
+}
+
+#[test]
+fn ready_then_buy_clears_ready() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let events = lobby.apply(Command::SetReady { player: P0, ready: true }).expect("ready in the shop");
+    assert_eq!(events, vec![Event::ReadyChanged { player: P0, ready: true }]);
+    assert!(lobby.state.players[0].ready);
+    let events = lobby.apply(Command::Buy { player: P0, index: 0 }).expect("buys");
+    assert!(!lobby.state.players[0].ready);
+    assert!(events.contains(&Event::ReadyChanged { player: P0, ready: false }));
+}
+
+#[test]
+fn a_shop_command_by_a_player_not_ready_sends_no_ready_event() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let events = lobby.apply(Command::Buy { player: P0, index: 0 }).expect("buys");
+    assert!(!events.iter().any(|e| matches!(e, Event::ReadyChanged { .. })));
+}
+
+#[test]
+fn setting_an_unchanged_ready_mark_sends_no_event() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let events = lobby.apply(Command::SetReady { player: P0, ready: false }).expect("not ready");
+    assert!(events.is_empty(), "already not ready");
+    lobby.apply(Command::SetReady { player: P0, ready: true }).expect("ready");
+    let events = lobby.apply(Command::SetReady { player: P0, ready: true }).expect("ready again");
+    assert!(events.is_empty(), "already ready");
+    assert!(lobby.state.players[0].ready);
+}
+
+#[test]
+fn all_ready_ignores_bots_and_dead() {
+    let mut lobby = Lobby::new(&["benz", "darwin", "newton"]);
+    lobby.state.players[2].alive = false;
+    let bots = [false, true, false];
+    assert!(!owl_core::shop::all_ready(&lobby.state, &bots));
+    lobby.apply(Command::SetReady { player: P0, ready: true }).expect("ready");
+    assert!(owl_core::shop::all_ready(&lobby.state, &bots));
+    lobby.apply(Command::SetReady { player: P0, ready: false }).expect("not ready");
+    assert!(!owl_core::shop::all_ready(&lobby.state, &bots));
+}
+
+#[test]
+fn locked_out_counts_as_ready() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    lobby.state.players[0].locked_out = true;
+    assert!(owl_core::shop::all_ready(&lobby.state, &[false, true]));
+}
+
+#[test]
+fn ready_resets_next_turn() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    lobby.apply(Command::SetReady { player: P0, ready: true }).expect("ready");
+    lobby.apply(Command::SetReady { player: P1, ready: true }).expect("ready");
+    let turn = lobby.state.turn;
+    lobby.battle(&[3, 3]);
+    assert_eq!((lobby.state.phase, lobby.state.turn), (Phase::Shop, turn + 1));
+    assert!(lobby.state.players.iter().all(|p| !p.ready));
+}
+
+#[test]
+fn set_ready_outside_shop_is_wrong_phase() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    lobby.apply(Command::EndShop).expect("shop ends");
+    assert_eq!(lobby.apply(Command::SetReady { player: P0, ready: true }), Err(RuleError::WrongPhase));
+}
+
+// ---- Hooks for the new heroes ----------------------------------------------
+
+/// Adds a test-only card to the lobby's content: never in the shop, never
+/// golden. A pooled one has one copy, which is out of the pool (in play).
+fn test_card(lobby: &mut Lobby, id: &str, effects: Vec<Effect>, one_battle: bool, pooled: bool) -> owl_core::CardDefId {
+    let base = lobby.content.card_id("whetstone").expect("card exists");
+    let mut def = lobby.content.card(base).clone();
+    def.id = id.into();
+    def.name = id.into();
+    def.golden_effects = effects.clone();
+    def.effects = effects;
+    def.golden_text = None;
+    def.can_golden = false;
+    def.category = None;
+    def.in_shop = false;
+    def.max_on_board = None;
+    def.merges_into = None;
+    def.copies = u32::from(pooled);
+    def.one_battle = one_battle;
+    lobby.content.cards.push(def);
+    lobby.state.pool.push(0);
+    owl_core::CardDefId((lobby.content.cards.len() - 1) as u16)
+}
+
+fn give_test_hand(lobby: &mut Lobby, player: usize, def: owl_core::CardDefId) -> CardInstanceId {
+    let card = lobby.state.new_instance(def, false, 1, &lobby.content);
+    let id = card.id;
+    lobby.state.players[player].hand.push(card);
+    id
+}
+
+fn give_test_board(lobby: &mut Lobby, player: usize, def: owl_core::CardDefId) -> CardInstanceId {
+    let card = lobby.state.new_instance(def, false, 1, &lobby.content);
+    let id = card.id;
+    lobby.state.players[player].board.push(card);
+    id
+}
+
+#[test]
+fn silenced_opponent_loses_battle_passive() {
+    use owl_core::stats::fold_stats_with;
+    let lobby = Lobby::new(&["herophilus", "pheidippides", "marie_curie", "newton"]);
+    let [herophilus, pheidippides, curie] = [0, 1, 2].map(|i| &lobby.state.players[i]);
+    assert_eq!(fold_stats(herophilus, &lobby.content).reflect, 25);
+    assert_eq!(fold_stats_with(herophilus, &lobby.content, false).reflect, 0);
+    let marathon = fold_stats(pheidippides, &lobby.content);
+    assert!(marathon.damage_per_correct > 0 && marathon.damage_per_correct_max > 0);
+    let silenced = fold_stats_with(pheidippides, &lobby.content, false);
+    assert_eq!((silenced.damage_per_correct, silenced.damage_per_correct_max), (0, 0));
+    assert_eq!(fold_stats(curie, &lobby.content).armor_pierce_percent, 50);
+    assert_eq!(fold_stats_with(curie, &lobby.content, false).armor_pierce_percent, 0);
+    // The +25% category bonus is not a battle passive and stays.
+    assert_eq!(fold_stats_with(herophilus, &lobby.content, false).weights, fold_stats(herophilus, &lobby.content).weights);
+    assert_eq!(fold_stats_with(herophilus, &lobby.content, true), fold_stats(herophilus, &lobby.content));
+}
+
+#[test]
+fn strike_hits_on_tie_and_loss() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let knight = test_card(&mut lobby, "test_knight", vec![Effect::Strike { amount: 2 }], false, false);
+    give_test_board(&mut lobby, 0, knight);
+    assert_eq!(lobby.stats(0).strike, 2);
+    let events = lobby.battle(&[3, 3]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(2, 0, 2)], "a tie");
+    assert!(damage_to(&events, P0, DamageSource::Battle).is_empty());
+
+    let events = lobby.battle(&[2, 4]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(2, 0, 2)], "a loss");
+    assert_eq!(damage_to(&events, P0, DamageSource::Battle), vec![(5, 0, 5)]);
+}
+
+#[test]
+fn strike_adds_to_win_up_to_cap() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let knight = test_card(&mut lobby, "test_knight", vec![Effect::Strike { amount: 2 }], false, false);
+    give_test_board(&mut lobby, 0, knight);
+    let events = lobby.battle(&[4, 2]);
+    // Margin 2 + base 2 + level 1 = 5, and 2 from the strike in the same hit.
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(7, 0, 7)]);
+
+    lobby.state.players[0].tavern = 6;
+    let events = lobby.battle(&[6, 0]);
+    let cap = lobby.content.tunables.max_battle_damage;
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(cap, 0, cap)]);
+
+    // A strike against a player who takes no damage at all deals nothing.
+    let windmill = test_card(&mut lobby, "test_windmill", vec![Effect::DamageCap { amount: 0 }], false, false);
+    give_test_board(&mut lobby, 1, windmill);
+    let events = lobby.battle(&[3, 3]);
+    assert!(damage_to(&events, P1, DamageSource::Battle).iter().all(|&(amount, ..)| amount == 0));
+}
+
+#[test]
+fn advance_stage_card_vanishes_and_counts() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let note = test_card(&mut lobby, "test_note", vec![Effect::AdvanceHeroStage], false, false);
+    // It needs no board slot.
+    for _ in 0..lobby.content.tunables.board_slots {
+        lobby.give(0, "whetstone");
+    }
+    for stage in 1..=2 {
+        let card = give_test_hand(&mut lobby, 0, note);
+        let events = lobby.apply(Command::Place { player: P0, card }).expect("placed");
+        assert!(events.contains(&Event::CardUsed { player: P0, card }));
+        let p = &lobby.state.players[0];
+        assert_eq!(p.hero_state.stage, stage);
+        assert!(p.find_card(card).is_none(), "the card is gone");
+        assert_eq!(p.board.len(), lobby.content.tunables.board_slots as usize);
+    }
+}
+
+#[test]
+fn displaces_removes_target_either_order() {
+    for knight_first in [true, false] {
+        let mut lobby = Lobby::new(&["benz", "darwin"]);
+        let windmill = test_card(&mut lobby, "test_windmill", vec![Effect::DamageCap { amount: 0 }], true, false);
+        let knight = test_card(
+            &mut lobby,
+            "test_knight",
+            vec![Effect::Strike { amount: 2 }, Effect::Displaces { card: "test_windmill".into() }],
+            true,
+            false,
+        );
+        let k = give_test_hand(&mut lobby, 0, knight);
+        let w = give_test_hand(&mut lobby, 0, windmill);
+        let order = if knight_first { [k, w] } else { [w, k] };
+        let mut events = Vec::new();
+        for card in order {
+            events.extend(lobby.apply(Command::Place { player: P0, card }).expect("placed"));
+        }
+        let p = &lobby.state.players[0];
+        assert!(p.find_card(w).is_none(), "the windmill goes, knight first: {knight_first}");
+        assert!(p.board.iter().any(|c| c.id == k), "the knight stays");
+        assert!(events.contains(&Event::CardUsed { player: P0, card: w }));
+    }
+}
+
+#[test]
+fn one_battle_card_removed_after_battle() {
+    let mut lobby = Lobby::new(&["benz", "darwin"]);
+    let once = test_card(&mut lobby, "test_once", vec![Effect::DamageOnWin { amount: 1 }], true, true);
+    let kept = lobby.give(0, "whetstone");
+    let first = give_test_board(&mut lobby, 0, once);
+    let skulled = give_test_board(&mut lobby, 1, once);
+    lobby.state.players[1].board.last_mut().unwrap().disabled = true;
+    let events = lobby.battle(&[3, 3]);
+    assert!(lobby.state.players[0].find_card(first).is_none());
+    assert!(lobby.state.players[1].find_card(skulled).is_none(), "a disabled one goes too");
+    assert!(lobby.state.players[0].find_card(kept).is_some());
+    assert!(events.contains(&Event::CardUsed { player: P0, card: first }));
+    assert_eq!(lobby.state.pool[usize::from(once.0)], 2, "both copies are back in the pool");
+}
+
+// ---- Beethoven and Goethe ------------------------------------------------
+
+const FRENZIED_NOTES: Command = Command::UseAbility { player: P0, action: AbilityAction::FrenziedNotes };
+const POETRY_BOOST: Command = Command::UseAbility { player: P0, action: AbilityAction::PoetryBoost };
+
+fn category(lobby: &Lobby, slug: &str) -> usize {
+    lobby.content.tunables.categories.iter().position(|c| c == slug).expect("category exists")
+}
+
+#[test]
+fn beethoven_needs_four_rounds_of_payment() {
+    let mut lobby = Lobby::new(&["beethoven", "darwin"]);
+    lobby.state.players[0].gold = 2;
+    assert_eq!(lobby.apply(FRENZIED_NOTES), Err(RuleError::NotEnoughGold));
+    for round in 1..=4 {
+        lobby.state.players[0].gold = 10;
+        let events = lobby.apply(FRENZIED_NOTES).expect("a payment");
+        assert!(events.contains(&Event::AbilityUsed { player: P0 }));
+        assert_eq!(lobby.state.players[0].gold, 7, "a payment costs 3");
+        assert_eq!(lobby.state.players[0].hero_state.uses, round);
+        let again = if round < 4 { RuleError::UsedThisRound } else { RuleError::NoCharges };
+        assert_eq!(lobby.apply(FRENZIED_NOTES), Err(again), "once a round, four in all");
+        lobby.battle(&[3, 3]);
+    }
+    lobby.state.players[0].gold = 10;
+    assert_eq!(lobby.apply(FRENZIED_NOTES), Err(RuleError::NoCharges), "paid in full");
+    assert_eq!(lobby.state.players[0].gold, 10);
+}
+
+#[test]
+fn notes_only_in_beethovens_shop_after_unlock() {
+    let mut lobby = Lobby::new(&["beethoven", "darwin"]);
+    let note = lobby.content.card_id("note").expect("the note exists");
+    let saw_note = |lobby: &mut Lobby, player: PlayerId| {
+        (0..60).any(|_| {
+            lobby.state.players[player.index()].gold = 10;
+            lobby.apply(Command::Reroll { player }).unwrap();
+            lobby.state.players[player.index()].extras.contains(&note)
+        })
+    };
+    assert!(!saw_note(&mut lobby, P0), "not before the fourth payment");
+    lobby.state.players[0].hero_state.uses = 4;
+    assert!(!saw_note(&mut lobby, P1), "never in another player's shop");
+    assert!(saw_note(&mut lobby, P0), "60 rolls at 30% offer one");
+    for _ in 0..20 {
+        lobby.state.players[0].gold = 10;
+        lobby.apply(Command::Reroll { player: P0 }).unwrap();
+        assert!(lobby.state.players[0].extras.iter().filter(|&&d| d == note).count() <= 1, "one at a time");
+    }
+    // Bought and placed, it moves him to his first phase and takes no slot.
+    let index = lobby.state.players[0].extras.iter().position(|&d| d == note).expect("still offered");
+    lobby.state.players[0].gold = 10;
+    lobby.apply(Command::BuyExtra { player: P0, index }).unwrap();
+    assert_eq!(lobby.state.players[0].gold, 9, "a note costs 1");
+    let card = lobby.state.players[0].hand.last().unwrap().id;
+    lobby.apply(Command::Place { player: P0, card }).unwrap();
+    assert_eq!(lobby.state.players[0].hero_state.stage, 1);
+    assert!(lobby.state.players[0].board.is_empty());
+}
+
+#[test]
+fn note_cycles_three_phases() {
+    let mut lobby = Lobby::new(&["beethoven", "darwin"]);
+    let music = category(&lobby, "music");
+    let before = lobby.stats(0);
+    assert_eq!((before.strike, before.weights[music], before.reflect), (0, 25, 0), "no phase before a note");
+    let expected = [(2, 25, 0), (0, 40, 0), (0, 25, 15), (2, 25, 0)];
+    for (stage, want) in (1..).zip(expected) {
+        let card = lobby.give_hand(0, "note");
+        lobby.apply(Command::Place { player: P0, card }).unwrap();
+        assert_eq!(lobby.state.players[0].hero_state.stage, stage);
+        let s = lobby.stats(0);
+        assert_eq!((s.strike, s.weights[music], s.reflect), want, "stage {stage}");
+    }
+}
+
+#[test]
+fn goethe_boost_lasts_one_battle() {
+    let mut lobby = Lobby::new(&["goethe", "darwin"]);
+    let poetry = category(&lobby, "poetry");
+    assert_eq!(lobby.stats(0).weights[poetry], 25);
+    lobby.state.players[0].gold = 2;
+    assert_eq!(lobby.apply(POETRY_BOOST), Err(RuleError::NotEnoughGold));
+    lobby.state.players[0].gold = 10;
+    lobby.apply(POETRY_BOOST).unwrap();
+    assert_eq!(lobby.state.players[0].gold, 7);
+    assert_eq!(lobby.stats(0).weights[poetry], 40);
+    assert!(lobby.apply(POETRY_BOOST).is_err(), "once a round");
+    lobby.battle(&[3, 3]);
+    assert!(!lobby.state.players[0].hero_state.boosted);
+    assert_eq!(lobby.stats(0).weights[poetry], 25, "back after the battle");
+    lobby.state.players[0].gold = 10;
+    lobby.apply(POETRY_BOOST).expect("a new round, a new boost");
+    lobby.state.players[0].hero_state.used_turn = 0;
+    assert_eq!(lobby.apply(POETRY_BOOST), Err(RuleError::AlreadyUsed), "already boosted");
+}
+
+#[test]
+fn prometheus_keeps_newton_sword_and_goethe_boost() {
+    use owl_core::stats::fold_stats_with;
+    let mut lobby = Lobby::new(&["goethe", "newton"]);
+    let poetry = category(&lobby, "poetry");
+    lobby.state.players[0].gold = 10;
+    lobby.apply(POETRY_BOOST).unwrap();
+    lobby.state.players[1].hero_state.uses = 2;
+    // An active's result is not a battle passive, so silence leaves it.
+    let newton = fold_stats_with(&lobby.state.players[1], &lobby.content, false);
+    assert_eq!(newton.sword_uses, 2);
+    let goethe = fold_stats_with(&lobby.state.players[0], &lobby.content, false);
+    assert_eq!(goethe.weights[poetry], 40);
+    let goethe = &lobby.content.hero(lobby.state.players[0].hero.unwrap());
+    assert_eq!(goethe.category_bonus, 25);
+}
+
+#[test]
+fn prometheus_silences_beethoven_phase() {
+    use owl_core::stats::fold_stats_with;
+    let mut lobby = Lobby::new(&["beethoven", "goethe"]);
+    let music = category(&lobby, "music");
+    for stage in 1..=3 {
+        lobby.state.players[0].hero_state.stage = stage;
+        let s = fold_stats_with(&lobby.state.players[0], &lobby.content, false);
+        assert_eq!((s.strike, s.weights[music], s.reflect), (0, 25, 0), "stage {stage}");
+    }
+    // In a real battle, Syncope deals nothing on a tie against Goethe.
+    lobby.state.players[0].hero_state.stage = 1;
+    let events = lobby.battle(&[3, 3]);
+    assert!(damage_to(&events, P1, DamageSource::Battle).iter().all(|&(amount, ..)| amount == 0));
+    assert_eq!(lobby.hp(1), lobby.state.players[1].max_hp);
+}
+
+#[test]
+fn syncope_strikes_on_a_tie_without_goethe() {
+    let mut lobby = Lobby::new(&["beethoven", "darwin"]);
+    lobby.state.players[0].hero_state.stage = 1;
+    let events = lobby.battle(&[3, 3]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(2, 0, 2)]);
+}
+
+#[test]
+fn herophilus_reflects_nothing_against_goethe() {
+    let mut lobby = Lobby::new(&["goethe", "herophilus"]);
+    let events = lobby.battle(&[4, 2]);
+    assert!(!damage_to(&events, P1, DamageSource::Battle).is_empty(), "Herophilus takes the hit");
+    assert!(damage_to(&events, P0, DamageSource::Reflect).is_empty(), "and sends nothing back");
+
+    let mut lobby = Lobby::new(&["darwin", "herophilus"]);
+    let events = lobby.battle(&[4, 2]);
+    assert!(!damage_to(&events, P0, DamageSource::Reflect).is_empty(), "he reflects against anyone else");
+}
+
+// ---- Miguel de Cervantes -------------------------------------------------
+
+const DON_QUIXOTE: Command = Command::UseAbility { player: P0, action: AbilityAction::DonQuixote };
+
+/// Places a card from the hand, through the command a host would send.
+fn place(lobby: &mut Lobby, player: usize, card: CardInstanceId) -> Vec<Event> {
+    lobby.apply(Command::Place { player: PlayerId(player as u8), card }).expect("placed")
+}
+
+#[test]
+fn don_quixote_three_times_once_a_round() {
+    let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+    let knight = lobby.content.card_id("knight").expect("the knight exists");
+    let windmill = lobby.content.card_id("windmill").expect("the windmill exists");
+    for round in 1..=3 {
+        let gold = lobby.state.players[0].gold;
+        let before = lobby.state.players[0].hand.len();
+        let events = lobby.apply(DON_QUIXOTE).expect("a use");
+        assert!(events.contains(&Event::AbilityUsed { player: P0 }));
+        let p = &lobby.state.players[0];
+        assert_eq!(p.gold, gold, "it is free");
+        assert_eq!(p.hand.len(), before + 2);
+        assert_eq!(p.hero_state.uses, round);
+        for def in [knight, windmill] {
+            let card = p.hand.iter().find(|c| c.has_def(def)).expect("in the hand").id;
+            assert!(events.contains(&Event::CardGained { player: P0, card, def }));
+        }
+        let again = if round < 3 { RuleError::UsedThisRound } else { RuleError::NoCharges };
+        assert_eq!(lobby.apply(DON_QUIXOTE), Err(again), "once a round, three in all");
+        lobby.state.players[0].hand.clear();
+        lobby.battle(&[3, 3]);
+    }
+    assert_eq!(lobby.apply(DON_QUIXOTE), Err(RuleError::NoCharges), "three uses a game");
+}
+
+#[test]
+fn don_quixote_needs_two_free_places_in_hand() {
+    let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+    let hand = lobby.content.tunables.hand_size as usize;
+    for _ in 0..hand - 1 {
+        lobby.give_hand(0, "whetstone");
+    }
+    assert_eq!(lobby.apply(DON_QUIXOTE), Err(RuleError::HandFull));
+    assert_eq!(lobby.state.players[0].hero_state.uses, 0, "no charge spent");
+    lobby.state.players[0].hand.pop();
+    lobby.apply(DON_QUIXOTE).expect("two places free");
+    assert_eq!(lobby.state.players[0].hand.len(), hand);
+}
+
+#[test]
+fn windmill_blocks_all_damage_including_reflect_and_arrow() {
+    // He loses to a reflect player: the battle deals him nothing.
+    let mut lobby = Lobby::new(&["cervantes", "herophilus"]);
+    let windmill = lobby.give_hand(0, "windmill");
+    place(&mut lobby, 0, windmill);
+    let hp = lobby.hp(0);
+    let events = lobby.battle(&[2, 4]);
+    assert!(damage_to(&events, P0, DamageSource::Battle).iter().all(|&(amount, ..)| amount == 0));
+    assert_eq!(lobby.hp(0), hp);
+
+    // He wins against a reflect player: he deals his own, nothing comes back.
+    let windmill = lobby.give_hand(0, "windmill");
+    place(&mut lobby, 0, windmill);
+    let hp_herophilus = lobby.hp(1);
+    let events = lobby.battle(&[4, 2]);
+    assert!(lobby.hp(1) < hp_herophilus, "he still deals his own damage");
+    assert!(damage_to(&events, P0, DamageSource::Reflect).iter().all(|&(amount, ..)| amount == 0));
+    assert_eq!(lobby.hp(0), hp);
+
+    // An Arrow from the opponent deals nothing either.
+    let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+    let windmill = lobby.give_hand(0, "windmill");
+    place(&mut lobby, 0, windmill);
+    lobby.give(1, "arrow");
+    let hp = lobby.hp(0);
+    let events = lobby.battle(&[3, 3]);
+    let arrow = damage_to(&events, P0, DamageSource::Arrow);
+    assert!(!arrow.is_empty(), "the arrow was fired");
+    assert!(arrow.iter().all(|&(amount, ..)| amount == 0));
+    assert_eq!(lobby.hp(0), hp);
+}
+
+#[test]
+fn knight_strikes_on_loss() {
+    let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+    let knight = lobby.give_hand(0, "knight");
+    place(&mut lobby, 0, knight);
+    let events = lobby.battle(&[2, 4]);
+    assert_eq!(damage_to(&events, P1, DamageSource::Battle), vec![(2, 0, 2)]);
+}
+
+#[test]
+fn knight_topples_windmill_either_order() {
+    for knight_first in [true, false] {
+        let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+        let k = lobby.give_hand(0, "knight");
+        let w = lobby.give_hand(0, "windmill");
+        let order = if knight_first { [k, w] } else { [w, k] };
+        let events: Vec<Event> = order.into_iter().flat_map(|card| place(&mut lobby, 0, card)).collect();
+        let p = &lobby.state.players[0];
+        assert!(p.find_card(w).is_none(), "the windmill falls, knight first: {knight_first}");
+        assert!(p.board.iter().any(|c| c.id == k), "the knight stays");
+        assert!(events.contains(&Event::CardUsed { player: P0, card: w }));
+    }
+}
+
+#[test]
+fn knight_and_windmill_gone_after_battle() {
+    let mut lobby = Lobby::new(&["cervantes", "darwin"]);
+    for name in ["knight", "windmill"] {
+        let def = lobby.content.card_id(name).unwrap();
+        let card = lobby.give_hand(0, name);
+        place(&mut lobby, 0, card);
+        let events = lobby.battle(&[3, 3]);
+        assert!(lobby.state.players[0].find_card(card).is_none(), "{name} lasts one battle");
+        assert!(events.contains(&Event::CardUsed { player: P0, card }));
+        assert_eq!(lobby.state.pool[usize::from(def.0)], 0, "{name} never enters the pool");
+    }
+    // They sell for nothing.
+    let card = lobby.give_hand(0, "knight");
+    let gold = lobby.state.players[0].gold;
+    lobby.apply(Command::Sell { player: P0, card }).unwrap();
+    assert_eq!(lobby.state.players[0].gold, gold);
+}
+
+// ---- Homer ---------------------------------------------------------------
+
+const BARD_OF_THE_CENTURIES: Command = Command::UseAbility { player: P0, action: AbilityAction::BardOfTheCenturies };
+
+#[test]
+fn homer_needs_three_rounds_of_payment() {
+    let mut lobby = Lobby::new(&["homer", "darwin"]);
+    lobby.state.players[0].gold = 2;
+    assert_eq!(lobby.apply(BARD_OF_THE_CENTURIES), Err(RuleError::NotEnoughGold));
+    for round in 1..=3 {
+        lobby.state.players[0].gold = 10;
+        let events = lobby.apply(BARD_OF_THE_CENTURIES).expect("a payment");
+        assert!(events.contains(&Event::AbilityUsed { player: P0 }));
+        assert_eq!(lobby.state.players[0].gold, 7, "a payment costs 3");
+        assert_eq!(lobby.state.players[0].hero_state.uses, round);
+        let again = if round < 3 { RuleError::UsedThisRound } else { RuleError::NoCharges };
+        assert_eq!(lobby.apply(BARD_OF_THE_CENTURIES), Err(again), "once a round, three in all");
+        lobby.battle(&[3, 3]);
+    }
+    lobby.state.players[0].gold = 10;
+    assert_eq!(lobby.apply(BARD_OF_THE_CENTURIES), Err(RuleError::NoCharges), "paid in full");
+    assert_eq!(lobby.state.players[0].gold, 10);
+}
+
+#[test]
+fn bards_in_every_shop_after_unlock_only_while_homer_alive() {
+    let mut lobby = Lobby::new(&["homer", "darwin", "benz"]);
+    let bard = lobby.content.card_id("bard").expect("the bard exists");
+    let saw_bard = |lobby: &mut Lobby, player: PlayerId| {
+        (0..80).any(|_| {
+            lobby.state.players[player.index()].gold = 10;
+            lobby.apply(Command::Reroll { player }).unwrap();
+            lobby.state.players[player.index()].extras.contains(&bard)
+        })
+    };
+    assert!(!saw_bard(&mut lobby, P1), "not before the third payment");
+    assert!(!saw_bard(&mut lobby, P0), "not in his own shop either");
+    lobby.state.players[0].hero_state.uses = 3;
+    assert!(saw_bard(&mut lobby, P1), "in another player's shop");
+    assert!(saw_bard(&mut lobby, P0), "and in his own");
+    for _ in 0..20 {
+        lobby.state.players[1].gold = 10;
+        lobby.apply(Command::Reroll { player: P1 }).unwrap();
+        assert!(lobby.state.players[1].extras.iter().filter(|&&d| d == bard).count() <= 1, "one at a time");
+    }
+    // Bought, it costs 1 gold.
+    lobby.state.players[1].extras = vec![bard];
+    lobby.state.players[1].gold = 10;
+    lobby.apply(Command::BuyExtra { player: P1, index: 0 }).unwrap();
+    assert_eq!(lobby.state.players[1].gold, 9, "a bard costs 1");
+    // Once Homer is out, no more Bards.
+    lobby.state.players[0].alive = false;
+    assert!(!saw_bard(&mut lobby, P1), "a dead Homer brings no bards");
+}
+
+#[test]
+fn bard_adds_music_for_one_battle() {
+    let mut lobby = Lobby::new(&["darwin", "benz"]);
+    let music = category(&lobby, "music");
+    let bard = lobby.content.card_id("bard").unwrap();
+    assert_eq!(lobby.stats(0).weights[music], 0);
+    let first = lobby.give_hand(0, "bard");
+    place(&mut lobby, 0, first);
+    assert_eq!(lobby.state.players[0].board.len(), 1, "it takes a board slot");
+    assert_eq!(lobby.stats(0).weights[music], 25);
+    let second = lobby.give_hand(0, "bard");
+    place(&mut lobby, 0, second);
+    assert_eq!(lobby.stats(0).weights[music], 50, "several stack");
+    let events = lobby.battle(&[3, 3]);
+    for card in [first, second] {
+        assert!(lobby.state.players[0].find_card(card).is_none(), "it lasts one battle");
+        assert!(events.contains(&Event::CardUsed { player: P0, card }));
+    }
+    assert_eq!(lobby.stats(0).weights[music], 0, "gone after the battle");
+    assert_eq!(lobby.state.pool[usize::from(bard.0)], 0, "it never enters the pool");
+    // It sells for nothing.
+    let card = lobby.give_hand(0, "bard");
+    let gold = lobby.state.players[0].gold;
+    lobby.apply(Command::Sell { player: P0, card }).unwrap();
+    assert_eq!(lobby.state.players[0].gold, gold);
+}
+
+#[test]
+fn benz_cannot_combine_a_card_that_lasts_one_battle() {
+    for id in ["bard", "knight"] {
+        let mut lobby = Lobby::new(&["benz", "darwin"]);
+        let short = lobby.give_hand(0, id);
+        let other = lobby.give(0, "hourglass");
+        let before = lobby.state.clone();
+        for action in [AbilityAction::Combine { a: other, b: short }, AbilityAction::Combine { a: short, b: other }] {
+            assert_eq!(lobby.apply(Command::UseAbility { player: P0, action }), Err(RuleError::NotUsable), "{id}");
+        }
+        assert_eq!(lobby.state, before, "nothing changes when {id} is refused");
+    }
+}
+
+#[test]
+fn bard_is_not_a_music_card_for_the_tribe_bonus() {
+    let mut lobby = Lobby::new(&["darwin", "benz"]);
+    for _ in 0..3 {
+        lobby.give(0, "bard");
+    }
+    assert!(lobby.stats(0).bonus_categories.is_empty(), "three bards give no category bonus");
+    lobby.give(0, "apprentice_music");
+    lobby.give(0, "scholar_music");
+    assert!(lobby.stats(0).bonus_categories.is_empty(), "nor do they complete one");
+}
+
+#[test]
+fn royalty_paid_next_shop_for_others_not_self() {
+    let mut lobby = Lobby::new(&["homer", "darwin", "benz"]);
+    let bard = lobby.content.card_id("bard").unwrap();
+    lobby.state.players[0].hero_state.uses = 3;
+    // Another player's Bard pays him 1 at his next shop.
+    lobby.state.players[1].extras = vec![bard];
+    lobby.state.players[1].gold = 10;
+    lobby.apply(Command::BuyExtra { player: P1, index: 0 }).unwrap();
+    assert_eq!(lobby.state.players[0].bonus_gold, 1);
+    // His own Bard pays him nothing.
+    lobby.state.players[0].extras = vec![bard];
+    lobby.state.players[0].gold = 10;
+    lobby.apply(Command::BuyExtra { player: P0, index: 0 }).unwrap();
+    assert_eq!(lobby.state.players[0].bonus_gold, 1);
+    // A normal card pays nothing.
+    lobby.state.players[2].gold = 10;
+    lobby.apply(Command::Buy { player: PlayerId(2), index: 0 }).unwrap();
+    assert_eq!(lobby.state.players[0].bonus_gold, 1);
+    lobby.battle(&[3, 3, 3]);
+    let (homer, benz) = (lobby.state.players[0].gold, lobby.state.players[2].gold);
+    assert_eq!(homer, benz + 1, "paid at his next shop");
+
+    // Out of the match, he collects nothing.
+    lobby.state.players[0].alive = false;
+    lobby.state.players[1].extras = vec![bard];
+    lobby.state.players[1].gold = 10;
+    lobby.apply(Command::BuyExtra { player: P1, index: 0 }).unwrap();
+    assert_eq!(lobby.state.players[0].bonus_gold, 0);
+}
+
+#[test]
+fn homer_endgame_bias_is_30_poetry_20_music() {
+    let lobby = Lobby::new(&["homer", "darwin"]);
+    let (poetry, music) = (category(&lobby, "poetry"), category(&lobby, "music"));
+    let bias = owl_core::heroes::endgame_bias(&lobby.state.players[0], &lobby.content);
+    assert_eq!(bias, vec![(Category(poetry as u8), 30), (Category(music as u8), 20)]);
+    // Regular battles keep 25% Poetry.
+    let stats = lobby.stats(0);
+    assert_eq!((stats.weights[poetry], stats.weights[music]), (25, 0));
+}
+
+#[test]
+fn other_heroes_endgame_bias_unchanged() {
+    let content = load_content();
+    for hero in content.heroes.iter().filter(|h| h.id != "homer") {
+        let mut lobby = Lobby::new(&[hero.id.as_str(), if hero.id == "darwin" { "benz" } else { "darwin" }]);
+        // Goethe's boost is for a regular battle only.
+        lobby.state.players[0].hero_state.boosted = true;
+        let bias = owl_core::heroes::endgame_bias(&lobby.state.players[0], &lobby.content);
+        assert_eq!(bias, vec![(hero.category, hero.category_bonus)], "{}", hero.id);
+    }
+}
+
+#[test]
+fn homer_endgame_category_comes_from_his_data_and_a_bad_one_fails_to_load() {
+    let content = load_content();
+    let homer = &content.heroes[usize::from(content.hero_id("homer").unwrap().0)];
+    let music = content.tunables.categories.iter().position(|c| c == "music").unwrap();
+    assert_eq!(homer.endgame_category, Some(Category(music as u8)));
+
+    // A copy of the data with a misspelt category, then with none, does not load.
+    let data = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let dir = std::env::temp_dir().join(format!("owl-homer-data-{}", std::process::id()));
+    for sub in ["cards", "heroes"] {
+        std::fs::create_dir_all(dir.join(sub)).unwrap();
+        for entry in std::fs::read_dir(data.join(sub)).unwrap() {
+            let path = entry.unwrap().path();
+            std::fs::copy(&path, dir.join(sub).join(path.file_name().unwrap())).unwrap();
+        }
+    }
+    std::fs::copy(data.join("tunables.toml"), dir.join("tunables.toml")).unwrap();
+    let homer_file = dir.join("heroes/homer.toml");
+    let original = std::fs::read_to_string(&homer_file).unwrap();
+    std::fs::write(&homer_file, original.replace("endgame_category = \"music\"", "endgame_category = \"musik\"")).unwrap();
+    assert!(Content::load(&dir).is_err(), "an unknown category fails loudly");
+    let without: String = original.lines().filter(|l| !l.starts_with("endgame_category")).map(|l| format!("{l}
+")).collect();
+    std::fs::write(&homer_file, without).unwrap();
+    assert!(Content::load(&dir).is_err(), "Homer must name it");
+    std::fs::write(&homer_file, &original).unwrap();
+    assert!(Content::load(&dir).is_ok(), "the copy itself loads");
+    std::fs::remove_dir_all(&dir).unwrap();
 }

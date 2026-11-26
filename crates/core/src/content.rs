@@ -141,6 +141,15 @@ pub enum Effect {
     /// The reward card: placing it opens the golden reward pick, and the
     /// card is gone.
     GoldenReward,
+    /// Damage dealt to the opponent in every battle whatever the result: on
+    /// a win it adds to the battle damage, otherwise it is a hit of its own.
+    Strike { amount: u32 },
+    /// When this card and a card with the def id `card` are on the board
+    /// together, that card is removed.
+    Displaces { card: String },
+    /// Placing the card moves its holder's hero to the next stage, and the
+    /// card is gone.
+    AdvanceHeroStage,
 }
 
 impl Effect {
@@ -163,6 +172,7 @@ impl Effect {
             ArmorPierce { amount } => ArmorPierce { amount: amount * 2 },
             StreakDamage { per_win, max } => StreakDamage { per_win: per_win * 2, max: max * 2 },
             SplitBonus { points } => SplitBonus { points: points * 2 },
+            Strike { amount } => Strike { amount: amount * 2 },
             other => other,
         }
     }
@@ -220,6 +230,11 @@ pub struct CardDef {
     pub merges_into: Option<CardDefId>,
     pub effects: Vec<Effect>,
     pub golden_effects: Vec<Effect>,
+    /// Removed from the board at the end of the battle it was on the board for.
+    pub one_battle: bool,
+    /// Counts toward its category's bonus. False for a card that only adds
+    /// weight to a category, such as Homer's Bard.
+    pub tribe: bool,
 }
 
 impl CardDef {
@@ -251,6 +266,10 @@ pub enum HeroKind {
     Pheidippides,
     Cleopatra,
     MarieCurie,
+    Beethoven,
+    Goethe,
+    Cervantes,
+    Homer,
     /// No ability at all: the temporary placeholder heroes.
     NoAbility,
 }
@@ -264,6 +283,8 @@ pub struct HeroDef {
     pub hp: u32,
     pub category_bonus: u32,
     pub kind: HeroKind,
+    /// A second category for the hero's endgame bias (Homer's Music).
+    pub endgame_category: Option<Category>,
     params: BTreeMap<String, u32>,
 }
 
@@ -293,6 +314,7 @@ struct RawHero {
     hp: u32,
     category_bonus: u32,
     kind: HeroKind,
+    endgame_category: Option<String>,
     #[serde(default)]
     params: BTreeMap<String, u32>,
 }
@@ -313,6 +335,10 @@ struct RawCard {
     golden_text: Option<String>,
     #[serde(default)]
     per_category: bool,
+    /// The one category of a card that is not made per category.
+    category: Option<String>,
+    #[serde(default = "yes")]
+    tribe: bool,
     #[serde(default = "yes")]
     golden: bool,
     #[serde(default)]
@@ -325,6 +351,8 @@ struct RawCard {
     #[serde(default)]
     effects: Vec<Effect>,
     golden_effects: Option<Vec<Effect>>,
+    #[serde(default)]
+    one_battle: bool,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -357,6 +385,10 @@ impl Content {
             if raw.params.get(REFLECT_CAP).is_some_and(|&cap| cap > 100) {
                 return Err(invalid(format!("hero {}: {REFLECT_CAP} must be at most 100", raw.id)));
             }
+            let endgame_category = raw.endgame_category.as_deref().map(|slug| category_of(&tunables, slug)).transpose()?;
+            if needs_endgame_category(raw.kind) && endgame_category.is_none() {
+                return Err(invalid(format!("hero {} is missing endgame_category", raw.id)));
+            }
             heroes.push(HeroDef {
                 id: raw.id,
                 name: raw.name,
@@ -365,6 +397,7 @@ impl Content {
                 hp: raw.hp,
                 category_bonus: raw.category_bonus,
                 kind: raw.kind,
+                endgame_category,
                 params: raw.params,
             });
         }
@@ -392,13 +425,14 @@ impl Content {
                 .golden_effects
                 .clone()
                 .unwrap_or_else(|| raw.effects.iter().map(Effect::doubled).collect());
-            let variants: Vec<Option<Category>> = if raw.per_category {
-                (0..tunables.categories.len()).map(|i| Some(Category(i as u8))).collect()
-            } else {
-                vec![None]
+            let variants: Vec<Option<Category>> = match (raw.per_category, &raw.category) {
+                (true, None) => (0..tunables.categories.len()).map(|i| Some(Category(i as u8))).collect(),
+                (false, Some(slug)) => vec![Some(category_of(&tunables, slug)?)],
+                (false, None) => vec![None],
+                (true, Some(_)) => return Err(invalid(format!("card {} is per category and has a category", raw.id))),
             };
             for category in variants {
-                let (id, name) = match category {
+                let (id, name) = match category.filter(|_| raw.per_category) {
                     Some(c) => {
                         let slug = &tunables.categories[usize::from(c.0)];
                         (format!("{}_{slug}", raw.id), format!("{} ({slug})", raw.name))
@@ -422,6 +456,8 @@ impl Content {
                     merges_into: None,
                     effects: raw.effects.clone(),
                     golden_effects: golden_effects.clone(),
+                    one_battle: raw.one_battle,
+                    tribe: raw.tribe,
                 });
             }
         }
@@ -442,7 +478,7 @@ impl Content {
         }
         for card in &cards {
             for effect in card.effects.iter().chain(&card.golden_effects) {
-                if let Effect::ShieldOnLoss { card } | Effect::GrantOnGolden { card } = effect {
+                if let Effect::ShieldOnLoss { card } | Effect::GrantOnGolden { card } | Effect::Displaces { card } = effect {
                     find(card)?;
                 }
             }
@@ -490,7 +526,16 @@ fn required_params(kind: HeroKind) -> &'static [&'static str] {
         HeroKind::Pheidippides => &["per_correct", "max"],
         HeroKind::Cleopatra => &["cap_percent"],
         HeroKind::MarieCurie => &["armor_percent"],
+        HeroKind::Beethoven => &["cost", "payments", "note_chance", "syncope", "passion", "critics_reflect"],
+        HeroKind::Goethe => &["cost", "boost"],
+        HeroKind::Cervantes => &["uses"],
+        HeroKind::Homer => &["cost", "payments", "bard_chance", "royalty", "endgame_poetry", "endgame_music"],
     }
+}
+
+/// Heroes whose data must name a second endgame category.
+fn needs_endgame_category(kind: HeroKind) -> bool {
+    matches!(kind, HeroKind::Homer)
 }
 
 fn check_tunables(t: &Tunables) -> Result<(), ContentError> {

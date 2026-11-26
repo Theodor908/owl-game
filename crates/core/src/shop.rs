@@ -23,6 +23,44 @@ pub fn shopper(state: &GameState, player: PlayerId) -> Result<usize, RuleError> 
     Ok(idx)
 }
 
+/// Marks a living player ready, or not, during the shop.
+pub fn set_ready(state: &mut GameState, player: PlayerId, ready: bool, events: &mut Vec<Event>) -> Result<(), RuleError> {
+    if state.phase != Phase::Shop {
+        return Err(RuleError::WrongPhase);
+    }
+    let p = state.players.get_mut(player.index()).ok_or(RuleError::UnknownPlayer)?;
+    if !p.alive {
+        return Err(RuleError::PlayerDead);
+    }
+    // An unchanged mark sends nothing, so a repeated command makes no noise.
+    if p.ready != ready {
+        p.ready = ready;
+        events.push(Event::ReadyChanged { player, ready });
+    }
+    Ok(())
+}
+
+/// Clears a player's ready mark after another shop command, with an event if it was set.
+pub fn clear_ready(state: &mut GameState, player: PlayerId, events: &mut Vec<Event>) {
+    if let Some(p) = state.players.get_mut(player.index())
+        && std::mem::take(&mut p.ready)
+    {
+        events.push(Event::ReadyChanged { player, ready: false });
+    }
+}
+
+/// True when every living player is a bot, ready, or locked out of the shop
+/// (Shakespeare's "not to be"). `is_bot[i]` says whether player `i` is a bot;
+/// a player missing from it counts as human.
+pub fn all_ready(state: &GameState, is_bot: &[bool]) -> bool {
+    state
+        .players
+        .iter()
+        .enumerate()
+        .filter(|(_, p)| p.alive)
+        .all(|(i, p)| is_bot.get(i).copied().unwrap_or(false) || p.ready || p.locked_out)
+}
+
 /// Starts the next turn: income, healing, and a fresh shop for everyone alive.
 pub fn start_turn(state: &mut GameState, env: &mut Env<'_>, events: &mut Vec<Event>) {
     let content = env.content;
@@ -31,6 +69,9 @@ pub fn start_turn(state: &mut GameState, env: &mut Env<'_>, events: &mut Vec<Eve
     state.phase = Phase::Shop;
     state.battles.clear();
     events.push(Event::TurnStarted { turn: state.turn });
+    for p in &mut state.players {
+        p.ready = false;
+    }
     let income = (t.gold_start + t.gold_per_turn * (state.turn - 1)).min(t.gold_cap);
 
     for idx in 0..state.players.len() {
@@ -164,6 +205,7 @@ pub fn buy(
     events.push(Event::CardBought { player, card: card.id, def });
     p.hand.push(card);
     check_merges(state, idx, env, events);
+    heroes::on_any_buy(state, idx, def, env);
     Ok(())
 }
 
@@ -218,6 +260,14 @@ pub fn place(
         offer_reward(state, idx, env, events);
         return Ok(());
     }
+    // A stage card moves the hero on and is gone; it needs no slot either.
+    if p.hand[pos].has_effect(content, |e| matches!(e, Effect::AdvanceHeroStage)) {
+        p.hand.remove(pos);
+        p.acted_this_shop = true;
+        p.hero_state.stage += 1;
+        events.push(Event::CardUsed { player, card });
+        return Ok(());
+    }
     if p.board.len() >= content.tunables.board_slots as usize {
         return Err(RuleError::BoardFull);
     }
@@ -233,9 +283,34 @@ pub fn place(
     p.board.push(placed);
     p.acted_this_shop = true;
     events.push(Event::CardPlaced { player, card });
+    displace(state, idx, content, events);
     offer_due_rewards(state, idx, card, env, events);
     check_merges(state, idx, env, events);
     Ok(())
+}
+
+/// Removes every board card that a card on the same board displaces,
+/// whichever of the two was placed first.
+fn displace(state: &mut GameState, idx: usize, content: &Content, events: &mut Vec<Event>) {
+    let p = &state.players[idx];
+    let targets: Vec<String> = p
+        .board
+        .iter()
+        .flat_map(|c| c.effects(content))
+        .filter_map(|e| if let Effect::Displaces { card } = e { Some(card.clone()) } else { None })
+        .collect();
+    if targets.is_empty() {
+        return;
+    }
+    let player = p.id;
+    let (gone, kept): (Vec<_>, Vec<_>) = std::mem::take(&mut state.players[idx].board)
+        .into_iter()
+        .partition(|c| c.parts.iter().any(|part| targets.contains(&content.card(part.def).id)));
+    state.players[idx].board = kept;
+    for card in gone {
+        state.return_instance(&card, content);
+        events.push(Event::CardUsed { player, card: card.id });
+    }
 }
 
 /// The tier golden reward options come from: the next one up from the

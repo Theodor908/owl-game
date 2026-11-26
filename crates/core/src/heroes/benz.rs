@@ -35,9 +35,11 @@ impl HeroAbility for Benz {
         }
         for id in [a, b] {
             let card = p.find_card(id).ok_or(RuleError::CardNotFound)?;
-            // Skulls vanish after a battle and a reward card when it is placed,
-            // so they cannot be fused into a lasting card.
-            if card.has_effect(content, |e| e.is_used_from_hand() || matches!(e, Effect::Skull | Effect::GoldenReward)) {
+            // Skulls and one-battle cards vanish after a battle and a reward card
+            // when it is placed, so they cannot be fused into a lasting card.
+            if card.lasts_one_battle(content)
+                || card.has_effect(content, |e| e.is_used_from_hand() || matches!(e, Effect::Skull | Effect::GoldenReward))
+            {
                 return Err(RuleError::NotUsable);
             }
         }

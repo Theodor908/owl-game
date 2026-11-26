@@ -1,9 +1,9 @@
-# Starting heroes (12)
+# Starting heroes (16)
 
 Rules that apply to all heroes:
 - Every +25% category bonus carries into the endgame (for now).
-- No hero ability carries into the endgame (for now).
-- An ability with a limited number of uses per match (Darwin, Benz, Herodotus, Shakespeare) can be used at most once per round; after a use it waits for the next turn.
+- No hero ability carries into the endgame (for now), except passives marked as carrying into it: Marie Curie's Half-Life and Homer's Lyrical Peak.
+- An ability with a limited number of uses per match (Darwin, Benz, Herodotus, Shakespeare, Beethoven, Cervantes, Homer) can be used at most once per round; after a use it waits for the next turn.
 - The +25% applies to the player's own weighted questions, not to the 2 house questions.
 - Any hero can buy category cards of any category.
 - When a lobby starts, each player is dealt a private offer of 2 distinct heroes, drawn at random from the full list. No hero appears in two players' offers, so each hero appears at most once per lobby.
@@ -26,6 +26,10 @@ Starting HP values and costs are placeholders. They live in `data/tunables.toml`
 | Pheidippides | Runner of Marathon | +25% Sport | 35 | Marathon: when he wins a battle, each of his own correct answers in that battle adds 1 damage, up to 6. Regular battles only; it does not carry into the endgame |
 | Cleopatra | Last Pharaoh of Egypt | +25% History | 35 | Royal Treasury: gold she does not spend carries over to the next turn. Carried gold and the turn's income together stop at one and a half times the gold cap |
 | Marie Curie | Pioneer of Radioactivity | +25% Physics | 35 | Half-Life: only half of her opponent's armor counts against her damage, rounded down. A passive that carries into the endgame |
+| Ludwig van Beethoven | Composer of the Ninth | +25% Music | 35 | Active, Frenzied Notes: pay 3 gold, 4 times in 4 different rounds. After the fourth payment, Notes can appear in his shop. Placing a Note moves him to his next phase, which holds until the next Note: Syncope (2 damage to the opponent in every battle, whatever the result, a tie included), Passionate Composer (40% Music in total from the hero), Can't Hear the Critics (15% reflect, within the 60% cap); after the third, back to Syncope. Before the first Note he has no phase |
+| Goethe | Poet of Weimar | +25% Poetry | 35 | Prometheus: during his battle, his opponent's battle passives do not work. Active: for 3 gold, once per round, his Poetry bonus is 40% for the next battle instead of 25% |
+| Miguel de Cervantes | Author of Don Quixote | +25% Prose | 35 | Active, Don Quixote: free, 3 times per game. Puts one Knight and one Windmill in his hand. A placed Knight deals 2 damage to the opponent in the next battle whatever the result; a placed Windmill keeps all damage off him in the next battle. Both are removed after that battle |
+| Homer | The Blind Poet | +25% Poetry | 35 | Active, Bard of the Centuries: pay 3 gold, 3 times in 3 different rounds. After the third payment, Bards can appear in every player's shop while he is alive. A placed Bard gives +25% Music on its holder's weighted questions for the next battle, then vanishes. Each Bard another player buys pays him 1 gold at his next shop. Lyrical Peak: a passive that carries into the endgame, where his hero bias is 30% Poetry and 20% Music instead of 25% Poetry |
 
 
 ## Tunables (placeholders)
@@ -41,11 +45,30 @@ Starting HP values and costs are placeholders. They live in `data/tunables.toml`
 | Marathon damage per correct answer / cap | 1 / 6 |
 | Royal Treasury gold cap | 150% of the gold cap (15) |
 | Half-Life share of armor ignored | 50% |
+| Frenzied Notes cost / payments to unlock Notes | 3 gold / 4 |
+| Note cost / chance to appear per shop roll | 1 gold / 30% |
+| Syncope damage / Passionate Composer extra Music / Can't Hear the Critics reflect | 2 / +15% (40% in total) / 15% |
+| Poetry boost cost / extra Poetry | 3 gold / +15% (40% in total) |
+| Don Quixote uses per game | 3 |
+| Knight damage | 2 |
+| Bard of the Centuries cost / payments to unlock Bards | 3 gold / 3 |
+| Bard cost / chance to appear per shop roll / Music it adds | 1 gold / 20% / +25% |
+| Bard royalty to Homer | 1 gold, paid at his next shop |
+| Lyrical Peak endgame bias | 30% Poetry, 20% Music |
 | Benz combined card | keeps both cards' full effects |
 | Herodotus rewrite | refunds the damage he took in that battle |
 | Herodotus "max damage" | the most he could have dealt in that battle: a 6-0 win with his bonuses, up to the per-battle cap. He takes the matching reflected damage if the opponent has reflect. |
 | Herodotus rewrite safety | the rewrite never kills. Any player who would die from it, Herodotus, the opponent or both, is left at 1 HP and given a shield for the next battle (3 armor, placeholder) |
 
 ## Settled details
+- Benz cannot combine a card that lasts one battle (a skull, a Bard, a Knight, a Windmill) or a reward card: nothing would be left of it after the battle or the pick.
 - Skulls are placed on his own board, one slot each, with no limit other than the board. Each disables a different random opponent card for that battle, and placed skulls disappear after one round.
 - Flaming Laser Sword plus Second Opinion on one question leaves only the correct answer. This is intended.
+- Prometheus silences only his current opponent, only during their battle, a ghost opponent included: Open Heart, Marathon, Half-Life and Beethoven's phase effects. The opponent's category bonus, shop abilities and what they gave (cards, gold) and all cards still work. It does not carry into the endgame, so Half-Life works there.
+- A Note appears only in Beethoven's shop, as an extra card beside the normal offers, like skulls. Placing it takes no board slot: it moves him on and disappears.
+- Syncope's 2 damage and the Knight's 2 damage are ordinary damage: armor, reflect and escalation apply, and they count toward the per-battle cap.
+- A Windmill blocks all damage he takes in that battle: battle, reflected, Arrow and overtime tie damage. He still deals his own. A Knight and a Windmill both take a board slot; if both are ever on his board, the Windmill disappears, whichever was placed second.
+- Bards appear in every player's shop, his own included, as an extra card beside the normal offers, like skulls, once his three payments are made and only while he is alive. A Bard takes a board slot and is removed after that battle. Several stack, within the 100% weight cap. A Bard is not a Music card: it does not count toward the Music category bonus or the board summary.
+- Royalties: each Bard bought by another player adds 1 gold to Homer's next shop, as Coin Purse pays. His own Bards pay him nothing, and he collects nothing once he is out.
+- Lyrical Peak changes only the endgame category draw. Regular battles keep his 25% Poetry. Goethe's paid Poetry boost does not carry into the endgame.
+- Note, Knight, Windmill and Bard are not pool cards: they are never golden, sell for nothing and never enter the pool.

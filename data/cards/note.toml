@@ -1,0 +1,12 @@
+id = "note"
+name = "Note"
+tier = 0
+kind = "token"
+text = "Place it: Beethoven moves to his next phase (Syncope, Passionate Composer, Can't Hear the Critics), then it vanishes"
+cost = 1
+golden = false
+shop = false
+copies = 0
+
+[[effects]]
+effect = "AdvanceHeroStage"
