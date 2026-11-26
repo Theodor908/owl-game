@@ -2,6 +2,10 @@
 
 Every published build, newest first. The version is for people; the build number is what the game's updates go by.
 
+## 0.4.1 alpha, build 18 (2026-11-26)
+
+The Note, Knight, Windmill and Bard cards show their pictures.
+
 ## 0.4.0 alpha, build 17 (2026-11-26)
 
 Four new heroes: Beethoven, Goethe, Cervantes and Homer. Three new categories: Music, Poetry and Prose. The shop lasts 60 seconds; tap the clock when you are done and the battle starts as soon as everyone has. Leaving the app for a moment keeps your place in a lobby.
